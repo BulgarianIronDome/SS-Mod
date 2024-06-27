@@ -1,0 +1,638 @@
+on_actions = {
+    on_startup = {
+        effect = {
+             if = {
+                limit = {
+                    has_game_rule = {
+                        rule = soviet_airforce
+                        option = off
+                    }
+                 }
+                SOV = {
+                    add_ideas = SOV_nuhuh_air
+                }
+            }
+            if = {
+				limit = {
+					has_game_rule = {
+						rule = japan_closed_eco
+						option = on
+					}
+				}
+				JAP = {
+					add_ideas = SOV_collectivized_society
+                    add_offsite_building = { type = industrial_complex level = 5 }
+				}
+			}
+			if = { #sov civs
+				limit = {
+					has_game_rule = {
+						rule = sov_boost
+						option = 4
+					}
+				}
+				SOV = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_boost
+						option = 8
+					}
+				}
+				SOV = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 8
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_boost
+						option = 12
+					}
+				}
+				SOV = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 12
+					}
+				}
+			}
+			if = { #ger civs
+				limit = {
+					has_game_rule = {
+						rule = ger_boost
+						option = 4
+					}
+				}
+				GER = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = ger_boost
+						option = 8
+					}
+				}
+				GER = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 8
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = ger_boost
+						option = 12
+					}
+				}
+				GER = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 12
+					}
+				}
+			}
+			if = { #jap civs
+				limit = {
+					has_game_rule = {
+						rule = jap_boost
+						option = 4
+					}
+				}
+				JAP = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = jap_boost
+						option = 8
+					}
+				}
+				JAP = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 8
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = jap_boost
+						option = 12
+					}
+				}
+				JAP = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 12
+					}
+				}
+			}
+			if = { #eng civs
+				limit = {
+					has_game_rule = {
+						rule = eng_boost
+						option = 4
+					}
+				}
+				ENG = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = eng_boost
+						option = 8
+					}
+				}
+				ENG = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 8
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = eng_boost
+						option = 12
+					}
+				}
+				ENG = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 12
+					}
+				}
+			}
+			if = { #ita civs
+				limit = {
+					has_game_rule = {
+						rule = ita_boost
+						option = 4
+					}
+				}
+				ITA = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = ita_boost
+						option = 8
+					}
+				}
+				ITA = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 8
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = ita_boost
+						option = 12
+					}
+				}
+				ITA = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 12
+					}
+				}
+			}
+			if = { #fra civs
+				limit = {
+					has_game_rule = {
+						rule = fra_boost
+						option = 4
+					}
+				}
+				FRA = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = fra_boost
+						option = 8
+					}
+				}
+				FRA = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 8
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = fra_boost
+						option = 12
+					}
+				}
+				FRA = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 12
+					}
+				}
+			}
+			if = { #usa civs
+				limit = {
+					has_game_rule = {
+						rule = usa_boost
+						option = 4
+					}
+				}
+				USA = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = usa_boost
+						option = 8
+					}
+				}
+				USA = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 8
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_closed_eco
+						option = on
+					}
+				}
+				SOV = {
+					add_ideas = SOV_collectivized_society
+                    add_offsite_building = { type = industrial_complex level = 5 }
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = ger_one_research_slot
+						option = on
+					}
+				}
+				GER = {
+					add_research_slot = 1
+				}
+			}
+            if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_one_research_slot
+						option = on
+					}
+				}
+				SOV = {
+					add_research_slot = 1
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = eng_ape_convoys
+						option = on
+					}
+				}
+				ENG = {
+					add_equipment_to_stockpile = {
+						type = convoy
+						amount = 2000
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = anti_noob_modefier
+						option = on
+					}
+				}
+				#TOP MAINLAND FRANCE
+				14 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				15 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				30 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				16 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				267 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				29 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				18 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				17 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				27 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				28 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				24 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				23 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				19 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				806 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				786 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				785 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				#VICHY
+				33 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				25 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				31 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				26 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				22 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				20 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				32 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				21 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				735 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				851 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				#INDOCHINA
+				670 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				671 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				741 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				286 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				728 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				#MOLDOVA
+				80 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				78 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				766 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				#FINLAND
+				147 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+				146 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_basic_heavy
+						option = on
+					}
+				}
+				SOV = {
+					set_technology = {
+						basic_heavy_tank_chassis = 1
+						popup = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+           				has_game_rule = { rule = pregrinds_4_factions option = on }
+           				has_game_rule = { rule = pregrinds_4_factions option = axis }
+           				has_game_rule = { rule = pregrinds_4_factions option = allies }
+      				}
+				}
+				ITA = {
+					annex_country = { target = ETH }
+					load_oob = "ITA_1936_nsb_1_div"
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						ETH = { exists = yes }
+						has_game_rule = { rule = pregrinds_4_factions option = none }
+					}
+				}
+				ITA = {
+					load_oob = "ITA_1936_nsb"
+				}
+				set_global_flag = no_pregrind
+			}
+			
+            if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_tashek_tungsten
+						option = on
+					}
+				}
+				405 = {
+                    add_resource = {
+                        type = steel
+                        amount = 21
+                    }
+                    add_resource = {
+                        type = tungsten 
+                        amount = 120
+                    }
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 1
+                        instant_build = yes
+                    }
+				}
+			}
+            if = {
+				limit = {
+					has_game_rule = {
+						rule = spr_asturias_tungsten
+						option = on
+					}
+				}
+				790 = {
+                    add_resource = {
+                        type = tungsten
+                        amount = 220
+                    }
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 1
+                        instant_build = yes
+                    }
+			    }
+                SPR = {
+                    add_resource_rights = 181
+                    add_resource_rights = 32
+                    add_resource_rights = 795
+			    }
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = vichy_france
+						option = banned
+					}
+				}
+				FRA = {
+					load_oob = "FRA_1936_naval_mtg"
+					add_offsite_building = { type = industrial_complex level = 3 }
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = vichy_france
+						option = forced 
+					}
+				}
+				VIC = {
+					transfer_state = 1
+					transfer_state = 514
+					514 = { set_compliance = 70 }
+					transfer_state = 665
+					665 = { set_compliance = 70 }
+					transfer_state = 458
+					458 = { set_compliance = 70 }
+					transfer_state = 513
+					513 = { set_compliance = 70 }
+					transfer_state = 460
+					460 = { set_compliance = 70 }
+					transfer_state = 459
+					459 = { set_compliance = 70 }
+					transfer_state = 462
+					462 = { set_compliance = 70 }
+					transfer_state = 461
+					461 = { set_compliance = 70 }
+					add_equipment_to_stockpile = {
+						type = motorized_equipment_1 
+						amount = 100
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 10000
+					}
+					load_oob = "VIC_1936_nsb"
+					load_oob = "FRA_1936_naval_mtg"
+				}
+				FRA = {
+					load_oob = "FRA_WS_PRIDE"
+					add_offsite_building = { type = industrial_complex level = 6 }
+					set_nationality={
+						target_country = VIC
+						character = FRA_philippe_petain
+					}
+					set_nationality={
+						target_country = VIC
+						character = FRA_charles_huntziger
+					}
+					set_nationality={
+						target_country = VIC
+						character = FRA_gastonhenri_billotte
+					}
+					set_nationality={
+						target_country = VIC
+						character = FRA_henry_freydenberg
+					}
+					set_nationality={
+						target_country = VIC
+						character = FRA_rene_olry
+					}
+					#set_nationality={
+					#	target_country = VIC
+					#	character = FRA_maurice_gamelin
+					#}
+					#set_nationality={
+					#	target_country = VIC
+					#	character = FRA_maxime_weygand
+					#}
+					set_nationality={
+						target_country = VIC
+						character = FRA_alphonse_georges
+					}
+					set_nationality={
+						target_country = VIC
+						character = FRA_antoinemariebenoit_besson
+					}
+					transfer_state = 768
+					768 = { set_compliance = 70 }
+					transfer_state = 769
+					769 = { set_compliance = 70 }
+				}
+			}
+            on_game_rule_change = { ##adaptable removed 
+                effect = {
+                    if = {
+                        limit = {
+                            has_game_rule = BHVM_adaptable
+                            game_rule = off
+                        }
+                        # y no work
+                        remove_trait = adaptable
+                    }
+                }
+            }
+			on_game_rule_change = { ##thorough_planner removed
+                effect = {
+                    if = {
+                        limit = {
+                            has_game_rule = BHVM_thorough_planner
+                            game_rule = off
+                        }
+                        # y no work
+                        remove_trait = thorough_planner
+                    }
+                }
+            }
+        } 
+    }
+	on_monthly = {
+		effect = {
+			if = { #pregrinds
+				limit = {
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = on
+					}
+					GER = {
+						has_war = no
+					}
+					NOT = {
+						has_global_flag = no_pregrind
+					}
+				}
+				every_country = {
+					every_army_leader = {
+						limit = {
+							NOT = { 
+								has_trait = no_grind
+							}
+						}
+						add_unit_leader_trait = no_grind
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,154 @@
+on_actions = {
+    on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					tag = YUG
+				}
+				IF = {
+					limit = {
+						NOT = { has_global_flag = ITA_no_scripted }
+					}
+					if = {
+						limit = {
+							country_exists = BUL
+						}
+						BUL = {
+							transfer_state = 106 # MACEDONIA
+							transfer_state = 803 # PIROT
+						}
+					}
+					else = {
+						ITA = {
+							transfer_state = 106 # MACEDONIA
+							transfer_state = 803 # PIROT
+						}
+						ITA = { add_state_core = 106 }
+						ITA = { add_state_core = 803 }
+					}
+					if = {
+						limit = {
+							country_exists = HUN
+						}
+						HUN = {
+							transfer_state = 45 # VOJVODINA
+						}
+					}
+					else = {
+						ITA = {
+							transfer_state = 45 # VOJVODINA
+						}
+					}
+					GER = {
+						transfer_state = 102 # GERMAN SLOVENIA
+					}
+					ITA = {
+						transfer_state = 853 # SLOVENIA
+						transfer_state = 103 # DALMATIA
+						transfer_state = 109 # CROATIA
+						transfer_state = 104 # BOSNIA
+						transfer_state = 804 # HERZEG
+						transfer_state = 764 # BANAT
+						transfer_state = 105 # MNT
+						transfer_state = 802 # KOSOVO
+						transfer_state = 108 # NIS
+						transfer_state = 107 # SERBIA
+						add_named_threat = { 
+							threat = 12
+							name = YUG_peace
+						}
+					}
+				550 = { set_demilitarized_zone = yes }
+				271 = { set_demilitarized_zone = yes }
+				559 = { set_demilitarized_zone = yes }
+				841 = { set_demilitarized_zone = yes }
+				843 = { set_demilitarized_zone = yes }
+				842 = { set_demilitarized_zone = yes }
+				908 = { set_demilitarized_zone = yes }
+				835 = { set_demilitarized_zone = yes }
+				840 = { set_demilitarized_zone = yes }
+				839 = { set_demilitarized_zone = yes }
+				838 = { set_demilitarized_zone = yes }
+				837 = { set_demilitarized_zone = yes }
+				836 = { set_demilitarized_zone = yes }
+				844 = { set_demilitarized_zone = yes }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = GRE
+				}
+				IF = {
+					limit = {
+						NOT = { has_global_flag = ITA_no_scripted }
+					}
+					IF = {
+						limit = {
+							country_exists = BUL
+						}
+						BUL = {
+							transfer_state = 184 # THRACE
+							transfer_state = 731 # SOLUN
+							add_named_threat = { 
+								threat = 6
+								name = GRE_peace
+							}
+						}
+						ITA = {
+							transfer_state = 185 # EPIR
+							transfer_state = 47 # ATINA
+							transfer_state = 186 # PELOPONES
+							transfer_state = 187 # OSTROVI
+							transfer_state = 182 # KRIT
+						}
+						550 = { set_demilitarized_zone = yes }
+						271 = { set_demilitarized_zone = yes }
+						559 = { set_demilitarized_zone = yes }
+						841 = { set_demilitarized_zone = yes }
+						843 = { set_demilitarized_zone = yes }
+						842 = { set_demilitarized_zone = yes }
+						908 = { set_demilitarized_zone = yes }
+						835 = { set_demilitarized_zone = yes }
+						840 = { set_demilitarized_zone = yes }
+						839 = { set_demilitarized_zone = yes }
+						838 = { set_demilitarized_zone = yes }
+						837 = { set_demilitarized_zone = yes }
+						836 = { set_demilitarized_zone = yes }
+						844 = { set_demilitarized_zone = yes }
+					}
+					else = {
+						ITA = {
+							transfer_state = 184 # THRACE
+							transfer_state = 731 # SOLUN
+							transfer_state = 185 # EPIR
+							transfer_state = 47 # ATINA
+							transfer_state = 186 # PELOPONES
+							transfer_state = 187 # OSTROVI
+							transfer_state = 182 # KRIT
+							add_named_threat = { 
+								threat = 9
+								name = GRE_peace
+							}
+						}
+						550 = { set_demilitarized_zone = yes }
+						271 = { set_demilitarized_zone = yes }
+						559 = { set_demilitarized_zone = yes }
+						841 = { set_demilitarized_zone = yes }
+						843 = { set_demilitarized_zone = yes }
+						842 = { set_demilitarized_zone = yes }
+						908 = { set_demilitarized_zone = yes }
+						835 = { set_demilitarized_zone = yes }
+						840 = { set_demilitarized_zone = yes }
+						839 = { set_demilitarized_zone = yes }
+						838 = { set_demilitarized_zone = yes }
+						837 = { set_demilitarized_zone = yes }
+						836 = { set_demilitarized_zone = yes }
+						844 = { set_demilitarized_zone = yes }
+					}
+				}
+			}
+		}
+	}
+}

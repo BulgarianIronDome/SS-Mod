@@ -1,0 +1,19 @@
+SOV_spain = {
+	allowed = {
+		original_tag = SOV
+	}
+	visible = {
+		has_global_flag = spanish_civil_war
+	}
+}
+
+auto_tech_rush = {
+	icon = generic_propaganda
+
+	visible = {
+        has_game_rule = {
+			rule = auto_tech_rush
+			option = on
+		}
+	}
+}

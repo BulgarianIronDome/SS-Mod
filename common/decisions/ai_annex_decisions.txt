@@ -1,0 +1,129 @@
+operations = {
+
+    ITA_annex_ROM = {
+            # icon used to be here rip icon 04/29/2024
+        targets = {
+            ROM
+        }
+        fire_only_once = yes
+
+        available = {
+            original_tag = ITA
+            ROM = { is_ai = yes }
+        }
+        visible = {
+            original_tag = ITA
+            ROM = { is_ai = yes }
+            is_ai = NO
+            country_exists = ROM
+        }
+        complete_effect = {
+            ITA = { 
+                set_technology = { fuel_refining2 = 1				popup = no }
+                set_technology = { fuel_refining3 = 1				popup = no }
+                set_technology = { fuel_refining4 = 1				popup = no }
+                set_technology = { fuel_refining5 = 1 				popup = no}
+            }
+            hidden_effect = {
+            if = { limit = { ROM = { NOT = { has_completed_focus = ROM_danubian_transport_network}}} ROM = { complete_national_focus = ROM_danubian_transport_network }}
+            if = { limit = { ROM = { NOT = { has_completed_focus = ROM_malaxa}}} ROM = { complete_national_focus = ROM_malaxa }}
+            if = { limit = { ROM = { NOT = { has_completed_focus = ROM_hunedoara_steel_works}}} ROM = { complete_national_focus = ROM_hunedoara_steel_works }}
+            if = { limit = { ROM = { NOT = { has_completed_focus = ROM_invest_in_the_iar}}} ROM = { complete_national_focus = ROM_invest_in_the_iar }}
+            if = { limit = { ROM = { NOT = { has_completed_focus = ROM_expand_ploiesti_oil_production}}} ROM = { complete_national_focus = ROM_expand_ploiesti_oil_production }}
+            if = { limit = { ROM = { NOT = { has_completed_focus = ROM_german_romanian_oil_exploitation_company}}} ROM = { complete_national_focus = ROM_german_romanian_oil_exploitation_company }}
+            }
+            ITA = { annex_country = { target = ROM transfer_troops = yes }}
+            every_state = {
+                limit = {
+                    is_core_of = ROM
+                    is_controlled_by = ITA
+                }
+                set_compliance = 100
+            }
+        }
+    }
+    ITA_annex_BUL = {
+        # icon used to be here rip icon 04/29/2024
+         targets = {
+            BUL
+        }
+        fire_only_once = yes
+
+         available = {
+            original_tag = ITA
+            BUL = { is_ai = yes }
+         }
+        visible = {
+            original_tag = ITA
+            BUL = { is_ai = yes }
+            is_ai = NO
+            country_exists = BUL
+        }
+        complete_effect = {
+            annex_country = { target = BUL transfer_troops = yes }
+            every_state = {
+                limit = {
+                        is_core_of = BUL
+                        is_controlled_by = ITA
+                    }
+                set_compliance = 100
+            }
+        }
+    }
+}
+political_actions = {
+
+	move_capital_to_cascablanca = {
+		fire_only_once = yes
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			tag = FRA
+			NOT = {
+				controls_state = 16
+			}
+		}
+		complete_effect = {
+			set_capital = {
+				state = 461
+			}
+		}
+	}
+
+	move_capital_to_gabon = {
+		fire_only_once = yes
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			tag = FRA
+			NOT = {
+				controls_state = 16
+			}
+		}
+		complete_effect = {
+			set_capital = {
+				state = 539
+			}
+		}
+	}
+	ITA_demand_crete = {
+		fire_only_once = yes
+		allowed = {
+			tag = ITA
+		}
+		visible = {
+			
+			BUL = {
+				controls_state = 182
+			}
+		}
+		complete_effect = {
+			ITA = { transfer_state = 182 }
+			
+		}
+	}
+
+	
+}

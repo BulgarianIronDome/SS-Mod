@@ -1,0 +1,14 @@
+﻿l_english:
+ #game_rule_gorila_not_on_plains_SIMULATOR:0 "Guerrilla Tactics are NOT able to be used on plains."
+ #game_rule_gorila_not_on_plains_ARCADE:0 "Guerrilla Tactics are able to be used on plains."
+ motr_gun_upgrade:0 "Bigger Caliber Guns"
+ adaptable_tooltip:0 "This trait is only pickable when the 'BHVM_adaptable' game rule option is set to 'on'."
+ thorough_planner_tooltip:0 "This trait is only pickable when the 'BHVM_thorough_planner' game rule option is set to 'on'."
+ SOV_no_air_tooltip:0 "Soviets cannot produce air!"
+ SOV_nuhuh_air:0 "§RThe Game rule:"Soviets no air" is on! \nSo now they can't produce aircraft.§!"
+ MON_dagva_tooltip:0 "With the following §Yskills§!:\n£trait_attack 6 £trait_defense 4 £trait_planning 4 £trait_logistics 3 and him being level 6 skill \n"
+  INVASION_WARNING_TEXT: "Forces of §Y[?ui_invader_country.GetNameWithFlag]§! have successfully conducted a §CNaval Invasion§! at [?ui_invaded_state.GetName]!"
+  INVASION_WARNING_DISABLE: "No longer show Enemy Invasions with this popup."
+
+  PARADROP_WARNING_TEXT: "Forces of §Y[?ui_invader_country.GetNameWithFlag]§! have successfully conducted a §CParadrop§! at [?ui_invaded_state.GetName]!"
+  PARADROP_WARNING_DISABLE: "No longer show Enemy Paradrops with this popup."

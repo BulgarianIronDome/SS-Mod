@@ -1,7 +1,10 @@
 spriteTypes = {
 
 	### generic equipment archetypes ###
-
+	SpriteType = {
+		 name = "GFX_Juggle_1_medium"
+		 texturefile = "gfx/interface/industry/Juggle_1.dds"
+	}
 	SpriteType = {
 		name = "GFX_archetype_heavy_fighter_equipment_medium"
 		texturefile = "gfx/interface/archetypes/archetype_heavy_fighter_equipment.dds"
@@ -5047,7 +5050,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/werwolf_guerillas.dds"
 		alwaystransparent = yes
 	}
-
+	SpriteType = {
+		name = "GFX_werwolf_guerillas_not_plain_medium"
+		texturefile = "gfx/interface/technologies/werwolf_guerillas.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_werwolf_guerillas_disabled_medium"
+		texturefile = "gfx/interface/technologies/werwolf_guerillas.dds"
+		alwaystransparent = yes
+	}
 	SpriteType = {
 		name = "GFX_armored_operations_medium"
 		texturefile = "gfx/interface/technologies/armored_operations.dds"
@@ -5208,6 +5220,16 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_guerilla_warfare_medium"
+		texturefile = "gfx/interface/technologies/guerilla_warfare.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_guerilla_warfare_disabled_medium"
+		texturefile = "gfx/interface/technologies/guerilla_warfare.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_guerilla_warfare_not_on_plains_medium"
 		texturefile = "gfx/interface/technologies/guerilla_warfare.dds"
 		alwaystransparent = yes
 	}

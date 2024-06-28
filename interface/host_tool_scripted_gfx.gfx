@@ -3,6 +3,10 @@ spriteTypes = {
 		name = "GFX_button_transparent"
 		texturefile = "gfx/interface/button_transparent.dds"
 	}
+    SpriteType = {
+		 name = "GFX_Juggle_1"
+		 texturefile = "gfx/interface/industry/Juggle_1.dds"
+	}
     spriteType = {
         name = "GFX_horst_help2"
         texturefile = "gfx/horst_gui/horsttool/horst_help.dds"

@@ -21,7 +21,7 @@ NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 9999		                    -- WAS 500 ||
 NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0					-- Free license
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                        -- Free license
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0						    -- Base IC cost for lended license
-
+NDefines.NProduction.MIN_LAND_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 1						    -- Metuh
 
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.001 	-- vilkata defines
 NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.15	-- vilkata defines

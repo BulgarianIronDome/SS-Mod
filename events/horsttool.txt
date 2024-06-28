@@ -7,55 +7,21 @@ news_event = {
 	major = yes
 	is_triggered_only = yes
 	option = {
-		name = "Okay..."
+		name = "Ja..."
 		clear_variable=this.selected_cheat
 		clear_variable=this.target_country
 	}
 }
+
 news_event = {
 	id = horsttool.2
-	title = "Historical Focus"
-	desc = "Troll Host. Historical focusses are not activated...    Time to rehost"
+	title = "Snek teleported again"
+	desc = " You little shit"
 	picture = GFX_news_event_001
 	major = yes
 	is_triggered_only = yes
 	option = {
-		name = "Wow..."
-	}
-}
-news_event = {
-	id = horsttool.5
-	title = "HostTool"
-	desc = " [From.Getname] annexed [?ROOT.marked_states^num] states to [From.From.Owner.Getname]"
-	picture = GFX_news_event_001
-	major = yes
-	is_triggered_only = yes
-	option = {
-		name = "OK..."
-		clear_variable=this.target_country
-	}
-}	
-news_event = {
-	id = horsttool.3
-	title = "Host Tool"
-	desc = " [From.Getname] annexed a country to [From.From.From.Owner.Getname]"
-	picture = GFX_news_event_001
-	major = yes
-	is_triggered_only = yes
-	option = {
-		name = "OK..."
-		clear_variable=this.target_country
-	}
-}
-news_event = {
-	id = horsttool.4
-	title = "Host Tool"
-	desc = " [From.Getname] cored [?ROOT.marked_states^num] states to [From.From.Owner.Getname]"
-	picture = GFX_news_event_001
-	major = yes
-	is_triggered_only = yes
-	option = {
-		name = "OK..."
-		clear_variable=this.target_country
+		name = "Im gonna break your kneecaps snek"
+		add_political_power = -1
 	}
 }

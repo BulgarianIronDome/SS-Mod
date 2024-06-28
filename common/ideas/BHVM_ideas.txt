@@ -144,12 +144,31 @@ ideas = {
 				}
             }	    
     	}
+		SPR_GER_ai = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			picture = SPR_relocate_the_gold_reserves
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 1
+				mic_to_target_factor = 1
+			}
+		}
 		ai_limit = {
 			cancel = {
 				is_ai = no
 			}
 			removal_cost = -1
 			picture = ger_mefo_bills_payment
+			allowed = {
+				is_ai = yes
+			}
 			modifier = {
 				industrial_capacity_factory = -10
 				production_factory_max_efficiency_factor = -10
@@ -160,12 +179,16 @@ ideas = {
 				ai_desired_divisions_factor = -1000
 			}
 		}
+
 		blm_ai = {
 			cancel = {
 				is_ai = no
 			}
 			removal_cost = -1
 			picture = ger_mefo_bills_payment
+			allowed = {
+				is_ai = yes
+			}
 			modifier = {
 				industrial_capacity_factory = -10
 				production_factory_max_efficiency_factor = -10
@@ -178,15 +201,18 @@ ideas = {
 				navy_intel_to_others = -1000
 				army_intel_to_others = -1000
 				airforce_intel_to_others = -1000
-				
 			}
 		}
+
 		ai_idea = {
 			cancel = {
 				is_ai = no
 			}
 			removal_cost = -1
 			picture = generic_goods_red_bonus
+			allowed = {
+				is_ai = yes
+			}
 			modifier = {
 				enemy_operative_capture_chance_factor = -2
 				conversion_cost_civ_to_mil_factor = 100
@@ -195,6 +221,7 @@ ideas = {
 				trade_laws_cost_factor = 10000
 			}
 		}
+
 		peace_training_xp = {
 			allowed = {
 				always = no
@@ -243,7 +270,7 @@ ideas = {
 			picture = generic_infantry_bonus
 			modifier = {
 				experience_gain_army_unit_factor = 1
-				experience_gain_army = 0.3
+				experience_gain_army = 0.2
 				training_time_army_factor = -0.80
 				air_training_xp_gain_factor = 10
 				experience_gain_navy_unit_factor = 10
@@ -323,9 +350,27 @@ ideas = {
 			}
 			picture = can_wartime_prices_and_trade_board
 			removal_cost=-1
+			rule = {
+				can_access_market = no
+			}
 			modifier={
 				production_lack_of_resource_penalty_factor = -1
 			}
+		}
+		no_market = {
+			allowed = {
+				always = no
+			}
+			picture = neutrality_idea
+			removal_cost=-1
+			rule = {
+				can_access_market = no
+			}
+		}
+		fix_production_idea = { 
+			modifier = { 
+				production_factory_start_efficiency_factor = 0.8
+			} 
 		}
 		SPR_offensive = {
 			allowed = {
@@ -349,6 +394,17 @@ ideas = {
 			modifier={
 				production_lack_of_resource_penalty_factor = -1
 				min_export = -1
+			}
+		}
+		no_vols= {
+			picture = air_support_focus
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				send_volunteer_size = -100
+				air_volunteer_cap = -1000
 			}
 		}
     }

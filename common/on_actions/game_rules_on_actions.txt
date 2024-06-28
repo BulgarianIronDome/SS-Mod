@@ -28,7 +28,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = sov_boost
-						option = 4
+						option = sov4
 					}
 				}
 				SOV = {
@@ -42,7 +42,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = sov_boost
-						option = 8
+						option = sov8
 					}
 				}
 				SOV = {
@@ -56,7 +56,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = sov_boost
-						option = 12
+						option = sov12
 					}
 				}
 				SOV = {
@@ -70,7 +70,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = ger_boost
-						option = 4
+						option = ger4
 					}
 				}
 				GER = {
@@ -84,7 +84,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = ger_boost
-						option = 8
+						option = ger8
 					}
 				}
 				GER = {
@@ -98,7 +98,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = ger_boost
-						option = 12
+						option = ger12
 					}
 				}
 				GER = {
@@ -112,7 +112,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = jap_boost
-						option = 4
+						option = jap4
 					}
 				}
 				JAP = {
@@ -126,7 +126,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = jap_boost
-						option = 8
+						option = jap8
 					}
 				}
 				JAP = {
@@ -140,7 +140,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = jap_boost
-						option = 12
+						option = jap12
 					}
 				}
 				JAP = {
@@ -154,7 +154,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = eng_boost
-						option = 4
+						option = eng4
 					}
 				}
 				ENG = {
@@ -168,7 +168,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = eng_boost
-						option = 8
+						option = eng8
 					}
 				}
 				ENG = {
@@ -182,7 +182,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = eng_boost
-						option = 12
+						option = eng12
 					}
 				}
 				ENG = {
@@ -196,7 +196,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = ita_boost
-						option = 4
+						option = ita4
 					}
 				}
 				ITA = {
@@ -210,13 +210,13 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = ita_boost
-						option = 8
+						option = ita8
 					}
 				}
 				ITA = {
 					add_offsite_building = {
 						type = industrial_complex
-						level = 8
+						level = ita8
 					}
 				}
 			}
@@ -224,7 +224,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = ita_boost
-						option = 12
+						option = ita12
 					}
 				}
 				ITA = {
@@ -238,7 +238,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = fra_boost
-						option = 4
+						option = fra4
 					}
 				}
 				FRA = {
@@ -252,7 +252,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = fra_boost
-						option = 8
+						option = fra8
 					}
 				}
 				FRA = {
@@ -266,7 +266,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = fra_boost
-						option = 12
+						option = fra12
 					}
 				}
 				FRA = {
@@ -280,7 +280,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = usa_boost
-						option = 4
+						option = usa4
 					}
 				}
 				USA = {
@@ -294,7 +294,7 @@ on_actions = {
 				limit = {
 					has_game_rule = {
 						rule = usa_boost
-						option = 8
+						option = usa8
 					}
 				}
 				USA = {
@@ -341,6 +341,17 @@ on_actions = {
 			if = {
 				limit = {
 					has_game_rule = {
+						rule = no_market
+						option = on
+					}
+				}
+				every_country = {
+					add_ideas = no_market
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
 						rule = eng_ape_convoys
 						option = on
 					}
@@ -355,6 +366,89 @@ on_actions = {
 			if = {
 				limit = {
 					has_game_rule = {
+						rule = no_collabs
+						option = on
+					}
+				}
+				every_country = {
+                    limit = {
+                        is_playable_country = yes
+						is_ai = yes
+                    }
+					can_create_collaboration_government = no
+                }
+			}
+			if = {
+                limit = {
+                    has_game_rule = {
+                        rule = no_brazil&finland
+                        option = both
+                    }
+                }
+                country_exists = BRA
+                country_exists = FIN
+				BLM = { 
+                    annex_country = { target = FIN transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = FIN
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = BRA transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = BRA
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = {
+                        rule = no_brazil&finland
+                        option = fin
+                    }
+                }
+                country_exists = FIN
+                BLM = { 
+                    annex_country = { target = FIN transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = FIN
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_game_rule = {
+                        rule = no_brazil&finland
+                        option = bra
+                    }
+                }
+                country_exists = BRA
+                BLM = { 
+                    annex_country = { target = BRA transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = BRA
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+            }
+			if = {
+				limit = {
+					has_game_rule = {
 						rule = anti_noob_modefier
 						option = on
 					}
@@ -364,7 +458,6 @@ on_actions = {
 				15 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 				30 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 				16 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
-				267 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 				29 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 				18 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 				17 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
@@ -607,32 +700,4 @@ on_actions = {
             }
         } 
     }
-	on_monthly = {
-		effect = {
-			if = { #pregrinds
-				limit = {
-					has_game_rule = {
-						rule = pregrinds_4_factions
-						option = on
-					}
-					GER = {
-						has_war = no
-					}
-					NOT = {
-						has_global_flag = no_pregrind
-					}
-				}
-				every_country = {
-					every_army_leader = {
-						limit = {
-							NOT = { 
-								has_trait = no_grind
-							}
-						}
-						add_unit_leader_trait = no_grind
-					}
-				}
-			}
-		}
-	}
 }

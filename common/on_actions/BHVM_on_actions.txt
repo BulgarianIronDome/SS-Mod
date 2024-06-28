@@ -25,6 +25,36 @@ on_actions = {
             }
         }
     }
+	on_weekly = { ### NO COLLABS COUNTRIES
+        effect = {
+            if = { 
+                every_country = {
+                    limit = {
+                        is_playable_country = yes
+						is_ai = yes
+                    }
+					rule = {
+						name = "No collabs lol"
+						
+						can_create_collaboration_government = no
+					}
+                }
+            }
+            if = { 
+                every_country = {
+                    limit = {
+                        is_playable_country = yes
+						is_ai = yes
+                    }
+                    rule = {
+						name = "No collabs lol"
+						
+						can_create_collaboration_government = no
+					}
+                }
+            }
+        }
+    }
     on_monthly = { # ANTI x2 DOCTRINE
 		effect = {
 			every_country = {
@@ -187,6 +217,25 @@ on_actions = {
 			}
 		}
     }
+	on_daily = {
+		effect = {
+			every_country = {
+				limit = { NOT = { is_ai = yes } }
+				if = {
+					limit = { has_idea = ai_limit }
+					remove_idea = ai_limit
+				}
+				if = {
+					limit = { has_idea = blm_ai }
+					remove_idea = blm_ai
+				}
+				if = {
+					limit = { has_idea = ai_idea }
+					remove_idea = ai_idea
+				}
+			}
+		}
+	}
     on_startup = { ### GAME RULES
 		effect = {
 			IF = {

@@ -378,9 +378,7 @@
 			every_state = {
 				limit = { 
 					OR = {
-						state = 459
-						state = 460
-						state = 513
+						
 					}
 					is_owned_or_subject_trigger = yes	
 					OR = {	
@@ -388,7 +386,7 @@
 						has_state_flag = FRA_colonial_industry_target
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 
@@ -407,7 +405,38 @@
 					}
 					is_owned_or_subject_trigger = yes	
 				}
-				add_extra_state_shared_building_slots = 2
+				
+				random_state = {
+						limit = { 
+							OR = {
+								state = 459
+								state = 460
+								state = 513
+							}
+							OWNER = { is_owned_or_subject_trigger = yes }	
+							NOT = {
+								has_state_flag = FRA_colonial_industry_target
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						set_state_flag = FRA_colonial_industry_target
+				}
+				random_state = {
+						limit = { 
+							OR = {
+								state = 459
+								state = 460
+								state = 513
+							}
+							OWNER = { is_owned_or_subject_trigger = yes }	
+							NOT = {
+								has_state_flag = FRA_colonial_industry_target
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						set_state_flag = FRA_colonial_industry_target
+				}
+				add_extra_state_shared_building_slots = 1
 				set_state_flag = FRA_industrial_expansion_target
 				set_state_flag = FRA_colonial_industry_target
 				random_neighbor_state = {
@@ -423,7 +452,24 @@
 							has_state_flag = FRA_colonial_industry_target
 						}		
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = FRA_industrial_expansion_target
+					set_state_flag = FRA_colonial_industry_target
+				}
+				random_neighbor_state = {
+					limit = { 
+						OR = {
+							state = 459
+							state = 460
+							state = 513
+						}
+						is_owned_or_subject_trigger = yes
+						NOT  = {
+							has_state_flag = FRA_industrial_expansion_target
+							has_state_flag = FRA_colonial_industry_target
+						}		
+					}
+					add_extra_state_shared_building_slots = 1
 					set_state_flag = FRA_industrial_expansion_target
 					set_state_flag = FRA_colonial_industry_target
 				}
@@ -529,7 +575,7 @@
 						has_state_flag = FRA_colonial_industry_target
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				set_state_flag = FRA_colonial_industry_target
 			}
 		}
@@ -550,14 +596,6 @@
 		}
 
 		available = {
-			any_state = {
-				OR = {
-					is_core_of = VIN
-					is_core_of = CAM
-					is_core_of = LAO
-				}
-				is_owned_or_subject_trigger = yes
-			}
 		}
 		
 		bypass = {
@@ -604,13 +642,6 @@
 		}
 
 		available = {
-			any_state = {
-				OR = {
-					is_core_of = SYR
-					is_core_of = LEB
-				}
-				is_owned_or_subject_trigger = yes
-			}
 		}
 		
 		bypass = {
@@ -636,7 +667,23 @@
 						has_state_flag = FRA_colonial_industry_target
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = FRA_colonial_industry_target
+			}
+			random_state = {
+				limit = { 
+					OR = {
+						state = 677
+						state = 680
+						state = 554
+						state = 553
+					}
+					OWNER = { is_owned_or_subject_trigger = yes }	
+					NOT = {
+						has_state_flag = FRA_colonial_industry_target
+					}
+				}
+				add_extra_state_shared_building_slots = 1
 				set_state_flag = FRA_colonial_industry_target
 			}
 		}
@@ -1148,7 +1195,13 @@
 			IF = {
 				limit = { has_dlc = "Arms Against Tyranny" }
 				mio:FRA_renault_organization = {
-					add_mio_funds = 2000
+					add_mio_funds = 2500
+				}
+				mio:FRA_hotchkiss_organization = {
+					add_mio_funds = 2500
+				}
+				mio:FRA_apx_organization = {
+					add_mio_funds = 2500
 				}
 			}
 			ELSE = {
@@ -1521,29 +1574,6 @@
 		offset = {
 			x = -3
 			y = 0
-			trigger = {
-				has_dlc = "La Resistance"
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_review_foreign_policy
-				has_completed_focus = FRA_form_the_popular_front
-			}
-		}
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_revive_the_national_bloc
-				}
-			}
 		}
 
 		prerequisite = {}
@@ -1581,18 +1611,6 @@
 				promote_leader = yes
 			}
 			set_country_flag = { flag = FRA_popular_front_cooldown value = 1 days = 360 } #fires strike event if labour laws not reformed in time
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 		}
 	}
 	focus = {
@@ -2545,7 +2563,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_strengthen_government_support
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -2649,45 +2667,6 @@
 		icon = GFX_focus_generic_strike_at_democracy2
 		x = 42
 		y = 0
-		
-		offset = {
-			x = -9
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_revive_the_national_bloc
-			}
-		}
-
-		offset = {
-			x = -7
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_utilize_the_leagues
-			}
-		}
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_form_the_popular_front
-				}
-			}
-		}
-
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2704,18 +2683,6 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_country_leader_trait = tenacious_negotiator
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 		}
 	}	
 	focus = {
@@ -3045,7 +3012,7 @@
 	focus = {
 		id = FRA_naval_rearmament
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 50
+		x = 67
 		y = 0
 
 		offset = {

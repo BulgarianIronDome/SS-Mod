@@ -175,14 +175,14 @@ no_brazil&finland = {
 		desc = "Brazil and Finland are alive and playable"
 	}
 	option = {
-		name = fine
-		text = "RAllowed Finland only"
-		desc = "Finland is playable , brazil isn't"
+		name = fin
+		text = "RFinland annexed"
+		desc = "Finland is annexed , brazil is playable"
 	}
 	option = {
-		name = braze
-		text = "RAllowed Brazil only"
-		desc = "Brazil Is playable , finland isn't"
+		name = bra
+		text = "RBrazil annexed"
+		desc = "Brazil is annexed, finland is playable"
 	}
 	option = {
 		name = both
@@ -190,6 +190,21 @@ no_brazil&finland = {
 		desc = "Finland and Brazil went on a vacation in Brazil :)"
 	}
 }
+no_collabs = {
+	name = "Banned collabs"
+	group = "BHVM game rules"
+	icon = "GFX_decision_revolt"
+	default = {
+		name = on
+		text = "RON"
+		desc = "You don't get to decide to make a collab gov , I do.(Reccomended)"
+	}
+	option = {
+		name = off
+		text = "ROff"
+		desc = "Heres your stupid collab"
+	}
+}   
 sov_boost = {
 	name = "Soviets Civ Boost"
 	group = "BHVM game rules"
@@ -200,21 +215,22 @@ sov_boost = {
 		desc = "Soviets won't have civilian factories buff (Reccomended)"
 	}
 	option = {
-		name = 4
+		name = sov4
 		text = "ROn-4"
 		desc = "Soviets get 4 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 8
+		name = sov8
 		text = "ROn-8"
 		desc = "Soviets get 8 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 12
+		name = sov12
 		text = "ROn-12"
 		desc = "Soviets get 12 Civilian factories (Not Reccomended)"
 	}
-}         
+}     
+  
 ger_boost = {
 	name = "German Civ Boost"
 	group = "BHVM game rules"
@@ -225,17 +241,17 @@ ger_boost = {
 		desc = "Germany won't have civilian factories buff (Reccomended)"
 	}
 	option = {
-		name = 4
+		name = ger4
 		text = "ROn-4"
 		desc = "Germany get 4 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 8
+		name = ger8
 		text = "ROn-8"
 		desc = "Germany get 8 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 12
+		name = ger12
 		text = "ROn-12"
 		desc = "Germany get 12 Civilian factories (Not Reccomended)"
 	}
@@ -250,17 +266,17 @@ jap_boost = {
 		desc = "Japan won't have civilian factories buff (Reccomended)"
 	}
 	option = {
-		name = 4
+		name = jap4
 		text = "ROn-4"
 		desc = "Japan get 4 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 8
+		name = jap8
 		text = "ROn-8"
 		desc = "Japan get 8 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 12
+		name = jap12
 		text = "ROn-12"
 		desc = "Japan get 12 Civilian factories (Not Reccomended)"
 	}
@@ -275,17 +291,17 @@ eng_boost = {
 		desc = "Britain won't have civilian factories buff (Reccomended)"
 	}
 	option = {
-		name = 4
+		name = eng4
 		text = "ROn-4"
 		desc = "Britain get 4 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 8
+		name = eng8
 		text = "ROn-8"
 		desc = "Britain get 8 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 12
+		name = eng12
 		text = "ROn-12"
 		desc = "Britain get 12 Civilian factories (Not Reccomended)"
 	}
@@ -300,17 +316,17 @@ ita_boost = {
 		desc = "Italiano won't have civilian factories buff (Reccomended)"
 	}
 	option = {
-		name = 4
+		name = ita4
 		text = "ROn-4"
 		desc = "Italiano get 4 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 8
+		name = ita8
 		text = "ROn-8"
 		desc = "Italiano get 8 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 12
+		name = ita12
 		text = "ROn-12"
 		desc = "Italiano get 12 Civilian factories (Not Reccomended)"
 	}
@@ -325,17 +341,17 @@ fra_boost = {
 		desc = "Français won't have civilian factories buff (Reccomended)"
 	}
 	option = {
-		name = 4
+		name = fra4
 		text = "ROn-4"
 		desc = "Français get 4 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 8
+		name = fra8
 		text = "ROn-8"
 		desc = "Français get 8 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 12
+		name = fra12
 		text = "ROn-12"
 		desc = "Français get 12 Civilian factories (Not Reccomended)"
 	}
@@ -350,12 +366,12 @@ usa_boost = {
 		desc = "USA won't have civilian factories buff (Reccomended)"
 	}
 	option = {
-		name = 4
+		name = usa4
 		text = "ROn-4"
 		desc = "USA get 4 Civilian factories (Not Reccomended)"
 	}
 	option = {
-		name = 8
+		name = usa8
 		text = "ROn-8"
 		desc = "USA get 8 Civilian factories (Not Reccomended)"
 	}
@@ -516,12 +532,12 @@ auto_tech_rush = {
 	name = "Auto Tech Rush"
 	group = "BHVM game rules"
 	icon = "GFX_decision_generic_research"
-	default = {
+	option = {
 		name = on
 		text = "ROn"
 		desc = "There will be decisions for auto-tech rushing (Reccomended)"
 	}
-	option = {
+	default = {
 		name = off
 		text = "GOff"
 		desc = "There will NOT be decisions for auto-tech rushing (Not Reccomended , If noob)"
@@ -600,6 +616,21 @@ finish_support_comp = {
 		name = off
 		text = "ROff"
 		desc = "Finland DOES NOT have its companies avaible(Not Reccomended)"
+	}
+}
+no_market = {
+	name = "Market options"
+	group = "BHVM game rules"
+	icon = "GFX_decision_category_NOR_fascist_deploy_prep"
+	default = {
+		name = on
+		text = "GOn"
+		desc = "You won't be able to acces the market(Reccomended)"
+	}
+	option = {
+		name = off
+		text = "ROff"
+		desc = "You are bale to acces the market(Not Reccomended)"
 	}
 }
 pregrinds_4_factions = {

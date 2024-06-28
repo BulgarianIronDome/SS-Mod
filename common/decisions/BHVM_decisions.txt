@@ -348,6 +348,9 @@ SOV_spain = {
 		icon = GFX_decision_SOV_secure_the_administration
 		fire_only_once = yes
 		cost = 0
+        allowed = {
+		    original_tag = SOV
+	    }
 		available = {
 			has_global_flag = spanish_civil_war
 			not = {
@@ -360,4 +363,62 @@ SOV_spain = {
 			}
 		}
 	}
+    GER_assist_republican_spain = {
+		icon = GFX_decision_SOV_secure_the_administration
+		fire_only_once = yes
+		cost = 0
+        allowed = {
+		    original_tag = GER
+	    }
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
+			}
+		}
+		complete_effect = {
+			GER = {
+				army_experience = 300
+			}
+		}
+	}
+    ITA_assist_republican_spain = {
+		icon = GFX_decision_SOV_secure_the_administration
+		fire_only_once = yes
+		cost = 0
+        allowed = {
+		    original_tag = ITA
+	    }
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
+			}
+		}
+		complete_effect = {
+			ITA = {
+				army_experience = 300
+			}
+		}
+	}
+    JAP_assist_republican_spain = {
+		icon = GFX_decision_SOV_secure_the_administration
+		fire_only_once = yes
+		cost = 0
+        allowed = {
+		    original_tag = JAP
+	    }
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
+			}
+		}
+		complete_effect = {
+			JAP = {
+				army_experience = 300
+			}
+		}
+	}
 }
+

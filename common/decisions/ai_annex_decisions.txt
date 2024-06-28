@@ -870,9 +870,8 @@ operations = {
                     every_state = {
                     limit = {
                         is_core_of = MON
-                        is_controlled_by = SOV
                     }
-                    set_compliance = 100
+                    add_core_of = SOV
                 }
             }
         }

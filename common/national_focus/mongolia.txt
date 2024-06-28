@@ -1450,6 +1450,9 @@ focus_tree = {
 					has_government = communism
 				}
 			}
+			SOV = {
+				has_completed_focus = SOV_merge_tank_and_materiel_plants
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }

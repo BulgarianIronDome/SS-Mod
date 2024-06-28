@@ -8,5 +8,7 @@ tags={
 	"National Focuses"
 	"Military"
 }
+picture="thumbnail.png"
 name="Bulgarian Historical Vanila Multiplayer"
 supported_version="1.14.*"
+remote_file_id="3277106573"

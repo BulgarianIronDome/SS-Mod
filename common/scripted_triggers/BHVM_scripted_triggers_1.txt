@@ -22,6 +22,7 @@ is_playable_country = {
 		original_tag = SPR
 		original_tag = FIN
 		original_tag = MEX
+		original_tag = MON
 	}
 }
 is_limited_country = {
@@ -72,6 +73,7 @@ allies = {
 		tag = IRE
 		tag = SOV
 		tag = NOR
+		tag = MON
 	}
 }
 is_axis_country = {
@@ -112,7 +114,7 @@ is_allied_country = {
 		original_tag = NOR
 		original_tag = MEX
 		original_tag = PHI
-
+		original_tag = MON
 
 		#just to be safe
 		original_tag = SWE
@@ -130,10 +132,7 @@ is_allied_country = {
 		original_tag = ALB
 		original_tag = DEN
 		original_tag = CHI
-		original_tag = IRQ
-		original_tag = PER
 		original_tag = ETH
-		original_tag = URG
 	}
 }
 is_vichy_france = {

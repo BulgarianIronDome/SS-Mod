@@ -92,6 +92,11 @@ tradebacks = {
 		desc = "Everyone has a tradeback idea that givens -100% missing resource penalty until September 1939. Germany must declare war then (Not usually Reccomended)"
 	}
 	option = {
+		name = no_export
+		text = "RNo Exports"
+		desc = "Everyone has a tradeback idea that givens -100% missing resource penalty and no exports until September 1939. Germany must declare war then (Not usually Reccomended)"
+	}
+	option = {
 		name = not_allies
 		text = "RNot Allies"
 		desc = "Everyone has no tradeback idea except for Allies. Germany has to attack Sept 1939 (Not usually Reccomended)"
@@ -671,6 +676,21 @@ rb_vps_system = {
 		name = off
 		text = "ROff"
 		desc = "There is NO VPS(Not Reccomended)"
+	}
+}
+no_asia_gamemode = {
+	name = "No Asia gamemode!"
+	group = "BHVM game rules"
+	icon = "GFX_decision_category_jap_southern_expansion"
+	option = {
+		name = on
+		text = "ROn"
+		desc = "No asia, TURN OFF VPS!!(NOT Reccomended)"
+	}
+	default = {
+		name = off
+		text = "GOff"
+		desc = "With Asia(Reccomended)"
 	}
 }
 china_war_difficulty = {

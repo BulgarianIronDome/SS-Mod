@@ -341,6 +341,79 @@ on_actions = {
 			if = {
 				limit = {
 					has_game_rule = {
+						rule = tradebacks
+						option = on
+					}
+				}
+				every_country = {
+					limit = {
+						is_playable_country = yes
+					}
+					add_ideas = tradeback_is_cancer
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = tradebacks
+						option = no_export
+					}
+				}
+				every_country = {
+					limit = {
+						is_playable_country = yes
+					}
+					add_ideas = tradeback_is_cancer_no_export
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = tradebacks
+						option = not_allies
+					}
+				}
+				every_country = {
+					limit = {
+						AND = {
+							is_playable_country = yes
+							NOT = {
+								tag = USA
+								tag = ENG
+								tag = CAN
+								tag = BRA
+								tag = MEX
+								tag = IRE
+								tag = SAF
+								tag = AST
+								tag = NZL
+								tag = RAJ
+								tag = NOR
+								tag = FRA
+							}
+						}
+					}
+					add_ideas = tradeback_is_cancer
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = sov_no_tradebacks
+						option = on
+					}
+				}
+
+				SOV = {
+					add_ideas = sov_no_tradebacks
+				}
+				MON = {
+					add_ideas = sov_no_tradebacks
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
 						rule = no_market
 						option = on
 					}
@@ -402,6 +475,246 @@ on_actions = {
                     every_state = {
                         limit = {
                             is_core_of = BRA
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+            }
+			if = {
+                limit = {
+                    has_game_rule = {
+                        rule = no_asia_gamemode
+                        option = on
+                    }
+                }
+                country_exists = BRA
+				country_exists = USA
+				country_exists = MEX
+				country_exists = CAN
+				country_exists = AST
+				country_exists = NZL
+				country_exists = RAJ
+				country_exists = SIA
+				country_exists = MAN
+				country_exists = JAP
+				country_exists = CHI
+				ENG = {
+					add_state_core = 118
+					add_ideas = {
+						boost_research
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 12000
+					}
+					add_research_slot = 1
+					126 = {
+						add_building_construction = {
+							type = industrial_complex
+							level = 20
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = arms_factory
+							level = 20
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = dockyard
+							level = 15
+							instant_build = yes
+						}
+						
+						add_resource = {
+							type = steel
+							amount = 700
+						}
+						add_resource = {
+							type = chromuim 
+							amount = 300
+						}
+						add_resource = {
+							type = oil 
+							amount = 900
+						}
+						add_resource = {
+							type = tungsten 
+							amount = 450
+						}
+						add_resource = {
+							type = aluminium 
+							amount = 650
+						}
+						add_resource = {
+							type = rubber 
+							amount = 100
+						}
+						add_extra_state_shared_building_slots = 60
+					}
+				}
+				FRA = {
+					add_state_core = 635
+					add_state_core = 543
+					add_state_core = 461
+					add_state_core = 462
+					add_ideas = {
+						boost_research
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 7000
+					}
+					635 = {
+						add_building_construction = {
+							type = industrial_complex
+							level = 5
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = arms_factory
+							level = 5
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = dockyard
+							level = 5
+							instant_build = yes
+						}
+						
+						add_resource = {
+							type = steel
+							amount = 120
+						}
+						add_resource = {
+							type = chromuim 
+							amount = 100
+						}
+						add_resource = {
+							type = oil 
+							amount = 200
+						}
+						add_resource = {
+							type = tungsten 
+							amount = 125
+						}
+						add_resource = {
+							type = aluminium 
+							amount = 70
+						}
+						add_resource = {
+							type = rubber 
+							amount = 20
+						}
+						add_extra_state_shared_building_slots = 20
+					}
+				}
+				
+				BLM = { 
+                    annex_country = { target = BRA transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = BRA
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = USA transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = USA
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = CAN transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = CAN
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = JAP transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = JAP
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = SIA transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = SIA
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = MAN transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = MAN
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = MEX transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = MEX
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = RAJ transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = RAJ
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = NZL transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = NZL
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = AST transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = AST
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+				BLM = { 
+                    annex_country = { target = CHI transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = CHI
                             is_controlled_by = BLM
                         }
                         set_compliance = 100

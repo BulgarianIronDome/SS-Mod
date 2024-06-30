@@ -2763,9 +2763,9 @@ form_mutapa_category = {
 			controls_state = 275
 			controls_state = 542
 			controls_state = 545
-			controls_state = 544
-			controls_state = 896
-			controls_state = 897
+			#controls_state = 544
+			#controls_state = 896
+			#controls_state = 897
 		}
 
 		visible = {
@@ -2786,12 +2786,13 @@ form_mutapa_category = {
 			275 = { add_core_of = ROOT }
 			542 = { add_core_of = ROOT }
 			545 = { add_core_of = ROOT }
-			544 = { add_core_of = ROOT }
-			896 = { add_core_of = ROOT }
-			897 = { add_core_of = ROOT }
+			#544 = { add_core_of = ROOT }
+			#896 = { add_core_of = ROOT }
+			#897 = { add_core_of = ROOT }
 			893 = { add_core_of = ROOT }
 			894 = { add_core_of = ROOT }
 			895 = { add_core_of = ROOT }
+			add_stability = 0.10
 			hidden_effect = {
 				news_event = { id = wtt_news.63 hours = 6 }
 				set_global_flag = form_mutapa_flag

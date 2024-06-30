@@ -323,68 +323,68 @@ operations = {
 			}
 		}
 	}
-    FRA_annex_SAF = {
-        # icon used to be here rip icon 04/29/2024
-        targets = {
-            SAF
-        }
-        fire_only_once = yes
-
-        available = {
-            original_tag = FRA
-            SAF = { is_ai = yes }
-            date > 1939.02.01
-        }
-        visible = {
-            original_tag = FRA
-            SAF = { is_ai = yes }
-            is_ai = NO
-            country_exists = SAF
-        }
-        complete_effect = {
-            FRA = { 
-                annex_country = { target = SAF transfer_troops = yes }
-                    every_state = {
-                    limit = {
-                        is_core_of = SAF
-                        is_controlled_by = FRA
-                    }
-                    set_compliance = 100
-                }
-            }
-        }
-    }
-    FRA_annex_CAN = {
-        # icon used to be here rip icon 04/29/2024
-        targets = {
-            CAN
-        }
-        fire_only_once = yes
-
-        available = {
-            original_tag = FRA
-            CAN = { is_ai = yes }
-            date > 1939.02.01
-        }
-        visible = {
-            original_tag = FRA
-            CAN = { is_ai = yes }
-            is_ai = NO
-            country_exists = CAN
-        }
-        complete_effect = {
-            FRA = { 
-                annex_country = { target = CAN transfer_troops = yes }
-                    every_state = {
-                    limit = {
-                        is_core_of = CAN
-                        is_controlled_by = FRA
-                    }
-                    set_compliance = 100
-                }
-            }
-        }
-    }
+    #FRA_annex_SAF = {
+    #    # icon used to be here rip icon 04/29/2024
+    #    targets = {
+    #        SAF
+    #    }
+    #    fire_only_once = yes
+    #
+    #    available = {
+    #        original_tag = FRA
+    #        SAF = { is_ai = yes }
+    #        date > 1939.02.01
+    #    }
+    #    visible = {
+    #        original_tag = FRA
+    #        SAF = { is_ai = yes }
+    #        is_ai = NO
+    #        country_exists = SAF
+    #    }
+    #    complete_effect = {
+    #        FRA = { 
+    #            annex_country = { target = SAF transfer_troops = yes }
+    #                every_state = {
+    #                limit = {
+    #                    is_core_of = SAF
+    #                    is_controlled_by = FRA
+    #                }
+    #                set_compliance = 100
+    #            }
+    #        }
+    #    }
+    #}
+    #FRA_annex_CAN = {
+    #    # icon used to be here rip icon 04/29/2024
+    #    targets = {
+    #        CAN
+    #    }
+    #    fire_only_once = yes
+    #
+    #    available = {
+    #        original_tag = FRA
+    #        CAN = { is_ai = yes }
+    #       date > 1939.02.01
+    #    }
+    #    visible = {
+    #        original_tag = FRA
+    #        CAN = { is_ai = yes }
+    #        is_ai = NO
+    #        country_exists = CAN
+    #    }
+    #    complete_effect = {
+    #        FRA = { 
+    #            annex_country = { target = CAN transfer_troops = yes }
+    #                every_state = {
+    #                limit = {
+    #                    is_core_of = CAN
+    #                    is_controlled_by = FRA
+    #                }
+    #                set_compliance = 100
+    #            }
+    #        }
+    #    }
+    #}
     FRA_annex_IRE = {
         # icon used to be here rip icon 04/29/2024
         targets = {
@@ -410,37 +410,6 @@ operations = {
                     limit = {
                         is_core_of = IRE
                         is_controlled_by = FRA
-                    }
-                    set_compliance = 100
-                }
-            }
-        }
-    }
-    ENG_annex_IRE = {
-        # icon used to be here rip icon 04/29/2024
-        targets = {
-            IRE
-        }
-        fire_only_once = yes
-
-        available = {
-            original_tag = ENG
-            IRE = { is_ai = yes }
-            date > 1940.01.01
-        }
-        visible = {
-            original_tag = ENG
-            IRE = { is_ai = yes }
-            is_ai = NO
-            country_exists = IRE
-        }
-        complete_effect = {
-            ENG = { 
-                annex_country = { target = IRE transfer_troops = yes }
-                    every_state = {
-                    limit = {
-                        is_core_of = IRE
-                        is_controlled_by = ENG
                     }
                     set_compliance = 100
                 }
@@ -478,6 +447,68 @@ operations = {
             }
         }
     }
+    ENG_annex_CAN_into_FRA = {
+        # icon used to be here rip icon 04/29/2024
+        targets = {
+            CAN
+        }
+        fire_only_once = yes
+
+        available = {
+            original_tag = ENG
+            CAN = { is_ai = yes }
+            date > 1938.01.01
+        }
+        visible = {
+            original_tag = ENG
+            CAN = { is_ai = yes }
+            is_ai = NO
+            country_exists = CAN
+        }
+        complete_effect = {
+            FRA = { 
+                annex_country = { target = CAN transfer_troops = yes }
+                    every_state = {
+                    limit = {
+                        is_core_of = CAN
+                        is_controlled_by = FRA
+                    }
+                    set_compliance = 100
+                }
+            }
+        }
+    }
+    ENG_annex_CAN_into_SAF = {
+        # icon used to be here rip icon 04/29/2024
+        targets = {
+            CAN
+        }
+        fire_only_once = yes
+
+        available = {
+            original_tag = ENG
+            CAN = { is_ai = yes }
+            date > 1938.01.01
+        }
+        visible = {
+            original_tag = ENG
+            CAN = { is_ai = yes }
+            is_ai = NO
+            country_exists = CAN
+        }
+        complete_effect = {
+            SAF = { 
+                annex_country = { target = CAN transfer_troops = yes }
+                    every_state = {
+                    limit = {
+                        is_core_of = CAN
+                        is_controlled_by = SAF
+                    }
+                    set_compliance = 100
+                }
+            }
+        }
+    }
     ENG_annex_SAF = {
         # icon used to be here rip icon 04/29/2024
         targets = {
@@ -503,6 +534,68 @@ operations = {
                     limit = {
                         is_core_of = SAF
                         is_controlled_by = ENG
+                    }
+                    set_compliance = 100
+                }
+            }
+        }
+    }
+    ENG_annex_SAF_into_FRA = {
+        # icon used to be here rip icon 04/29/2024
+        targets = {
+            SAF
+        }
+        fire_only_once = yes
+
+        available = {
+            original_tag = ENG
+            CAN = { is_ai = yes }
+            date > 1938.01.01
+        }
+        visible = {
+            original_tag = ENG
+            SAF = { is_ai = yes }
+            is_ai = NO
+            country_exists = SAF
+        }
+        complete_effect = {
+            FRA = { 
+                annex_country = { target = SAF transfer_troops = yes }
+                    every_state = {
+                    limit = {
+                        is_core_of = SAF
+                        is_controlled_by = FRA
+                    }
+                    set_compliance = 100
+                }
+            }
+        }
+    }
+    ENG_annex_SAF_into_CAN = {
+        # icon used to be here rip icon 04/29/2024
+        targets = {
+            SAF
+        }
+        fire_only_once = yes
+
+        available = {
+            original_tag = ENG
+            CAN = { is_ai = yes }
+            date > 1938.01.01
+        }
+        visible = {
+            original_tag = ENG
+            SAF = { is_ai = yes }
+            is_ai = NO
+            country_exists = SAF
+        }
+        complete_effect = {
+            CAN = { 
+                annex_country = { target = SAF transfer_troops = yes }
+                    every_state = {
+                    limit = {
+                        is_core_of = SAF
+                        is_controlled_by = CAN
                     }
                     set_compliance = 100
                 }
@@ -880,7 +973,7 @@ operations = {
 political_actions = {
 
 	move_capital_to_cascablanca = {
-		fire_only_once = yes
+		fire_only_once = no
 		allowed = {
 			tag = FRA
 		}
@@ -898,7 +991,7 @@ political_actions = {
 	}
 
 	move_capital_to_gabon = {
-		fire_only_once = yes
+		fire_only_once = no
 		allowed = {
 			tag = FRA
 		}
@@ -911,6 +1004,38 @@ political_actions = {
 		complete_effect = {
 			set_capital = {
 				state = 539
+			}
+		}
+	}
+    move_capital_to_capetown = {
+		fire_only_once = no
+		allowed = {
+			tag = CAN
+		}
+		visible = {
+            NOT = { capital = 276 }
+			tag = CAN
+			controls_state = 681
+		}
+		complete_effect = {
+			set_capital = {
+				state = 681
+			}
+		}
+	}
+    move_capital_to_ottawa = {
+		fire_only_once = no
+		allowed = {
+			tag = CAN
+		}
+		visible = {
+            NOT = { capital = 681 }
+			tag = CAN
+			controls_state = 276
+		}
+		complete_effect = {
+			set_capital = {
+				state = 276
 			}
 		}
 	}
@@ -1007,6 +1132,7 @@ political_actions = {
 	}
     USA_share_frame = {
 		icon = generic_air
+        fire_only_once = yes
 		visible = {
 			original_tag = USA
 		}

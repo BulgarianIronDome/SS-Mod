@@ -179,7 +179,35 @@ ideas = {
 				ai_desired_divisions_factor = -1000
 			}
 		}
-
+		YUG_air_payment = {
+			picture = generic_fighter_production_diverted
+			allowed = {
+				original_tag = YUG
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		sov_no_tradebacks = {
+			cancel = {
+				SOV = {
+					has_war = yes
+				}
+			}
+			allowed = {
+				always = no				# Added via game rule
+			}
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				production_lack_of_resource_penalty_factor = -1
+			}
+		}
 		blm_ai = {
 			cancel = {
 				is_ai = no

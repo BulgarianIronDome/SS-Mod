@@ -158,3 +158,6 @@ French focus "Defensive stratagems" is now 35 days only
 Added the special forces branch for japan back #vanila
 Unhid the french focus effects for focus "Infantry Tanks"
 Oh also AI annex decisions , american shared fighter , host tool , and a lot A LOT OF GAME RULES LIKE STUPID AMOUNT OF THEM
+
+
+Fixed some ideas , added few ideas, fixed some on actions , added some ai annex stuff , made saf form silly nation without portugal states and added localization for ideas

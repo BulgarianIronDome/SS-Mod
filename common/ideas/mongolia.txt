@@ -33,7 +33,7 @@ ideas = {
             
             modifier = {
                 consumer_goods_factor = 0.45
-                global_building_slots_factor = -0.15
+                global_building_slots_factor = -0.25
                 production_speed_buildings_factor = -0.3
                 industrial_capacity_factory = -0.4
                 industrial_capacity_dockyard = -0.5
@@ -59,12 +59,12 @@ ideas = {
             
             modifier = {
                 consumer_goods_factor = 0.25
-                global_building_slots_factor = -0.1
+                global_building_slots_factor = -0.2
                 production_speed_buildings_factor = -0.15
                 industrial_capacity_factory = -0.2
                 industrial_capacity_dockyard = -0.35
                 license_tech_difference_speed = -0.15
-                license_production_speed = -0.1
+                license_production_speed = -0.125
                 stability_factor = -0.05
                 economy_cost_factor = 0.1
                 trade_laws_cost_factor = 0.1
@@ -84,16 +84,16 @@ ideas = {
 			}
             
             modifier = {
-                consumer_goods_factor = 0.1
-                global_building_slots_factor = -0.05
+                consumer_goods_factor = 0.15
+                global_building_slots_factor = -0.15
                 production_speed_buildings_factor = -0.05
                 industrial_capacity_factory = -0.05
                 industrial_capacity_dockyard = -0.05
                 license_tech_difference_speed = -0.05
                 license_production_speed = -0.1
-                stability_factor = 0.05
-                economy_cost_factor = -0.1
-                trade_laws_cost_factor = -0.1
+                stability_factor = 0.03
+                economy_cost_factor = -0.125
+                trade_laws_cost_factor = -0.125
                 mobilization_laws_cost_factor = 0.1
             }
         }
@@ -110,19 +110,19 @@ ideas = {
 			}
             
             modifier = {
-                consumer_goods_factor = -0.15
+                consumer_goods_factor = -0.25
                 global_building_slots_factor = 0.25
-                production_speed_buildings_factor = 0.1
-                industrial_capacity_factory = 0.15
-                industrial_capacity_dockyard = 0.25
-                license_tech_difference_speed = 0.15
-                license_production_speed = 0.15
-                stability_factor = 0.125
+                production_speed_buildings_factor = 0.15
+                industrial_capacity_factory = 0.2
+                industrial_capacity_dockyard = 0.2
+                license_tech_difference_speed = 0.1
+                license_production_speed = 0.1
+                stability_factor = 0.15
                 economy_cost_factor = -0.25
                 trade_laws_cost_factor = -0.25
-                mobilization_laws_cost_factor = 0.35
-                production_lack_of_resource_penalty_factor = -0.15
-                local_resources_factor = 0.1
+                mobilization_laws_cost_factor = 0.40
+                production_lack_of_resource_penalty_factor = -0.35
+                local_resources_factor = 0.125
             }
         }
         MON_religious_taxation = {
@@ -140,7 +140,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.1
 			}		
 		
 		}
@@ -155,7 +155,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.1
+				industrial_capacity_factory = 0.15
 			}
 		}
 #####################ECONOMY#####################
@@ -166,10 +166,10 @@ ideas = {
 
 			}
 			modifier = {
-				political_power_gain = -0.25
-				consumer_goods_factor = 0.08
-				weekly_manpower = 100
-                monthly_population = 0.2
+				political_power_gain = -0.15
+				consumer_goods_factor = 0.10
+				weekly_manpower = 125
+                monthly_population = 0.3
 			}
 		}
         MON_soviet_science = {
@@ -179,8 +179,8 @@ ideas = {
 
 			}
 			modifier = {
-				research_speed_factor = 0.1
-				consumer_goods_factor = 0.02
+				research_speed_factor = 0.15
+				consumer_goods_factor = 0.05
 			}
 		}
         MON_illitarate_majority = {
@@ -190,9 +190,9 @@ ideas = {
 
 			}
 			modifier = {
-				research_speed_factor = -0.1
+				research_speed_factor = -0.125
 				consumer_goods_factor = -0.05
-                monthly_population = 0.05
+                monthly_population = 0.065
 			}
 		}
 
@@ -210,7 +210,7 @@ ideas = {
 			}
 
 			modifier = {
-				experience_gain_army = 0.15
+				experience_gain_army = 0.165
 			}
 		}
         MON_com_propaganda = {
@@ -227,8 +227,8 @@ ideas = {
 			}
 
 			modifier = {
-				communism_drift = 0.05
-                drift_defence_factor = 0.15
+				communism_drift = 0.1
+                drift_defence_factor = 0.35
 			}
 		}
         MON_a61 = {
@@ -245,8 +245,8 @@ ideas = {
 			}
 
 			modifier = {
-				fascism_drift = -0.035
-                fascism_acceptance = -25
+				fascism_drift = -0.045
+                fascism_acceptance = -50
 			}
 		}
         MON_plan_ulaan_ayuul = {
@@ -263,8 +263,8 @@ ideas = {
 			}
 
 			modifier = {
-                party_popularity_stability_factor = 0.15
-                stability_weekly = 0.002
+                party_popularity_stability_factor = 0.25
+                stability_weekly = 0.001
 			}
 		}
         MON_superior_modern_horse_power = {
@@ -282,23 +282,24 @@ ideas = {
 
 			modifier = {
                 army_org_factor = 0.05
-                motorized_attack_factor = 0.15
-                motorized_defence_factor = 0.15
-                mechanized_defence_factor = 0.1
-                mechanized_attack_factor = 0.1
+                motorized_attack_factor = 0.175
+                motorized_defence_factor = 0.175
+                mechanized_defence_factor = 0.05
+                mechanized_attack_factor = 0.05
                 experience_gain_motorized_training_factor = 0.2
                 experience_gain_motorized_combat_factor = 0.2
                 experience_gain_mechanized_training_factor = 0.2
                 experience_gain_mechanized_combat_factor = 0.2
-                experience_gain_motorized_rocket_brigade_training_factor = 0.1
-                experience_gain_motorized_rocket_brigade_combat_factor = 0.1
+                experience_gain_motorized_rocket_brigade_training_factor = 0.2
+                experience_gain_motorized_rocket_brigade_combat_factor = 0.2
 			}
             equipment_bonus = {
                motorized_rocket_equipment = {
                     soft_attack = 0.1
-                    breakthrough = 0.1
-                    hard_attack = 0.1
-                    defense = 0.1
+                    breakthrough = 0.2
+                    hard_attack = 0.5
+                    defense = 0.3
+					build_cost_ic = 0.015
 					instant = yes
 				}
             }
@@ -317,15 +318,14 @@ ideas = {
 			}
 
 			modifier = {
-               org_loss_when_moving = -0.5
-               army_speed_factor = 0.1
+               org_loss_when_moving = -0.25
                cavalry_attack_factor = 0.25
                cavalry_defence_factor = 0.25
                experience_gain_cavalry_training_factor = 0.2
                experience_gain_cavalry_combat_factor = 0.2
-               experience_gain_recon_training_factor = 0.4
-               experience_gain_recon_combat_factor = 0.4
-               high_command_cost_factor = -0.05
+               experience_gain_recon_training_factor = 0.2
+               experience_gain_recon_combat_factor = 0.2
+               high_command_cost_factor = -0.1
 			}
 		}
         MON_new_generals = {
@@ -342,16 +342,15 @@ ideas = {
 			}
 
 			modifier = {
-			    custom_modifier_tooltip = bold_attack_spirit_tt
                 max_command_power = 15
-                command_power_gain = 0.1
-                army_leader_start_logistics_level = 2
-                army_leader_start_planning_level = 2
+                command_power_gain = 0.3
+                army_leader_start_logistics_level = 1
+                army_leader_start_planning_level = 1
                 army_leader_start_level = 1
-				army_leader_cost_factor = -0.1 
-				unit_leader_as_advisor_cp_cost_factor = -0.2
+				army_leader_cost_factor = -0.2 
+				unit_leader_as_advisor_cp_cost_factor = -0.3
                 command_abilities_cost_factor = -0.10
-                high_command_cost_factor = -0.15
+                high_command_cost_factor = -0.25
 			}
 		}
         MON_organized_squads = {
@@ -368,17 +367,17 @@ ideas = {
 			}
 
 			modifier = {
-			    experience_gain_infantry_training_factor = 0.35
-                experience_gain_infantry_combat_factor = 0.35
-                army_infantry_attack_factor = 0.15
-                army_infantry_defence_factor = 0.15
-                winter_attrition_factor = -0.35
-                no_supply_grace = 24
-                army_org_factor = 0.1
+			    experience_gain_infantry_training_factor = 0.10
+                experience_gain_infantry_combat_factor = 0.10
+                army_infantry_attack_factor = 0.175
+                army_infantry_defence_factor = 0.175
+                winter_attrition_factor = -0.15
+                no_supply_grace = 48
+                army_org_factor = 0.05
                 resistance_growth_on_our_occupied_states = 0.3
-                resistance_target_on_our_occupied_states = 0.1
-                army_armor_attack_factor = -0.25
-                army_armor_defence_factor -0.25
+                resistance_target_on_our_occupied_states = 0.3
+                army_armor_attack_factor = -0.1
+                army_armor_defence_factor -0.1
 			}
 		}
 		MON_will_figthing = {
@@ -395,15 +394,15 @@ ideas = {
 			}
 
 			modifier = {
-			    supply_combat_penalties_on_core_factor = -0.2
-				army_core_attack_factor = 0.2
-				army_core_defence_factor = 0.2
-				army_defence_against_major_factor = 0.1
-				army_attack_against_major_factor = 0.1
-				acclimatization_cold_climate_gain_factor = 0.1
-				dig_in_speed_factor = 0.3
-				experience_loss_factor = 0.05
-				max_dig_in_factor = 0.2
+			    supply_combat_penalties_on_core_factor = -0.25
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+				army_defence_against_major_factor = 0.05
+				army_attack_against_major_factor = 0.05
+				acclimatization_cold_climate_gain_factor = 0.3
+				dig_in_speed_factor = 0.1
+				experience_loss_factor = -0.05
+				max_dig_in_factor = 0.1
 				recon_factor_while_entrenched = 0.5
 			}
 		}
@@ -422,15 +421,15 @@ ideas = {
 
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
-				production_factory_start_efficiency_factor = 0.025
+				production_factory_start_efficiency_factor = 0.065
 				industrial_capacity_factory = 0.05
-				production_lack_of_resource_penalty_factor = -0.1
+				production_lack_of_resource_penalty_factor = -0.15
 			}
 			equipment_bonus = {
 				armor = {
 					instant = yes
-					build_cost_ic = -0.065
-					reliability = -0.05
+					build_cost_ic = -0.075
+					reliability = -0.105
 				}
 			}
 		}
@@ -447,21 +446,20 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				army_morale_factor = 0.3
-				army_armor_attack_factor = 0.05
-				army_armor_defence_factor = 0.05
+				army_morale_factor = 0.1
+				army_armor_attack_factor = 0.075
+				army_armor_defence_factor = 0.075
 				experience_gain_medium_armor_training_factor = 0.1
 				experience_gain_medium_armor_combat_factor = 0.1
 			}
 			equipment_bonus = {
 				armor = {
 					instant = yes
-					build_cost_ic = 0.05
-					reliability = 0.1
-					soft_attack = 0.05
-					hard_attack = 0.05
-
-					armor = 0.05
+					build_cost_ic = 0.1
+					reliability = 0.05
+					soft_attack = 0.065
+					hard_attack = 0.065
+					armor = 0.1
 				}
 			}
 		}
@@ -478,23 +476,22 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				army_strength_factor = 0.1
-				army_org_factor = 0.1
-				experience_gain_armored_car_training_factor = 0.4
-				experience_gain_armored_car_combat_factor = 0.4
-				experience_gain_armored_car_recon_training_factor = 0.4
-				experience_gain_armored_car_recon_combat_factor = 0.4
-				army_speed_factor = 0.15
-				planning_speed = 0.25
-				max_planning = -0.1
-				equipment_conversion_speed = 0.4
-				equipment_capture_factor = 0.2
+				army_strength_factor = 0.05
+				army_org_factor = 0.05
+				experience_gain_armored_car_training_factor = 0.2
+				experience_gain_armored_car_combat_factor = 0.2
+				experience_gain_armored_car_recon_training_factor = 0.2
+				experience_gain_armored_car_recon_combat_factor = 0.2
+				army_speed_factor = 0.05
+				planning_speed = 0.1
+				equipment_conversion_speed = 0.2
+				equipment_capture_factor = 0.05
 			}
 			equipment_bonus = {
 				armored_car_equipment = {
 					instant = yes
 					maximum_speed = 0.2
-					build_cost_ic = 0.05
+					build_cost_ic = 0.1
 					reliability = 0.15
 					soft_attack = 0.2
 					hard_attack = 0.2
@@ -511,7 +508,7 @@ ideas = {
 			picture = can_wartime_prices_and_trade_board
 				
 			modifier = {
-				industrial_factory_donations = 3
+				industrial_factory_donations = 4
 			}
 		}
 		MON_air_engenuity = {

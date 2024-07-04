@@ -1922,7 +1922,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_nuhuh_air
+			custom_effect_tooltip = SOV_nuhuh_air_tooltip
 			hidden_effect = {
 				set_technology = {
 					iw_small_airframe = 1

@@ -11,7 +11,12 @@ technologies = {
 				Juggle_1 = 0
 			}
 		}
-
+		allow = {
+			has_game_rule = {
+				rule = juggle_slot
+				option = ALLOWED
+			}
+		}
 		ai_will_do = {
 			factor = -100
 		}

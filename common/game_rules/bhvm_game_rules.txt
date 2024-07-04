@@ -663,6 +663,36 @@ pregrinds_4_factions = {
 		desc = "No one has pregrinds!(XD)"
 	}
 }
+juggle_slot = {
+	name = "Juggling esport"
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_research"
+	default = {
+		name = ALLOWED
+		text = "GALLOWED"
+		desc = "There is a special juggle slot(Reccomended)"
+	}
+	option = {
+		name = DISALLOWED
+		text = "RDISALLOWED"
+		desc = "There is NO special juggle slot(Not Reccomended)"
+	}
+}
+atom_bombs = {
+	name = "Nukes"
+	group = "BHVM game rules"
+	icon = "GFX_decision_category_generic"
+	default = {
+		name = ALLOWED
+		text = "GALLOWED"
+		desc = "There is researchable nukes(Reccomended)"
+	}
+	option = {
+		name = DISALLOWED
+		text = "RDISALLOWED"
+		desc = "There is NO researchable nukes(Not Reccomended)"
+	}
+}
 rb_vps_system = {
 	name = "Victory Points"
 	group = "BHVM game rules"

@@ -12,7 +12,7 @@ NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0.5				    -- Volunteer shit t
 NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 1				    -- Volunteer shit to prevent 2w spam
 NDefines.NDiplomacy.TENSION_FACTION_JOIN = 0.1
 NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 1				        -- was 5 , but minors having to micro more is good
-NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.1 					--was 2 in vanila 0.1 to adjust for MIOS pp
+NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.0 					--fake shit 
 
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 9999                            -- WAS 500 || XP Cap
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 9999			                    -- WAS 500 || XP Cap
@@ -32,7 +32,7 @@ NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 25 	-- vilkata defines
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.0001
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3, 0.75, 0.9 }		-- Experience needed to progress to the next level
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0   -- vilkata defines
-NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.2 -- vilkata defines, shore cap
+-- NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.2 -- vilkata defines, shore cap
 NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0.05 -- was 0.5
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.25
 NDefines.NMilitary.ARMOR_VS_AVERAGE = 0.4			                -- how to weight in highest armor & pen vs the division average
@@ -56,9 +56,9 @@ NDefines.NMilitary.COMBAT_MINIMUM_TIME = 4 --was 4
 		10.0, -- NAVAL_MINES_SWEEPING
 		0.0, -- MISSION_RECON
 	}
-NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 10.0					-- CP cost to maintain more ground crews
-NDefines.NAir.AIR_MORE_GROUND_CREWS_BOOST = 0.10					-- Efficienct boost for more ground crews
-NDefines.NAir.COMBAT_MAX_WINGS_AT_ONCE_PORT_STRIKE = 10         -- we can really pounce a naval strike and escalate (10k Vanilla)
+--NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 10.0					-- CP cost to maintain more ground crews
+--NDefines.NAir.AIR_MORE_GROUND_CREWS_BOOST = 0.10					-- Efficienct boost for more ground crews
+--NDefines.NAir.COMBAT_MAX_WINGS_AT_ONCE_PORT_STRIKE = 10         -- we can really pounce a naval strike and escalate (10k Vanilla)
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_NO_TRUCK_DISRUPTION_FACTOR = 0.001 -- If a unit isn't motorized, still disrupt its supply by damage * this
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_DAMAGE_FACTOR = 0.008
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_INFRA_DAMAGE_SPILL_FACTOR = 0.001 -- Portion of truck damage to additionally deal to infrastructure
@@ -70,7 +70,7 @@ NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_DISRUPTION_MIN_DAMAGE_FACTOR = 0.025 -- 
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_MAX_DISRUPTION_DAMAGE_TO_CONSIDER = 5.0 -- see above
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_DIRECT_DISRUPTION_DAMAGE_FACTOR = 0.025 -- Disruption damage to supply throughput done by bombing damage, not dependant on killing trains which also causes diruption.
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_MAX_FACTOR = 0.4 -- was 0.3 max trucks we can destroy in one instance of a logistics strike 
-NDefines.NAir.PORT_STRIKES_DELAY_MULTIPLIER = 8                 -- multplies HOURS_DELAY_AFTER_EACH_COMBAT (4 in vanilla, 2 in the mod) if port strikes
+--NDefines.NAir.PORT_STRIKES_DELAY_MULTIPLIER = 8                 -- multplies HOURS_DELAY_AFTER_EACH_COMBAT (4 in vanilla, 2 in the mod) if port strikes
 -- Anti-Autism
 NDefines.NOperatives.BOOST_IDEOLOGY_NATIONAL_COVERAGE_FACTOR = 0
 NDefines.NOperatives.BOOST_IDEOLOGY_MAX_DRIFT_BY_OPERATIVE = 0

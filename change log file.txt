@@ -161,3 +161,6 @@ Oh also AI annex decisions , american shared fighter , host tool , and a lot A L
 
 
 Fixed some ideas , added few ideas, fixed some on actions , added some ai annex stuff , made saf form silly nation without portugal states and added localization for ideas
+
+Added a juggle button in the industry tab , once you research it , it reserts the actual tech so you can do it unlimited amount of times 
+Nerfed Mongolia focus tree , mostly military branch stuff remove a lot of bonuses  for tech and nerfed few ideas , chnage the Nano atom focus to give 2x150% instead of 1x300% , inviting soviet companies now requires for soviets to have made the merge tank plants also nerfed some companies to be at level 4 not 6 , society reforms focus needs to be done after a certain date

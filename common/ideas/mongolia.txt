@@ -141,7 +141,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.15
 			}		
 		
 		}
@@ -456,11 +456,11 @@ ideas = {
 			equipment_bonus = {
 				armor = {
 					instant = yes
-					build_cost_ic = 0.1
-					reliability = 0.05
-					soft_attack = 0.065
-					hard_attack = 0.065
-					armor = 0.1
+					build_cost_ic = 0.125
+					reliability = 0.1
+					soft_attack = 0.035
+					hard_attack = 0.035
+					armor_value  = 0.15
 				}
 			}
 		}
@@ -477,22 +477,22 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				army_strength_factor = 0.05
-				army_org_factor = 0.05
+				army_strength_factor = 0.125
+				army_org_factor = 0.075
 				experience_gain_armored_car_training_factor = 0.2
 				experience_gain_armored_car_combat_factor = 0.2
 				experience_gain_armored_car_recon_training_factor = 0.2
 				experience_gain_armored_car_recon_combat_factor = 0.2
-				army_speed_factor = 0.05
+				army_speed_factor = 0.025
 				planning_speed = 0.1
 				equipment_conversion_speed = 0.2
-				equipment_capture_factor = 0.05
+				equipment_capture_factor = 0.02
 			}
 			equipment_bonus = {
 				armored_car_equipment = {
 					instant = yes
-					maximum_speed = 0.2
-					build_cost_ic = 0.1
+					maximum_speed = 0.1
+					build_cost_ic = 0.15
 					reliability = 0.15
 					soft_attack = 0.2
 					hard_attack = 0.2
@@ -510,6 +510,19 @@ ideas = {
 				
 			modifier = {
 				industrial_factory_donations = 4
+			}
+		}
+		MON_infra_rebuilding = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
+				
+			modifier = {
+				production_speed_infrastructure_factor = 0.5
+				production_cost_infrastructure_factor = -0.15
 			}
 		}
 		MON_air_engenuity = {

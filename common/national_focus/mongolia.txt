@@ -13,7 +13,7 @@ focus_tree = {
 	
 	default = no
 	
-	continuous_focus_position = { x = 1000 y = 2000 }	
+	continuous_focus_position = { x = 500 y = 1400 }	
 
 	focus = {
 		id = MON_indusrial
@@ -233,7 +233,7 @@ focus_tree = {
 		prerequisite = { focus = MON_economic_bloom }
 		prerequisite = { focus = MON_increase_wartime focus = MON_grande_economy }
 		available_if_capitulated = no
-		cost = 18.6
+		cost = 14.3
 		x = 0
 		y = 6
 		available = {
@@ -242,24 +242,25 @@ focus_tree = {
 		}
 		completion_reward = { 
 			# bloat!
-			add_stability = 0.2
+			add_timed_idea = { idea = MON_infra_rebuilding days = 265 }
+			add_stability = 0.25
 			330 = {
-				add_manpower = 95000
-				add_extra_state_shared_building_slots = 6
+				add_manpower = 165000
+				add_extra_state_shared_building_slots = 8
 				set_state_category = large_city
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
 			817 = {
-				add_manpower = 35000
+				add_manpower = 55000
 				add_extra_state_shared_building_slots = 4
 				set_state_category = city
 				add_building_construction = {
@@ -274,7 +275,7 @@ focus_tree = {
 				}
 			}
 			818 = {
-				add_manpower = 55000
+				add_manpower = 60000
 				add_extra_state_shared_building_slots = 4
 				set_state_category = large_town
 				add_building_construction = {
@@ -289,8 +290,8 @@ focus_tree = {
 				}
 			}
 			618 = {
-				add_manpower = 75000
-				add_extra_state_shared_building_slots = 7
+				add_manpower = 85000
+				add_extra_state_shared_building_slots = 5
 				set_state_category = large_city
 				add_building_construction = {
 					type = industrial_complex
@@ -304,7 +305,7 @@ focus_tree = {
 				}
 			}
 			819 = {
-				add_manpower = 35000
+				add_manpower = 50000
 				add_extra_state_shared_building_slots = 4
 				set_state_category = town
 				add_building_construction = {
@@ -727,7 +728,7 @@ focus_tree = {
             factor = 10
         }
 		available = {
-			num_of_factories > 50
+			num_of_factories > 60
 		}
         available_if_capitulated = yes
         completion_reward = {
@@ -742,7 +743,7 @@ focus_tree = {
         relative_position_id = MON_economic_bloom
         x = 0
         y = 3
-        cost = 20
+        cost = 12.2
         ai_will_do = {
             factor = 10
         }
@@ -750,8 +751,8 @@ focus_tree = {
         completion_reward = {
             add_tech_bonus = {
                 name = nuclear_bonus
-                bonus = 3
-                uses = 1
+                bonus = 1.5
+                uses = 2
                 category = nuclear
             }
         }
@@ -980,7 +981,7 @@ focus_tree = {
 		icon = GFX_focus_ARG_women_in_industry
 		x = 2
 		y = 2
-		cost = 5
+		cost = 10
 		prerequisite = { focus = MON_communist_propagnda }
 
 		available_if_capitulated = yes
@@ -1034,7 +1035,7 @@ focus_tree = {
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
 		x = -2
 		y = 2
-		cost = 5
+		cost = 10
 		prerequisite = { focus = MON_anti_fascist_campaing }
 
 		available_if_capitulated = yes
@@ -1060,22 +1061,22 @@ focus_tree = {
 			CHI = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
-					amount = 6000
+					amount = 2000
 					producer = MON
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 2500
+					amount = 1500
 					producer = SOV
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment_1
-					amount = 800
+					amount = 400
 					producer = SOV
 				}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
-					amount = 320
+					amount = 100
 					producer = SOV
 				}
 			}
@@ -1093,9 +1094,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		relative_position_id = MON_government_reforms
-		available = {
-			has_government = communism
-		}
 		ai_will_do = {
 			factor = 2
 		}
@@ -1103,7 +1101,10 @@ focus_tree = {
 		complete_tooltip = {
 			
 		}
-
+		available = {
+			has_government = communism
+			date > 1937.5.12
+		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = MON_economic_disaster_1
@@ -1489,12 +1490,12 @@ focus_tree = {
 				add_mio_research_bonus = 0.05
 			}
 			mio:SOV_mig_design_bureau_organization = {
-				add_mio_size = 3
+				add_mio_size = 4
 				add_mio_funds_gain_factor = 0.35
 				add_mio_research_bonus = 0.05
 			}
 			mio:SOV_ilyushin_design_bureau_organization = {
-				add_mio_size = 3
+				add_mio_size = 4
 				add_mio_funds_gain_factor = 0.35
 				add_mio_research_bonus = 0.05
 			}
@@ -1504,86 +1505,93 @@ focus_tree = {
 				add_mio_research_bonus = 0.05
 			}
 			mio:SOV_gaz_organization = {
-				add_mio_size = 6
+				add_mio_size = 4
 				add_mio_funds_gain_factor = 0.35
 				add_mio_research_bonus = 0.05
 			}
 		}
 	}
 
-	focus = {
-		id = MON_force_out
-		icon = GFX_focus_POL_riot_of_37
-		x = 0
-		y = 1
-		cost = 2.9
-		prerequisite = { focus = MON_invite_soviet_scientists }
-		relative_position_id = MON_invite_soviet_scientists
+focus = {
+    id = MON_force_out
+    icon = GFX_focus_POL_riot_of_37
+    x = 0
+    y = 1
+    cost = 3.7
+    prerequisite = { focus = MON_invite_soviet_scientists }
+    relative_position_id = MON_invite_soviet_scientists
 
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 2
-		}
+    available_if_capitulated = yes
+    
+    ai_will_do = {
+        factor = 2
+    }
 
-		complete_tooltip = {
-			
-		}
+    complete_tooltip = {
+        
+    }
 
-		completion_reward = {
-			add_stability = -0.15
-			330 = {
-				add_manpower = -55000
-				add_building_construction = {
-					type = industrial_complex
-					level = -2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = -2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = -1
-					instant_build = yes
-				}
-			}
-			618 = {
-				add_manpower = -35000
-				add_building_construction = {
-					type = industrial_complex
-					level = -1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = -1
-					instant_build = yes
-				}
-			}
-			817 = {
-				add_manpower = -15000
-				add_building_construction = {
-					type = industrial_complex
-					level = -1
-					instant_build = yes
-				}
-			}
-			818 = {
-				add_manpower = -15000
-				add_building_construction = {
-					type = infrastructure
-					level = -1
-					instant_build = yes
-				}
-			}
-			819 = {
-				add_manpower = -10000
-			}
-		}
-	}
+    completion_reward = {
+        add_stability = -0.15
+		custom_effect_tooltip = MON_warning_tooltip
+        330 = {
+            add_manpower = -85000
+            set_building_level = {
+                type = infrastructure
+                level = 2
+            }
+			set_building_level = {
+                type = industrial_complex
+                level = 1
+            }
+			 set_building_level = {
+                type = arms_factory
+                level = 1
+            }
+        }
+        618 = {
+            add_manpower = -55000
+            set_building_level = {
+                type = infrastructure
+                level = 2
+            }
+			set_building_level = {
+                type = industrial_complex
+                level = 1
+            }
+			 set_building_level = {
+                type = arms_factory
+                level = 1
+            }
+        }
+        817 = {
+            add_manpower = -20000
+             set_building_level = {
+                type = infrastructure
+                level = 1
+            }
+			set_building_level = {
+                type = industrial_complex
+                level = 1
+            }
+        }
+        818 = {
+            add_manpower = -15000
+             set_building_level = {
+                type = infrastructure
+                level = 1
+            }
+        }
+        819 = {
+            set_building_level = {
+                type = infrastructure
+                level = 1
+            }
+            add_manpower = -12500
+        }
+    }
+}
+
 	focus = {
 		id = MON_army
 		icon = GFX_goal_generic_army_artillery
@@ -1601,19 +1609,19 @@ focus_tree = {
 			show_ideas_tooltip = MON_olziytrygyn_badrak
 			add_tech_bonus = {
 				name = "Arlilery upgrades"
-				bonus = 1.0
+				bonus = 0.2
 				uses = 1
 				category = artillery
 			}
 			add_tech_bonus = {
 				name = "Infantry upgrades"
-				bonus = 1.0
+				bonus = 0.2
 				uses = 1
 				category = infantry_weapons
 			}
 			add_tech_bonus = {
 				name = "Motorization efforts"
-				bonus = 1.0
+				bonus = 0.2
 				uses = 1
 				category = motorized_equipment
 			}
@@ -1632,6 +1640,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = { 
+			army_exp = 25
 			add_ideas = MON_superior_modern_horse_power
 		}
 	}
@@ -1648,6 +1657,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = { 
+			army_exp = 25
 			add_ideas = MON_classic_horse_power
 		}
 	}
@@ -1701,9 +1711,9 @@ focus_tree = {
 
 		completion_reward = {
 			every_country_division = {
-					random_select_amount = 10
+					random_select_amount = 5
 					add_divisional_commander_xp = 1850
-				}
+			}
 			add_doctrine_cost_reduction = {
 					name = "Doctrine branching"
 					cost_reduction = 0.5
@@ -1736,7 +1746,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = "Lighting Warfare"
-				cost_reduction = 0.8
+				cost_reduction = 0.2
 				uses = 1
 				category = cat_mobile_warfare 
 			}
@@ -1765,26 +1775,26 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = "Modern warfare"
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = cat_mobile_warfare  
 			}
 			add_tech_bonus = {
 				name = "Tank researching"
-				bonus = 1.5
+				bonus = 0.5
 				uses = 1
 				category = armor
 				category = cat_light_armor
 			}
 			add_tech_bonus = {
 				name = "Motorized and quick infantry"
-				bonus = 2.0
+				bonus = 3.0
 				uses = 1
 				category = motorized_equipment
 			}
 			add_tech_bonus = {
 				name = "Signalization effort"
-				bonus = 0.25
-				uses = 2
+				bonus = 0.5
+				uses = 1
 				technology = tech_signal_company
 				technology = tech_signal_company2
 				technology = tech_signal_company3
@@ -1817,8 +1827,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = "IFV screening"
-				bonus = 1.0
-				uses = 3
+				bonus = 1.5
+				uses = 1
 				category = motorized_equipment
 				category = cat_armored_cars
 				category = armor
@@ -1847,16 +1857,10 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = "APC commandos"
-				bonus = 2.0
-				uses = 2
+				bonus = 3.0
+				uses = 1
 				category = motorized_equipment
 				category = cat_armored_cars
-			}
-			add_doctrine_cost_reduction = {
-				name = "IFV warfare"
-				cost_reduction = 1.0
-				uses = 1
-				category = cat_mobile_warfare  
 			}
 			add_ideas = MON_future_apcs
 		}
@@ -1889,8 +1893,8 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = "Meduim tank variants"
-				bonus = 1
-				uses = 2
+				bonus = 1.25
+				uses = 1
 				category = armor
 				category = cat_medium_armor
 			}
@@ -1922,12 +1926,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = MON_GER_tank_engeneering
-			add_doctrine_cost_reduction = {
-				name = "Tanking warfare"
-				cost_reduction = 1
-				uses = 1
-				category = cat_mobile_warfare  
-			}
 		}
 	}
 	focus = {
@@ -1982,7 +1980,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = "Long-line battle"
-				cost_reduction = 0.8
+				cost_reduction = 0.2
 				uses = 1
 				category = cat_grand_battle_plan 
 			}
@@ -2011,20 +2009,20 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = "Prepartion warfare"
 				cost_reduction = 0.5
-				uses = 3
+				uses = 1
 				category = cat_grand_battle_plan 
 			}
 			add_tech_bonus = {
 				name = "British breakthrough armor"
 				bonus = 0.75
-				uses = 2
+				uses = 1
 				category = armor
 				category = cat_heavy_armor
 			}
 			add_tech_bonus = {
 				name = "American Artilerich Trust"
-				bonus = 0.75
-				uses = 2
+				bonus = 1.0
+				uses = 1
 				category = artillery
 			}
 		}
@@ -2056,7 +2054,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = "Advanced artillery programs"
-				bonus = 1.0
+				bonus = 0.25
 				uses = 2
 				category = artillery
 			}
@@ -2108,13 +2106,13 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = "Hit and scouch"
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = cat_superior_firepower
 			}
 			add_doctrine_cost_reduction = {
 				name = "Bomb and run"
 				cost_reduction = 0.5
-				uses = 3
+				uses = 2
 				category = air_doctrine
 			}
 			add_tech_bonus = {
@@ -2181,18 +2179,18 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = "Women ideas"
-				cost_reduction = 1.0
-				uses = 1
+				cost_reduction = 0.5
+				uses = 2
 				category = air_doctrine
 			}
 			add_tech_bonus = {
-				name = "Women ideas"
-				bonus = 1.0
-				uses = 2
+				name = "Women moduled plane ideas"
+				bonus = 0.25
+				uses = 3
 				category = air_equipment
 				category = 	plane_modules_tech
 			}
-			air_experience = 50
+			air_experience = 75
 			set_rule = {
 				can_generate_female_aces = yes
 			}
@@ -2222,7 +2220,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = "Long-line battle"
-				cost_reduction = 0.8
+				cost_reduction = 0.2
 				uses = 1
 				category = cat_mass_assault 
 			}
@@ -2250,14 +2248,14 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = "Deep Battle"
-				cost_reduction = 0.5
-				uses = 2
+				cost_reduction = 0.75
+				uses = 1
 				category = cat_mass_assault 
 			}
 			add_tech_bonus = {
 				name = "Tank researching"
 				bonus = 0.5
-				uses = 2
+				uses = 1
 				category = armor
 			}
 		}
@@ -2284,7 +2282,7 @@ focus_tree = {
 			add_ideas = MON_SOV_tank_engenieering
 			add_tech_bonus = {
 				name = "Advanced Tank Designers"
-				bonus = 2.5
+				bonus = 3.0
 				uses = 1
 				category = cat_heavy_armor
 			}
@@ -2312,14 +2310,14 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = "Long-line battle"
-				cost_reduction = 0.25
-				uses = 3
+				cost_reduction = 0.75
+				uses = 1
 				category = cat_mass_assault 
 			}
 			add_tech_bonus = {
 				name = "Arms for the people"
-				bonus = 0.75
-				uses = 2
+				bonus = 0.5
+				uses = 1
 				category = infantry_weapons
 			}
 		}
@@ -2371,6 +2369,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = MON_generals_tooltip
 			every_army_leader = {
 				add_planning = 1
 				add_attack = 1

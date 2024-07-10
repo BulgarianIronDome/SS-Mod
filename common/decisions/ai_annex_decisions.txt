@@ -899,13 +899,44 @@ operations = {
             country_exists = SIA
         }
         complete_effect = {
-            JAP = { 
-                annex_country = { target = SIA transfer_troops = yes }
-                every_state = {
+           JAP = {
+                annex_country = { target = MAN transfer_troops = yes }
+                    every_state = {
                     limit = {
                         is_core_of = SIA
+                        is_controlled_by = JAP
                     }
-                    add_core_of = JAP
+                    set_compliance = 100
+                }
+            }
+        }
+    }
+    JAP_give_SIA_to_MAN = {
+        # icon used to be here rip icon 04/29/2024
+        targets = {
+            SIA
+        }
+        fire_only_once = yes
+
+        available = {
+            original_tag = JAP
+            SIA = { is_ai = yes }
+        }
+        visible = {
+            original_tag = JAP
+            SIA = { is_ai = yes }
+            is_ai = NO
+            country_exists = SIA
+        }
+        complete_effect = {
+           MAN = {
+                annex_country = { target = SIA transfer_troops = yes }
+                    every_state = {
+                    limit = {
+                        is_core_of = SIA
+                        is_controlled_by = MAN
+                    }
+                    set_compliance = 100
                 }
             }
         }

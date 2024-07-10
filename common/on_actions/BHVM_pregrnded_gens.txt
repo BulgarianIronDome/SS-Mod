@@ -180,12 +180,12 @@ on_actions = {
 					}
 					add_corps_commander_role={
 						character = GER_kurt_student
-						traits = { brilliant_strategist trickster trait_engineer organizer trait_reckless commando infantry_leader }
-						skill=5
-						attack_skill=3
-						defense_skill=6
-						planning_skill=4
-						logistics_skill=4
+						traits = { skilled_staffer cavalry_leader commando armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger organizer }
+						skill=7
+						attack_skill=6
+						defense_skill=7
+						planning_skill=6
+						logistics_skill=6
 					}
 					add_corps_commander_role={
 						character = GER_heinz_guderian
@@ -317,12 +317,12 @@ on_actions = {
 				}
 				SAF = {
 					add_corps_commander_role = {
-						character = SAF_william_poole
-						traits={ career_officer organizer cavalry_leader panzer_leader hill_fighter }
-						skill=6
-						attack_skill=4
+						character = SAF_j_f_van_rensburg
+						traits={ career_officer organizer infantry_leader }
+						skill=3
+						attack_skill=2
 						defense_skill=4
-						planning_skill=4
+						planning_skill=2
 						logistics_skill=5
 					}
 					add_corps_commander_role = {
@@ -442,12 +442,12 @@ on_actions = {
 					}
 					add_corps_commander_role={
 						character = GER_kurt_student
-						traits = { brilliant_strategist trickster trait_engineer organizer trait_reckless commando infantry_leader }
-						skill=5
-						attack_skill=3
-						defense_skill=6
-						planning_skill=4
-						logistics_skill=4
+						traits = { skilled_staffer cavalry_leader commando armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger organizer }
+						skill=7
+						attack_skill=6
+						defense_skill=7
+						planning_skill=6
+						logistics_skill=6
 					}
 					add_corps_commander_role={
 						character = GER_heinz_guderian
@@ -678,17 +678,17 @@ on_actions = {
 				}
 				SAF = {
 					add_corps_commander_role = {
-						character = SAF_william_poole
-						traits={ career_officer organizer cavalry_leader panzer_leader hill_fighter }
-						skill=6
-						attack_skill=4
+						character = SAF_j_f_van_rensburg
+						traits={ career_officer organizer infantry_leader }
+						skill=3
+						attack_skill=2
 						defense_skill=4
-						planning_skill=4
+						planning_skill=2
 						logistics_skill=5
 					}
 					add_corps_commander_role = {
 						character = SAF_george_edwin_brink
-						traits={ brilliant_strategist trait_reckless organizer cavalry_leader panzer_leader trickster }
+						traits={ brilliant_strategist trait_reckless organizer cavalry_leader panzer_leader }
 						skill=5
 						attack_skill=3
 						defense_skill=4

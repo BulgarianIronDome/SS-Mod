@@ -3043,7 +3043,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = GER_anschluss
 		icon = GFX_goal_anschluss
@@ -3051,8 +3050,24 @@ focus_tree = {
 		available_if_capitulated = no
 		available = {
 			is_subject = no
-			has_army_manpower = { size > 499999 }
 			NOT = { has_idea = rhineland_challenge_met }
+			OR = {
+				OR = {
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = axis
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = allies
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = on
+					}
+					has_army_manpower = { size > 499999 }
+				}
+			}
 		}
 		cancel = {
 			OR = {
@@ -3322,8 +3337,7 @@ focus_tree = {
 		will_lead_to_war_with = POL
 		available = {
 			date > 1939.2.1
-			is_subject = no
-			has_army_manpower = { size > 800000 } #100 div			
+			is_subject = no	
 			#Make custom trigger tooltip here
 			85 = {
 				owner = {
@@ -3331,6 +3345,23 @@ focus_tree = {
 				}
 				controller = {
 					original_tag = POL
+				}
+			}
+			OR = {
+				OR = {
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = axis
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = allies
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = on
+					}
+					has_army_manpower = { size > 800000 } #100 div		
 				}
 			}
 			OR = {
@@ -3727,12 +3758,28 @@ focus_tree = {
 		will_lead_to_war_with = CZE
 		will_lead_to_war_with = FRA
 		available = {
-			is_subject = no
-			has_army_manpower = { size > 724999 } #80 div		
 			NOT = {
 				AND = {
 					CZE = { is_in_faction_with = GER }
 					has_war = yes
+				}
+			}
+			is_subject = no
+			OR = {
+				OR = {
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = axis
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = allies
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = on
+					}
+					has_army_manpower = { size > 724999 } #80 div	
 				}
 			}
 		}
@@ -3905,53 +3952,29 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_first_vienna_award
-		icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = GER_demand_sudetenland }
-		bypass = {
-			OR = {
-				AND = {
-					NOT = { CZE = { controls_state = 664 } }
-					NOT = { owns_state = 664 }
-				}
-				HUN = { is_friend_or_potential_friend_of_GER = no }
-				CZE = { is_puppet_of = GER }
-				CZE = { is_in_faction_with = GER }
-			}
-		}
-		available = {
-			is_subject = no
-			owns_state = 69
-		}
-		x = 0
-		y = 1
-		relative_position_id = GER_demand_sudetenland
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-			HUN = {
-				country_event = { id = germany.51 }
-				add_opinion_modifier = { target = GER modifier = GER_first_vienna_award_GER }
-			}
-			every_other_country = {
-				limit = {
-					is_faction_leader = yes
-				}
-				reverse_add_opinion_modifier = { target = HUN modifier = GER_first_vienna_award_other }
-			}
-		}
-	}
-
-	focus = {
 		id = GER_end_of_czechoslovakia
 		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = GER_first_vienna_award }
+		prerequisite = { focus = GER_demand_sudetenland }
 		available = { 
 			is_subject = no
-			has_army_manpower = { size > 749999 }
 			NOT = { has_war_with = CZE }
+			OR = {
+				OR = {
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = axis
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = allies
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = on
+					}
+					has_army_manpower = { size > 749999 }
+				}
+			}
 		}
 
 		bypass = {
@@ -3971,7 +3994,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		relative_position_id = GER_first_vienna_award
+		relative_position_id = GER_demand_sudetenland
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -4145,10 +4168,10 @@ focus_tree = {
 			}
 		}
 
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = GER_second_vienna_award
-		cost = 10
+		cost = 1
 		ai_will_do = {
 			factor = 10
 		}

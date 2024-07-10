@@ -45,7 +45,7 @@ on_actions = {
 					variant_name = "Light Tank Mk. VI"
 				}
 				add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 230
 				}
 				country_event = {
@@ -91,7 +91,7 @@ on_actions = {
 					variant_name = "Panzer I Ausf. A"
 				}
 				add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 60
 				}
 				country_event = {
@@ -127,7 +127,7 @@ on_actions = {
 					variant_name = "H-35"
 				}
 				add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 115
 				}
 				country_event = {
@@ -159,7 +159,7 @@ on_actions = {
 					variant_name = "Type 95 Ha-Go"
 				}
                 add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 60
 				}
 			}
@@ -173,7 +173,7 @@ on_actions = {
 					amount = 300
 				}
                 add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 60
 				}
 			}
@@ -191,7 +191,7 @@ on_actions = {
 					amount = 110
 				}
                 add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 300
 				}
 				#if = {
@@ -219,7 +219,7 @@ on_actions = {
 					amount = 20
 				}
                 add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 3
 				}
 			}
@@ -299,7 +299,7 @@ on_actions = {
 					variant_name = "BT-7"
 				}
 				add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 300
 				}
 			}
@@ -321,7 +321,7 @@ on_actions = {
 					amount = 40
 				}
                 add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 6
 				}
 			}
@@ -381,7 +381,7 @@ on_actions = {
 					amount = 30
                 }
                 add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 6
 				}
 			}
@@ -405,7 +405,7 @@ on_actions = {
 					amount = 100
 				}
                 add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 7
 				}
 			}
@@ -421,7 +421,7 @@ on_actions = {
 					amount = 1000
 				}
                 add_equipment_to_stockpile = {
-					type = train_equipment
+					type = train_equipment_1
 					amount = 4
 				}
                 add_equipment_to_stockpile = {

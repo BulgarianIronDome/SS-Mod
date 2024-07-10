@@ -109,6 +109,36 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			618 = {
+				limit = {
+					infrastructure > 0
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			329 = {
+				limit = {
+					infrastructure > 0
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -219,7 +249,41 @@ focus_tree = {
 			has_completed_focus = MON_mobilize_the_workers
 		}
 		completion_reward = { 
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			add_ideas = MON_economic_bloom
+			remove_ideas = MON_economic_disaster_3 
+			# TODO 
 			#swap_ideas = {
 			#	remove_idea = MON_economic_disaster_1
 			#	add_idea = MON_economic_disaster_2
@@ -242,30 +306,31 @@ focus_tree = {
 		}
 		completion_reward = { 
 			# bloat!
-			add_timed_idea = { idea = MON_infra_rebuilding days = 265 }
+			add_timed_idea = { idea = MON_infra_rebuilding days = 90 }
+			remove_ideas = MON_mobilize_the_workers_idea
 			add_stability = 0.25
 			330 = {
 				add_manpower = 165000
-				add_extra_state_shared_building_slots = 8
+				add_extra_state_shared_building_slots = 9
 				set_state_category = large_city
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
 			817 = {
-				add_manpower = 55000
+				add_manpower = 65000
 				add_extra_state_shared_building_slots = 4
 				set_state_category = city
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -280,7 +345,7 @@ focus_tree = {
 				set_state_category = large_town
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -291,7 +356,7 @@ focus_tree = {
 			}
 			618 = {
 				add_manpower = 85000
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 6
 				set_state_category = large_city
 				add_building_construction = {
 					type = industrial_complex
@@ -310,7 +375,7 @@ focus_tree = {
 				set_state_category = town
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -332,6 +397,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		available = {
+			has_completed_focus = MON_new_constitution
 		}
 		completion_reward = { 
 			817 = {
@@ -343,10 +409,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -359,10 +425,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -377,11 +443,26 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
+				limit = {
+					infrastructure > 0
+					free_building_slots = {
+						building = infrastructure
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			617 = {
 				limit = {
 					infrastructure > 0
 					free_building_slots = {
@@ -408,6 +489,22 @@ focus_tree = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
+					instant_build = yes
+				}
+			}
+			617 = {
+				add_extra_state_shared_building_slots = 1
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -537,7 +634,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = { 
-			819 = {
+			617 = {
 				limit = {
 					arms_factory > 0
 					free_building_slots = {
@@ -546,12 +643,40 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
+			}
+		}
+	}
+	focus = {
+		id = MON_mountain_development
+		icon = GFX_focus_SMB_a_land_of_mountains
+		relative_position_id = MON_more_mills
+		prerequisite = { focus = MON_more_mills }
+		available_if_capitulated = yes
+		cost = 5
+		x = 0
+		y = 1
+		available = {
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 617
+						state = 618
+						state = 760
+						
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+			} 
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 	}
@@ -566,6 +691,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		available = {
+			has_completed_focus = MON_new_constitution
 		}
 		completion_reward = { 
 			random_owned_controlled_state = {
@@ -577,7 +703,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -593,7 +719,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -626,7 +752,23 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
+					instant_build = yes
+				}
+			}
+			618 = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -666,7 +808,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = { 
-			random_owned_controlled_state = {
+			819 = {
 				limit = {
 					industrial_complex > 0
 					free_building_slots = {
@@ -675,7 +817,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -690,7 +832,7 @@ focus_tree = {
 		relative_position_id = MON_self_development
 		prerequisite = { focus = MON_more_jobs }
 		available_if_capitulated = yes
-		cost = 10
+		cost = 5
 		x = -4
 		y = 2
 		available = {
@@ -701,8 +843,6 @@ focus_tree = {
 					OR = {
 						state = 817
 						state = 819
-						state = 617
-						state = 618
 						state = 818
 					}
 				}
@@ -1103,7 +1243,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = communism
-			date > 1937.5.12
+			date > 1937.9.30
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -1344,6 +1484,29 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			617 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+				add_resource = {
+					type = tungsten 
+					amount = 7
+				}
+				add_resource = {
+					type = chromuim  
+					amount = 7
+				}
+				add_resource = {
+					type = aluminium  
+					amount = 7
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 		}
 	}
@@ -1359,7 +1522,9 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		
-		
+		available = {
+			has_completed_focus = MON_stabalize_the_country
+		}
 		
 		ai_will_do = {
 			factor = 2
@@ -2061,7 +2226,7 @@ focus = {
 		}
 	}
 	focus = {
-		id = MON_will_lifting
+		id = MON_will_figthing_focus
 		icon = GFX_focus_generic_total_war
 		x = 1.5
 		y = 5
@@ -2079,7 +2244,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_war_support = 0.15
+			add_war_support = 0.25
 			add_ideas = MON_will_figthing
 		}
 	}
@@ -2356,7 +2521,7 @@ focus = {
 		x = 0
 		y = 6.5
 		cost = 5
-		prerequisite = { focus = MON_advanced_heavy_tank_envelopment focus = MON_superior_squads focus = MON_will_lifting focus = MON_aircrafting focus = MON_ifv_apc_learning focus = MON_strong_tanks }
+		prerequisite = { focus = MON_advanced_heavy_tank_envelopment focus = MON_superior_squads focus = MON_will_figthing_focus focus = MON_aircrafting focus = MON_ifv_apc_learning focus = MON_strong_tanks }
 		relative_position_id = MON_follow_soviet
 		available_if_capitulated = yes
 		

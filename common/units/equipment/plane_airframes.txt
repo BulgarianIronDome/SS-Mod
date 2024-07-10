@@ -17,11 +17,6 @@ equipments = {
 					has_idea = BUL_army_restrictions
 				}
 			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
 		}
 
 		is_archetype = yes
@@ -54,7 +49,7 @@ equipments = {
 		fuel_consumption = 0.05
 		build_cost_ic = 4
 		resources = {
-			aluminium = 2
+			aluminium = 1
 			rubber = 1
 		}
 
@@ -213,27 +208,7 @@ equipments = {
 		}
 	}
 
-	small_plane_airframe_0 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Inter-War
+	small_plane_airframe_0 = { #Inter-War
 		abbreviation = "afs0"
 		derived_variant_name = fighter_equipment_0
 		year = 1933
@@ -251,27 +226,7 @@ equipments = {
 		naval_strike_targetting = 1
 	}
 
-	small_plane_airframe_1 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Basic
+	small_plane_airframe_1 = { #Basic
 		abbreviation = "afs1"
 		derived_variant_name = fighter_equipment_1
 		year = 1936
@@ -289,7 +244,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 5
 		resources = {
-			aluminium = 3
+			aluminium = 2
 			rubber = 1
 		}
 		module_slots = {
@@ -348,27 +303,7 @@ equipments = {
 			}
 		}
 	}
-	small_plane_airframe_2 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Improved
+	small_plane_airframe_2 = { #Improved
 		abbreviation = "afs2"
 		derived_variant_name = fighter_equipment_2
 		year = 1939
@@ -386,7 +321,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 6
 		resources = {
-			aluminium = 3
+			aluminium = 2
 			rubber = 1
 		}
 		module_slots = {
@@ -472,27 +407,7 @@ equipments = {
 		}
 	}
 
-	small_plane_airframe_3 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Advanced
+	small_plane_airframe_3 = { #Advanced
 		abbreviation = "afs3"
 		derived_variant_name = fighter_equipment_3
 		year = 1942
@@ -510,7 +425,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 7
 		resources = {
-			aluminium = 4
+			aluminium = 2
 			rubber = 1
 		}
 		module_slots = {
@@ -615,27 +530,7 @@ equipments = {
 		}
 	}
 
-	small_plane_airframe_4 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #modern
+	small_plane_airframe_4 = { #modern
 		abbreviation = "afs4"
 		derived_variant_name = jet_fighter_equipment_1 # We should use "jet" for this or any of the ones below, but this is good enough for now.
 		year = 1945
@@ -778,11 +673,6 @@ equipments = {
 					has_idea = BUL_army_restrictions
 				}
 			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
 		}
 
 		is_archetype = yes
@@ -817,7 +707,7 @@ equipments = {
 		fuel_consumption = 0.05
 		build_cost_ic = 6
 		resources = {
-			aluminium = 2
+			aluminium = 1
 			rubber = 1
 		}
 
@@ -975,27 +865,7 @@ equipments = {
 		}
 	}
 
-	cv_small_plane_airframe_0 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Inter-War
+	cv_small_plane_airframe_0 = { #Inter-War
 		abbreviation = "afc0"
 		derived_variant_name = cv_fighter_equipment_0
 		year = 1933
@@ -1015,27 +885,7 @@ equipments = {
 		lend_lease_cost = 8
 	}
 
-	cv_small_plane_airframe_1 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Basic
+	cv_small_plane_airframe_1 = { #Basic
 		abbreviation = "afc1"
 		derived_variant_name = cv_fighter_equipment_1
 		year = 1936
@@ -1053,7 +903,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 8.5
 		resources = {
-			aluminium = 3
+			aluminium = 2
 			rubber = 1
 		}
 		module_slots = {
@@ -1111,27 +961,7 @@ equipments = {
 			}
 		}
 	}
-	cv_small_plane_airframe_2 = { 
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		}#Improved
+	cv_small_plane_airframe_2 = { #Improved
 		abbreviation = "afc2"
 		derived_variant_name = cv_fighter_equipment_2
 		year = 1939
@@ -1149,7 +979,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 9.5
 		resources = {
-			aluminium = 3
+			aluminium = 2
 			rubber = 1
 		}
 		module_slots = {
@@ -1234,27 +1064,7 @@ equipments = {
 		}
 	}
 
-	cv_small_plane_airframe_3 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Advanced
+	cv_small_plane_airframe_3 = { #Advanced
 		abbreviation = "afc3"
 		derived_variant_name = cv_fighter_equipment_3
 		year = 1942
@@ -1272,7 +1082,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 11
 		resources = {
-			aluminium = 4
+			aluminium = 2
 			rubber = 1
 		}
 		module_slots = {
@@ -1364,27 +1174,7 @@ equipments = {
 		}
 	}
 
-	cv_small_plane_airframe_4 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #modern
+	cv_small_plane_airframe_4 = { #modern
 		abbreviation = "afc4"
 		year = 1945
 
@@ -1401,7 +1191,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 14.5
 		resources = {
-			aluminium = 4
+			aluminium = 2
 			rubber = 1
 		}
 		module_slots = {
@@ -1513,12 +1303,8 @@ equipments = {
 					has_idea = BUL_army_restrictions
 				}
 			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
 		}
+
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_strat_bomber_equipment
@@ -1546,7 +1332,7 @@ equipments = {
 		fuel_consumption = 0
 		build_cost_ic = 6
 		resources = {
-			aluminium = 2
+			aluminium = 1
 			rubber = 1
 		}
 
@@ -1754,27 +1540,7 @@ equipments = {
 		}
 	}
 
-	medium_plane_airframe_0 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Inter-War
+	medium_plane_airframe_0 = { #Inter-War
 		abbreviation = "afm0"
 		derived_variant_name = tac_bomber_equipment_0
 		year = 1933
@@ -1794,27 +1560,7 @@ equipments = {
 		lend_lease_cost = 10
 	}
 
-	medium_plane_airframe_1 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Basic
+	medium_plane_airframe_1 = { #Basic
 		abbreviation = "afm1"
 		derived_variant_name = tac_bomber_equipment_1
 		year = 1936
@@ -1832,7 +1578,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 8
 		resources = {
-			aluminium = 3
+			aluminium = 2
 			rubber = 1
 		}
 		module_slots = {
@@ -1945,27 +1691,7 @@ equipments = {
 		}
 	}
 
-	medium_plane_airframe_2 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Improved
+	medium_plane_airframe_2 = { #Improved
 		abbreviation = "afm2"
 		derived_variant_name = tac_bomber_equipment_2
 		year = 1939
@@ -1983,7 +1709,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 10
 		resources = {
-			aluminium = 4
+			aluminium = 2
 			rubber = 1
 		}
 		module_slots = {
@@ -2113,27 +1839,7 @@ equipments = {
 		}
 	}
 
-	medium_plane_airframe_3 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Advanced
+	medium_plane_airframe_3 = { #Advanced
 		abbreviation = "afm3"
 		derived_variant_name = tac_bomber_equipment_3
 		year = 1942
@@ -2151,7 +1857,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 13
 		resources = {
-			aluminium = 5
+			aluminium = 3
 			rubber = 1
 		}
 		module_slots = {
@@ -2293,27 +1999,7 @@ equipments = {
 		}
 	}
 
-	medium_plane_airframe_4 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Modern
+	medium_plane_airframe_4 = { #Modern
 		abbreviation = "afm4"
 		derived_variant_name = jet_tac_bomber_equipment_1
 		year = 1945
@@ -2331,7 +2017,7 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 14
 		resources = {
-			aluminium = 5
+			aluminium = 3
 			rubber = 1
 		}
 		module_slots = {
@@ -2490,11 +2176,6 @@ equipments = {
 					has_idea = BUL_army_restrictions
 				}
 			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
 		}
 
 		is_archetype = yes
@@ -2523,8 +2204,8 @@ equipments = {
 		fuel_consumption = 0.16
 		build_cost_ic = 16
 		resources = {
-			aluminium = 3
-			rubber = 2
+			aluminium = 2
+			rubber = 1
 		}
 
 		lend_lease_cost = 12
@@ -2730,27 +2411,7 @@ equipments = {
 		}
 	}
 
-	large_plane_airframe_0 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Inter-War
+	large_plane_airframe_0 = { #Inter-War
 		abbreviation = "afl0"
 		year = 1933
 
@@ -2767,27 +2428,7 @@ equipments = {
 		naval_strike_targetting = 1
 	}
 
-	large_plane_airframe_1 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Basic
+	large_plane_airframe_1 = { #Basic
 		abbreviation = "afl1"
 		derived_variant_name = strat_bomber_equipment_1
 		year = 1936
@@ -2805,8 +2446,8 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 18
 		resources = {
-			aluminium = 3
-			rubber = 2
+			aluminium = 2
+			rubber = 1
 		}
 		module_slots = {
 			fixed_main_weapon_slot = {
@@ -2927,27 +2568,7 @@ equipments = {
 		}
 	}
 
-	large_plane_airframe_2 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Improved
+	large_plane_airframe_2 = { #Improved
 		abbreviation = "afl2"
 		derived_variant_name = strat_bomber_equipment_2
 		year = 1939
@@ -2965,8 +2586,8 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 20
 		resources = {
-			aluminium = 4
-			rubber = 2
+			aluminium = 2
+			rubber = 1
 		}
 		module_slots = {
 			fixed_main_weapon_slot = {
@@ -3113,27 +2734,7 @@ equipments = {
 		}
 	}
 
-	large_plane_airframe_3 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Advanced
+	large_plane_airframe_3 = { #Advanced
 		abbreviation = "afl3"
 		derived_variant_name = strat_bomber_equipment_3
 		year = 1942
@@ -3151,8 +2752,8 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 22
 		resources = {
-			aluminium = 5
-			rubber = 2
+			aluminium = 3
+			rubber = 1
 		}
 		module_slots = {
 			fixed_main_weapon_slot = {
@@ -3299,27 +2900,7 @@ equipments = {
 		}
 	}
 
-	large_plane_airframe_4 = {
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-			if = {
-				NOT = {
-					has_idea = SOV_nuhuh_air
-				}
-			}
-		} #Modern
+	large_plane_airframe_4 = { #Modern
 		abbreviation = "afl4"
 		derived_variant_name = jet_strat_bomber_equipment_1
 		year = 1945
@@ -3337,8 +2918,8 @@ equipments = {
 		naval_strike_targetting = 1
 		build_cost_ic = 23
 		resources = {
-			aluminium = 6
-			rubber = 2
+			aluminium = 4
+			rubber = 1
 		}
 		module_slots = {
 			fixed_main_weapon_slot = {
@@ -3484,4 +3065,5 @@ equipments = {
 			}
 		}
 	}
+
 }

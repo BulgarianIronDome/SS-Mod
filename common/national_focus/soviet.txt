@@ -1897,124 +1897,132 @@ focus_tree = {
 
 
 
-	focus = {
-		id = SOV_transpolar_flights
+focus = {
+    id = SOV_transpolar_flights
+    icon = GFX_goal_generic_air_fighter2
+    x = 10
+    y = 0
+    relative_position_id = SOV_infrastructure_effort_nsb
+    cost = 5
 
-		icon = GFX_goal_generic_air_fighter2
-		x = 10
-		y = 0
-		relative_position_id = SOV_infrastructure_effort_nsb
-		cost = 5
+    ai_will_do = {
+        factor = 1
+    }
 
-		ai_will_do = {
-			factor = 1
-		}
+    available = {
+        NOT = {
+            has_game_rule = {
+                rule = soviet_airforce
+                option = off
+            }
+        }
+    }
+    
+    search_filters = {FOCUS_FILTER_AIR_XP}
 
-		available = {
-			NOT = {
-				has_game_rule = {
-					rule = soviet_airforce
-					option = off
-				}
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_AIR_XP}
+    completion_reward = {
+        custom_effect_tooltip = SOV_nuhuh_air_tooltip
+        hidden_effect = {
+            set_technology = {
+                iw_small_airframe = 1
+                aa_lmg = 1
+                aa_cannon_1 = 1
+                early_bombs = 1
+                engines_1 = 1
+                engines_2 = 1
+                iw_medium_airframe = 1
+                iw_large_airframe = 1
+                basic_small_airframe = 1
+                basic_medium_airframe = 1
+                aircraft_construction = 1
+                air_torpedoe_1 = 1
+                popup = no
+            }
+            create_equipment_variant = { #Note: There is a copy of this variant in Finnish Scripted Effects file (FIN_purchase_soviet_equipment_for_cw). Any changes here should also be applied there
+                name = "I-15" #
+                type = small_plane_airframe_0
+                modules = {
+                    fixed_main_weapon_slot = light_mg_4x
+                    engine_type_slot = engine_1_1x
+                    special_type_slot_1 = empty
+                }
+                obsolete = yes
+            }
+            create_equipment_variant = {
+                name = "I-16" #
+                type = small_plane_airframe_1
+                modules = {
+                    fixed_main_weapon_slot = light_mg_2x
+                    engine_type_slot = engine_1_1x
+                    special_type_slot_1 = empty
+                }
+                icon = "GFX_SOV_fighter1_medium"
+            }
+            create_equipment_variant = {
+                name = "DB-3" #
+                type = medium_plane_airframe_0
+                design_team = mio:SOV_ilyushin_design_bureau_organization
+                modules = {
+                    fixed_main_weapon_slot = medium_bomb_bay
+                    fixed_auxiliary_weapon_slot_1 = bomb_locks
+                    engine_type_slot = engine_2_2x
+                    special_type_slot_1 = lmg_defense_turret
+                }
+                icon = "GFX_SOV_early_bomber_medium"
+            }
+            create_equipment_variant = {
+                name = "TB-3" #
+                type = large_plane_airframe_0
+                modules = {
+                    fixed_main_weapon_slot = large_bomb_bay
+                    fixed_auxiliary_weapon_slot_1 = empty
+                    engine_type_slot = engine_1_4x
+                    special_type_slot_1 = lmg_defense_turret_2x
+                }
+                icon = "GFX_SOV_transport_plane_equipment_1_medium"
+            }
+            create_equipment_variant = {
+                name = "ANT-40" #
+                type = medium_plane_airframe_1
+                modules = {
+                    fixed_main_weapon_slot = medium_bomb_bay
+                    fixed_auxiliary_weapon_slot_1 = bomb_locks
+                    engine_type_slot = engine_2_2x
+                    special_type_slot_1 = lmg_defense_turret_2x
+                }
+                icon = "GFX_SOV_tactical_bomber1_medium"
+            }
+            add_equipment_to_stockpile = {
+                type = small_plane_airframe_0
+                amount = 400
+                version_name = "I-15"
+            }
+            add_equipment_to_stockpile = {
+                type = small_plane_airframe_1
+                amount = 300
+                version_name = "I-16"
+            }
+            add_equipment_to_stockpile = {
+                type = medium_plane_airframe_0
+                amount = 300
+                version_name = "DB-3"
+            }
+            add_equipment_to_stockpile = {
+                type = medium_plane_airframe_1
+                amount = 100
+                version_name = "ANT-40"
+            }
+            add_equipment_to_stockpile = {
+                type = large_plane_airframe_0
+                amount = 100
+                version_name = "TB-3"
+            }
+        }
+        air_experience = 50
+    }
+}
 
-		completion_reward = {
-			custom_effect_tooltip = SOV_nuhuh_air_tooltip
-			hidden_effect = {
-				set_technology = {
-					iw_small_airframe = 1
-					aa_lmg = 1
-					aa_cannon_1 = 1
-					early_bombs = 1
-					engines_1 = 1
-					engines_2 = 1
-					iw_medium_airframe = 1
-					iw_large_airframe = 1
-					basic_small_airframe = 1
-					basic_medium_airframe = 1
-					aircraft_construction = 1
-					air_torpedoe_1 = 1
-					popup = no
-				}
-				 SOV = {
-					add_equipment_to_stockpile = {
-						type = small_plane_airframe_0
-						amount = 500
-					}
-					add_equipment_to_stockpile = {
-						type = small_plane_airframe_1
-						amount = 200
-					}
-					add_equipment_to_stockpile = {
-						type = medium_plane_airframe_0
-						amount = 360
-					}
-					add_equipment_to_stockpile = {
-						type = large_plane_airframe_0
-						amount = 100
-					}
-      			}
-					create_equipment_variant = { #Note: There is a copy of this variant in Finnish Scripted Effects file (FIN_purchase_soviet_equipment_for_cw). Any changes here should also be applied there
-						name = "I-15" #
-						type = small_plane_airframe_0
-						modules = {
-							fixed_main_weapon_slot = light_mg_4x
-							engine_type_slot = engine_1_1x
-							special_type_slot_1 = empty
-						}
-						obsolete = yes
-					}
-					create_equipment_variant = {
-						name = "I-16" #
-						type = small_plane_airframe_1
-						modules = {
-							fixed_main_weapon_slot = light_mg_2x
-							engine_type_slot = engine_1_1x
-							special_type_slot_1 = empty
-						}
-						icon = "GFX_SOV_fighter1_medium"
-					}
-					create_equipment_variant = {
-						name = "DB-3" #
-						type = medium_plane_airframe_0
-						design_team = mio:SOV_ilyushin_design_bureau_organization
-						modules = {
-							fixed_main_weapon_slot = medium_bomb_bay
-							fixed_auxiliary_weapon_slot_1 = bomb_locks
-							engine_type_slot = engine_2_2x
-							special_type_slot_1 = lmg_defense_turret
-						}
-						icon = "GFX_SOV_early_bomber_medium"
-					}
-					create_equipment_variant = {
-						name = "TB-3" #
-						type = large_plane_airframe_0
-						modules = {
-							fixed_main_weapon_slot = large_bomb_bay
-							fixed_auxiliary_weapon_slot_1 = empty
-							engine_type_slot = engine_1_4x
-							special_type_slot_1 = lmg_defense_turret_2x
-						}
-						icon = "GFX_SOV_transport_plane_equipment_1_medium"
-					}
-					create_equipment_variant = {
-						name = "ANT-40" #
-						type = medium_plane_airframe_1
-						modules = {
-							fixed_main_weapon_slot = medium_bomb_bay
-							fixed_auxiliary_weapon_slot_1 = bomb_locks
-							engine_type_slot = engine_2_2x
-							special_type_slot_1 = lmg_defense_turret_2x
-						}
-						icon = "GFX_SOV_tactical_bomber1_medium"
-					}
-			}
-			air_experience = 50
-		}
-	}
+
 
 	focus = {
 		id = SOV_expand_the_aircraft_industry

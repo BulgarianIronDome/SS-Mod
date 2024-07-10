@@ -347,11 +347,9 @@ ideas = {
                 command_power_gain = 0.3
                 army_leader_start_logistics_level = 1
                 army_leader_start_planning_level = 1
-                army_leader_start_level = 1
-				army_leader_cost_factor = -0.2 
+				army_leader_cost_factor = -0.1 
 				unit_leader_as_advisor_cp_cost_factor = -0.3
-                command_abilities_cost_factor = -0.10
-                high_command_cost_factor = -0.25
+                high_command_cost_factor = -0.1
 			}
 		}
         MON_organized_squads = {

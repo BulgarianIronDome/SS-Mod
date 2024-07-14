@@ -80,7 +80,7 @@ auto_tech_rush = {
                 create_production_license = {
                     target = ROOT
                         equipment = {
-                            type = anti_tank_equipment_1
+                            type = anti_air_equipment_1
                             version = 0
                             new_prioritised = yes
                         }
@@ -106,7 +106,7 @@ auto_tech_rush = {
                 create_production_license = {
                     target = ROOT
                         equipment = {
-                            type = anti_air_equipment_1
+                            type = anti_tank_equipment_1
                             version = 0
                             new_prioritised = yes
                         }

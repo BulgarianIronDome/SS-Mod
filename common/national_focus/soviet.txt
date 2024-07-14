@@ -6893,10 +6893,10 @@ focus = {
 
 			add_political_power = 25
 			add_stability = 0.05
-			set_division_template_lock = {
-				division_template = "NKVD Pogranichnaya Diviziya"
-				is_locked = no
-			}
+			#set_division_template_lock = {
+			#	division_template = "NKVD Pogranichnaya Diviziya"
+			#	is_locked = no
+			#}
 
 			SOV_paranoia_high_decrease_effect = yes
 		}

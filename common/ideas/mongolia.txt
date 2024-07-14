@@ -168,9 +168,11 @@ ideas = {
 			}
 			modifier = {
 				political_power_gain = -0.15
-				consumer_goods_factor = 0.10
-				weekly_manpower = 125
-                monthly_population = 0.3
+				consumer_goods_factor = 0.125
+				weekly_manpower = 150
+                monthly_population = 0.5
+				mobilization_speed = -0.25
+				conscription = 0.01
 			}
 		}
         MON_soviet_science = {
@@ -502,7 +504,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			removal_cost = -1
+			is_in_war = {
+				
+			}
 
 			picture = can_wartime_prices_and_trade_board
 				

@@ -247,6 +247,8 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = 100
 				enemy_operative_detection_chance = -200
 				trade_laws_cost_factor = 10000
+				justify_war_goal_time = 100
+				enemy_justify_war_goal_time = 100
 			}
 		}
 

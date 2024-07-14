@@ -1421,7 +1421,7 @@ focus_tree = {
 					amount = 14
 				}
 				add_resource = {
-					type = chromuim 
+					type = chromium 
 					amount = 8
 				}
 				add_building_construction = {
@@ -1459,7 +1459,7 @@ focus_tree = {
 					amount = 7
 				}
 				add_resource = {
-					type = chromuim  
+					type = chromium 
 					amount = 7
 				}
 				add_building_construction = {
@@ -1478,7 +1478,7 @@ focus_tree = {
 					amount = 7
 				}
 				add_resource = {
-					type = chromuim  
+					type = chromium  
 					amount = 7
 				}
 				add_resource = {

@@ -174,3 +174,5 @@ Removed Focus "First vienna award " from germany
 Made the focus for the italy to join faction 1 day bcz theyd already join in 
 Moved eco from yemen and oman back to the uk
 Added few regions to the tag BLM so people can grind planning there
+Fixed desync in mp
+Fixed events for VP system

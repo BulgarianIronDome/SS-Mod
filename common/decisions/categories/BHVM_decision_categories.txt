@@ -14,3 +14,10 @@ auto_tech_rush = {
 		}
 	}
 }
+E_ll = {
+	icon = GFX_decision_categ
+
+	allowed = {
+		always = yes
+	}
+}

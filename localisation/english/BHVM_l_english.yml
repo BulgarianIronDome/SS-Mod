@@ -75,6 +75,9 @@
 
   PARADROP_WARNING_TEXT: "Forces of §Y[?ui_invader_country.GetNameWithFlag]§! have successfully conducted a §CParadrop§! at [?ui_invaded_state.GetName]!"
   PARADROP_WARNING_DISABLE: "No longer show Enemy Paradrops with this popup."
+ FIN_winter_warfare_a:"Winter warfare alternative"
+ FIN_long_range_patrols_a:"Long range patrols alternative"
+ FRA_anti_noob:"Noob proof"
  MON_indusrial:0"Industrial experts"
  MON_upgrade_eco:0"Updating Law economies"
  MON_diversefy_roads:0"Road building"

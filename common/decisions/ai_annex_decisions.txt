@@ -717,7 +717,7 @@ operations = {
         }
         complete_effect = {
             RAJ = { 
-                annex_country = { target = RAJ transfer_troops = yes }
+                annex_country = { target = AST transfer_troops = yes }
                     every_state = {
                     limit = {
                         is_core_of = AST

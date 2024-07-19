@@ -900,7 +900,7 @@ operations = {
         }
         complete_effect = {
            JAP = {
-                annex_country = { target = MAN transfer_troops = yes }
+                annex_country = { target = SIA transfer_troops = yes }
                     every_state = {
                     limit = {
                         is_core_of = SIA

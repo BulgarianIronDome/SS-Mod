@@ -152,7 +152,7 @@ bookmarks = {
 			}
 			focuses = {
 				SOV_behead_the_snake
-				SOV_the_supreme_soviet
+				SOV_desperate_measures
 				SOV_the_centre
 			}	
 		}
@@ -246,7 +246,79 @@ bookmarks = {
 				RAJ_the_smiling_buddha
 			}
 		}
-
+		"BRA"={
+			minor = yes
+			history = BRA_BLITZKRIEG_DESC
+			ideology = neutrality
+			ideas = {
+				BRA_estado_novo_dummy_idea
+				BRA_radio_nacional_idea
+				BRA_army_dummy_idea
+			}
+			focuses = {
+				BRA_end_the_state_of_emergency
+				BRA_tribunal_de_seguranca_nacional
+				BRA_cooperation_in_the_americas
+			}
+		}
+		"MON"={
+			minor = yes
+			history = MON_BLITZKRIEG_DESC
+			ideology = communism
+			ideas = {
+				MON_political_freezing 
+				MON_economic_disaster_1 
+				MON_illitarate_majority
+			}
+			focuses = {
+				MON_new_constitution
+				MON_civilian_bastion
+				MON_wartime_bastion
+			}
+		}
+		"MEX"={
+			minor = yes
+			history = "MEXICO_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				MEX_church_power_2
+				MEX_politicised_army
+				MEX_oil_concessions
+			}
+			focuses = {
+				MEX_focus_oil_field_expansion
+				MEX_focus_state_education
+				MEX_focus_ban_political_militias
+			}
+		}
+		FIN={
+			minor = yes
+			history = FIN_GATHERING_STORM_DESC
+			ideology = neutrality
+			ideas = {
+				FIN_sisu_2
+			}
+			focuses = {
+				FIN_winter_warfare
+				FIN_greater_finland
+				FIN_oy_alkoholiliike
+			}
+		}
+		"MAN"={
+			minor = yes
+			history = "MAN_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				MAN_banditry
+				MAN_kwantung_veto
+				MAN_low_legitimacy_5
+			}
+			focuses = {
+				MAN_obedience
+				MAN_the_two_emperors
+				MAN_national_defense_state
+			}
+		}
 		"HUN"={
 			minor = yes
 			history = "HUN_GATHERING_STORM_DESC"

@@ -7239,7 +7239,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_flotta_d_evasione_admiral_traits_tt
-			#Stupid tooltips oh my god I hate this game
+			#Stupid tooltips oh my god I hate this game - deversus org 2023
 			hidden_effect = {
 				#First admiral trait
 				if = { #Try to select high level admirals
@@ -7781,13 +7781,6 @@ focus_tree = {
 		icon = GFX_focus_generic_attack_ethiopia
 		x = 50
 		y = 0
-		offset = {
-			x = -20
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-		}
 		relative_position_id = ITA_the_abyssinian_fiasco
 		cost = 1
 
@@ -7819,13 +7812,6 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-		}
 		relative_position_id = ITA_solid_progress
 		cost = 10
 		available = {
@@ -9776,13 +9762,6 @@ focus_tree = {
 
 		x = 18
 		y = 1
-		offset = {
-			x = -29
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-		}
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
 		available = {

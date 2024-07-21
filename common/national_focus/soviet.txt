@@ -8256,18 +8256,6 @@ focus = {
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
-		}
-
 		available = {
 
 		}
@@ -8638,18 +8626,6 @@ focus = {
 		y = 0
 		relative_position_id = SOV_addressing_internal_affairs
 		cost = 5
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
-		}
 
 		available = {
 

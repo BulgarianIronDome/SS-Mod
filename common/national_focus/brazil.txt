@@ -51,18 +51,6 @@ focus_tree = {
 		}
 		available = {
 		}
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = BRA_end_the_state_of_emergency }
-				NOT = { has_completed_focus = BRA_prepare_for_second_intentona }
-			}
-		}
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
@@ -80,16 +68,6 @@ focus_tree = {
 				tooltip = stability_factor_tt
 			}
 			add_political_power = 120
-
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
-			}
 		}
 	}
 
@@ -735,30 +713,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 15
-		}
-
-		offset = {
-			x = -33
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = BRA_prepare_for_second_intentona 
-			}
-		}
-
-		offset = {
-			x = -15
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = BRA_end_the_state_of_emergency 
-			}
 		}
 		available = {
 		}
@@ -2320,33 +2274,13 @@ focus_tree = {
 		}
 		available = {
 		}
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = BRA_prepare_for_second_intentona }
-				NOT = { has_completed_focus = BRA_tribunal_de_seguranca_nacional }
-			}
-		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			remove_dynamic_modifier = {
 				modifier = BRA_aftermath_of_the_coup
 			}
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
-			}
+
 		}
 	}
 
@@ -2949,12 +2883,6 @@ focus_tree = {
 		allow_branch = {
 			has_dlc = "Arms Against Tyranny"
 			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
 				NOT = { has_completed_focus = BRA_tribunal_de_seguranca_nacional }
 				NOT = { has_completed_focus = BRA_prepare_for_second_intentona }
 			}

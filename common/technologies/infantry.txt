@@ -106,7 +106,9 @@ technologies = {
 		cavalry = {
 			soft_attack = 0.05
 		}
-		
+		camelry  = {
+			soft_attack = 0.05
+		}
 		motorized = {
 			soft_attack = 0.05
 		}
@@ -228,7 +230,9 @@ technologies = {
 		cavalry = {
 			soft_attack = 0.05
 		}
-		
+		camelry  = {
+			soft_attack = 0.05
+		}
 		motorized = {
 			soft_attack = 0.05
 		}
@@ -418,8 +422,9 @@ technologies = {
 		cavalry = {
 			soft_attack = 0.1
 		}		
-
-
+		camelry  = {
+			soft_attack = 0.05
+		}
 		motorized = {
 			soft_attack = 0.1
 		}
@@ -1157,7 +1162,7 @@ technologies = {
 
 	night_vision = {
 
-		land_night_attack = 0.1
+		land_night_attack = 0.15
 		
 		path = {
 			leads_to_tech = night_vision2
@@ -1249,6 +1254,10 @@ technologies = {
 			defense = 0.02
 			breakthrough = 0.02
 		}		
+		camelry  = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
 		mountaineers = {
 			defense = 0.03
 			breakthrough = 0.03
@@ -1339,7 +1348,11 @@ technologies = {
 		cavalry = {
 			defense = 0.02
 			breakthrough = 0.02
-		}		
+		}	
+		camelry  = {
+			defense = 0.02
+			breakthrough = 0.02
+		}	
 		mountaineers = {
 			defense = 0.03
 			breakthrough = 0.03
@@ -1437,6 +1450,10 @@ technologies = {
 			defense = 0.02
 			breakthrough = 0.02
 		}		
+		camelry  = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
 		mountaineers = {
 			defense = 0.03
 			breakthrough = 0.03
@@ -1521,6 +1538,10 @@ technologies = {
 			defense = 0.02
 			breakthrough = 0.02
 		}		
+		camelry  = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
 		mountaineers = {
 			defense = 0.03
 			breakthrough = 0.03

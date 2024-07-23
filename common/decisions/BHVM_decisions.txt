@@ -467,6 +467,8 @@ E_ll = {
 				original_tag = HUN
 				original_tag = ROM
 				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
 			}
 			NOT = { has_country_flag = sending_ll_to_ger }
 		}
@@ -488,6 +490,8 @@ E_ll = {
 				original_tag = HUN
 				original_tag = ROM
 				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
 			}
 			has_country_flag = sending_ll_to_ger
 		}
@@ -506,6 +510,8 @@ E_ll = {
 				original_tag = HUN
 				original_tag = ROM
 				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
 			} 
 		}
 		available = {
@@ -536,6 +542,8 @@ E_ll = {
 				original_tag = HUN
 				original_tag = ROM
 				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
 			} 
 		}
 		available = {
@@ -571,6 +579,8 @@ E_ll = {
 				original_tag = HUN
 				original_tag = ROM
 				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
 			}
 			NOT = { has_country_flag = sending_ll_to_ger_nav }
 			has_equipment = {
@@ -595,6 +605,8 @@ E_ll = {
 				original_tag = HUN
 				original_tag = ROM
 				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
 			}
 			has_country_flag = sending_ll_to_ger_nav
 		}
@@ -613,6 +625,8 @@ E_ll = {
 				original_tag = HUN
 				original_tag = ROM
 				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
 			} 
 		}
 		available = {
@@ -640,6 +654,8 @@ E_ll = {
 				original_tag = HUN
 				original_tag = ROM
 				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
 			} 
 		}
 		available = {
@@ -682,14 +698,6 @@ E_ll = {
 		}
 		available = {
 			#date > 1938.1.1
-			if = {
-				limit = {
-					original_tag = USA
-				}
-				OR = {
-					#date > 1939.10.1
-				}
-			}
 		}
 
 		complete_effect = {

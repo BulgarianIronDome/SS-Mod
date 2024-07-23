@@ -180,3 +180,5 @@ Fixed events for VP system
 Fixed some local shit
 
 Added a alternative no asia scenario with usa , usa has 1 less research slot and the navy is cut by ~50% 
+
+Nerfed allied generals , buffed spanish generals , nerfed soviet generals fixed the lend lease air for USA , nerfed alt-asia uk and france , nerfed asia uk and france , added decision to remove noob state for indochina if its no asia 

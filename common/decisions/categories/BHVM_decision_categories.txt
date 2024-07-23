@@ -1,8 +1,23 @@
 SOV_spain = {
 	visible = {
+		OR = {
+			has_game_rule = {
+				rule = pregrinds_4_factions
+				option = on
+			}
+			has_game_rule = {
+				rule = pregrinds_4_factions
+				option = axis
+			}
+			has_game_rule = {
+				rule = pregrinds_4_factions
+				option = allies
+			}
+		}
 		has_global_flag = spanish_civil_war
 	}
 }
+
 
 auto_tech_rush = {
 	icon = generic_propaganda

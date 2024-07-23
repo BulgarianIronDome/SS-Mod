@@ -705,14 +705,25 @@ on_actions = {
                 limit = {
                     has_game_rule = {
                         rule = no_asia_gamemode
+                        option = off
+                    }
+                }
+				USA = {
+					limit = { has_dlc = "Man the Guns" }
+					load_oob = "USA_1936_naval_mtg"
+					else = {
+						load_oob = "USA_1936_naval_legacy"
+					}
+				}
+			}
+			if = {
+                limit = {
+                    has_game_rule = {
+                        rule = no_asia_gamemode
                         option = alt
                     }
                 }
-				country_exists = USA
 				country_exists = MEX
-				country_exists = CAN
-				country_exists = AST
-				country_exists = NZL
 				country_exists = RAJ
 				country_exists = SIA
 				country_exists = MAN
@@ -769,7 +780,6 @@ on_actions = {
 					}
 				}
 				FRA = {
-					
 					add_state_core = 635
 					add_state_core = 543
 					add_state_core = 461
@@ -822,6 +832,10 @@ on_actions = {
 						}
 						add_extra_state_shared_building_slots = 10
 					}
+				}
+				USA = {
+					load_oob = "USA_NO_ASIA_ALT"
+					set_research_slots = 3
 				}
 				BLM = { 
 					transfer_state = 378

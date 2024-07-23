@@ -178,3 +178,5 @@ Fixed desync in mp
 Fixed events for VP system
 
 Fixed some local shit
+
+Added a alternative no asia scenario with usa , usa has 1 less research slot and the navy is cut by ~50% 

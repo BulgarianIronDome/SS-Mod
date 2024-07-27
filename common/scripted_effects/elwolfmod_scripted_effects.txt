@@ -22,16 +22,12 @@ elwolfmod_vichy_france = {
 		transfer_state = 806
 	}
 
-	#ITA = { 
-	#	transfer_state = 735 
-	#	735 = { 
-	#		add_compliance = 100 
-	#	}
-	#	#transfer_state = 1 
-	#	#1 = {
-	#	#	add_compliance = 100
-	#	#}
-	#}
+	ITA = { 
+		transfer_state = 735 
+		735 = { 
+			add_compliance = 30 
+		}
+	}
 
 	FRA = {
 		transfer_state = 713
@@ -548,7 +544,7 @@ elwolfmod_capitulations_on_actions = {
 	}
 
 }
-elwolfmod_capitulations_on_actions_collab = {
+#elwolfmod_capitulations_on_actions_collab = {
 
 	# Yugoslavia
 	if = {
@@ -664,7 +660,7 @@ elwolfmod_capitulations_on_actions_collab = {
 		    }
 		}
 	}
-}
+#}
 
 generic_bonus_1 = {
 	add_tech_bonus = { 

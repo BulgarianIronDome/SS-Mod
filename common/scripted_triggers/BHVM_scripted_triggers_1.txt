@@ -43,6 +43,7 @@ is_limited_country = {
 DIPLOMACY_PEACE_PROPOSAL_ENABLE_TRIGGER = {
 	always = no
 }
+
 axis = {
 	OR = {
 		tag = GER

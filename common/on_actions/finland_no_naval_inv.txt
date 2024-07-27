@@ -25,4 +25,44 @@ on_actions = {
 			} 
 		}
 	}
+	on_daily_FIN = {
+		effect = {
+			every_owned_state= {
+				limit = { NOT= { state=111 } }
+				set_demilitarized_zone = yes
+				set_state_controller_to = FIN
+			}
+			if = {
+				limit ={ FIN = { has_offensive_war = yes }}
+				FIN = { add_ideas = SPR_offensive }
+			}
+			if = {
+				limit = {
+					GER = {
+						divisions_in_state = {
+							type = infantry
+							size > 0
+							state = 111
+						}
+					}
+				}
+				every_state = { 
+					limit = { is_core_of = FIN } 
+					teleport_armies = {
+						limit = {
+							OR = {
+								original_tag = GER
+								original_tag = ITA
+								original_tag = HUN
+								original_tag = ROM
+								original_tag = BUL
+								original_tag = SPR
+							}
+						} 
+						to_state = 64 
+					} 
+				}
+			}
+		}
+    }
 }

@@ -334,14 +334,6 @@ focus_tree = {
 			is_subject = no
 		}
 
-		bypass = {
-			NOT = {
-				has_idea = HUN_treaty_of_triannon
-				has_idea = HUN_treaty_of_triannon_2
-				has_idea = HUN_treaty_of_triannon_3
-			}
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes

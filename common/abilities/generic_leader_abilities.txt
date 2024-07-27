@@ -47,9 +47,9 @@ ability = {
 		
 		one_time_effect = {
 			add_temporary_buff_to_units = {
-				combat_offense = 0.25
+				combat_offense = 0.2
 				combat_breakthrough = 0.25
-				org_damage_multiplier = -0.95
+				org_damage_multiplier = -1.0
 				str_damage_multiplier = 0.6
 				war_support_reduction_on_damage = 0.2
 				cannot_retreat_while_attacking = 1.0
@@ -88,9 +88,9 @@ ability = {
 		
 		one_time_effect = {
 			add_temporary_buff_to_units = {
-				combat_defense = 0.25
+				combat_defense = 0.2
 				combat_entrenchment = 0.25
-				org_damage_multiplier = -0.95
+				org_damage_multiplier = -1.0
 				str_damage_multiplier = 0.6
 				war_support_reduction_on_damage = 0.2
 				cannot_retreat_while_defending = 1.0
@@ -135,7 +135,6 @@ ability = {
 		
 		unit_modifiers = {
 			planning_speed = 4.0
-			max_planning = -0.1
 		}
 		
 		
@@ -207,7 +206,7 @@ ability = {
 		}
 		
 		unit_modifiers = {
-			paratrooper_count_per_plane = 1.0
+			paratrooper_weight_factor = -0.10
 			paradrop_organization_factor = 2.0
 			paratrooper_aa_defense = 0.5
 		}

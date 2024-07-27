@@ -395,7 +395,8 @@ operations = {
         available = {
             original_tag = FRA
             IRE = { is_ai = yes }
-            date > 1940.01.01
+            #date > 1940.01.01
+            FRA = {has_capitulated = yes}
         }
         visible = {
             original_tag = FRA

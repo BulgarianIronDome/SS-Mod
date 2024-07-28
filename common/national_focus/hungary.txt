@@ -631,7 +631,10 @@ focus_tree = {
 			add_state_core = 664
 			add_state_core = 45
 			add_state_core = 764
-			add_state_claim = 82
+			add_state_core = 82
+			add_state_claim = 70
+			add_state_claim = 71
+			add_state_claim = 73
 		}
 	}
 
@@ -650,7 +653,24 @@ focus_tree = {
 		}
 
 		available = {
-
+			OR = {
+				OR = {
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = axis
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = allies
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = on
+					}
+					strength_ratio = { tag = ROM ratio > 0.66 }
+					has_army_manpower = { size > 200000 }
+				}
+			}
 			ROM = {
 				controls_state = 76
 				controls_state = 83
@@ -663,9 +683,6 @@ focus_tree = {
 			NOT = {
 				has_war_with = ROM
 			}
-			strength_ratio = { tag = ROM ratio > 0.66 }
-			has_army_manpower = { size > 200000 }
-		
 		}
 
 		bypass = {
@@ -722,7 +739,25 @@ focus_tree = {
 					country_exists = CZE 
 					664 = { is_owned_by = CZE }
 				}
-				strength_ratio = { tag = CZE ratio > 0.75 }
+				
+			}
+			OR = {
+				OR = {
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = axis
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = allies
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = on
+					}
+					strength_ratio = { tag = CZE ratio > 0.75 }
+					has_army_manpower = { size > 220000 }
+				}
 			}
 		}
 
@@ -811,8 +846,24 @@ focus_tree = {
 		}
 
 		available = {
-			strength_ratio = { tag = YUG ratio > 0.75 }
-			has_army_manpower = { size > 175000 }
+			OR = {
+				OR = {
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = axis
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = allies
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = on
+					}
+					strength_ratio = { tag = YUG ratio > 0.75 }
+					has_army_manpower = { size > 175000 }
+				}
+			}
 		}
 
 		bypass = {
@@ -1044,7 +1095,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = HUN_GREATER_tt
 			set_cosmetic_tag = HUN_GREATER
-			add_stability = 0.1
+			add_stability = 0.15
 			hidden_effect = {
 				news_event = { id = news.299 }
 			}
@@ -1993,7 +2044,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			army_experience = 25
+			army_experience = 50
 		}
 	}
 

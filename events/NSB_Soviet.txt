@@ -482,10 +482,20 @@ unit_leader_event = {
 		hidden_effect = {
 			random_army_leader = {
 				limit = {
-					NOT = { is_character = SOV_georgy_zhukov }
-					NOT = { is_character = SOV_konstantin_rokossovsky }
-					NOT = { is_character = SOV_markian_popov }
+					if = {
+						limit = { has_game_rule = { rule = sov_purges option = yes } }
+						# If the game rule is set to yes, include these characters
+						has_character_flag = SOV_targeted_for_purge_flag
+					}
+					else_if = {
+						# If the game rule is set to no, exclude these characters
+						NOT = { has_game_rule = { rule = sov_purges option = yes } }
+						NOT = { is_character = SOV_georgy_zhukov }
+						NOT = { is_character = SOV_konstantin_rokossovsky }
+						NOT = { is_character = SOV_leonid_govorov }
 
+						has_character_flag = SOV_targeted_for_purge_flag
+					}
 					has_character_flag = SOV_targeted_for_purge_flag
 				}
 				NOT = { has_id = 410 }
@@ -719,9 +729,20 @@ unit_leader_event = {
 		hidden_effect = {
 			random_army_leader = {
 				limit = {
-					NOT = { is_character = SOV_georgy_zhukov }
-					NOT = { is_character = SOV_konstantin_rokossovsky }
-					NOT = { is_character = SOV_markian_popov }
+					if = {
+						limit = { has_game_rule = { rule = sov_purges option = yes } }
+						# If the game rule is set to yes, include these characters
+						has_character_flag = SOV_targeted_for_purge_flag
+					}
+					else_if = {
+						# If the game rule is set to no, exclude these characters
+						NOT = { has_game_rule = { rule = sov_purges option = yes } }
+						NOT = { is_character = SOV_georgy_zhukov }
+						NOT = { is_character = SOV_konstantin_rokossovsky }
+						NOT = { is_character = SOV_leonid_govorov }
+	
+						has_character_flag = SOV_targeted_for_purge_flag
+					}
 
 					has_character_flag = SOV_purge_accused_flag
 				}
@@ -789,11 +810,20 @@ unit_leader_event = {
 		hidden_effect = {
 			random_army_leader = {
 				limit = {
-					NOT = { is_character = SOV_georgy_zhukov }
-					NOT = { is_character = SOV_konstantin_rokossovsky }
-					NOT = { is_character = SOV_markian_popov }
-
-					has_character_flag = SOV_purge_accuser_flag
+					if = {
+						limit = { has_game_rule = { rule = sov_purges option = yes } }
+						# If the game rule is set to yes, include these characters
+						has_character_flag = SOV_targeted_for_purge_flag
+					}
+					else_if = {
+						# If the game rule is set to no, exclude these characters
+						NOT = { has_game_rule = { rule = sov_purges option = yes } }
+						NOT = { is_character = SOV_georgy_zhukov }
+						NOT = { is_character = SOV_konstantin_rokossovsky }
+						NOT = { is_character = SOV_leonid_govorov }
+							has_character_flag = SOV_purge_accuser_flag
+					}
+				
 				}
 				SOV_purge_character_effect = yes
 			}
@@ -1024,12 +1054,21 @@ country_event = {
 			#Purge any Advisors
 			every_character = {
 				limit = {
-					NOT = { is_character = SOV_georgy_zhukov }
-					NOT = { is_character = SOV_konstantin_rokossovsky }
-					NOT = { is_character = SOV_markian_popov }
-
-					has_army_ledger = yes
-					has_character_flag = SOV_targeted_for_purge_flag
+					if = {
+						limit = { has_game_rule = { rule = sov_purges option = yes } }
+						# If the game rule is set to yes, include these characters
+						has_character_flag = SOV_targeted_for_purge_flag
+					}
+					else_if = {
+						# If the game rule is set to no, exclude these characters
+						NOT = { has_game_rule = { rule = sov_purges option = yes } }
+						NOT = { is_character = SOV_georgy_zhukov }
+						NOT = { is_character = SOV_konstantin_rokossovsky }
+						NOT = { is_character = SOV_leonid_govorov }
+					
+						has_army_ledger = yes
+						has_character_flag = SOV_targeted_for_purge_flag
+					}
 				}
 				SOV_purge_character_effect = yes	
 				#log = "Hey I am [THIS.GetName] I am in the Event!"
@@ -1038,10 +1077,18 @@ country_event = {
 			#Purge any Marshals/Generals #This is a duplicate as a workaround for tooltip purposes
 			every_army_leader = {
 				limit = {
-					NOT = { is_character = SOV_georgy_zhukov }
-					NOT = { is_character = SOV_konstantin_rokossovsky }
-					NOT = { is_character = SOV_markian_popov }
-
+					if = {
+						limit = { has_game_rule = { rule = sov_purges option = yes } }
+						# If the game rule is set to yes, include these characters
+						has_character_flag = SOV_targeted_for_purge_flag
+					}
+					else_if = {
+						# If the game rule is set to no, exclude these characters
+						NOT = { has_game_rule = { rule = sov_purges option = yes } }
+						NOT = { is_character = SOV_georgy_zhukov }
+						NOT = { is_character = SOV_konstantin_rokossovsky }
+						NOT = { is_character = SOV_leonid_govorov }
+					}
 					OR = {
 						is_field_marshal = yes
 						is_corps_commander = yes

@@ -414,7 +414,7 @@ technologies = {
 	tech_recon2 = {
 
 		category_recon = {
-			recon = 3
+			recon = 2
 		}
 		
 		path = {
@@ -457,7 +457,7 @@ technologies = {
 	tech_recon3 = {
 
 		category_recon = {
-			recon = 3
+			recon = 2
 		}
 		path = {
 			leads_to_tech = tech_recon4
@@ -498,7 +498,7 @@ technologies = {
 	tech_recon4 = {
 
 		category_recon = {
-			recon = 3
+			recon = 2
 		}
 
 		research_cost = 2.0
@@ -1449,7 +1449,7 @@ technologies = {
 			train_equipment_1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.1
 		start_year = 1910
 		folder = {
 			name = support_folder
@@ -1498,7 +1498,7 @@ technologies = {
 			railway_gun_equipment_1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1936
 		folder = {
 			name = support_folder

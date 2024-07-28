@@ -656,6 +656,21 @@ pregrinds_4_factions = {
 		desc = "No one has pregrinds!(XD)"
 	}
 }
+sov_purges = {
+	name = "Soviet general purges"
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_assassination"
+	default = {
+		name = yes
+		text = "GOn"
+		desc = "There is a chance that top SOV generals will get purged(Reccomended)"
+	}
+	option = {
+		name = no
+		text = "PNone"
+		desc = "There is no chance that top SOV will get purged(Not balanced)"
+	}
+}
 juggle_slot = {
 	name = "Juggling esport"
 	group = "BHVM game rules"

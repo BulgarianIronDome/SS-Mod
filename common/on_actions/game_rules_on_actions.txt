@@ -950,7 +950,6 @@ on_actions = {
 				23 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 				19 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 				806 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
-				786 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 				785 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 				#VICHY
 				33 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
@@ -1111,7 +1110,7 @@ on_actions = {
 					}
 				}
 				FRA = {
-					load_oob = "FRA_1936_naval_mtg"
+					#load_oob = "FRA_1936_naval_mtg"
 					add_offsite_building = { type = industrial_complex level = 3 }
 				}
 			}

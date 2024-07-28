@@ -2660,11 +2660,27 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = fascism
-			has_army_manpower = { size > 849999 } #ca 90 div
 			SOV = {
 				NOT = { has_war_with = GER }
 				country_exists = SOV
 				has_civil_war = no
+			}
+			OR = {
+				OR = {
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = axis
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = allies
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = on
+					}
+					has_army_manpower = { size > 849999 } #ca 90 div
+				}
 			}
 			
 		}

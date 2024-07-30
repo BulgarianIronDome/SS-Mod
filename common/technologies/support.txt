@@ -249,7 +249,7 @@ technologies = {
 			research_cost_coeff = 1
 		}		
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -316,7 +316,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.25
 			}
 		}
 		research_cost = 2.0
@@ -464,7 +464,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -643,7 +643,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -814,7 +814,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -995,7 +995,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -1203,7 +1203,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1942
 		folder = {
 			name = support_folder
@@ -1373,7 +1373,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1.5
 		start_year = 1942
 		folder = {
 			name = support_folder

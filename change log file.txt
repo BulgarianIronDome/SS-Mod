@@ -182,3 +182,27 @@ Fixed some local shit
 Added a alternative no asia scenario with usa , usa has 1 less research slot and the navy is cut by ~50% 
 
 Nerfed allied generals , buffed spanish generals , nerfed soviet generals fixed the lend lease air for USA , nerfed alt-asia uk and france , nerfed asia uk and france , added decision to remove noob state for indochina if its no asia 
+
+Added a game rule for purgable soviet generals (you might still get "cowed by stalin" on the pregrinds) 
+Total mob is now called "Total Economic Morbilization"
+Fixed SAF annex into UK
+Fixed Yugoslavian air purchaes spirit
+Molotov packt now instead of always wanting 850k manpower , has now a game rule requirement for the manpower its either no grinding or allied pregrinds only
+Anti license trolling has been implemented 
+Made recon like vanila
+Made the navy spliting task force glitch not lag as much the game ( there will be a part 2 to this )
+Fixed Hungary focus tree , also added claims for slovakia 
+Made force attack and last stand like vanila ( for what ever reason they werent vania ) 
+Made french stockpile and navy teleport to IRE , france has a decision to annex them and gain back thier stuff
+Made italy get that one state borering france after france caps
+Removed swedish magic technology
+Nerfed Allied minor generals by a small bit
+Buffed spanish generals , now has double ranger and 1+ defense
+Prob fixed the wasteland africa crash
+Fixed french no asia noob state mods to indochina to be avaible only when no asia/alt asia is selected
+Added a decision for france to get the belguim congo after cap
+Added an artilery tech rush decisions as well
+Localized a few stuff
+Soviet focus "Superior war machines" now needs basic meduim in order to do
+Soviet focus "Foreign Experst" now gives Germany an event for resources , soviets also get resources , this is cut in vanila and made into a diffrent focus thats somewhere in "The comintern" branch
+Did all the changes promised in "Iron Water"

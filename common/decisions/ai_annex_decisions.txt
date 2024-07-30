@@ -1049,7 +1049,7 @@ political_actions = {
             original_tag = FRA
         }
         visible = {
-            #has_capitulated = yes
+            has_capitulated = yes
             original_tag = FRA
         }
         complete_effect = {

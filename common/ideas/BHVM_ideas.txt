@@ -179,20 +179,6 @@ ideas = {
 				ai_desired_divisions_factor = -1000
 			}
 		}
-		YUG_air_payment = {
-			picture = generic_fighter_production_diverted
-			allowed = {
-				original_tag = YUG
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
 		sov_no_tradebacks = {
 			cancel = {
 				SOV = {
@@ -301,16 +287,16 @@ ideas = {
 			modifier = {
 				experience_gain_army_unit_factor = 1
 				experience_gain_army = 0.2
-				training_time_army_factor = -0.80
+				training_time_army_factor = -0.85
 				air_training_xp_gain_factor = 10
 				experience_gain_navy_unit_factor = 10
 				attrition = -1
 				air_accidents_factor = -10
 				naval_accidents_chance = -10
 				mobilization_speed = 2
-				army_fuel_consumption_factor = -1
-				air_fuel_consumption_factor = -1
-				navy_fuel_consumption_factor = -1
+				army_fuel_consumption_factor = -10
+				air_fuel_consumption_factor = -10
+				navy_fuel_consumption_factor = -10
 			}
 		}
 		peace_training_no_xp = {
@@ -362,16 +348,16 @@ ideas = {
 			modifier = {
 				
 				experience_gain_army_unit_factor = 1
-				training_time_army_factor = -0.80
+				training_time_army_factor = -0.85
 				air_training_xp_gain_factor = 10
 				experience_gain_navy_unit_factor = 10
 				attrition = -1
 				air_accidents_factor = -10
 				naval_accidents_chance = -10
 				mobilization_speed = 2
-				army_fuel_consumption_factor = -1
-				air_fuel_consumption_factor = -1
-				navy_fuel_consumption_factor = -1
+				army_fuel_consumption_factor = -10
+				air_fuel_consumption_factor = -10
+				navy_fuel_consumption_factor = -10
 			}	
 		}
 		tradeback_is_cancer = {

@@ -188,6 +188,21 @@ no_brazil&finland = {
 		desc = "Finland and Brazil went on a vacation in Brazil :)"
 	}
 }
+killable_fin = {
+	name = "Can we Kill finland?"
+	group = "BHVM game rules"
+	icon = "SWE_committee_against_the_finnish_white_terror"
+	default = {
+		name = off
+		text = "GNo"
+		desc = "Finland cant be killed"
+	}
+	option = {
+		name = on
+		text = "RFinland will died"
+		desc = "GEGE VELL PLEIYED FEMLAND"
+	}
+}
 no_collabs = {
 	name = "Banned collabs"
 	group = "BHVM game rules"
@@ -744,6 +759,11 @@ china_war_difficulty = {
 		name = hard
 		text = "RHard"
 		desc = "China will get in total 160 divs , 45 are of them veterans-Juntuáns tho , all fully equiped also they get air(Not Reccomended)"
+	}
+	option = {
+		name = super_ez
+		text = "RNoob"
+		desc = "There is no Sino-China war , it will be scripted via decisions , making Japan's game extra easy(Not Reccomended)"
 	}
 	default = {
 		name = easy

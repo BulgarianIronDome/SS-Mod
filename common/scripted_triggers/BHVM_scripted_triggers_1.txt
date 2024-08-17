@@ -96,6 +96,7 @@ is_axis_country = {
 		original_tag = VEN
 		original_tag = VIC
 		original_tag = AOI
+		original_tag = LIB
 	}
 }
 

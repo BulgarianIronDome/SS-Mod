@@ -142,13 +142,23 @@ on_actions = {
 				ITA = {
 					add_corps_commander_role = {
 						character = ITA_sebastiano_visconti_prasca
-						traits = {  cavalry_leader armor_officer war_hero panzer_leader trait_engineer infantry_leader trickster organizer desert_fox trait_mountaineer }
+						traits = {  armor_officer war_hero trait_engineer infantry_leader trickster organizer desert_fox }
 						skill=6
-						attack_skill=6
+						attack_skill=4
 						defense_skill=7
 						planning_skill=5
 						logistics_skill=4
 					}
+					add_corps_commander_role = {
+						character = ITA_giovanni_messe
+						traits = {  cavalry_leader armor_officer war_hero panzer_leader trait_engineer infantry_leader trickster organizer trait_mountaineer }
+						skill=6
+						attack_skill=5
+						defense_skill=4
+						planning_skill=5
+						logistics_skill=5
+					}
+					
 				}
 				GER = {
 					add_corps_commander_role={
@@ -410,6 +420,15 @@ on_actions = {
 						defense_skill=7
 						planning_skill=5
 						logistics_skill=4
+					}
+					add_corps_commander_role = {
+						character = ITA_giovanni_messe
+						traits = {  cavalry_leader armor_officer war_hero panzer_leader trait_engineer infantry_leader trickster organizer trait_mountaineer }
+						skill=6
+						attack_skill=5
+						defense_skill=4
+						planning_skill=5
+						logistics_skill=5
 					}
 				}
 				GER = {

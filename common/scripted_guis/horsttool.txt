@@ -6,8 +6,8 @@ scripted_gui = {
 		parent_window_name = time_control_window
 		visible = {
 		OR ={ 
-			AND = { SWE = { check_variable = { pause_blocker_variable = 2    } } NOT = { has_country_flag = host }     } 
-			AND = { SWE = { check_variable = { pause_blocker_variable = 3    } } NOT = { immune_to_pause_block = yes  }     } 
+			AND = { BLM = { check_variable = { pause_blocker_variable = 2    } } NOT = { has_country_flag = host }     } 
+			AND = { BLM = { check_variable = { pause_blocker_variable = 3    } } NOT = { immune_to_pause_block = yes  }     } 
 		}
 		}
 	}
@@ -43,49 +43,86 @@ st_country_powers = {
 		addpp_click = {
 			owner={
 				set_temp_variable = { ROOT.marks = this}
-				var:marks = { add_political_power = 50 news_event = { id = horsttool.4 } }
+				var:marks = { add_political_power = 50 news_event = { id = hosttool.4 } }
 			}
 		}
 		addws_click = {
 			owner={
 				set_temp_variable = { ROOT.marks = this}
-				var:marks = { add_war_support = 0.1 news_event = { id = horsttool.4 } }
+				var:marks = { add_war_support = 0.1 news_event = { id = hosttool.10 } }
 			}
 		}
 		addst_click = {
 			owner={
 				set_temp_variable = { ROOT.marks = this}
-				var:marks = { add_stability = 0.1 news_event = { id = horsttool.4 } }
+				var:marks = { add_stability = 0.1 news_event = { id = hosttool.11 } }
 			}
 		}
 		addsteel_click = {
 			owner={
 				set_temp_variable = { ROOT.marks = this}
-				var:marks = { add_resource = { type = steel amount = 5 }  = 0.1 news_event = { id = horsttool.4 } }
+				var:marks = {
+					capital_scope = {
+						add_resource = { type = steel amount = 5 }
+					}
+					news_event = { id =  hosttool.12 }
+				}
 			}
 		}
+
 		addtungsten_click = {
 			owner={
 				set_temp_variable = { ROOT.marks = this}
-				var:marks = { add_resource = {type = tungsten amount = 5}  = 0.1 news_event = { id = horsttool.4 } }
+				var:marks = {
+					capital_scope = {
+						add_resource = { type = tungsten amount = 5 }
+					}
+					news_event = { id =  hosttool.13 }
+				}
 			}
 		}
 		addchromuim_click = {
 			owner={
 				set_temp_variable = { ROOT.marks = this}
-				var:marks = { add_resource = {type = chromium amount = 5}  = 0.1 news_event = { id = horsttool.4 } }
+				var:marks = {
+					capital_scope = {
+						add_resource = { type = chromium amount = 5 }
+					}
+					news_event = { id = hosttool.16 }
+				}
 			}
 		}
 		addaluminium_click = {
 			owner={
 				set_temp_variable = { ROOT.marks = this}
-				var:marks = { add_resource = { type = aluminium amount = 5}  = 0.1 news_event = { id = horsttool.4 } }
+				var:marks = {
+					capital_scope = {
+						add_resource = { type = aluminium amount = 5 }
+					}
+					news_event = { id =  hosttool.14 }
+				}
 			}
 		}
 		addoil_click = {
 			owner={
 				set_temp_variable = { ROOT.marks = this}
-				array = marked_states = { add_resource = {type = oil amount = 5}  = 0.1 news_event = { id = horsttool.4 } }
+				var:marks = {
+					capital_scope = {
+						add_resource = { type = oil amount = 5 }
+					}
+					news_event = { id =  hosttool.15 }
+				}
+			}
+		}
+		addrubber_click = {
+			owner={
+				set_temp_variable = { ROOT.marks = this}
+				var:marks = {
+					capital_scope = {
+						add_resource = { type = rubber amount = 5 }
+					}
+					news_event = { id =  hosttool.17 } 
+				}
 			}
 		}
 		#civ_add_click = { owner = { news_event = { id = horsttool.1 days = 0} add_offsite_building = { type = industrial_complex level = 1 } } }
@@ -181,9 +218,9 @@ st_country_powers = {
 					if = { limit = { check_variable = { Root.selected_cheat = 9 } } random_owned_controlled_state = { limit = { arms_factory > 0 }remove_building = { type = arms_factory  level = 1 }}}
 					if = { limit = { check_variable = { Root.selected_cheat = 10 } } random_owned_controlled_state = { limit = { industrial_complex > 0 }remove_building = { type = industrial_complex  level = 1 }}}
 					if = { limit = { check_variable = { Root.selected_cheat = 11 } } scoped_sound_effect = "earrape_sound_effect" }
-					if = { limit = { check_variable = { Root.selected_cheat = 12 } } army_experience = 25 }
-					if = { limit = { check_variable = { Root.selected_cheat = 13 } } air_experience = 25 }
-					if = { limit = { check_variable = { Root.selected_cheat = 14 } } navy_experience = 25 }
+					if = { limit = { check_variable = { Root.selected_cheat = 12 } } army_experience = 50 }
+					if = { limit = { check_variable = { Root.selected_cheat = 13 } } air_experience = 50 }
+					if = { limit = { check_variable = { Root.selected_cheat = 14 } } navy_experience = 50 }
 					if = { limit = { check_variable = { Root.selected_cheat = 15 } } scoped_sound_effect = "schizophrenic_meltdown_sound_effect" } # Amongus yuli - Vilio 
 					if = {
 						limit = {
@@ -307,12 +344,12 @@ st_country_powers = {
 			}
 			set_variable = { ROOT.first_marked_state = ROOT.marked_states^0 }
 		}				
-		mill_add_click = { owner = { news_event = { id = horsttool.1 days = 0} add_offsite_building = { type = arms_factory level = 1 }	} }
-		civ_add_click = { owner = { news_event = { id = horsttool.1 days = 0} add_offsite_building = { type = industrial_complex level = 1 } } }
+		mill_add_click = { owner = { news_event = { id = hosttool.2 days = 0} add_offsite_building = { type = arms_factory level = 1 }	} }
+		civ_add_click = { owner = { news_event = { id = hosttool.3 days = 0} add_offsite_building = { type = industrial_complex level = 1 } } }
 
-		pause_blocker_all_click = { SWE =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 1 } } ROOT={clr_global_flag=blocking_pauses} }#ALL CAN PAUSE
-		pause_blocker_host_click = { SWE =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 2 } } ROOT={clr_global_flag=blocking_pauses } } #ONLY HOST CAN USE PAUSE BUTTON
-		pause_blocker_major_click = {if={limit={ROOT={has_global_flag=blocking_pauses}} SWE =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 3 } }  ROOT={clr_global_flag=blocking_pauses}} else = {ROOT={set_global_flag = blocking_pauses } } }#ONLY MAJORS CAN PAUSE
+		pause_blocker_all_click = { BLM =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 1 } } ROOT={clr_global_flag=blocking_pauses} }#ALL CAN PAUSE
+		pause_blocker_host_click = { BLM =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 2 } } ROOT={clr_global_flag=blocking_pauses } } #ONLY HOST CAN USE PAUSE BUTTON
+		pause_blocker_major_click = {if={limit={ROOT={has_global_flag=blocking_pauses}} BLM =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 3 } }  ROOT={clr_global_flag=blocking_pauses}} else = {ROOT={set_global_flag = blocking_pauses } } }#ONLY MAJORS CAN PAUSE
 
 		wt_add_click = { GER = { add_threat = 1 } }
 		wt_remove_click = { GER = { add_threat = -1 } }

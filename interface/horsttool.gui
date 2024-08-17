@@ -212,51 +212,51 @@ guiTypes = {
 			pdx_tooltip_delayed = "ADDST_DELAYED"
 		}
 		buttonType = {
-			name = "add_tungsten"	
+			name = "addtungsten"	
 			position = {x=150 y=140}
 			spriteType = "GFX_tungsten"
             scale=1.2
-			pdx_tooltip = "ADD_TUNGSTEN"
+			pdx_tooltip = "ADDTUNGSTEN"
 			pdx_tooltip_delayed = "ADD_TUNGSTEN_DELAYED"
 		}
 		buttonType = {
-			name = "add_steel"	
+			name = "addsteel"	
 			position = {x=190 y=140}
 			spriteType = "GFX_steel"
             scale=1.2
-			pdx_tooltip = "ADD_STEEL"
+			pdx_tooltip = "ADDSTEEL"
 			pdx_tooltip_delayed = "ADD_STEEL_DELAYED"
 		}
 		buttonType = {
-			name = "add_chromuim"	
+			name = "addchromuim"	
 			position = {x=145 y=170}
 			spriteType = "GFX_chromuim"
             scale=1.4
-			pdx_tooltip = "ADD_CHROMUIM"
+			pdx_tooltip = "ADDCHROMUIM"
 			pdx_tooltip_delayed = "ADD_CHROMUIM_DELAYED"
 		}
 		buttonType = {
-			name = "add_aluminium"	
+			name = "addaluminium"	
 			position = {x=190 y=170}
 			spriteType = "GFX_aluminium"
             scale=1.4
-			pdx_tooltip = "ADD_ALUMINIUM"
+			pdx_tooltip = "ADDALUMINIUM"
 			pdx_tooltip_delayed = "ADD_ALUMINIUM_DELAYED"
 		}
 		buttonType = {
-			name = "add_rubber"	
+			name = "addrubber"	
 			position = {x=190 y=205}
 			spriteType = "GFX_rubber"
             scale=1.3
-			pdx_tooltip = "ADD_RUBBER"
+			pdx_tooltip = "ADDRUBBER"
 			pdx_tooltip_delayed = "ADD_RUBBER_DELAYED"
 		}
 		buttonType = {
-			name = "add_oil"	
+			name = "addoil"	
 			position = {x=150 y=205}
 			spriteType = "GFX_oil"
             scale=1.2
-			pdx_tooltip = "ADD_OIL"
+			pdx_tooltip = "ADDOIL"
 			pdx_tooltip_delayed = "ADD_OIL_DELAYED"
 		}
 ####################################################################

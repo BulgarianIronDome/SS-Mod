@@ -206,3 +206,15 @@ Localized a few stuff
 Soviet focus "Superior war machines" now needs basic meduim in order to do
 Soviet focus "Foreign Experst" now gives Germany an event for resources , soviets also get resources , this is cut in vanila and made into a diffrent focus thats somewhere in "The comintern" branch
 Did all the changes promised in "Iron Water"
+
+
+Fixed a lot of hoost tool stuff , and now gives events 
+Gave japan pregrinds a commando +1 buffed manchu pregrind , fixed italian 2nd pregrind aka 2+ more traits , buffed a tiny wee bit german pregrinds giving them 1+ defense on the dday one
+Gave some skill 1+ on some gens
+Buffed mongolia with 1 extra starting civ , that is in non core territory lol
+Gorila on plains now has proper localization
+Changed LL decision to be proper
+Fixed all the broken localization stuff from "Iron Water"
+Stuff to do , add the swiss gold for Germany as a game rule ofc , add the no china war only decisions pushes stuff to be real and to work
+Reverted decryption commented out stuff aka + some attack against the decrypted nation
+

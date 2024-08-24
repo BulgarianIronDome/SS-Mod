@@ -4,6 +4,7 @@
  thorough_planner_tooltip:0 "This trait is only pickable when the 'BHVM_thorough_planner' game rule option is set to 'on'."
  SOV_no_air_tooltip:0 "Soviets cannot produce air!"
  E_ll:"Air Decision Lend Lease"
+ tactic_guerrilla_tactics_plains:"Ape tacitcs (not rollable on plains)"
  SOV_nuhuh_air:0 "§RThe Game rule:"Soviets no air" is on! \nSo now they can't produce aircraft.§!"
  MON_dagva_tooltip:0 "With the following §Yskills§!:\n£trait_attack 6 £trait_defense 4 £trait_planning 4 £trait_logistics 3 and him being level 6 skill.\n"
  MON_warning_tooltip:0 "Once you finish this focus §R IT WILL CRUMBLE YOUR WHOLE INDUSTRY IT IS ADVISED TO DO THIS FOCUS ASAP BEFORE ECONOMIC ONES!§"

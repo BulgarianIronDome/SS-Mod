@@ -1,0 +1,48 @@
+﻿add_namespace = cheat
+
+news_event = {
+	id = cheat.1
+	title = "Cheated Equipment Detected"
+	desc = "A nation has equipment with upgrades exceeding the allowed limits!"
+	picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+    trigger = {
+        equipment_upgrade_exceeds_limit = yes
+    }
+
+    option = {
+        name = "Well.Atleast it works!"
+        # Do something, like logging, or applying penalties if necessary
+    }
+}
+news_event = {
+	id = cheat.2
+	title = "Impresive factory count"
+	desc = "A nation has exceeded define building limit! In a state Look around for a state with a lot of factories"
+	picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = "Very Impresive, Hallal"
+        # Do something, like logging, or applying penalties if necessary
+    }
+}
+news_event = {
+	id = cheat.3
+	title = "Double doctrine/Tech"
+	desc = "CE user has both industry techs or 2 doctrines"
+	picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = "Very Impresive, Hallal"
+        # Do something, like logging, or applying penalties if necessary
+    }
+}
+

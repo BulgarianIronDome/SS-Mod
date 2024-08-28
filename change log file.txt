@@ -218,3 +218,9 @@ Fixed all the broken localization stuff from "Iron Water"
 Stuff to do , add the swiss gold for Germany as a game rule ofc , add the no china war only decisions pushes stuff to be real and to work
 Reverted decryption commented out stuff aka + some attack against the decrypted nation
 
+Nerfed china eco 
+Nerfed jap ger and sov generals
+New game rule for fighters against fascism
+Nerfed baltic eco , nerfed china eco w 5 civs and 2 mills and 1 dokcyard
+Fixed some stuff about auto tech rush
+Fixed spanish and japan focus trees

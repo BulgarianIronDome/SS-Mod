@@ -511,6 +511,21 @@ soviet_airforce = {
 		desc = "Soviets are NOT ALLOWED to make air"
 	}
 }
+soviet_focus_buffs = {
+	name = "Soviet can do Fighters Against fascism"
+	group = "BHVM game rules"
+	icon = "GFX_decision_SOV_place_hq"
+	option = {
+		name = on
+		text = "GYes they can"
+		desc = "Soviets can do the funny focus(RECOMENDED)"
+	}
+	default = {
+		name = off
+		text = "RNo they can't"
+		desc = "Soviets can't do the funny focus(NOT REALLY RECOMENDED)"
+	}
+}
 sov_tashek_tungsten = {
 	name = "Soviets tungsten"
 	group = "BHVM game rules"

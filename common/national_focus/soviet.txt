@@ -8965,7 +8965,14 @@ focus = {
 		y = 1
 		relative_position_id = SOV_the_comintern
 		cost = 5
-
+		available = {
+			NOT = {
+				has_game_rule = {
+					rule = soviet_focus_buffs
+					option = off
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 1
 			modifier = {

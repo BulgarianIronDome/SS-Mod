@@ -281,7 +281,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1938.12.31
+           date > 1939.12.31
         }
         complete_effect = {
             BLM = {
@@ -307,7 +307,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1940.03.30
+           date > 1940.01.30
         }
         complete_effect = {
             BLM = {
@@ -333,7 +333,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1940.03.30
+           date > 1940.01.30
         }
         complete_effect = {
             BLM = {
@@ -359,7 +359,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1940.03.30
+           date > 1940.01.30
         }
         complete_effect = {
             BLM = {
@@ -385,7 +385,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1940.05.30
+           date > 1940.03.30
         }
         complete_effect = {
             BLM = {

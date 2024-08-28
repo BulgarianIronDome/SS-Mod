@@ -473,7 +473,7 @@ unit_leader_event = {
 		}
 	}
 
-	option = { #PURGE
+	option = { # PURGE
 		name = NSB_soviet_paranoia_system_events.21.a
 		ai_chance = {
 			base = 10
@@ -484,16 +484,13 @@ unit_leader_event = {
 				limit = {
 					if = {
 						limit = { has_game_rule = { rule = sov_purges option = yes } }
-						# If the game rule is set to yes, include these characters
 						has_character_flag = SOV_targeted_for_purge_flag
 					}
 					else_if = {
-						# If the game rule is set to no, exclude these characters
 						NOT = { has_game_rule = { rule = sov_purges option = yes } }
 						NOT = { is_character = SOV_georgy_zhukov }
 						NOT = { is_character = SOV_konstantin_rokossovsky }
 						NOT = { is_character = SOV_leonid_govorov }
-
 						has_character_flag = SOV_targeted_for_purge_flag
 					}
 					has_character_flag = SOV_targeted_for_purge_flag
@@ -504,8 +501,6 @@ unit_leader_event = {
 				SOV_purge_character_effect = yes
 			}
 		}
-		#custom_effect_tooltip = SOV_retire_purged_character_tt
-
 		custom_effect_tooltip = SOV_characters_will_be_purged_tt
 		character_list_tooltip = {
 			limit = {
@@ -513,16 +508,13 @@ unit_leader_event = {
 			}
 		}
 
-		#Update purged portraits in UI
 		hidden_effect = {
 			SOV_paranoia_update_portraits_ui = yes
 		}
 
-		#RANDOM GENERALS COWED
 		SOV_paranoia_daunt_generals_minor_effect = yes
 
-		#PARANOIA DECREASES based on general's level
-		set_variable = { SOV_unit_leader_level = SOV_accused_unit_leader_level } #Set the appropriate var used in the scripted effect
+		set_variable = { SOV_unit_leader_level = SOV_accused_unit_leader_level }
 		SOV_paranoia_decrease_based_on_unit_leader_level_effect = yes
 		custom_effect_tooltip = NSB_soviet_paranoia_system_events.24_paranoia_accused_decrease_tt
 
@@ -532,20 +524,19 @@ unit_leader_event = {
 			}
 			custom_effect_tooltip = SOV_purge_event_not_enough_pp_to_avoid_regular_tt
 		}
-		# Increase opposition Army Support 
 		SOV_increase_opposition_army_support_small = yes 
 		clear_variable = SOV_purged_character_for_loc
 	}
 
-	option = { #NO WAIT! Let's Think about it
+	option = { # NO WAIT! Let's Think about it
 		name = NSB_soviet_paranoia_system_events.21.b
 		ai_chance = {
 			base = 1
-			modifier = { #Don't go to negative PP please
+			modifier = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
 			}
-			modifier = { #Don't risk starting CW too early
+			modifier = {
 				factor = 0
 				SOV_is_opposition = yes 
 			}
@@ -559,12 +550,10 @@ unit_leader_event = {
 
 		SOV_paranoia_increase_based_on_unit_leader_level_effect = yes
 
-		#PARANOIA INCREASES
-		set_variable = { SOV_unit_leader_level = SOV_accused_unit_leader_level } #Set the appropriate var used in the scripted effect
+		set_variable = { SOV_unit_leader_level = SOV_accused_unit_leader_level }
 		SOV_paranoia_increase_based_on_unit_leader_level_effect = yes
 		custom_effect_tooltip = NSB_soviet_paranoia_system_events.24_paranoia_accused_increase_tt
 
-		#CLEAN EVERYTHING THANKS
 		SOV_clean_purge_targets_effect = yes
 		clear_variable = SOV_purged_character_for_loc
 	}
@@ -720,7 +709,7 @@ unit_leader_event = {
 		}
 	}
 
-	option = { #PURGE ACCUSED
+	option = { # PURGE ACCUSED
 		name = NSB_soviet_paranoia_system_events.24.a
 		ai_chance = {
 			base = 10
@@ -731,19 +720,15 @@ unit_leader_event = {
 				limit = {
 					if = {
 						limit = { has_game_rule = { rule = sov_purges option = yes } }
-						# If the game rule is set to yes, include these characters
 						has_character_flag = SOV_targeted_for_purge_flag
 					}
 					else_if = {
-						# If the game rule is set to no, exclude these characters
 						NOT = { has_game_rule = { rule = sov_purges option = yes } }
 						NOT = { is_character = SOV_georgy_zhukov }
 						NOT = { is_character = SOV_konstantin_rokossovsky }
 						NOT = { is_character = SOV_leonid_govorov }
-	
 						has_character_flag = SOV_targeted_for_purge_flag
 					}
-
 					has_character_flag = SOV_purge_accused_flag
 				}
 				NOT = { has_id = 410 }
@@ -752,7 +737,6 @@ unit_leader_event = {
 				SOV_purge_character_effect = yes
 			}
 		}
-		#custom_effect_tooltip = SOV_retire_accused_character_tt
 		custom_effect_tooltip = SOV_characters_will_be_purged_tt
 		character_list_tooltip = {
 			limit = {
@@ -760,20 +744,16 @@ unit_leader_event = {
 			}
 		}
 
-		#Update purged portraits in UI
 		hidden_effect = {
 			SOV_paranoia_update_portraits_ui = yes
 		}
 
-		#RANDOM GENERALS COWED
 		SOV_paranoia_daunt_generals_minor_effect = yes
 		
-		#PARANOIA decreases based on general's level
-		set_variable = { SOV_unit_leader_level = SOV_accused_unit_leader_level } #Set the appropriate var used in the scripted effect
+		set_variable = { SOV_unit_leader_level = SOV_accused_unit_leader_level }
 		SOV_paranoia_decrease_based_on_unit_leader_level_effect = yes
 		custom_effect_tooltip = NSB_soviet_paranoia_system_events.24_paranoia_accused_decrease_tt
 
-		#CLEAN EVERYTHING THANKS
 		hidden_effect = {
 			clear_variable = SOV_accused_unit_leader_level
 			clear_variable = SOV_accuser_unit_leader_level
@@ -793,11 +773,10 @@ unit_leader_event = {
 			}
 			custom_effect_tooltip = SOV_purge_event_not_enough_pp_to_avoid_regular_tt
 		}
-		# Increase opposition Army Support 
 		SOV_increase_opposition_army_support_small = yes 
 	}
 
-	option = { #PURGE ACCUSER 
+	option = { # PURGE ACCUSER 
 		name = NSB_soviet_paranoia_system_events.24.b
 		ai_chance = {
 			base = 5
@@ -812,23 +791,19 @@ unit_leader_event = {
 				limit = {
 					if = {
 						limit = { has_game_rule = { rule = sov_purges option = yes } }
-						# If the game rule is set to yes, include these characters
 						has_character_flag = SOV_targeted_for_purge_flag
 					}
 					else_if = {
-						# If the game rule is set to no, exclude these characters
 						NOT = { has_game_rule = { rule = sov_purges option = yes } }
 						NOT = { is_character = SOV_georgy_zhukov }
 						NOT = { is_character = SOV_konstantin_rokossovsky }
 						NOT = { is_character = SOV_leonid_govorov }
-							has_character_flag = SOV_purge_accuser_flag
+						has_character_flag = SOV_purge_accuser_flag
 					}
-				
 				}
 				SOV_purge_character_effect = yes
 			}
 		}
-		#custom_effect_tooltip = SOV_retire_accuser_character_tt
 		custom_effect_tooltip = SOV_characters_will_be_purged_tt
 		character_list_tooltip = {
 			limit = {
@@ -836,15 +811,12 @@ unit_leader_event = {
 			}
 		}
 
-		#RANDOM GENERALS COWED
 		SOV_paranoia_daunt_generals_minor_effect = yes
 
-		#PARANOIA decreases based on general's level
-		set_variable = { SOV_unit_leader_level = SOV_accuser_unit_leader_level } #Set the appropriate var used in the scripted effect and clean vars and flags
+		set_variable = { SOV_unit_leader_level = SOV_accuser_unit_leader_level }
 		SOV_paranoia_decrease_based_on_unit_leader_level_effect = yes
 		custom_effect_tooltip = NSB_soviet_paranoia_system_events.24_paranoia_accused_decrease_tt
 
-		#CLEAN EVERYTHING THANKS
 		hidden_effect = {
 			clear_variable = SOV_accused_unit_leader_level
 			clear_variable = SOV_accuser_unit_leader_level
@@ -852,77 +824,12 @@ unit_leader_event = {
 			clear_variable = SOV_accuser_character_for_loc
 			every_army_leader = {
 				limit = {
-					has_character_flag = SOV_purge_accused_flag
-				}
-				clr_character_flag = SOV_purge_accused_flag
-			}
-		}
-
-		if = {
-			limit = {
-				has_political_power < SOV_purge_event_pp_to_avoid_regular
-			}
-			custom_effect_tooltip = SOV_purge_event_not_enough_pp_to_avoid_regular_tt
-		}
-		# Increase opposition Army Support 
-		SOV_increase_opposition_army_support_small = yes 
-	}
-
-	option = { #NO WAIT! Let's Think about it
-		name = NSB_soviet_paranoia_system_events.24.c
-		ai_chance = {
-			base = 2
-			modifier = { #Don't go to negative PP please
-				factor = 0
-				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
-			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
-		}
-
-		trigger = {
-			NOT = { has_political_power < SOV_purge_event_pp_to_avoid_regular }
-		}
-
-		add_political_power = SOV_purge_event_pp_to_avoid_regular_pay
-
-		every_army_leader = { #Both characters get cowed
-			limit = {
-				OR = {
-					has_character_flag = SOV_purge_accuser_flag
-					has_character_flag = SOV_purge_accused_flag
-				}
-			}
-			add_unit_leader_trait = trait_SOV_cowed_by_stalin_army
-		}
-
-		#PARANOIA INCREASES
-		set_variable = { SOV_unit_leader_level = SOV_accused_unit_leader_level } #Set the appropriate var used in the scripted effect and clean vars and flags
-		add_to_variable = { SOV_unit_leader_level = SOV_accuser_unit_leader_level }
-		SOV_paranoia_increase_based_on_unit_leader_level_effect = yes
-		custom_effect_tooltip = NSB_soviet_paranoia_system_events.24_paranoia_both_increase_tt
-
-		#CLEAN EVERYTHING THANKS
-		hidden_effect = {
-			clear_variable = SOV_accused_unit_leader_level
-			clear_variable = SOV_accuser_unit_leader_level
-			clear_variable = SOV_accused_character_for_loc
-			clear_variable = SOV_accuser_character_for_loc
-			random_army_leader = {
-				limit = {
-					has_character_flag = SOV_purge_accused_flag
-				}
-				clr_character_flag = SOV_purge_accused_flag
-			}
-			random_army_leader = {
-				limit = {
 					has_character_flag = SOV_purge_accuser_flag
 				}
 				clr_character_flag = SOV_purge_accuser_flag
 			}
 		}
+		SOV_increase_opposition_army_support_small = yes 
 	}
 }
 
@@ -1062,16 +969,17 @@ country_event = {
 					else_if = {
 						# If the game rule is set to no, exclude these characters
 						NOT = { has_game_rule = { rule = sov_purges option = yes } }
-						NOT = { is_character = SOV_georgy_zhukov }
-						NOT = { is_character = SOV_konstantin_rokossovsky }
-						NOT = { is_character = SOV_leonid_govorov }
-					
-						has_army_ledger = yes
+						NOT = {
+							OR = {
+								is_character =  SOV_georgy_zhukov 
+								is_character = SOV_konstantin_rokossovsky
+								is_character = SOV_leonid_govorov
+							}
+						}
 						has_character_flag = SOV_targeted_for_purge_flag
 					}
 				}
 				SOV_purge_character_effect = yes	
-				#log = "Hey I am [THIS.GetName] I am in the Event!"
 			}
 
 			#Purge any Marshals/Generals #This is a duplicate as a workaround for tooltip purposes
@@ -1085,9 +993,13 @@ country_event = {
 					else_if = {
 						# If the game rule is set to no, exclude these characters
 						NOT = { has_game_rule = { rule = sov_purges option = yes } }
-						NOT = { is_character = SOV_georgy_zhukov }
-						NOT = { is_character = SOV_konstantin_rokossovsky }
-						NOT = { is_character = SOV_leonid_govorov }
+						NOT = {
+							OR = {
+								is_character = SOV_georgy_zhukov
+								is_character = SOV_konstantin_rokossovsky
+								is_character = SOV_leonid_govorov
+							}
+						}
 					}
 					OR = {
 						is_field_marshal = yes
@@ -1096,7 +1008,6 @@ country_event = {
 					has_character_flag = SOV_targeted_for_purge_flag
 				}
 				SOV_purge_character_effect = yes	
-				#log = "Hey I am [THIS.GetName] I am in the Event!"
 			}
 		}
 
@@ -1137,35 +1048,8 @@ country_event = {
 		# Increase opposition Army Support 
 		SOV_increase_opposition_army_support_small = yes  
 	}
-
-	option = { #NO WAIT! Let's Think about it
-		name = NSB_soviet_paranoia_system_events.29.b
-		ai_chance = {
-			base = 1
-			modifier = { #Don't go to negative PP please
-				factor = 0
-				has_political_power < SOV_purge_event_pp_to_avoid_great_pay
-			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
-		}
-
-		trigger = {
-			NOT = { has_political_power < SOV_purge_event_pp_to_avoid_great }
-			NOT = { has_country_flag = SOV_purge_event_unavoidable_flag } #Used for historical purges triggered via focus
-		}
-
-		add_political_power = SOV_purge_event_pp_to_avoid_great_pay
-
-		#PARANOIA INCREASES
-		SOV_paranoia_very_high_increase_effect = yes
-
-		#CLEAN EVERYTHING THANKS
-		SOV_clean_purge_targets_effect = yes
-	}
 }
+
 
 ###################
 ### NAVY PURGES ###

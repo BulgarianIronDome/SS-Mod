@@ -211,6 +211,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = 100
 				conversion_cost_mil_to_civ_factor = 100
 				ai_desired_divisions_factor = -1000
+				lend_lease_tension = 99
 				ai_license_acceptance = -1000
 				navy_intel_to_others = -1000
 				army_intel_to_others = -1000
@@ -288,15 +289,16 @@ ideas = {
 				experience_gain_army_unit_factor = 1
 				experience_gain_army = 0.2
 				training_time_army_factor = -0.85
-				air_training_xp_gain_factor = 10
+				air_training_xp_gain_factor = 9
 				experience_gain_navy_unit_factor = 10
 				attrition = -1
-				air_accidents_factor = -10
-				naval_accidents_chance = -10
+				air_accidents_factor = -9
+				naval_accidents_chance = -9
 				mobilization_speed = 2
-				army_fuel_consumption_factor = -10
-				air_fuel_consumption_factor = -10
-				navy_fuel_consumption_factor = -10
+				army_fuel_consumption_factor = -9
+				air_fuel_consumption_factor = -9
+				navy_fuel_consumption_factor = -9
+				repair_speed_factor = 100
 			}
 		}
 		peace_training_no_xp = {
@@ -349,15 +351,16 @@ ideas = {
 				
 				experience_gain_army_unit_factor = 1
 				training_time_army_factor = -0.85
-				air_training_xp_gain_factor = 10
+				air_training_xp_gain_factor = 9
 				experience_gain_navy_unit_factor = 10
 				attrition = -1
-				air_accidents_factor = -10
-				naval_accidents_chance = -10
+				air_accidents_factor = -9
+				naval_accidents_chance = -9
 				mobilization_speed = 2
-				army_fuel_consumption_factor = -10
-				air_fuel_consumption_factor = -10
-				navy_fuel_consumption_factor = -10
+				army_fuel_consumption_factor = -9
+				air_fuel_consumption_factor = -9
+				navy_fuel_consumption_factor = -9
+				repair_speed_factor = 100
 			}	
 		}
 		tradeback_is_cancer = {

@@ -132,22 +132,16 @@
 					608 = {
 						NOT = {
 							is_controlled_by = CHI
-							is_controlled_by = PRC
-							is_controlled_by = SHX
 						}
 					}
 					597 = {
 						NOT = {
 							is_controlled_by = CHI
-							is_controlled_by = PRC
-							is_controlled_by = SHX
 						}
 					}
 					614 = {
 						NOT = {
 							is_controlled_by = CHI
-							is_controlled_by = PRC
-							is_controlled_by = SHX
 						}
 					}
 				}
@@ -221,6 +215,28 @@
 			OR = {
 				NOT = { JAP_has_idea_JAP_intervene_in_china = yes }
 				CHI = { has_capitulated = yes }
+			}
+			bypass = {
+				OR = {
+					AND = {
+						608 = {
+							NOT = {
+								is_controlled_by = CHI								
+							}
+						}
+						597 = {
+							NOT = {
+								is_controlled_by = CHI
+							}
+						}
+						614 = {
+							NOT = {
+								is_controlled_by = CHI
+							}
+						}
+					}
+					has_war_with = CHI
+				}
 			}
 		}
 

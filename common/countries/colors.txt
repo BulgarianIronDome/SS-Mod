@@ -164,10 +164,6 @@ VEN = {
 	color = rgb { 171 190 152 }
 	color_ui = rgb { 222 247 198 }
 }
-WST = {
-	color = rgb { 0 0 0 }
-	color_ui = rgb { 0 0 0 }
-}
 ETH = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }

@@ -336,7 +336,7 @@ elwolfmod_capitulations_on_actions = {
 				JAP = {
 					has_war_with = HOL
 				}
-				361 = { is_owned_and_controlled_by = WST }
+				361 = { is_owned_and_controlled_by = BLM }
 			}
 		}
 		HOL = {
@@ -358,7 +358,7 @@ elwolfmod_capitulations_on_actions = {
 			original_tag = BEL
 			GER = { has_war_with = BEL }
 			NOT = {
-				361 = { is_owned_and_controlled_by = WST }
+				361 = { is_owned_and_controlled_by = BLM }
 			}
 		}
 		BEL = {
@@ -387,7 +387,7 @@ elwolfmod_capitulations_on_actions = {
 			}
 		}
 
-		WST = {
+		BLM = {
 			add_threat = 40
 		}
 	}
@@ -409,7 +409,7 @@ elwolfmod_capitulations_on_actions = {
 						has_idea = elwolfmod_noasia_research
 					}
 				}
-				WST = { add_threat = 40 }
+				BLM = { add_threat = 40 }
 				add_named_threat = { 
 					threat = 6.3 
 					name = elwolf_yug
@@ -562,7 +562,7 @@ elwolfmod_capitulations_on_actions = {
 						has_idea = elwolfmod_noasia_research
 					}
 				}
-				WST = { add_threat = 40 }
+				BLM = { add_threat = 40 }
 				add_named_threat = { 
 					threat = 6.3 
 					name = elwolf_yug

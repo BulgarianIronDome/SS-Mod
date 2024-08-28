@@ -378,7 +378,9 @@
 			every_state = {
 				limit = { 
 					OR = {
-						
+						state = 459
+						state = 460
+						state = 513
 					}
 					is_owned_or_subject_trigger = yes	
 					OR = {	
@@ -386,7 +388,7 @@
 						has_state_flag = FRA_colonial_industry_target
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 
@@ -405,38 +407,7 @@
 					}
 					is_owned_or_subject_trigger = yes	
 				}
-				
-				random_state = {
-						limit = { 
-							OR = {
-								state = 459
-								state = 460
-								state = 513
-							}
-							OWNER = { is_owned_or_subject_trigger = yes }	
-							NOT = {
-								has_state_flag = FRA_colonial_industry_target
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						set_state_flag = FRA_colonial_industry_target
-				}
-				random_state = {
-						limit = { 
-							OR = {
-								state = 459
-								state = 460
-								state = 513
-							}
-							OWNER = { is_owned_or_subject_trigger = yes }	
-							NOT = {
-								has_state_flag = FRA_colonial_industry_target
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						set_state_flag = FRA_colonial_industry_target
-				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				set_state_flag = FRA_industrial_expansion_target
 				set_state_flag = FRA_colonial_industry_target
 				random_neighbor_state = {
@@ -452,30 +423,13 @@
 							has_state_flag = FRA_colonial_industry_target
 						}		
 					}
-					add_extra_state_shared_building_slots = 1
-					set_state_flag = FRA_industrial_expansion_target
-					set_state_flag = FRA_colonial_industry_target
-				}
-				random_neighbor_state = {
-					limit = { 
-						OR = {
-							state = 459
-							state = 460
-							state = 513
-						}
-						is_owned_or_subject_trigger = yes
-						NOT  = {
-							has_state_flag = FRA_industrial_expansion_target
-							has_state_flag = FRA_colonial_industry_target
-						}		
-					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					set_state_flag = FRA_industrial_expansion_target
 					set_state_flag = FRA_colonial_industry_target
 				}
 			}
 		}
-	}	
+	}		
 	focus = {
 		id = FRA_invest_in_the_colonies
 		icon = GFX_goal_generic_construct_civilian
@@ -575,7 +529,7 @@
 						has_state_flag = FRA_colonial_industry_target
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				set_state_flag = FRA_colonial_industry_target
 			}
 		}
@@ -642,6 +596,13 @@
 		}
 
 		available = {
+			any_state = {
+				OR = {
+					is_core_of = SYR
+					is_core_of = LEB
+				}
+				is_owned_or_subject_trigger = yes
+			}
 		}
 		
 		bypass = {
@@ -667,23 +628,7 @@
 						has_state_flag = FRA_colonial_industry_target
 					}
 				}
-				add_extra_state_shared_building_slots = 1
-				set_state_flag = FRA_colonial_industry_target
-			}
-			random_state = {
-				limit = { 
-					OR = {
-						state = 677
-						state = 680
-						state = 554
-						state = 553
-					}
-					OWNER = { is_owned_or_subject_trigger = yes }	
-					NOT = {
-						has_state_flag = FRA_colonial_industry_target
-					}
-				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				set_state_flag = FRA_colonial_industry_target
 			}
 		}

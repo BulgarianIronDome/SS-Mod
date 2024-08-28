@@ -707,7 +707,11 @@ focus_tree = {
 	focus = {
 		id = SPA_the_national_and_popular_army_of_spain
 		available = {
-			has_global_flag = scw_over
+			OR = {
+				has_global_flag = scw_over
+				D01 = { has_capitulated = yes }
+				has_civil_war = no
+			}
 		}
 		bypass = {
 		}
@@ -1020,7 +1024,11 @@ focus_tree = {
 	focus = {
 		id = SPA_national_recovery
 		available = {
-			has_global_flag = scw_over
+			OR = {
+				has_global_flag = scw_over
+				D01 = { has_capitulated = yes }
+				has_civil_war = no
+			}
 		}
 		bypass = {
 		}
@@ -1846,7 +1854,11 @@ focus_tree = {
 	focus = {
 		id = SPA_adopt_the_26_points
 		available = {
-			has_global_flag = scw_over
+			OR = {
+				has_global_flag = scw_over
+				D01 = { has_capitulated = yes }
+				has_civil_war = no 
+			}
 		}
 		bypass = {
 		}

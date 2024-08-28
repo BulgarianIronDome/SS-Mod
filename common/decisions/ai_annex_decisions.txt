@@ -1052,6 +1052,9 @@ political_actions = {
             has_capitulated = yes
             original_tag = FRA
         }
+        available = {
+			date > 1940.5.5
+		}
         complete_effect = {
             transfer_state = 295
             transfer_state = 538
@@ -1066,7 +1069,6 @@ political_actions = {
     }
 	move_capital_to_gabon = {
 		fire_only_once = no
-        icon = GFX_decision_hol_exchange_intelligence_data
 		allowed = {
 			tag = FRA
 		}

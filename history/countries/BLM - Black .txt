@@ -6,7 +6,7 @@ add_ideas = blm_ai
 add_ideas = ai_idea
 #BLM BULGARIAN LIVES MATER!
 set_technology = {
-	
+	infantry_weapons = 0
 }
 
 if = {

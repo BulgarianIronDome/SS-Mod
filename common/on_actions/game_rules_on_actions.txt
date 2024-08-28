@@ -499,6 +499,12 @@ on_actions = {
 				country_exists = MAN
 				country_exists = JAP
 				country_exists = CHI
+				BLM = { 
+                    add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 9999999
+					}
+                }
 				ENG = {
 					add_state_core = 118
 					add_ideas = {
@@ -701,6 +707,53 @@ on_actions = {
                     }
                 }
             }
+			if = {
+                limit = {
+                    has_game_rule = {
+                        rule = auto_tech_rush
+                        option = on
+                    }
+                }
+					BLM = {
+						country_event = { id = tech_rush.1 days = 57 } #at1
+					}
+					BLM = {
+						country_event = { id = tech_rush.2 days = 57 } #ar1
+					}
+					BLM = {
+						country_event = { id = tech_rush.3 days = 57 } #aa1
+					}
+					BLM = {
+						country_event = { id = tech_rush.4 days = 330 } #mech
+					}
+					BLM = {
+						country_event = { id = tech_rush.5 days = 740 } #gun2
+					}
+					BLM = {
+						country_event = { id = tech_rush.6 days = 810 } #aa2
+					}
+					BLM = {
+						country_event = { id = tech_rush.7 days = 810 } #ar2
+					}
+					BLM = {
+						country_event = { id = tech_rush.8 days = 810 } #at2
+					}
+					BLM = {
+						country_event = { id = tech_rush.9 days = 1440 } #ampb way too early change it , it gave jun 1939 jan
+					}
+					BLM = {
+						country_event = { id = tech_rush.10 days = 1470 } #at3 jan 1940 
+					}
+					BLM = {
+						country_event = { id = tech_rush.11 days = 1470 } #aa3 jan 1940 
+					}
+					BLM = {
+						country_event = { id = tech_rush.12 days = 1470 } #ar3 jan 1940 
+					}
+					BLM = {
+						country_event = { id = tech_rush.13 days = 1510 } #gun3
+					}
+			}
 			if = {
                 limit = {
                     has_game_rule = {
@@ -928,6 +981,13 @@ on_actions = {
                         set_compliance = 100
                     }
                 }
+				BLM = { 
+                    add_equipment_to_stockpile = {
+						type = infantry_equipment_0
+						amount = 9999999
+					}
+                }
+				
             }
 			if = {
 				limit = {

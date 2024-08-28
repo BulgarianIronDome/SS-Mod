@@ -105,22 +105,12 @@ on_actions = {
 					level = 2
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 			}
 			808 = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 3
@@ -133,10 +123,10 @@ on_actions = {
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 6
 			}
 			106 = {
 				add_building_construction = {
@@ -149,7 +139,7 @@ on_actions = {
 			47 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -157,15 +147,7 @@ on_actions = {
 					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 4
-			}
-			605 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 			}
 			743 = {
 				add_building_construction = {
@@ -173,20 +155,7 @@ on_actions = {
 					level = 1
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}
-			595 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 			}
 			7 = {
 				add_building_construction = {
@@ -263,11 +232,6 @@ on_actions = {
 					instant_build = yes
 				}
 				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
 					type = dockyard
 					level = 1
 					instant_build = yes
@@ -333,21 +297,11 @@ on_actions = {
 			}
 			113 = {
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
 					type = dockyard
 					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 			}
 
 		}

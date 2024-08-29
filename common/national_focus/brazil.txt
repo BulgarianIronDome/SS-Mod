@@ -1928,11 +1928,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRA_washington_accords
-		cost = 5
+		cost = 10
 		bypass = {
 			is_in_faction_with = USA
 		}
 		available = {
+			is_subject = no
 			USA = {
 				OR = {
 					has_war = yes
@@ -1959,10 +1960,11 @@ focus_tree = {
 					has_war_with = USA
 					is_major = yes
 				}
-				BRA = {
-					declare_war_on = {
-						target = PREV
-						type = topple_government
+				ROOT = {
+					add_to_war = {
+					    targeted_alliance = USA
+					    enemy = PREV
+					    hostility_reason = asked_to_join
 					}
 				}
 			}

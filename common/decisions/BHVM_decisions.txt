@@ -307,7 +307,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1940.01.30
+           date > 1940.06.1
         }
         complete_effect = {
             BLM = {
@@ -333,7 +333,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1940.01.30
+           date > 1940.06.1
         }
         complete_effect = {
             BLM = {
@@ -359,7 +359,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1940.01.30
+           date > 1940.06.1
         }
         complete_effect = {
             BLM = {
@@ -385,7 +385,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1940.03.30
+           date > 1940.07.1
         }
         complete_effect = {
             BLM = {
@@ -723,7 +723,10 @@ E_ll = {
 			NOT = { has_country_flag = sending_ll_to_eng }
 		}
 		available = {
-			#date > 1938.1.1
+			OR = {
+				NOT = { original_tag = USA }
+				date > 1939.6.1
+			}
 		}
 
 		complete_effect = {
@@ -749,7 +752,10 @@ E_ll = {
 			has_country_flag = sending_ll_to_eng
 		}
 		available = {
-			#date > 1938.1.1
+			OR = {
+				NOT = { original_tag = USA }
+				date > 1939.6.1
+			}
 		}
 
 		complete_effect = {
@@ -772,6 +778,10 @@ E_ll = {
 		}
 		available = {
 			NOT = { has_country_flag = sending_ll_to_eng }
+			OR = {
+				NOT = { original_tag = USA }
+				date > 1939.6.1
+			}
 		}
 		icon = generic_army_support
 		is_good = yes
@@ -807,6 +817,10 @@ E_ll = {
 		}
 		available = {
 			NOT = { has_country_flag = sending_ll_to_eng }
+			OR = {
+				NOT = { original_tag = USA }
+				date > 1939.6.1
+			}
 		}
 		icon = generic_army_support
 		is_good = yes
@@ -844,7 +858,10 @@ E_ll = {
 			NOT = { has_country_flag = sending_ll_to_can }
 		}
 		available = {
-			#date > 1938.1.1
+			OR = {
+				NOT = { original_tag = USA }
+				date > 1939.6.1
+			}
 		}
 
 		complete_effect = {
@@ -870,7 +887,10 @@ E_ll = {
 			has_country_flag = sending_ll_to_can
 		}
 		available = {
-			#date > 1938.1.1
+			OR = {
+				NOT = { original_tag = USA }
+				date > 1939.6.1
+			}
 		}
 
 		complete_effect = {
@@ -893,6 +913,10 @@ E_ll = {
 		}
 		available = {
 			NOT = { has_country_flag = sending_ll_to_can }
+			OR = {
+				NOT = { original_tag = USA }
+				date > 1939.6.1
+			}
 		}
 		icon = generic_army_support
 		is_good = yes
@@ -928,6 +952,10 @@ E_ll = {
 		}
 		available = {
 			NOT = { has_country_flag = sending_ll_to_can }
+			OR = {
+				NOT = { original_tag = USA }
+				date > 1939.6.1
+			}
 		}
 		icon = generic_army_support
 		is_good = yes

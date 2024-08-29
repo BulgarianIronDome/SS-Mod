@@ -191,7 +191,7 @@ no_brazil&finland = {
 killable_fin = {
 	name = "Can we Kill finland?"
 	group = "BHVM game rules"
-	icon = "SWE_committee_against_the_finnish_white_terror"
+	icon = "GFX_decision_generic_coastal_fortification"
 	default = {
 		name = off
 		text = "GNo"
@@ -714,6 +714,21 @@ juggle_slot = {
 		name = DISALLOWED
 		text = "RDISALLOWED"
 		desc = "There is NO special juggle slot(Not Reccomended)"
+	}
+}
+ger_pupets = {
+	name = "German Pupet"
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_nationalism"
+	option = {
+		name = pupets
+		text = "GPupet Reichcoms"
+		desc = "There are pupets from the focus"
+	}
+	default = {
+		name = compliance
+		text = "RCompliance pupets"
+		desc = "You get factories and compliance in the benelux"
 	}
 }
 atom_bombs = {

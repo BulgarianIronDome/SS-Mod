@@ -739,19 +739,19 @@ on_actions = {
 						country_event = { id = tech_rush.8 days = 810 } #at2
 					}
 					BLM = {
-						country_event = { id = tech_rush.9 days = 1440 } #ampb way too early change it , it gave jun 1939 jan
+						country_event = { id = tech_rush.9 days = 1125  } #ampb way too early change it , it gave jun 1939 jan
 					}
 					BLM = {
-						country_event = { id = tech_rush.10 days = 1470 } #at3 jan 1940 
+						country_event = { id = tech_rush.10 days = 1275  } #at3 jan 1940 
 					}
 					BLM = {
-						country_event = { id = tech_rush.11 days = 1470 } #aa3 jan 1940 
+						country_event = { id = tech_rush.11 days = 1275  } #aa3 jan 1940 
 					}
 					BLM = {
-						country_event = { id = tech_rush.12 days = 1470 } #ar3 jan 1940 
+						country_event = { id = tech_rush.12 days = 1275  } #ar3 jan 1940 
 					}
 					BLM = {
-						country_event = { id = tech_rush.13 days = 1510 } #gun3
+						country_event = { id = tech_rush.13 days = 1300 } #gun3
 					}
 			}
 			if = {

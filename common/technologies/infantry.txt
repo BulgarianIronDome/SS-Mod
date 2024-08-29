@@ -1776,8 +1776,10 @@ technologies = {
 		}
 		
 		categories = {
+			rocketry
 			mot_rockets
 			mio_cat_tech_all_motorized_mechanized
+			artillery
 		}
 	}
 	

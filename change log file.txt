@@ -224,3 +224,8 @@ New game rule for fighters against fascism
 Nerfed baltic eco , nerfed china eco w 5 civs and 2 mills and 1 dokcyard
 Fixed some stuff about auto tech rush
 Fixed spanish and japan focus trees
+
+
+Up to vanila stuff
+Updated local stuff , added some stuff to USA lend lease and shared frame stuff
+Reichcoms game rule for germany , either pupet or compliance

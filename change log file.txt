@@ -229,3 +229,5 @@ Fixed spanish and japan focus trees
 Up to vanila stuff
 Updated local stuff , added some stuff to USA lend lease and shared frame stuff
 Reichcoms game rule for germany , either pupet or compliance
+
+Desync fix

@@ -62,23 +62,23 @@ NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0.05
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 	--Base cost to unlock a regiment slot,
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0	--Base cost to change a regiment column.
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 	--Base cost to unlock a support slot
-NDefines.NAir.MISSION_COMMAND_POWER_COSTS = { -- vilkata defines strongest deversus modding right here
-		0.0, -- AIR_SUPERIORITY
-		0.0, -- CAS
-		0.0, -- INTERCEPTION
-		0.0, -- STRATEGIC_BOMBER
-		0.0, -- NAVAL_BOMBER
-		0.0, -- DROP_NUKE
-		0.0, -- PARADROP
-		0.0, -- NAVAL_KAMIKAZE
-        0.0, -- PORT_STRIKE
-		0.25, -- ATTACK_LOGISTICS
-		0.0, -- AIR_SUPPLY
-		0.0, -- TRAINING
-		10.0, -- NAVAL_MINES_PLANTING
-		10.0, -- NAVAL_MINES_SWEEPING
-		0.0, -- MISSION_RECON
-	}
+--NDefines.NAir.MISSION_COMMAND_POWER_COSTS = { -- vilkata defines strongest deversus modding right here
+	--	0.0, -- AIR_SUPERIORITY
+	--	0.0, -- CAS
+	--	0.0, -- INTERCEPTION
+	--	0.0, -- STRATEGIC_BOMBER
+	--	0.0, -- NAVAL_BOMBER
+	--	0.0, -- DROP_NUKE
+	--	0.0, -- PARADROP
+	--	0.0, -- NAVAL_KAMIKAZE
+    --    0.0, -- PORT_STRIKE
+	--	0.25, -- ATTACK_LOGISTICS
+	--	0.0, -- AIR_SUPPLY
+	--	0.0, -- TRAINING
+	--	10.0, -- NAVAL_MINES_PLANTING
+	--	10.0, -- NAVAL_MINES_SWEEPING
+	--	0.0, -- MISSION_RECON
+	--}
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.5 --makes redeployement of fighters faster vanilla is 0.02
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0                              -- Down from 3 | Makes AC player have brain 
 

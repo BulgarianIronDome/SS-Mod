@@ -30,6 +30,7 @@ on_actions = {
                 news_event = {
                     id = cheat.2
                 }
+                sound_effect = "cheat_sound_effect"
             }
         }
     }

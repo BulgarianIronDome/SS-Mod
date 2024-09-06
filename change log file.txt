@@ -231,3 +231,10 @@ Updated local stuff , added some stuff to USA lend lease and shared frame stuff
 Reichcoms game rule for germany , either pupet or compliance
 
 Desync fix
+
+Fixed some anti cheat stuff
+Fixed some stuff about the soviet focus tree eco wise
+Nerfed mongolia eco focuses again , specificly conc farm acts , gives less mills and civs and slots as well
+Fixed french focus tree for eco in syria
+Fixed MW not giving another brigade size
+New cheat sound effect when you cheat

@@ -175,7 +175,7 @@ focus_tree = {
 	focus = {
 		id = SOV_heavy_industry
 
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
 		x = 2
 		y = 0
 		relative_position_id = SOV_infrastructure_effort_nsb
@@ -228,10 +228,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					set_state_flag = SOV_finish_five_year_plan_2IC
@@ -247,10 +247,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					set_state_flag = SOV_finish_five_year_plan_2IC
@@ -280,10 +280,10 @@ focus_tree = {
 						}
 						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					set_state_flag = SOV_finish_five_year_plan_2IC
@@ -303,10 +303,10 @@ focus_tree = {
 						}
 						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					set_state_flag = SOV_finish_five_year_plan_2IC
@@ -1904,7 +1904,7 @@ focus = {
     x = 10
     y = 0
     relative_position_id = SOV_infrastructure_effort_nsb
-    cost = 5
+    cost = 2.2
 
     ai_will_do = {
         factor = 1

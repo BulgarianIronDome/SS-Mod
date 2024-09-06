@@ -43,6 +43,10 @@ news_event = {
     option = {
         name = "Very Impresive, Hallal"
         # Do something, like logging, or applying penalties if necessary
+        clr_country_flag = double_land_doctrine
+        clr_country_flag = double_industry
+        clr_country_flag = double_naval_doctrine
+        clr_country_flag = double_air_doctrine
     }
 }
 

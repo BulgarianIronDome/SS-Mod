@@ -351,8 +351,8 @@ st_country_powers = {
 		pause_blocker_host_click = { BLM =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 2 } } ROOT={clr_global_flag=blocking_pauses } } #ONLY HOST CAN USE PAUSE BUTTON
 		pause_blocker_major_click = {if={limit={ROOT={has_global_flag=blocking_pauses}} BLM =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 3 } }  ROOT={clr_global_flag=blocking_pauses}} else = {ROOT={set_global_flag = blocking_pauses } } }#ONLY MAJORS CAN PAUSE
 
-		wt_add_click = { GER = { add_threat = 1 } }
-		wt_remove_click = { GER = { add_threat = -1 } }
+		wt_add_click = { BLM = { add_threat = 1 } }
+		wt_remove_click = { BLM = { add_threat = -1 } }
 		snek_tped_click = { owner = { news_event = horsttool.2 } }
 
 		cheat1_click = { if = { limit = { Root = { has_country_flag = cheating } } set_variable = { Root.selected_cheat = 1 } ROOT = { clr_country_flag = cheating } } else = { ROOT = { set_country_flag = cheating } } }

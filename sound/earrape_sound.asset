@@ -10,3 +10,9 @@ sound = {
 	file = "earrape_folder/schizophrenic_meltdown_sound_effect.wav"
 	always_load = yes
 }
+
+sound = {
+	name = "cheat_sound_effect"
+	file = "earrape_folder/cheat_sound_effect.wav"
+	always_load = yes
+}

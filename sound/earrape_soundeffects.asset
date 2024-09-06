@@ -11,7 +11,16 @@ soundeffect = {
 	name = "schizophrenic_meltdown_sound_effect"
 	sounds = {
 		sound = 
-		schizophrenic_meltdown_sound_effect
+			schizophrenic_meltdown_sound_effect
 	}
 	volume = 1
+}
+
+soundeffect = {
+	name = "cheat_sound_effect"
+	sounds = {
+		sound = 
+			cheat_sound_effect
+	}
+	volume = 30
 }

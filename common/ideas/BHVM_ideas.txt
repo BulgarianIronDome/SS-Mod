@@ -12,6 +12,25 @@ ideas = {
 				trade_cost_for_target_factor = -0.8 #pay only half too
 			}
 		}
+		boost_research = {
+			picture = generic_fighter_production_diverted
+			allowed = {
+				original_tag = ENG
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			research_bonus = {
+				infantry_weapons = 0.15
+				artillery = 0.15
+				air_equipment = 0.15
+			}
+			modifier = {
+				global_building_slots_factor = 0.1
+			}
+		}
 		victory_con_axis_2 = {
 			allowed = {
 				always = no

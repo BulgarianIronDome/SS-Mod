@@ -1169,6 +1169,14 @@ leader_traits = {
 		random = no
 		resistance_damage_to_garrison = -0.15
 		high_command_cost_factor = -0.15
+		max_command_power = 20
+		command_power_gain_mult = 0.25
+	}
+
+	caudillo_3 = {
+		random = no
+		resistance_damage_to_garrison = -0.15
+		high_command_cost_factor = -0.15
 		command_power_gain_mult = 0.15
 	}
 

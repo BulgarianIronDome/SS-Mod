@@ -222,6 +222,10 @@ on_actions = {
 					type = train_equipment_1
 					amount = 3
 				}
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 50
+				}
 			}
 			ROM = {
 				add_equipment_to_stockpile = {
@@ -392,7 +396,7 @@ on_actions = {
 				}
                 add_equipment_to_stockpile = {
 					type = convoy
-					amount = 15
+					amount = 25
                 }
 			}
 			AST = {
@@ -432,7 +436,7 @@ on_actions = {
 			FIN = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 4600
+					amount = 6600
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment_1
@@ -444,13 +448,13 @@ on_actions = {
 				}
                 add_equipment_to_stockpile = {
 					type = convoy
-					amount = 10
+					amount = 50
 				}
 			}
 			NOR = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 6300
+					amount = 8300
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment_1
@@ -464,39 +468,39 @@ on_actions = {
             BEL = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 12300
+					amount = 20000
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment_1
-					amount = 50
+					amount = 150
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment
-					amount = 6
+					amount = 12
 				}
 			}
             HOL = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 14300
+					amount = 23300
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment_1
-					amount = 200
+					amount = 600
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment
-					amount = 20
+					amount = 35
 				}
 			}
             AUS = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 7300
+					amount = 10800
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment_1
-					amount = 85
+					amount = 100
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment
@@ -506,15 +510,15 @@ on_actions = {
             CZE = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 9800
+					amount = 15800
 				}
                 add_equipment_to_stockpile = {
 					type = support_equipment_1
-					amount = 220
+					amount = 420
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment
-					amount = 12
+					amount = 24
 				}
 			}
 			BLM = {

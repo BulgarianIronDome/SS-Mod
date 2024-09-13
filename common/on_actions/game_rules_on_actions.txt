@@ -484,6 +484,44 @@ on_actions = {
 			if = {
                 limit = {
                     has_game_rule = {
+                        rule = no_brazil&finland
+                        option = fin
+                    }
+                }
+                country_exists = FIN
+                BLM = { 
+                    annex_country = { target = FIN transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = FIN
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = no_brazil&finland
+                        option = bra
+                    }
+                }
+                country_exists = BRA
+                BLM = { 
+                    annex_country = { target = BRA transfer_troops = yes }
+                    every_state = {
+                        limit = {
+                            is_core_of = BRA
+                            is_controlled_by = BLM
+                        }
+                        set_compliance = 100
+                    }
+                }
+            }
+			if = {
+                limit = {
+                    has_game_rule = {
                         rule = no_asia_gamemode
                         option = on
                     }
@@ -1048,44 +1086,6 @@ on_actions = {
 				147 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 				146 = { add_dynamic_modifier = { modifier = FRA_anti_noob }}
 			}
-            else_if = {
-                limit = {
-                    has_game_rule = {
-                        rule = no_brazil&finland
-                        option = fin
-                    }
-                }
-                country_exists = FIN
-                BLM = { 
-                    annex_country = { target = FIN transfer_troops = yes }
-                    every_state = {
-                        limit = {
-                            is_core_of = FIN
-                            is_controlled_by = BLM
-                        }
-                        set_compliance = 100
-                    }
-                }
-            }
-            else_if = {
-                limit = {
-                    has_game_rule = {
-                        rule = no_brazil&finland
-                        option = bra
-                    }
-                }
-                country_exists = BRA
-                BLM = { 
-                    annex_country = { target = BRA transfer_troops = yes }
-                    every_state = {
-                        limit = {
-                            is_core_of = BRA
-                            is_controlled_by = BLM
-                        }
-                        set_compliance = 100
-                    }
-                }
-            }
 			if = {
 				limit = {
 					has_game_rule = {

@@ -782,6 +782,9 @@ on_actions = {
 				country_exists = MAN
 				country_exists = JAP
 				country_exists = CHI
+				AST = {
+					add_manpower = 100000
+				}
 				ENG = {
 					add_state_core = 118
 					add_equipment_to_stockpile = {

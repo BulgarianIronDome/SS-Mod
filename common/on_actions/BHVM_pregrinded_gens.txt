@@ -308,15 +308,6 @@ on_actions = {
 				}
 				SPR = {
 					add_corps_commander_role = {
-						character = SPR_mohamed_meziane
-						traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer ranger trickster commando }
-						skill=6
-						attack_skill=6
-						defense_skill=4
-						planning_skill=6
-						logistics_skill=5
-					}
-					add_corps_commander_role = {
 						character = SPA_juan_yague
 						traits={ brilliant_strategist trait_reckless trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer urban_assault_specialist trickster }
 						skill=6
@@ -324,6 +315,63 @@ on_actions = {
 						defense_skill=4
 						planning_skill=6
 						logistics_skill=5
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = no_asia_gamemode
+							option = off
+						}
+					}
+					SPR = {
+						add_corps_commander_role = {
+							character = SPR_mohamed_meziane
+							traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer ranger trickster commando }
+							skill=6
+							attack_skill=6
+							defense_skill=4
+							planning_skill=6
+							logistics_skill=5
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_game_rule = {
+							rule = no_asia_gamemode
+							option = alt
+						}
+					}
+					SPR = {
+						add_corps_commander_role = {
+							character = SPR_mohamed_meziane
+							traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer trickster commando }
+							skill=6
+							attack_skill=5
+							defense_skill=4
+							planning_skill=6
+							logistics_skill=5
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_game_rule = {
+							rule = no_asia_gamemode
+							option = on
+						}
+					}
+					SPR = {
+						add_corps_commander_role = {
+							character = SPR_mohamed_meziane
+							traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer trickster commando }
+							skill=6
+							attack_skill=6
+							defense_skill=4
+							planning_skill=6
+							logistics_skill=5
+						}
 					}
 				}
 				SAF = {
@@ -580,15 +628,6 @@ on_actions = {
 				}
 				SPR = {
 					add_corps_commander_role = {
-						character = SPR_mohamed_meziane
-						traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer ranger trickster commando }
-						skill=6
-						attack_skill=6
-						defense_skill=4
-						planning_skill=6
-						logistics_skill=5
-					}
-					add_corps_commander_role = {
 						character = SPA_juan_yague
 						traits={ brilliant_strategist trait_reckless trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer urban_assault_specialist trickster }
 						skill=6
@@ -596,6 +635,63 @@ on_actions = {
 						defense_skill=4
 						planning_skill=6
 						logistics_skill=5
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = no_asia_gamemode
+							option = off
+						}
+					}
+					SPR = {
+						add_corps_commander_role = {
+							character = SPR_mohamed_meziane
+							traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer ranger trickster commando }
+							skill=6
+							attack_skill=6
+							defense_skill=4
+							planning_skill=6
+							logistics_skill=5
+						}
+					}
+				}
+				else if = {
+					limit = {
+						has_game_rule = {
+							rule = no_asia_gamemode
+							option = alt
+						}
+					}
+					SPR = {
+						add_corps_commander_role = {
+							character = SPR_mohamed_meziane
+							traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer trickster commando }
+							skill=6
+							attack_skill=6
+							defense_skill=4
+							planning_skill=6
+							logistics_skill=5
+						}
+					}
+				}
+				else if = {
+					limit = {
+						has_game_rule = {
+							rule = no_asia_gamemode
+							option = on
+						}
+					}
+					SPR = {
+						add_corps_commander_role = {
+							character = SPR_mohamed_meziane
+							traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer trickster commando }
+							skill=6
+							attack_skill=6
+							defense_skill=4
+							planning_skill=6
+							logistics_skill=5
+						}
 					}
 				}
 			}

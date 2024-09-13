@@ -785,6 +785,17 @@ on_actions = {
 				AST = {
 					add_manpower = 100000
 				}
+				SPR = {
+					add_corps_commander_role = {
+						character = SPR_mohamed_meziane
+						traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader panzer_leader trait_engineer trickster commando }
+						skill=6
+						attack_skill=6
+						defense_skill=4
+						planning_skill=6
+						logistics_skill=5
+					}
+				}
 				ENG = {
 					add_state_core = 118
 					add_equipment_to_stockpile = {

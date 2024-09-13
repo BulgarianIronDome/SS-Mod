@@ -12,14 +12,14 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "horsttool_open_container"
-		position = { x = -1929 y = 70 }
+		position = { x = -100% y = 7% }
 		Orientation = UPPER_RIGHT
 		buttonType = {
 			name = "tool_open"
 			#quadTextureSprite = "GFX_generic_bg"
 			quadTextureSprite = "GFX_generic_box_96"
 			position = { x = 0 y = 0 }
-			scale=1.1
+			scale=1.2
 			pdx_tooltip = "[ST_TOOLTIP]"
 			clicksound = click_ok
 			oversound = ui_menu_over
@@ -27,8 +27,8 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "title"
-			position = {x=22 y=5}
-			position = {x=10 y=4}
+			position = { x = 5% y = 7% }
+			position = { x = 5% y = 7% }
 			font = "hoi_18mbs"
 			text = "[transfer_states_tooltip]"
 			maxWidth = 100
@@ -37,10 +37,9 @@ guiTypes = {
 		}
 
 	}
-		
 	containerWindowType = { 
 		name = "horsttool_container"
-		position = {x=0 y=95}
+		position = { x = 0% y = 10% }
 		size = { width=9000 height=650}
 		
 		fade_time = 900

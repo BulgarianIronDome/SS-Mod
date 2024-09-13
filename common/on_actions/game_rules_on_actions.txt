@@ -543,6 +543,9 @@ on_actions = {
 						amount = 9999999
 					}
                 }
+				AST = {
+					add_manpower = 100000
+				}
 				ENG = {
 					add_state_core = 118
 					add_ideas = {

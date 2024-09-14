@@ -17,7 +17,7 @@ political_actions = {
 				}
 				has_game_rule = {
 					rule = no_asia_gamemode
-					option = off
+					option = on
 				}
 			}
 			OR = {

@@ -3373,7 +3373,7 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_danzig_vs_slovakia }
 		will_lead_to_war_with = POL
 		available = {
-			date > 1939.2.1
+			date > 1939.1.1
 			is_subject = no	
 			#Make custom trigger tooltip here
 			85 = {

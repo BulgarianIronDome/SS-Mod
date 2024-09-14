@@ -543,6 +543,9 @@ on_actions = {
 						amount = 9999999
 					}
                 }
+				AST = {
+					add_manpower = 100000
+				}
 				ENG = {
 					add_state_core = 118
 					add_ideas = {
@@ -813,6 +816,9 @@ on_actions = {
 				country_exists = MAN
 				country_exists = JAP
 				country_exists = CHI
+				AST = {
+					add_manpower = 100000
+				}
 				ENG = {
 					add_state_core = 118
 					add_equipment_to_stockpile = {
@@ -936,11 +942,6 @@ on_actions = {
 					transfer_state = 623
 					transfer_state = 626
 					transfer_state = 638
-					transfer_state = 391
-					transfer_state = 392
-					transfer_state = 372
-					transfer_state = 373
-					transfer_state = 371
 					
 				}
 				BLM = {

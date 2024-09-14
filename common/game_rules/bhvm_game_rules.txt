@@ -646,6 +646,21 @@ finish_support_comp = {
 		desc = "Finland DOES NOT have its companies avaible(Not Reccomended)"
 	}
 }
+spanish_franco_cp = {
+	name = "Spanish Franco CP"
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_army_support"
+	default = {
+		name = on
+		text = "GVanilla CP"
+		desc = "Spain has vanilla CP from franco focus"
+	}
+	option = {
+		name = off
+		text = "RNo CP"
+		desc = "Spain doesn't get CP from franco focus and less CP gain"
+	}
+}
 no_market = {
 	name = "Market options"
 	group = "BHVM game rules"

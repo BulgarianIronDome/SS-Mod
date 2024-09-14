@@ -5,7 +5,7 @@ political_actions = {
 
 		icon = generic_ignite_civil_war
 
-		days_mission_timeout = 1886
+		days_mission_timeout = 1976
 
 		fire_only_once = yes
 

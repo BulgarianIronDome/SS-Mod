@@ -4233,7 +4233,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_around_maginot
-		cost = 10
+		cost = 2.9
 		bypass = {
 			OR = {
 				NOT = { country_exists = FRA }

@@ -19,6 +19,8 @@
 
  CHANGE_HOST_NATION_TT:0 "Change host nation"
   
+ TAGSWTICH_HOST:0 "<HOSTTOOL> Host: ([?ROOT.GetTag]) [?ROOT.GetName]; Action: Tag switched to ([?ROOT.marked_states^0.owner.GetTag])"
+ TAGSWTICH_HOST_DELAYED:0 ""
  CLEAR_ALL_MARKINGS:0 "§HClear All Marks§!\nEvery mark on world will be removed\n\n"
  CLEAR_ALL_MARKINGS_DELAYED:0 ""
 

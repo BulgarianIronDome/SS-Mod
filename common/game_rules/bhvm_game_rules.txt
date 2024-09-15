@@ -86,12 +86,12 @@ tradebacks = {
 	}
 	option = {
 		name = no_export
-		text = "RNo Exports"
+		text = "BNo Exports"
 		desc = "Everyone has a tradeback idea that givens -100% missing resource penalty and no exports until September 1939. Germany must declare war then (Not usually Reccomended)"
 	}
 	option = {
 		name = not_allies
-		text = "RNot Allies"
+		text = "YNot Allies"
 		desc = "Everyone has no tradeback idea except for Allies. Germany has to attack Sept 1939 (Not usually Reccomended)"
 	}
 }
@@ -184,7 +184,7 @@ no_brazil&finland = {
 	}
 	option = {
 		name = both
-		text = "RNo Brazil AND Finland"
+		text = "BNo Brazil AND Finland"
 		desc = "Finland and Brazil went on a vacation in Brazil :)"
 	}
 }
@@ -448,7 +448,7 @@ acoustic_guerilla_tatctics = {
 	option = {
 		name = PLAINS
 		text = "PPlains"
-		desc = "Guerilla Tatics are RNOT able to get rolled on plains"
+		desc = "Guerilla Tatics are RNOT able to get rolled on plains"
 	}
 }
 space_marine_deleter = {
@@ -661,6 +661,21 @@ spanish_franco_cp = {
 		desc = "Spain doesn't get CP from franco focus and less CP gain"
 	}
 }
+spanish_production = {
+	name = "Spanish Production"
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_industry"
+	default = {
+		name = on
+		text = "GGermany gets a button for Mech lend lease"
+		desc = "It progresivly gets better as more time passes"
+	}
+	option = {
+		name = off
+		text = "RGermany doesn't get a button for Mech lend lease"
+		desc = "No DDAY wall :("
+	}
+}
 no_market = {
 	name = "Market options"
 	group = "BHVM game rules"
@@ -807,8 +822,8 @@ china_war_difficulty = {
 	}
 	option = {
 		name = super_ez
-		text = "RNoob"
-		desc = "There is no Sino-China war , it will be scripted via decisions , making Japan's game extra easy(Not Reccomended)"
+		text = "BNoob"
+		desc = "BDOESNT WORK CURRENTLYThere is no Sino-China war , it will be scripted via decisions , making Japan's game extra easy(Not Reccomended)"
 	}
 	default = {
 		name = easy

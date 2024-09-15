@@ -907,6 +907,24 @@ on_actions = {
 				USA = {
 					load_oob = "USA_NO_ASIA_ALT"
 					set_research_slots = 3
+					393 = {
+						add_extra_state_shared_building_slots = 2
+					}
+					358 = {
+						add_extra_state_shared_building_slots = 4
+					}
+					365 = {
+						add_extra_state_shared_building_slots = 4
+					}
+					366 = {
+						add_extra_state_shared_building_slots = 4
+					}
+					363 = {
+						add_extra_state_shared_building_slots = 3
+					}
+					359 = {
+						add_extra_state_shared_building_slots = 6
+					}
 				}
 				BLM = {
 					give_resource_rights = { receiver = USA state = 375 }

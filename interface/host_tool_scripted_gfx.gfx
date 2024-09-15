@@ -92,15 +92,15 @@ spriteTypes = {
         texturefile = "gfx/horst_gui/horsttool/rubber.dds"
         effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
     }
-        	# spriteType = {
-	# 	name = "GFX_horst_pingtool"
-	# 	texturefile = "gfx/horst_gui/horsttool/horst_pingtool.dds"
-	# 	effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
-    # }
    	spriteType = {
    		name = "GFX_change_host_nation"
    		texturefile = "gfx/interface/lobby_country_mapmode_button.dds"
    	}
+       spriteType = {
+        name = "GFX_tag_switch_button"
+        texturefile = "gfx/horst_gui/horsttool/tag_switch_button.dds"
+        effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
    	spriteType = {
    		name = "GFX_topbar_production_horst_tool"
    		texturefile = "gfx/interface/topbar/toolbar/production_button.dds"

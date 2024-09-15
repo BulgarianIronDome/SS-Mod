@@ -1242,7 +1242,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1

@@ -69,7 +69,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "change_host_nation" 
-			position = {x=18 y=251}       
+			position = {x=10 y=251}       
 			spriteType = "GFX_change_host_nation"
             scale = 0.75
 			pdx_tooltip = "CHANGE_HOST_NATION_TT"
@@ -98,6 +98,14 @@ guiTypes = {
 			spriteType = "GFX_observer_button"
          	pdx_tooltip = "OBSERVER"
 			pdx_tooltip_delayed = "OBSERVER_DELAYED"
+			scale = 0.70
+		}
+		buttonType = {
+			name = "tagswtich_host"
+			position = { x=55 y=252 }
+			spriteType = "GFX_tag_switch_button"
+			pdx_tooltip = "TAGSWTICH_HOST"
+			pdx_tooltip_delayed = "TAGSWTICH_HOST_DELAYED"
 			scale = 0.70
 		}
 		buttonType = {

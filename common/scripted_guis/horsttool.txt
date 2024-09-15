@@ -22,9 +22,30 @@ st_country_powers = {
 		}
 	}	
 	effects = {
-		observer_click = {
-			owner = { set_temp_variable = { ROOT.marks = this}	HST = {change_tag_from =var:marks}	}			
+		tagswtich_host = {
+			if = {
+				limit = { has_country_flag = host }
+				var:marked_states^0 = { 
+					owner = { 
+						change_tag_from = ROOT
+					}
+				}
+			}
+			for_each_scope_loop = {
+				array = marked_states
+				clear_variable = mark_status
+			}
+			clear_array = marked_states
+			clear_variable = first_marked_state
 		}
+		
+		observer_click = { 
+			owner = {
+					set_temp_variable = { ROOT.marks = this}
+					SOL = {change_tag_from =var:marks}
+			}
+		}
+
 		change_host_nation_click = {
 			ROOT = { clr_country_flag = host }
 			owner = { set_country_flag = host }
@@ -276,21 +297,26 @@ st_country_powers = {
 		}
 		
 	
-		annex_country_click = {			
+		annex_country_click = {
 			owner = { set_variable = { ROOT.taker = this } }
 			var:ROOT.marked_states^0 = { owner = { set_variable = { ROOT.target = this } } }
 			if = { limit = { check_variable = { ROOT.target = ROOT.taker } } }
 			else = {
 				var:ROOT.target = {
-					pow_before_annex=yes
+					pow_before_annex = yes
 					var:ROOT.taker = {
-						every_state = { limit = { is_core_of = var:ROOT.target} add_core_of = var:ROOT.taker }
-						annex_country = { target=PREV	transfer_troops=yes	}
-						every_state = { limit = { is_core_of = var:ROOT.target is_owned_by = var:Root.taker } add_cor = 80 }
+						annex_country = { target = PREV transfer_troops = yes }
+						every_state = { 
+							limit = { 
+								is_owned_by = var:ROOT.taker 
+								is_core_of = var:ROOT.target
+							}
+							add_compliance = 80
 						}
 					}
 				}
-				
+			}
+			
 			ROOT = {
 				for_each_scope_loop = {
 					array = marked_states
@@ -301,7 +327,8 @@ st_country_powers = {
 				clear_variable = taker
 				clear_variable = first_marked_state
 			}
-		}	
+		}
+			
 		
 		puppet_country_click = {
 			owner = {
@@ -381,6 +408,8 @@ st_country_powers = {
 	triggers = {
 		observer_click_enabled = { owner = { is_ai = no } }
 		observer_visible = {}
+		tagswtich_host_enabled = { owner = { is_ai = no } }
+		tagswtich_host_visible = { always = no }
 
 		add_cheat_click_enabled = { check_variable = { Root.selected_cheat>0 } }
 		cheat1_visible = {}

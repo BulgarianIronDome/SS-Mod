@@ -1,0 +1,15 @@
+version="a1"
+tags={
+	"Balance"
+	"Gameplay"
+	"Historical"
+	"Fixes"
+	"Map"
+	"National Focuses"
+	"Military"
+}
+picture="thumbnail.png"
+name="Bulgarian Historical Vanila Multiplayer"
+supported_version="1.14.*"
+path="C:/Users/Students/Documents/Paradox Interactive/Hearts of Iron IV/mod/Bulgarian Historical Vanila Multiplayer"
+remote_file_id="3277106573"

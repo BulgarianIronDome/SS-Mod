@@ -544,7 +544,7 @@ on_actions = {
 					}
                 }
 				AST = {
-					add_manpower = 100000
+					add_manpower = 300000
 				}
 				ENG = {
 					add_state_core = 118

@@ -11,4 +11,5 @@ tags={
 picture="thumbnail.png"
 name="Bulgarian Historical Vanila Multiplayer"
 supported_version="1.14.*"
+path="C:/Users/dev-cop/Documents/Paradox Interactive/Hearts of Iron IV/mod/BHVM"
 remote_file_id="3277106573"

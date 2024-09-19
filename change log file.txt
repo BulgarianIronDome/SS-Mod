@@ -239,22 +239,4 @@ Fixed french focus tree for eco in syria
 Fixed MW not giving another brigade size
 New cheat sound effect when you cheat
 
-Pregrind for Spain changed , removed urban specialist
-"Franco CP nerf" , added a game rule for it
-Added a boosted research for UK when in no asia 
-Usa is more nerfed in alt asia - made its fleet even smaller , less states BUT now they get thier resources from the biggest resource states
-2 Atlantic islands in the sub direct middle are now british , cuz uk has a decision for it aperently
-Axis now in total from all the capped minors and annexed now should get around 300k guns in total , NOT VERY VANILA 
-In alt asia , Australia Has 300k more manpower cuz no india 
-Changed the date for Germany when can it do Danzig or war , its jan instead of feb now
-Made the hosttool dynamic for player settings , aka where it apears is not scripted now (in the future steal fullchyord s pause rights and fix tagswitch)
-Spanish generals are now diffrent in alt asia/no asia , they are less pregrinded
-Japan game impact is now a simulator for no asia / alt asia , it makes it so that "Japan" takes the rubber islands away from the Allies
-Simulator for spanish mechanized ( mutually exclusive with an "annexexed" spain) should also be a game rule?
-Changed the cost for ger focus for benelux , its 20 days , changed the cost for usa focus for usa war plan divs , its 5% more planning speed , 70 days for that focus is a pure scam
-Changed the amount of spawned factories by the AI , lamao bloat kekw rolf ~20 more factories in total
-When romania is given finland , the territories for finland now stay demilitirized , expect the states which finland looses aka karalija
-Czeko tree now made so you cant go non hist, kept in for the eco
-Nerfed luxembourg factories by 2 , -2 mills
-
-
+TBA patch

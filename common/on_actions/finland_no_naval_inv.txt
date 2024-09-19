@@ -90,4 +90,47 @@ on_actions = {
 			}
 		}
     }
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = killable_fin
+						option = off
+					} 
+				}
+				every_country = {
+					every_owned_state = {
+						limit = { 
+							OR = {
+								is_core_of = FIN
+								has_state_flag = finnish_demilitarized_zone
+							}
+							NOT = {
+								OR = {
+									state = 146
+									state = 147
+								}
+								OWNER = { tag = SOV }
+							}
+						}
+						set_state_flag = finnish_demilitarized_zone
+						set_demilitarized_zone = yes
+					}
+				}
+				
+				every_state = {
+					limit = {
+						OR = {
+							state = 146
+							state = 147
+						}
+						OWNER = { tag = SOV }
+					}
+					clr_state_flag = finnish_demilitarized_zone
+					set_demilitarized_zone = no
+				}
+			}
+		}
+    }
 }

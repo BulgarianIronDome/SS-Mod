@@ -239,9 +239,9 @@ Fixed french focus tree for eco in syria
 Fixed MW not giving another brigade size
 New cheat sound effect when you cheat
 
- 
+
 Shayed update:
-Pregrind for Spain changed , removed urban specialist
+Pregrind for Spain changed , removed urban specialist and forest trait for 1 general , but 1 has both or smt like that
 "Franco CP nerf" , added a game rule for it
 Added a boosted research for UK when in no asia 
 Usa is more nerfed in alt asia - made its fleet even smaller , less states BUT now they get thier resources from the biggest resource states

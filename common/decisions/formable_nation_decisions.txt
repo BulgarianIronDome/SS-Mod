@@ -10582,6 +10582,7 @@ greater_italy_category = {
 				controls_state = 156 # Calabria
 				controls_state = 115 # Sicilia
 				controls_state = 114 # Sardegna
+				controls_state = 846 # Ticino
 			}  
 			custom_trigger_tooltip = {
 				tooltip = greater_italy_required_other_states 
@@ -10656,6 +10657,15 @@ greater_italy_category = {
 						any_country = {
 							is_subject_of = ITA
 							controls_state = 164 # Dodecaneso
+						}
+					}
+					OR = {
+						ITA = { 
+						controls_state = 846 # Ticino 
+						}
+						any_country = {
+							is_subject_of = ITA
+							controls_state = 846 # Ticino
 						}
 					}
 				}

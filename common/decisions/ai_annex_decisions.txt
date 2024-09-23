@@ -1,5 +1,53 @@
 operations = {
 
+    ITA_get_ticino = {
+        fire_only_once = yes 
+        
+        icon = GFX_decision_generic_form_nation
+
+        allowed = {
+            original_tag = ITA
+        }
+        available = {
+            has_completed_focus = ITA_towards_a_greater_italy
+            original_tag = ITA
+            controls_state = 852 # Istria
+			controls_state = 736 # Litorale
+			controls_state = 160 # Veneto
+			controls_state = 39 # Alto Adige
+			controls_state = 850 # Trentino
+			controls_state = 159 # Lombardia
+			controls_state = 158 # Piedmonte
+			controls_state = 161 # Emilia Romagna
+			controls_state = 162 # Toscana 
+			controls_state = 157 # Abruzzo
+			controls_state = 2 # Latium
+			controls_state = 849 # Puglia
+			controls_state = 117 # Campania
+			controls_state = 156 # Calabria
+			controls_state = 115 # Sicilia
+			controls_state = 114 # Sardegna
+            controls_state = 1 # Corsica
+            controls_state = 118 # Giblatar
+            controls_state = 116 # Malta
+            controls_state = 182 # Crete
+            controls_state = 183 # Cyprus
+            controls_state = 164 # Epir
+            controls_state = 187 # Gay islands
+
+        }
+        visible = { 
+            NOT = {
+                ITA = { 
+                    controls_state = 846
+                }
+            }
+        }
+        complete_effect = {
+            transfer_state = 846
+        }
+    }
+
     ITA_annex_ROM = {
             # icon used to be here rip icon 04/29/2024
         targets = {
@@ -566,6 +614,38 @@ operations = {
             country_exists = IRE
         }
         complete_effect = {
+            hidden_effect = {
+                113 = {
+                    set_building_level = {
+                        type = industrial_complex
+                        level = 0
+                    }
+                    set_building_level = {
+                        type = arms_factory
+                        level = 0
+                    }
+                }
+                134 = {
+                    set_building_level = {
+                        type = industrial_complex
+                        level = 0
+                    }
+                    set_building_level = {
+                        type = arms_factory
+                        level = 0
+                    }
+                }
+                135 = {
+                    set_building_level = {
+                        type = industrial_complex
+                        level = 0
+                    }
+                    set_building_level = {
+                        type = arms_factory
+                        level = 0
+                    }
+                }
+            }
             FRA = { 
                 annex_country = { target = IRE transfer_troops = yes }
                     every_state = {

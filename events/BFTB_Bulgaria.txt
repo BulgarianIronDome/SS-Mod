@@ -2981,6 +2981,65 @@ country_event = {
 
 	}
 	
+	option = { #Refuse
+		name = bftb_bulgaria_rearmament.1.a
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 100
+				has_opinion = {
+					target = BUL
+					value < 0
+				}
+			}
+			modifier = {
+				factor = 100
+				BUL = {
+					is_in_faction_with = GER
+				}
+				NOT = {
+					GER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			modifier = { #Support IMRO is not cool bro
+				factor = 10
+				BUL = { has_completed_focus = BUL_support_macedonian_organizations }
+			}
+			modifier = { #Your coop with IMRO is just too much
+				factor = 10
+				BUL = { has_idea = BUL_imro_05 }
+			}
+			modifier = {
+				factor = 5
+				BUL_has_some_sort_of_bogdan_filov = yes
+			}
+		}
+
+		BUL = { country_event = { id = bftb_bulgaria_rearmament.2 hours = 16 random_hours = 8 } }
+		custom_effect_tooltip = bftb_bulgaria_rearmament.1_refuse_tt
+	}
+
+	option = { #Demands NAP with (at least) one balkan nation
+		name = bftb_bulgaria_rearmament.1.b
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 5
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 2
+				BUL_has_some_sort_of_bogdan_filov = yes
+			}
+		}
+
+		BUL = { country_event = { id = bftb_bulgaria_rearmament.3 hours = 16 random_hours = 8 } }
+		custom_effect_tooltip = bftb_bulgaria_rearmament.1_nap_tt
+	}
 
 	option = { #Accept
 		name = bftb_bulgaria_rearmament.1.c
@@ -3191,6 +3250,71 @@ country_event = {
 
 	is_triggered_only = yes
 
+	option = { #Refuse
+		name = bftb_bulgaria_rearmament.7.a
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 5
+				has_opinion = {
+					target = BUL
+					value < 0
+				}
+			}
+			modifier = {
+				factor = 5
+				has_opinion = {
+					target = BUL
+					value < 50
+				}
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_government = BUL }
+			}
+			modifier = {
+				factor = 10
+				BUL = { has_completed_focus = BUL_bulgarian_irredentism }
+			}
+			modifier = {
+				factor = 100
+				BUL = {
+					OR = {
+						has_war_with = ENG
+						AND = {
+							is_in_faction = yes
+							NOT = { is_in_faction_with = ROOT }
+						}	
+					}
+				}
+			}
+			modifier = { #Support IMRO is not cool bro
+				factor = 10
+				BUL = {	has_completed_focus = BUL_support_macedonian_organizations }
+			}
+			modifier = { #Your coop with IMRO is just too much
+				factor = 15
+				BUL = { has_idea = BUL_imro_05 }
+			}
+			modifier = {
+				factor = 5
+				BUL_has_some_sort_of_bogdan_filov = yes
+			}
+		}
+
+		effect_tooltip = {
+			BUL = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = BUL_refused_to_lift_arms_restrictions
+				}
+			}
+		}
+
+		BUL = { country_event = { id = bftb_bulgaria_rearmament.8 hours = 8 random_hours = 4 } }
+		custom_effect_tooltip = bftb_bulgaria_rearmament.1_refuse_tt
+	}
 
 	option = { #Accept
 		name = bftb_bulgaria_rearmament.7.b
@@ -5910,7 +6034,6 @@ country_event = {
 							fixed_ship_radar_slot = empty
 							fixed_ship_engine_slot = cruiser_ship_engine_2
 							fixed_ship_armor_slot = empty
-							front_1_custom_slot = ship_anti_air_1
 							mid_1_custom_slot = ship_torpedo_1
 							mid_2_custom_slot = ship_airplane_launcher_1
 							rear_1_custom_slot = ship_light_medium_battery_2
@@ -5933,7 +6056,6 @@ country_event = {
 						fixed_ship_radar_slot = empty
 						fixed_ship_engine_slot = cruiser_ship_engine_2
 						fixed_ship_armor_slot = empty
-						front_1_custom_slot = ship_anti_air_1
 						mid_1_custom_slot = ship_torpedo_1
 						mid_2_custom_slot = ship_airplane_launcher_1
 						rear_1_custom_slot = ship_light_medium_battery_2

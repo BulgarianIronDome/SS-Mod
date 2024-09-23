@@ -1,0 +1,142 @@
+operations = {
+	HUN_GER_MIO_companies = {
+		allowed = {
+			original_tag = HUN
+		}
+		visible = {
+			OR = {
+				has_game_rule = {
+					rule = mios_for_minors
+					option = on
+				}
+				has_game_rule = {
+					rule = mios_for_minors
+					option = axis_mio
+				}
+			}
+		}
+		available = {
+			OR = {
+				has_game_rule = {
+					rule = mios_for_minors
+					option = on
+				}
+				has_game_rule = {
+					rule = mios_for_minors
+					option = axis_mio
+				}
+			}
+		}
+		complete_effect = {
+            HUN = {
+				show_mio_tooltip = GER_porsche_organization
+				show_mio_tooltip = GER_henschel_organization
+				show_mio_tooltip = GER_man_organization
+				show_mio_tooltip = GER_daimler_benz_organization
+				mio:GER_porsche_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+				}
+				mio:GER_henschel_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+				}
+				mio:GER_man_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+				}
+				mio:GER_daimler_benz_organization = {
+					add_mio_size = 1
+					add_mio_research_bonus = 0.05
+				}
+            }
+        }
+	}
+	SPR_GER_MIO_companies = {
+		allowed = {
+			original_tag = SPR
+		}
+		visible = {
+			OR = {
+				has_game_rule = {
+					rule = mios_for_minors
+					option = on
+				}
+				has_game_rule = {
+					rule = mios_for_minors
+					option = axis_mio
+				}
+			}
+		}
+		available = {
+			OR = {
+				has_game_rule = {
+					rule = mios_for_minors
+					option = on
+				}
+				has_game_rule = {
+					rule = mios_for_minors
+					option = axis_mio
+				}
+			}
+		}
+	}
+	CAN_ENG_MIO_companies = {
+		allowed = {
+			original_tag = CAN
+		}
+		visible = {
+			OR = {
+				has_game_rule = {
+					rule = mios_for_minors
+					option = on
+				}
+				has_game_rule = {
+					rule = mios_for_minors
+					option = allies_mio
+				}
+			}
+		}
+		available = {
+			OR = {
+				has_game_rule = {
+					rule = mios_for_minors
+					option = on
+				}
+				has_game_rule = {
+					rule = mios_for_minors
+					option = allies_mio
+				}
+			}
+		}
+	}
+	SAF_ENG_MIO_companies = {
+		allowed = {
+			original_tag = SAF
+		}
+		visible = {
+			OR = {
+				has_game_rule = {
+					rule = mios_for_minors
+					option = on
+				}
+				has_game_rule = {
+					rule = mios_for_minors
+					option = allies_mio
+				}
+			}
+		}
+		available = {
+			OR = {
+				has_game_rule = {
+					rule = mios_for_minors
+					option = on
+				}
+				has_game_rule = {
+					rule = mios_for_minors
+					option = allies_mio
+				}
+			}
+		}
+	}
+}

@@ -334,6 +334,26 @@ focus_tree = {
 			is_subject = no
 		}
 
+		bypass = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = HUN_treaty_of_triannon_aat
+					has_idea = HUN_treaty_of_triannon_2
+					has_idea = HUN_treaty_of_triannon_3
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = HUN_treaty_of_triannon
+					has_idea = HUN_treaty_of_triannon_2
+					has_idea = HUN_treaty_of_triannon_3
+				}
+			}
+		}
+
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -692,6 +712,7 @@ focus_tree = {
 						has_war_with = ROOT
 					}
 				}
+				is_in_faction_with = ROM
 				NOT = {
 					ROM = {
 						controls_state = 76
@@ -2104,24 +2125,53 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				AND = {
-					NOT = { has_idea = HUN_treaty_of_triannon }
-					NOT = { has_idea = HUN_treaty_of_triannon_2 }
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
 				}
-				has_idea = HUN_treaty_of_triannon_3
-				AND = {
-					ROM = {
-						OR = {
-							exists = no
-							is_puppet = yes
+				OR = {
+					AND = {
+						NOT = { has_idea = HUN_treaty_of_triannon_aat }
+						NOT = { has_idea = HUN_treaty_of_triannon_2 }
+					}
+					has_idea = HUN_treaty_of_triannon_3
+					AND = {
+						ROM = {
+							OR = {
+								exists = no
+								is_puppet = yes
+							}
+						}
+						FRA = {
+							OR = {
+								exists = no
+								is_puppet = yes
+								NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
+							}
 						}
 					}
-					FRA = {
-						OR = {
-							exists = no
-							is_puppet = yes
-							NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
+				}
+			}
+			else = {		
+				OR = {
+					AND = {
+						NOT = { has_idea = HUN_treaty_of_triannon }
+						NOT = { has_idea = HUN_treaty_of_triannon_2 }
+					}
+					has_idea = HUN_treaty_of_triannon_3
+					AND = {
+						ROM = {
+							OR = {
+								exists = no
+								is_puppet = yes
+							}
+						}
+						FRA = {
+							OR = {
+								exists = no
+								is_puppet = yes
+								NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
+							}
 						}
 					}
 				}

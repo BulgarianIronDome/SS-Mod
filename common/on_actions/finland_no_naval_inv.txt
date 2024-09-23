@@ -110,12 +110,26 @@ on_actions = {
 								OR = {
 									state = 146
 									state = 147
+									state = 111
 								}
 								OWNER = { tag = SOV }
 							}
 						}
 						set_state_flag = finnish_demilitarized_zone
-						set_demilitarized_zone = yes
+						if = {
+							limit = {
+								OWNER = {
+									OR = {
+										tag = ROM
+										tag = HUN
+										tag = SPR
+										tag = BUL
+										# Add other tags here if needed
+									}
+								}
+							}
+							set_demilitarized_zone = yes
+						}
 					}
 				}
 				
@@ -132,5 +146,4 @@ on_actions = {
 				}
 			}
 		}
-    }
-}
+    }}

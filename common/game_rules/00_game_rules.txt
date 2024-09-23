@@ -117,6 +117,21 @@ allow_release_nations = {
 		desc = "RULE_ALLOW_RELEASE_NATIONS_BLOCKED_DESC"
 	}
 }
+allow_return_teritory = {
+	name = "Giving territory back"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	icon = "GFX_release_nations"
+	option = {
+		name = Yes
+		text = "GYes"
+		desc = "Enable If idiot"
+	}
+	default = {
+		name = Never
+		text = "ROff"
+		desc = "Don't touch if sigma"
+	}
+}
 
 allow_licensing = {
 	name = "RULE_ALLOW_LICENSING"

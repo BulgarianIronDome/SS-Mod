@@ -85,20 +85,6 @@ on_actions = {
 							name = YUG_peace
 						}
 					}
-				550 = { set_demilitarized_zone = yes }
-				271 = { set_demilitarized_zone = yes }
-				559 = { set_demilitarized_zone = yes }
-				841 = { set_demilitarized_zone = yes }
-				843 = { set_demilitarized_zone = yes }
-				842 = { set_demilitarized_zone = yes }
-				908 = { set_demilitarized_zone = yes }
-				835 = { set_demilitarized_zone = yes }
-				840 = { set_demilitarized_zone = yes }
-				839 = { set_demilitarized_zone = yes }
-				838 = { set_demilitarized_zone = yes }
-				837 = { set_demilitarized_zone = yes }
-				836 = { set_demilitarized_zone = yes }
-				844 = { set_demilitarized_zone = yes }
 				}
 			}
 		}
@@ -130,20 +116,6 @@ on_actions = {
 							transfer_state = 187 # OSTROVI
 							transfer_state = 182 # KRIT
 						}
-						550 = { set_demilitarized_zone = yes }
-						271 = { set_demilitarized_zone = yes }
-						559 = { set_demilitarized_zone = yes }
-						841 = { set_demilitarized_zone = yes }
-						843 = { set_demilitarized_zone = yes }
-						842 = { set_demilitarized_zone = yes }
-						908 = { set_demilitarized_zone = yes }
-						835 = { set_demilitarized_zone = yes }
-						840 = { set_demilitarized_zone = yes }
-						839 = { set_demilitarized_zone = yes }
-						838 = { set_demilitarized_zone = yes }
-						837 = { set_demilitarized_zone = yes }
-						836 = { set_demilitarized_zone = yes }
-						844 = { set_demilitarized_zone = yes }
 					}
 					else = {
 						ITA = {
@@ -159,20 +131,6 @@ on_actions = {
 								name = GRE_peace
 							}
 						}
-						550 = { set_demilitarized_zone = yes }
-						271 = { set_demilitarized_zone = yes }
-						559 = { set_demilitarized_zone = yes }
-						841 = { set_demilitarized_zone = yes }
-						843 = { set_demilitarized_zone = yes }
-						842 = { set_demilitarized_zone = yes }
-						908 = { set_demilitarized_zone = yes }
-						835 = { set_demilitarized_zone = yes }
-						840 = { set_demilitarized_zone = yes }
-						839 = { set_demilitarized_zone = yes }
-						838 = { set_demilitarized_zone = yes }
-						837 = { set_demilitarized_zone = yes }
-						836 = { set_demilitarized_zone = yes }
-						844 = { set_demilitarized_zone = yes }
 					}
 				}
 			}

@@ -58,7 +58,18 @@ division_template = {
 		cavalry = { x = 4 y = 3 }
 	}
 }
-
+division_template = {
+	name = "Banda Irregolare Libica"		
+	division_names_group = ITA_COL_02
+	override_model = ITA_irregular_infantry_alt_0_entity
+	template_counter = 66
+	regiments = {
+		irregular_infantry = { x = 0 y = 0 }
+		irregular_infantry = { x = 0 y = 1 }
+		irregular_infantry = { x = 1 y = 0 }
+		irregular_infantry = { x = 1 y = 1 }
+	}
+}
 
 units = {
 	division= {	

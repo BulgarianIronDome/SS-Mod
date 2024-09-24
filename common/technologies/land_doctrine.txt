@@ -3160,8 +3160,6 @@ technologies = {
 		xp_unlock_cost = 100
 		category_tanks = {
 			max_organisation = 1
-		}
-		category_all_armor = {
 			breakthrough = 0.10
 		}
 		category_all_infantry = {

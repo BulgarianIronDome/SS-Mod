@@ -26,6 +26,32 @@ on_actions = {
 			}
 		}
 	}
+	on_capitulation = {
+        effect = {
+            if = {
+                limit = {
+                    tag = CHI
+                }
+                JAP = {
+                    add_equipment_to_stockpile = {
+                        type = infantry_equipment_0
+                        amount = 58000
+                        producer = CHI
+                    }
+					add_equipment_to_stockpile = {
+                        type = support_equipment_1
+                        amount = 1500
+                        producer = CHI
+                    }
+					add_equipment_to_stockpile = {
+                        type = infantry_equipment_1
+                        amount = 12000
+                        producer = CHI
+                    }
+                }
+            }
+        }
+    }
     on_capitulation = {
 		effect = {
 			if = {
@@ -59,11 +85,13 @@ on_actions = {
 						}
 						HUN = {
 							transfer_state = 45 # VOJVODINA
+							transfer_state = 764 # BANAT
 						}
 					}
 					else = {
 						ITA = {
 							transfer_state = 45 # VOJVODINA
+							transfer_state = 764 # BANAT
 						}
 					}
 					GER = {
@@ -75,7 +103,6 @@ on_actions = {
 						transfer_state = 109 # CROATIA
 						transfer_state = 104 # BOSNIA
 						transfer_state = 804 # HERZEG
-						transfer_state = 764 # BANAT
 						transfer_state = 105 # MNT
 						transfer_state = 802 # KOSOVO
 						transfer_state = 108 # NIS
@@ -104,15 +131,15 @@ on_actions = {
 						BUL = {
 							transfer_state = 184 # THRACE
 							transfer_state = 731 # SOLUN
+							transfer_state = 47 # ATINA
+							transfer_state = 186 # PELOPONES
 							add_named_threat = { 
-								threat = 6
+								threat = 9
 								name = GRE_peace
 							}
 						}
 						ITA = {
 							transfer_state = 185 # EPIR
-							transfer_state = 47 # ATINA
-							transfer_state = 186 # PELOPONES
 							transfer_state = 187 # OSTROVI
 							transfer_state = 182 # KRIT
 						}

@@ -8,12 +8,6 @@ on_actions = {
 						option = on
 					}
 				}
-				every_state = {
-					limit = {
-						is_core_of = ETH
-					}
-					set_compliance = 15
-				}
 				every_country = { # NO VOLS!
 					limit = {
 						AND = {
@@ -395,18 +389,12 @@ on_actions = {
 					}
 				}
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_game_rule = {
 						rule = pregrinds_4_factions
 						option = axis
 					}
-				}
-				every_state = {
-					limit = {
-						is_core_of = ETH
-					}
-					set_compliance = 15
 				}
 				every_country = { # NO VOLS!
 					limit = {
@@ -695,18 +683,12 @@ on_actions = {
 					}
 				}
 			}
-			else_if = {
+			if = {
 				limit = {
 					has_game_rule = {
 						rule = pregrinds_4_factions
 						option = allies
 					}
-				}
-				every_state = {
-					limit = {
-						is_core_of = ETH
-					}
-					set_compliance = 15
 				}
 				every_country = { # NO VOLS!
 					limit = {

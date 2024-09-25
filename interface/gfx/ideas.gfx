@@ -1,0 +1,7 @@
+#BHVM BEST MOD
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_trollol"
+		texturefile = "gfx/interface/ideas/trollol.dds"
+	}
+}

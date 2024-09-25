@@ -691,6 +691,21 @@ no_market = {
 		desc = "You are bale to acces the market(Not Reccomended)"
 	}
 }
+anti_troll = {
+	name = "Anti Funny production fuckery"
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_fundraising"
+	default = {
+		name = on
+		text = "GOn"
+		desc = "IF on accident you delete your starting production line , it will give back efficiency(Reccomended)"
+	}
+	option = {
+		name = off
+		text = "ROff"
+		desc = "You won't get efficiency when you fuck up your production line(Not Reccomended)"
+	}
+}
 pregrinds_4_factions = {
 	name = "Pregrinds: Game rule"
 	group = "BHVM game rules"

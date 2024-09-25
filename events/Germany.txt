@@ -5068,8 +5068,13 @@ country_event = {
 			generator = { 85 807 }
 			target = POL
 		}
-		add_state_core = 85
+		add_state_core = 86
+		add_state_core = 762
 		add_state_core = 807
+		add_state_core = 85
+		add_state_core = 87
+		add_state_core = 98
+		add_state_core = 72
 		if = {
 			limit = {
 				ENG = {

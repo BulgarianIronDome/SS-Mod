@@ -7,6 +7,10 @@ spriteTypes = {
 		 name = "GFX_Juggle_1"
 		 texturefile = "gfx/interface/industry/Juggle_1.dds"
 	}
+    SpriteType = {
+        name = "GFX_idea_troll"
+        texturefile = "gfx/interface/ideas/idea_troll.dds"
+   }
     spriteType = {
         name = "GFX_horst_help2"
         texturefile = "gfx/horst_gui/horsttool/horst_help.dds"

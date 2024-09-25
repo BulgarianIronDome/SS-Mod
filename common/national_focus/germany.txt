@@ -2745,19 +2745,6 @@ focus_tree = {
 		y = 0
 		cost = 10
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = GER_oppose_hitler
-				}
-			}
-		}
 
 		available = {
 			is_subject = no
@@ -3473,7 +3460,7 @@ focus_tree = {
 						}
 					}
 				}
-				effect_tooltip = {
+				effect_tooltip = { #the fucking event for this tooltip is so false ,it only gives on danzig and the bigger state outside , thus the reason im doing it on the event
 					add_state_core = 86
 					add_state_core = 762
 					add_state_core = 807

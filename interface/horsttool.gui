@@ -12,14 +12,14 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "horsttool_open_container"
-		position = { x = -100% y = 7% }
+		position = { x = -100% y = 6% }
 		Orientation = UPPER_RIGHT
 		buttonType = {
 			name = "tool_open"
 			#quadTextureSprite = "GFX_generic_bg"
 			quadTextureSprite = "GFX_generic_box_96"
 			position = { x = 0 y = 0 }
-			scale=1.2
+			scale=1
 			pdx_tooltip = "[ST_TOOLTIP]"
 			clicksound = click_ok
 			oversound = ui_menu_over
@@ -31,8 +31,8 @@ guiTypes = {
 			position = { x = 5% y = 7% }
 			font = "hoi_18mbs"
 			text = "[transfer_states_tooltip]"
-			maxWidth = 100
-			maxHeight = 66
+			maxWidth = 90
+			maxHeight = 22
 			format = left
 		}
 

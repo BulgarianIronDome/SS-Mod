@@ -12,6 +12,18 @@ ideas = {
 				trade_cost_for_target_factor = -0.8 #pay only half too
 			}
 		}
+		anti_troll = {
+			picture = trollol
+			cancel = {
+				date > 1936.01.05
+			}
+			allowed = {
+				always = no				# Added via actions for game rules
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = 0.5
+			}
+		}
 		boost_research = {
 			picture = generic_fighter_production_diverted
 			allowed = {

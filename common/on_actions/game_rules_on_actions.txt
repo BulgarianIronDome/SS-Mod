@@ -1,13 +1,43 @@
 on_actions = {
+	on_startup = {
+        effect = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = anti_troll
+                        option = on
+                    }
+                }
+                every_country = {
+                    add_ideas = { anti_troll }
+                    set_country_flag = anti_troll_active
+                }
+            }
+        }
+	}
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    date > 1936.1.5
+                    has_country_flag = anti_troll_active
+                }
+                every_country = {
+                    remove_ideas = anti_troll
+                    clr_country_flag = anti_troll_active
+                }
+            }
+        }
+    }
     on_startup = {
         effect = {
-             if = {
+            if = {
                 limit = {
                     has_game_rule = {
                         rule = soviet_airforce
                         option = off
                     }
-                 }
+                }
                 SOV = {
                     add_ideas = SOV_nuhuh_air
                 }

@@ -31,21 +31,21 @@ add_ideas = {
 # RESISTANCE / COMPLIANCE
 550 = { #ERITREA
 	start_resistance = yes
-	set_compliance = 20
+	set_compliance = 60
 	set_resistance = 0
 	set_garrison_strength = 1.0
 }
 
 559 = { #SOMALILAND
 	start_resistance = yes
-	set_compliance = 20
+	set_compliance = 60
 	set_resistance = 0
 	set_garrison_strength = 1.0
 }
 
 844 = { #JUBALAND
 	start_resistance = yes
-	set_compliance = 20
+	set_compliance = 60
 	set_resistance = 0
 	set_garrison_strength = 1.0
 }
@@ -56,7 +56,7 @@ every_owned_state = { #LIBYAN STATES
 		NOT = { state = 273 } #Don't add resistance in the middle of the impassable desert thanks
 	}
 	start_resistance = yes
-	set_compliance = 35
+	set_compliance = 70
 	set_resistance = 0
 	set_garrison_strength = 1.0
 }

@@ -258,3 +258,30 @@ Changed the amount of spawned factories by the AI , lamao bloat kekw rolf ~20 mo
 When romania is given finland , the territories for finland now stay demilitirized , expect the states which finland looses aka karalija
 Czeko tree now made so you cant go non hist, kept in for the eco
 Nerfed luxembourg factories by 2 , -2 mills
+
+Changed non occupied states to have 1 manpower and no supply buildings
+Made supply decision to be avaible for faction leader and for the tags ITA GER SOV JAP and FRA , JAP is special , if SIA is gone or AI controlled its avaible for japan
+Added a decision special for italy , so that if they fully control the med islands , they can get Ticino via the decision but they have to make the focus "Towards a Greater Italy" , so then they can press the decision and after that form greater italy
+Made it so that when ever france annexes ireland when it has caput , it no longer gets irish economy only a single dockyard for convoys 
+Fixed Hungary not being vanila , now its completly vanila for Trainon. Fixed Brazil focus tree. France has 1 less organizer. Fixed finland having its capital demilitirzed , when yugo and greece cap , ethopia is no longer demilitarized
+Changed how some scripting works in the pregrinded gens actions 
+made italy start with 42 compliance in ethopia
+japan now gets around ~70k guns , mainly gun 1s and 1k support eq
+nerfed the non vanila black shirt battalion still no body would use it tho.
+Italy now starts with irregular inf ,  but the catch is that you can edit it , you cant add more irregular battalions , but you can add inf and others to improvise!
+Land doctrine deep battle no longer gives to all armor ( aka tds spaa spg ) break 10% , only to regular tanks ( heavies meduims lights )
+some more optimization for supply buildings in the non occupied states.
+Made it so that you cant exploit off the AI like guns also made it not justify if its AI and has claims yada yada 
+added a funny game rule for fucking up your production day 1 , it will spare you 5-6 days of 50% retention aka if you delete your inf eq line day 1 , you can just place another one 1 day later
+Made rhineland not lag your game for a bit , the focus
+actually made the tooltip for adding extra cores in poland for germany bcz thx pdx <3 
+changed where the host tool is at.
+hanged AI not to disgruntle attache 
+changed uk focuses for dockyards  -2 less 1st dockyard focus and 2 more 2nd dockyard focus , aka repair dockyards focus and naval rearmament
+Added compliance to guyana states 
+made italy start with more compliance in colonies
+Toilet anans das.
+
+In the future i promise to add mios for allied and axis tank countries and it will work , its just scrapped bcz i cant be bothered to do it rn. 
+(WORK IN PROGRESS: AXIS/ALLIED MINORS HAVING MIOS FROM BIG MAJOR COUNTRY , ONLY GAME RULED RN , not anymore commented it out last second lol)
+

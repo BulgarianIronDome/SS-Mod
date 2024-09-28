@@ -413,7 +413,7 @@ operations = {
 		available = {
 			original_tag = GER
 			SPR = { is_ai = yes }
-			date > 1939.01.01
+			date > 1935.01.01
             NOT = {
                 OR = {
                     has_country_flag = annexed_SPR
@@ -440,6 +440,7 @@ operations = {
 		complete_effect = {
             BUL = {
                 activate_mission = GER_recieving_ll_mech_bul_1a
+                add_country_leader_trait = bul_caudillo
             }
             set_country_flag = GER_started_ll_mech_bul
 			SPR = {	

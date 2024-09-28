@@ -1180,6 +1180,12 @@ leader_traits = {
 		command_power_gain_mult = 0.15
 	}
 
+	bul_caudillo = {
+		random = no
+		max_command_power = 100
+		command_power_gain_mult = 0.5
+	}
+
 	the_lion_of_the_rif = {
 		random = no
 		war_support_factor = 0.1

@@ -282,13 +282,23 @@ operations = {
 			original_tag = GER
 			SPR = { is_ai = yes }
 			date > 1939.01.01
-            NOT = { has_country_flag = GER_started_ll_mech }
+            NOT = {
+                OR = {
+                    has_country_flag = GER_started_ll_mech
+                    has_country_flag = GER_started_ll_mech_bul
+                }
+            }
 		}
 		visible = {
 			original_tag = GER
 			SPR = { is_ai = yes }
 			is_ai = NO
-            NOT = { has_country_flag = GER_started_ll_mech }
+            NOT = {
+                OR = {
+                    has_country_flag = GER_started_ll_mech
+                    has_country_flag = GER_started_ll_mech_bul
+                }
+            }
 			country_exists = SPR
 		}
 		complete_effect = {
@@ -348,14 +358,19 @@ operations = {
 		}
 	}
     GER_mech_delivery_SPR = {
-		icon = GFX_decision_generic_industry
+	    icon = GFX_decision_generic_industry
 		fire_only_once = yes
 
 		available = {
 			original_tag = GER
 			SPR = { is_ai = yes }
 			date > 1939.01.01
-            NOT = { has_country_flag = annexed_SPR }
+            NOT = {
+                OR = {
+                    has_country_flag = annexed_SPR
+                    has_country_flag = GER_started_ll_mech_bul
+                }
+            }
             has_game_rule = {
                 rule = spanish_production
                 option = on
@@ -365,7 +380,12 @@ operations = {
 			original_tag = GER
 			SPR = { is_ai = yes }
 			is_ai = NO
-            NOT = { has_country_flag = annexed_SPR }
+            NOT = {
+                OR = {
+                    has_country_flag = annexed_SPR
+                    has_country_flag = GER_started_ll_mech_bul
+                }
+            }
 			country_exists = SPR
 		}
 		complete_effect = {
@@ -386,123 +406,311 @@ operations = {
 			}
 		}
 	}
-    GER_recieving_ll_mech_1a = {
+    GER_mech_delivery_SPR_to_BUL = {
+	    icon = GFX_decision_generic_industry
+		fire_only_once = yes
+
+		available = {
+			original_tag = GER
+			SPR = { is_ai = yes }
+			date > 1935.01.01
+            NOT = {
+                OR = {
+                    has_country_flag = annexed_SPR
+                    has_country_flag = GER_started_ll_mech
+                }
+            }
+            has_game_rule = {
+                rule = spanish_production
+                option = on
+            }
+		}
+		visible = {
+			original_tag = GER
+			SPR = { is_ai = yes }
+			is_ai = NO
+            NOT = {
+                OR = {
+                    has_country_flag = annexed_SPR
+                    has_country_flag = GER_started_ll_mech
+                }
+            }
+			country_exists = SPR
+		}
+		complete_effect = {
+            BUL = {
+                activate_mission = GER_recieving_ll_mech_bul_1a
+                add_country_leader_trait = bul_caudillo
+            }
+            set_country_flag = GER_started_ll_mech_bul
+			SPR = {	
+				set_technology = {
+				    mechanised_infantry = 1
+				}
+                create_equipment_variant = {
+                    name = "Cheap Mechanised"
+                    type = mechanized_equipment_1
+                    parent_version = 0
+                    upgrades = {
+                        mech_cost_upgrade = 5
+                    }
+                }
+			}
+		}
+	}
+    GER_recieving_ll_mech_bul_1a = {
         allowed = {  
-            original_tag = GER
-            SPR = { is_ai = yes }
-            NOT = { has_country_flag = annexed_SPR }
+            original_tag = BUL
         }
         available = {
-            NOT = { has_country_flag = GER_started_ll_mech }
-            SPR = { is_ai = yes }
-            NOT = { has_country_flag = annexed_SPR }
+            NOT = { GER = { has_country_flag = GER_started_ll_mech_bul } }
         }
         icon = generic_army_support
         is_good = yes
         activation = { always = no }
-        days_mission_timeout = 60
+        days_mission_timeout = 30
     
         timeout_effect = {
             SPR = {
                 if = {
                     limit = { date > 1943.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 7000 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 }
                 }
                 else_if = {
                     limit = { date > 1942.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5000 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 }
                 }
                 else_if = {
                     limit = { date > 1941.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4500 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 }
                 }
                 else_if = {
                     limit = { date > 1940.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2300 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 }
+                }
+                else_if = {
+                    limit = { date > 1939.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 }
                 }
                 else = {
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1600 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 }
                 }
             }
             if = {
                 limit = { date > 1943.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 7000 producer = SPR } }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1942.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5000 producer = SPR } }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1941.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4500 producer = SPR } }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1940.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2300 producer = SPR } }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 producer = SPR } }
+            }
+            else_if = {
+                limit = { date > 1939.12.31 }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 producer = SPR } }
             }
             else = {
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1600 producer = SPR } }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 producer = SPR } }
+            }
+            activate_mission = GER_recieving_ll_mech_bul_2a
+        }
+    }
+    GER_recieving_ll_mech_bul_2a = {
+        allowed = {  
+            original_tag = BUL
+        }
+        available = {
+            NOT = { GER = { has_country_flag = GER_started_ll_mech_bul } }
+        }
+        icon = generic_army_support
+        is_good = yes
+        activation = { always = no }
+        days_mission_timeout = 30
+    
+        timeout_effect = {
+            SPR = {
+                if = {
+                    limit = { date > 1943.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 }
+                }
+                else_if = {
+                    limit = { date > 1942.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 }
+                }
+                else_if = {
+                    limit = { date > 1941.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 }
+                }
+                else_if = {
+                    limit = { date > 1940.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 }
+                }
+                else_if = {
+                    limit = { date > 1939.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 }
+                }
+                else = {
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 }
+                }
+            }
+            if = {
+                limit = { date > 1943.12.31 }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 producer = SPR } }
+            }
+            else_if = {
+                limit = { date > 1942.12.31 }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 producer = SPR } }
+            }
+            else_if = {
+                limit = { date > 1941.12.31 }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 producer = SPR } }
+            }
+            else_if = {
+                limit = { date > 1940.12.31 }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 producer = SPR } }
+            }
+            else_if = {
+                limit = { date > 1939.12.31 }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 producer = SPR } }
+            }
+            else = {
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 producer = SPR } }
+            }
+            activate_mission = GER_recieving_ll_mech_bul_1a    
+        }
+    }
+
+    GER_recieving_ll_mech_1a = {
+        allowed = {  
+            original_tag = GER
+        }
+        available = {
+            NOT = { has_country_flag = GER_started_ll_mech }
+        }
+        icon = generic_army_support
+        is_good = yes
+        activation = { always = no }
+        days_mission_timeout = 30
+    
+        timeout_effect = {
+            SPR = {
+                if = {
+                    limit = { date > 1943.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 }
+                }
+                else_if = {
+                    limit = { date > 1942.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 }
+                }
+                else_if = {
+                    limit = { date > 1941.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 }
+                }
+                else_if = {
+                    limit = { date > 1940.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 }
+                }
+                else_if = {
+                    limit = { date > 1939.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 }
+                }
+                else = {
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 }
+                }
+            }
+            if = {
+                limit = { date > 1943.12.31 }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 producer = SPR } }
+            }
+            else_if = {
+                limit = { date > 1942.12.31 }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 producer = SPR } }
+            }
+            else_if = {
+                limit = { date > 1941.12.31 }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 producer = SPR } }
+            }
+            else_if = {
+                limit = { date > 1940.12.31 }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 producer = SPR } }
+            }
+            else_if = {
+                limit = { date > 1939.12.31 }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 producer = SPR } }
+            }
+            else = {
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 producer = SPR } }
             }
             activate_mission = GER_recieving_ll_mech_2a    
         }
     }
-    
     GER_recieving_ll_mech_2a = {
         allowed = {  
             original_tag = GER
-            SPR = { is_ai = yes }
-            NOT = { has_country_flag = annexed_SPR }
         }
         available = {
             NOT = { has_country_flag = GER_started_ll_mech }
-            SPR = { is_ai = yes }
-            NOT = { has_country_flag = annexed_SPR }
         }
         icon = generic_army_support
         is_good = yes
         activation = { always = no }
-        days_mission_timeout = 60
+        days_mission_timeout = 30
     
         timeout_effect = {
             SPR = {
                 if = {
                     limit = { date > 1943.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 7850 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 }
                 }
                 else_if = {
                     limit = { date > 1942.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5420 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 }
                 }
                 else_if = {
                     limit = { date > 1941.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4800 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 }
                 }
                 else_if = {
                     limit = { date > 1940.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3250 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 }
+                }
+                else_if = {
+                    limit = { date > 1939.12.31 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 }
                 }
                 else = {
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2000 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 }
                 }
             }
             if = {
                 limit = { date > 1943.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 7850 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1942.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5420 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1941.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4800 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1940.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3250 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 producer = SPR } }
+            }
+            else_if = {
+                limit = { date > 1939.12.31 }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 producer = SPR } }
             }
             else = {
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2000 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 producer = SPR } }
             }
             activate_mission = GER_recieving_ll_mech_1a    
         }

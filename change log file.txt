@@ -285,3 +285,12 @@ Toilet anans das.
 In the future i promise to add mios for allied and axis tank countries and it will work , its just scrapped bcz i cant be bothered to do it rn. 
 (WORK IN PROGRESS: AXIS/ALLIED MINORS HAVING MIOS FROM BIG MAJOR COUNTRY , ONLY GAME RULED RN , not anymore commented it out last second lol)
 
+Fixed Britsh requirments for annexing minors
+Made AIs who have generic trees to rush industry proper
+Made the spanish mech be more sigma, more game rules option for a bulgaria direct lend lease etc
+Fixed some continouis focuses
+"Vanila" Eco for denmark and norway
+Fixed some land doctrine bs
+Buffed romania by 1 single civ xd
+Nerfed france by 2 civs in africa and syria colonies , 1 from afirca 1 from syria
+Fixed some loading tips , added local to new options for mech lend lease

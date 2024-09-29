@@ -1,9 +1,12 @@
 version="1a"
 tags={
 	"Balance"
-	"National Focuses"
 	"Gameplay"
 	"Historical"
+	"Fixes"
+	"Map"
+	"National Focuses"
+	"Military"
 }
 name="BHVM-2"
 picture="thumbnail.png"

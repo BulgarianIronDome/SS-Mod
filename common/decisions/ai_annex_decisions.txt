@@ -359,7 +359,7 @@ operations = {
 	}
     GER_mech_delivery_SPR = {
 	    icon = GFX_decision_generic_industry
-		fire_only_once = yes
+		#fire_only_once = yes
 
 		available = {
 			original_tag = GER
@@ -369,11 +369,18 @@ operations = {
                 OR = {
                     has_country_flag = annexed_SPR
                     has_country_flag = GER_started_ll_mech_bul
+                    has_country_flag = GER_started_ll_mech
                 }
             }
-            has_game_rule = {
-                rule = spanish_production
-                option = on
+            OR = {
+                has_game_rule = {
+                    rule = spanish_production
+                    option = ger_mech
+                }
+                has_game_rule = {
+                    rule = spanish_production
+                    option = mixer
+                }
             }
 		}
 		visible = {
@@ -384,9 +391,20 @@ operations = {
                 OR = {
                     has_country_flag = annexed_SPR
                     has_country_flag = GER_started_ll_mech_bul
+                    has_country_flag = GER_started_ll_mech
                 }
             }
 			country_exists = SPR
+            OR = {
+                has_game_rule = {
+                    rule = spanish_production
+                    option = ger_mech
+                }
+                has_game_rule = {
+                    rule = spanish_production
+                    option = mixer
+                }
+            }
 		}
 		complete_effect = {
             activate_mission = GER_recieving_ll_mech_1a
@@ -408,21 +426,28 @@ operations = {
 	}
     GER_mech_delivery_SPR_to_BUL = {
 	    icon = GFX_decision_generic_industry
-		fire_only_once = yes
+		#fire_only_once = yes
 
 		available = {
 			original_tag = GER
 			SPR = { is_ai = yes }
-			date > 1935.01.01
+			date > 1939.01.01
             NOT = {
                 OR = {
                     has_country_flag = annexed_SPR
                     has_country_flag = GER_started_ll_mech
+                    has_country_flag = GER_started_ll_mech_bul
                 }
             }
-            has_game_rule = {
-                rule = spanish_production
-                option = on
+            OR = {
+                has_game_rule = {
+                    rule = spanish_production
+                    option = bul_mech
+                }
+                has_game_rule = {
+                    rule = spanish_production
+                    option = mixer
+                }
             }
 		}
 		visible = {
@@ -433,9 +458,20 @@ operations = {
                 OR = {
                     has_country_flag = annexed_SPR
                     has_country_flag = GER_started_ll_mech
+                    has_country_flag = GER_started_ll_mech_bul
                 }
             }
 			country_exists = SPR
+            OR = {
+                has_game_rule = {
+                    rule = spanish_production
+                    option = bul_mech
+                }
+                has_game_rule = {
+                    rule = spanish_production
+                    option = mixer
+                }
+            }
 		}
 		complete_effect = {
             BUL = {
@@ -456,6 +492,45 @@ operations = {
                     }
                 }
 			}
+		}
+	}
+    GER_close_mech_LL = {
+		icon = GFX_decision_generic_industry
+
+        available = {
+			#If youre going to add a button for bulgaria , add a stop gap button
+		}
+
+		visible = {	
+            original_tag = GER
+            SPR = { is_ai = yes }
+            country_exists = SPR
+            has_country_flag = GER_started_ll_mech
+		}
+
+		complete_effect = {
+			clr_country_flag = GER_started_ll_mech
+		}
+	}
+    GER_close_mech_LL_bul = {
+		icon = GFX_decision_generic_industry
+
+        available = {
+			#If youre going to add a button for bulgaria , add a stop gap button
+		}
+
+		visible = {	
+            original_tag = GER
+            SPR = { is_ai = yes }
+            country_exists = SPR
+            has_country_flag = GER_started_ll_mech_bul
+		}
+
+		complete_effect = {
+            BUL = {
+                remove_country_leader_trait = bul_caudillo
+            }
+			clr_country_flag = GER_started_ll_mech_bul
 		}
 	}
     GER_recieving_ll_mech_bul_1a = {
@@ -999,7 +1074,7 @@ operations = {
 
         available = {
             original_tag = ENG
-            CAN = { is_ai = yes }
+            SAF = { is_ai = yes }
             date > 1938.01.01
         }
         visible = {
@@ -1030,7 +1105,7 @@ operations = {
 
         available = {
             original_tag = ENG
-            CAN = { is_ai = yes }
+            SAF = { is_ai = yes }
             date > 1938.01.01
         }
         visible = {
@@ -1061,7 +1136,7 @@ operations = {
 
         available = {
             original_tag = ENG
-            CAN = { is_ai = yes }
+            AST = { is_ai = yes }
             date > 1937.01.01
         }
         visible = {
@@ -1147,7 +1222,7 @@ operations = {
             }
         }
     }
-     ENG_give_AST_to_RAJ = {
+    ENG_give_AST_to_RAJ = {
         # icon used to be here rip icon 04/29/2024
         targets = {
             AST

@@ -665,10 +665,20 @@ spanish_production = {
 	name = "Spanish Production"
 	group = "BHVM game rules"
 	icon = "GFX_decision_generic_industry"
-	default = {
-		name = on
-		text = "GGermany gets a button for Mech lend lease"
+	option = {
+		name = ger_mech
+		text = "GGerman Lend Lease for Mech"
 		desc = "It progresivly gets better as more time passes"
+	}
+	option = {
+		name = bul_mech
+		text = "BGerman-Bulgarian Lend Lease for Mech"
+		desc = "It progresivly gets better as more time passes , for bulgaria"
+	}
+	default = {
+		name = mixer
+		text = "4Germany can choose either BUL or GER"
+		desc = "It progresivly gets better as more time passes , Germany can choose between itself and bulgaria"
 	}
 	option = {
 		name = off

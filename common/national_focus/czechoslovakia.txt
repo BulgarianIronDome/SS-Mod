@@ -755,7 +755,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 90
+			factor = 100
 		}
 
 		available = {
@@ -788,7 +788,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 40
+			factor = 100
 			modifier = {
 				factor = 2
 				has_completed_focus = CZE_go_right
@@ -844,7 +844,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 80
+			factor = 100
 		}
 
 		available = {
@@ -1271,7 +1271,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 90
+			factor = 50
 		}
 
 		available = {
@@ -2067,7 +2067,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 90
+			factor = 50
 		}
 
 		available = {
@@ -2860,7 +2860,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 90
+			factor = 50
 		}
 
 		available = {
@@ -3315,7 +3315,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 90
+			factor = 30
 		}
 
 		available = {
@@ -3647,7 +3647,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 30
+			factor = 10
 		}
 
 		available = {

@@ -4258,17 +4258,33 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = GER_war_with_france }
 		available = {
-			core_compliance = {
-				occupied_country_tag = FRA
-				value > 20
-			}
-			core_compliance = {
-				occupied_country_tag = DEN
-				value > 20
-			}
-			core_compliance = {
-				occupied_country_tag = LUX
-				value > 20
+			OR = {
+				OR = {
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = axis
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = allies
+					}
+					has_game_rule = {
+						rule = pregrinds_4_factions
+						option = on
+					}
+					core_compliance = {
+						occupied_country_tag = FRA
+						value > 20
+					}
+					core_compliance = {
+						occupied_country_tag = DEN
+						value > 20
+					}
+					core_compliance = {
+						occupied_country_tag = LUX
+						value > 20
+					}	
+				}
 			}
 			is_subject = no
 			has_full_control_of_state = 8

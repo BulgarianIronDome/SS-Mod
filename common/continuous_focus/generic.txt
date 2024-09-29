@@ -372,7 +372,39 @@ continuous_focus_palette = {
 		
 		available_if_capitulated = yes
 	}
-
+	focus = {
+		id = continuous_reduce_training_time
+		
+		icon = GFX_goal_continuous_reduce_training_time
+		
+		available = {
+			NOT = {
+				OR = {
+					has_idea = peace_training_xp
+					has_idea = peace_training_no_xp
+				}
+			}
+		}
+		
+		modifier = {
+			training_time_army_factor = -0.25
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25		
+				is_government_in_exile = yes  
+				original_tag = ETH
+			}
+		}
+		
+		supports_ai_strategy = ai_focus_defense
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
 	focus = {
 		id = continuous_repair
 		

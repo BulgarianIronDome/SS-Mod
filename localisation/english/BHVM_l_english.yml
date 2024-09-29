@@ -104,6 +104,8 @@
  no_market:0"Banned Market Acces World Wide"
  no_vols:0"No volenteers"
  fix_production_idea:0"Production fix"
+ GER_close_mech_LL_bul:0"Close Mechanized LL for Bulgaria"
+ GER_close_mech_LL:0"Close Mechanized LL for Germany"
   INVASION_WARNING_TEXT: "Forces of §Y[?ui_invader_country.GetNameWithFlag]§! have successfully conducted a §CNaval Invasion§! at [?ui_invaded_state.GetName]!"
   INVASION_WARNING_DISABLE: "No longer show Enemy Invasions with this popup."
 

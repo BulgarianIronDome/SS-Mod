@@ -294,3 +294,8 @@ Fixed some land doctrine bs
 Buffed romania by 1 single civ xd
 Nerfed france by 2 civs in africa and syria colonies , 1 from afirca 1 from syria
 Fixed some loading tips , added local to new options for mech lend lease
+
+Fixed plane lend lease , now gives fighter meduim airplanes
+Fixed brazil right path being broke
+Made gun 3 to be in 1940 march 1st
+Vanilaied an USA focus

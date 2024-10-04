@@ -274,8 +274,8 @@ focus_tree = {
 		icon = GFX_focus_ICE_state_corporatism
 		prerequisite = { focus = BRA_anaue focus = BRA_the_polaca}
 		mutually_exclusive = { focus = BRA_autarky }
-		x = 0
-		y = 2
+		x = 2
+		y = 6
 		relative_position_id = BRA_anaue
 		cost = 5
 		ai_will_do = {
@@ -344,7 +344,7 @@ focus_tree = {
 		id = BRA_departamento_de_ordem_politica_e_social
 		icon = GFX_focus_SWI_embrace_rote_drei
 		prerequisite = { focus = BRA_corporatism focus = BRA_autarky  }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = BRA_corporatism
 		cost = 5

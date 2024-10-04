@@ -51,7 +51,7 @@ if = {
 		country_event = { id = tech_rush.12 days = 1520 } #ar3
 	}
 	BLM = {
-		country_event = { id = tech_rush.13 days = 1600 } #gun3
+		country_event = { id = tech_rush.13 days = 1510 } #gun3
 	}
 
 }

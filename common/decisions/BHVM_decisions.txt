@@ -385,7 +385,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1940.07.1
+           date > 1940.03.1
         }
         complete_effect = {
             BLM = {
@@ -557,6 +557,7 @@ E_ll = {
 				send_equipment = { equipment = large_plane_airframe amount = 10000 target = GER }
 				send_equipment = { equipment = small_plane_cas_airframe amount = 10000 target = GER }
 				send_equipment = { equipment = medium_plane_airframe amount = 10000 target = GER }
+				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = GER }
 			}
 			activate_mission = GER_recieving_ll_2		
 		}
@@ -589,6 +590,7 @@ E_ll = {
 				send_equipment = { equipment = large_plane_airframe amount = 10000 target = GER }
 				send_equipment = { equipment = small_plane_cas_airframe amount = 10000 target = GER }
 				send_equipment = { equipment = medium_plane_airframe amount = 10000 target = GER }
+				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = GER }
 			}
 			activate_mission = GER_recieving_ll_1		
 		}
@@ -669,6 +671,7 @@ E_ll = {
 					has_country_flag = sending_ll_to_ger_nav 
 				}  
 				send_equipment = { equipment = small_plane_naval_bomber_airframe amount = 10000 target = GER }
+				send_equipment = { equipment = large_plane_maritime_patrol_plane_airframe amount = 10000 target = GER }
 			}
 			activate_mission = GER_recieving_navs_ll_2		
 		}
@@ -698,6 +701,7 @@ E_ll = {
 					has_country_flag = sending_ll_to_ger_nav 
 				}  
 				send_equipment = { equipment = small_plane_naval_bomber_airframe amount = 10000 target = GER }
+				send_equipment = { equipment = large_plane_maritime_patrol_plane_airframe amount = 10000 target = GER }
 			}
 			activate_mission = GER_recieving_navs_ll_1		
 		}
@@ -797,6 +801,7 @@ E_ll = {
 				send_equipment = { equipment = large_plane_airframe amount = 10000 target = ENG }
 				send_equipment = { equipment = small_plane_cas_airframe amount = 10000 target = ENG }
 				send_equipment = { equipment = medium_plane_airframe amount = 10000 target = ENG }
+				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = ENG }
 			}
 			activate_mission = ENG_recieving_ll_2		
 		}
@@ -836,6 +841,7 @@ E_ll = {
 				send_equipment = { equipment = small_plane_cas_airframe amount = 10000 target = ENG }
 				send_equipment = { equipment = large_plane_airframe amount = 10000 target = ENG } 
 				send_equipment = { equipment = medium_plane_airframe amount = 10000 target = ENG }
+				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = ENG }
 			}
 			activate_mission = ENG_recieving_ll_1		
 		}
@@ -932,6 +938,7 @@ E_ll = {
 				send_equipment = { equipment = large_plane_airframe amount = 10000 target = CAN }
 				send_equipment = { equipment = small_plane_cas_airframe amount = 10000 target = CAN }
 				send_equipment = { equipment = medium_plane_airframe amount = 10000 target = CAN }
+				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = ENG }
 			}
 			activate_mission = CAN_recieving_ll_2		
 		}
@@ -971,6 +978,7 @@ E_ll = {
 				send_equipment = { equipment = large_plane_airframe amount = 10000 target = CAN }
 				send_equipment = { equipment = small_plane_cas_airframe amount = 10000 target = CAN }
 				send_equipment = { equipment = medium_plane_airframe amount = 10000 target = CAN }
+				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = ENG }
 			}
 			activate_mission = CAN_recieving_ll_1		
 		}

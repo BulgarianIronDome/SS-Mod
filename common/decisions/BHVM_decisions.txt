@@ -938,7 +938,7 @@ E_ll = {
 				send_equipment = { equipment = large_plane_airframe amount = 10000 target = CAN }
 				send_equipment = { equipment = small_plane_cas_airframe amount = 10000 target = CAN }
 				send_equipment = { equipment = medium_plane_airframe amount = 10000 target = CAN }
-				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = ENG }
+				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = CAN }
 			}
 			activate_mission = CAN_recieving_ll_2		
 		}
@@ -978,9 +978,85 @@ E_ll = {
 				send_equipment = { equipment = large_plane_airframe amount = 10000 target = CAN }
 				send_equipment = { equipment = small_plane_cas_airframe amount = 10000 target = CAN }
 				send_equipment = { equipment = medium_plane_airframe amount = 10000 target = CAN }
-				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = ENG }
+				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = CAN }
 			}
 			activate_mission = CAN_recieving_ll_1		
 		}
 	}
+}
+operations = {
+	give_axis_mio_access = {
+		icon = generic_industry
+	
+		visible = {
+			OR = {
+				tag = SPR
+				tag = HUN
+			}
+			NOT = { has_country_flag = axis_mio_access }
+			OR = {
+				has_game_rule = {
+					rule = mios_for_minors
+					option = on
+				}
+				has_game_rule = {
+					rule = mios_for_minors
+					option = axis_mio
+				}
+			}
+		}
+	
+		available = {
+			NOT = { has_war_with = GER }
+		}
+	
+		#cost = 0
+	
+		complete_effect = {
+			set_country_flag = axis_mio_access
+			custom_effect_tooltip = gain_axis_mio_access_tt
+		}
+	
+		#ai_will_do = {
+		#	factor = 100
+		#}
+	}
+	
+	give_allies_mio_access = {
+		icon = generic_industry
+	
+		visible = {
+			OR = {
+				tag = SAF
+				tag = CAN
+			}
+			NOT = { has_country_flag = allies_mio_access }
+			OR = {
+				has_game_rule = {
+					rule = mios_for_minors
+					option = on
+				}
+				has_game_rule = {
+					rule = mios_for_minors
+					option = allies_mio
+				}
+			}
+		}
+	
+		available = {
+			NOT = { has_war_with = ENG }
+		}
+	
+		#cost = 0
+	
+		complete_effect = {
+			set_country_flag = allies_mio_access
+			custom_effect_tooltip = gain_allies_mio_access_tt
+		}
+	
+		#ai_will_do = {
+		#	factor = 100
+		#}
+	}
+	
 }

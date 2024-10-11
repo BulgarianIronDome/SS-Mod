@@ -741,32 +741,32 @@ pregrinds_4_factions = {
 		desc = "No one has pregrinds!(XD)"
 	}
 }
-#mios_for_minors = {
-#    name = "MIOs for X minors"
-#    group = "BHVM game rules"
-#    icon = "GFX_decision_generic_merge_plant_materiel"
-#    default = {
-#        name = on
-#        text = "GOn"
-#        desc = "Allied and Axis tank minors have MIOs from the main major nation(Reccomended)"
-#    }
-#    option = {
-#        name = axis_mio
-#        text = "BAxis"
-#        desc = "AXIS Minors only have MIOs(Tank Larp)"
-#    }
-#    option = {
-#        name = allies_mio
-#        text = "PAllies"
-#        desc = "ALLIED Minors only have MIOs(Tank Larp)"
-#    }
-#    option = {
-#        name = none
-#        text = "PNone"
-#        desc = "No minors have MIOs of the major nation(Vanila)"
-#    }
-#}
-#I WILL COME BACK TO YOU STUPID GAME!
+mios_for_minors = {
+    name = "MIOs for X minors"
+    group = "BHVM game rules"
+    icon = "GFX_decision_generic_merge_plant_materiel"
+    default = {
+        name = on
+        text = "GOn"
+        desc = "Allied and Axis tank minors have MIOs from the main major nation(Reccomended)"
+    }
+    option = {
+        name = axis_mio
+        text = "RAxis"
+        desc = "AXIS Minors only have MIOs(Tank Larp)"
+    }
+    option = {
+        name = allies_mio
+        text = "4Allies"
+        desc = "ALLIED Minors only have MIOs(Tank Larp)"
+    }
+    option = {
+        name = none
+        text = "None"
+        desc = "No minors have MIOs of the major nation(Vanila)"
+    }
+}
+#I CAMA BACK AT YOU , SILLY BILLY GAME!
 sov_purges = {
 	name = "Soviet general purges"
 	group = "BHVM game rules"

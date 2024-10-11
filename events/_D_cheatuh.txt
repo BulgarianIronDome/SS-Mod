@@ -2,8 +2,8 @@
 
 news_event = {
 	id = cheat.1
-	title = "Cheated Equipment Detected"
-	desc = "A nation has equipment with upgrades exceeding the allowed limits!"
+	title = "Cheated Equipment Detected a Mf"
+	desc = "Mf has equipment with upgrades exceeding the allowed limits!"
 	picture = GFX_report_event_generic_read_write
 
     is_triggered_only = yes
@@ -14,39 +14,89 @@ news_event = {
 
     option = {
         name = "Well.Atleast it works!"
-        # Do something, like logging, or applying penalties if necessary
     }
 }
 news_event = {
-	id = cheat.2
-	title = "Impresive factory count"
-	desc = "A nation has exceeded define building limit! In a state Look around for a state with a lot of factories"
-	picture = GFX_report_event_generic_read_write
+    id = cheat.2
+    title = "Mf has exceeded building limits!"
+    desc = "Mf has exceeded the defined building limit in [From.GetStateName]! The state has buildings over the acceptable limit: [From.GetBuildingType]."
+    picture = GFX_report_event_generic_read_write
 
+    is_triggered_only = yes
+
+    option = {
+        name = "Very Impressive, Hallal"
+    }
+}
+news_event = {
+    id = cheat.3
+    title = "Double Doctrine/Tech Violation Detected!"
+    desc = "Mf has violated doctrine/tech research rules."
+    picture = GFX_report_event_generic_read_write
     is_triggered_only = yes
 
 
     option = {
-        name = "Very Impresive, Hallal"
-        # Do something, like logging, or applying penalties if necessary
-    }
-}
-news_event = {
-	id = cheat.3
-	title = "Double doctrine/Tech"
-	desc = "CE user has both industry techs or 2 doctrines"
-	picture = GFX_report_event_generic_read_write
-
-    is_triggered_only = yes
-
-
-    option = {
-        name = "Very Impresive, Hallal"
-        # Do something, like logging, or applying penalties if necessary
+        trigger = { has_country_flag = double_land_doctrine }
+        name = "Mf has researched conflicting land doctrines."
         clr_country_flag = double_land_doctrine
         clr_country_flag = double_industry
         clr_country_flag = double_naval_doctrine
         clr_country_flag = double_air_doctrine
+    }
+
+    option = {
+        trigger = { has_country_flag = double_industry }
+        name = "Mf has researched conflicting industrial techs."
+        clr_country_flag = double_industry
+        clr_country_flag = double_land_doctrine
+        clr_country_flag = double_naval_doctrine
+        clr_country_flag = double_air_doctrine
+    }
+
+    option = {
+        trigger = { has_country_flag = double_naval_doctrine }
+        name = "Mf has researched conflicting naval doctrines."
+        clr_country_flag = double_naval_doctrine
+        clr_country_flag = double_industry
+        clr_country_flag = double_land_doctrine
+        clr_country_flag = double_air_doctrine
+    }
+
+    option = {
+        trigger = { has_country_flag = double_air_doctrine }
+        name = "Mf has researched conflicting air doctrines."
+        clr_country_flag = double_air_doctrine
+        clr_country_flag = double_naval_doctrine
+        clr_country_flag = double_industry
+        clr_country_flag = double_land_doctrine
+    }
+}
+
+
+news_event = {
+    id = cheat.4
+    title = "Illegal Trait Combination Detected"
+    desc = "A country has been caught with an illegal trait combination!"
+    picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            random_country = {
+                limit = {
+                    any_unit_leader = {
+                        has_trait = hax
+                    }
+                }
+                save_event_target_as = cheating_country
+            }
+        }
+    }
+
+    option = {
+        name = "Mf has a leader with the 'hax' trait!"
     }
 }
 

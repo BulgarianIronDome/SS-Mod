@@ -21,9 +21,14 @@ GER_porsche_organization = {
 				has_dlc = "Man the Guns"
 			}
 			NOR_AAT = yes
+			AND = {
+                tag = SPR
+            }
+			AND = {
+                tag = HUN
+            }
 		}
 	}
-
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
 		IF = {
@@ -45,6 +50,26 @@ GER_porsche_organization = {
 			}
 			FROM = { has_completed_focus = NOR_invite_german_engineers }
 		}
+		IF = {
+            limit = { FROM = { original_tag = SPR } }
+			custom_trigger_tooltip = {
+				tooltip = gain_axis_mio_access_tt
+				FROM = {
+					has_country_flag = axis_mio_access
+				}
+			}
+            NOT = { has_war_with = GER }
+        } 
+		IF = {
+            limit = { FROM = { original_tag = HUN } }
+			custom_trigger_tooltip = {
+				tooltip = gain_axis_mio_access_tt
+				FROM = {
+					has_country_flag = axis_mio_access
+				}
+			}
+            NOT = { has_war_with = GER }
+        } 
 	}
 }
 
@@ -63,6 +88,12 @@ GER_henschel_organization = {
 				tag = ETH
 				has_dlc = "By Blood Alone"
 			}
+			AND = {
+                tag = SPR
+            }
+			AND = {
+                tag = HUN
+            }
 		}
 	}
 	
@@ -108,6 +139,26 @@ GER_henschel_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
+		IF = {
+            limit = { FROM = { original_tag = SPR } }
+			custom_trigger_tooltip = {
+				tooltip = gain_axis_mio_access_tt
+				FROM = {
+					has_country_flag = axis_mio_access
+				}
+			}
+            NOT = { has_war_with = GER }
+        } 
+		IF = {
+            limit = { FROM = { original_tag = HUN } }
+			custom_trigger_tooltip = {
+				tooltip = gain_axis_mio_access_tt
+				FROM = {
+					has_country_flag = axis_mio_access
+				}
+			}
+            NOT = { has_war_with = GER }
+        } 
 	}
 }
 

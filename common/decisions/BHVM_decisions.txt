@@ -479,6 +479,63 @@ SOV_spain = {
 			}
 		}
 	}
+	FRA_assist_republican_spain = {
+		icon = GFX_decision_SOV_secure_the_administration
+		fire_only_once = yes
+		cost = 0
+        allowed = {
+		    original_tag = FRA
+	    }
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
+			}
+		}
+		complete_effect = {
+			FRA = {
+				army_experience = 125
+			}
+		}
+	}
+	NZL_assist_republican_spain = {
+		icon = GFX_decision_SOV_secure_the_administration
+		fire_only_once = yes
+		cost = 0
+        allowed = {
+		    original_tag = NZL
+	    }
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
+			}
+		}
+		complete_effect = {
+			NZL = {
+				army_experience = 50
+			}
+		}
+	}
+	AST_assist_republican_spain = {
+		icon = GFX_decision_SOV_secure_the_administration
+		fire_only_once = yes
+		cost = 0
+        allowed = {
+		    original_tag = AST
+	    }
+		available = {
+			has_global_flag = spanish_civil_war
+			not = {
+				has_global_flag = scw_over
+			}
+		}
+		complete_effect = {
+			AST = {
+				army_experience = 50
+			}
+		}
+	}
 }
 E_ll = {
 	# AXIS
@@ -595,6 +652,118 @@ E_ll = {
 			activate_mission = GER_recieving_ll_1		
 		}
 	}
+	HUN_start_ll = {
+		icon = GFX_decision_generic_air
+
+		visible = {	
+			OR = {
+				original_tag = ITA
+				original_tag = GER
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
+			}
+			NOT = { has_country_flag = sending_ll_to_hun }
+		}
+		available = {
+			#date > 1938.1.1
+		}
+
+		complete_effect = {
+			activate_mission = HUN_recieving_ll_1
+			set_country_flag = sending_ll_to_hun
+		}
+	}
+	HUN_close_ll = {
+		icon = GFX_decision_generic_air
+
+		visible = {	
+			OR = {
+				original_tag = ITA
+				original_tag = GER
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
+			}
+			has_country_flag = sending_ll_to_hun
+		}
+		available = {
+			#date > 1938.1.1
+		}
+
+		complete_effect = {
+			clr_country_flag = sending_ll_to_hun
+		}
+	}
+	HUN_recieving_ll_1 = {
+		allowed = {	 
+			OR = { 
+				original_tag = ITA
+				original_tag = GER
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
+			} 
+		}
+		available = {
+			NOT = { has_country_flag = sending_ll_to_hun }
+		}
+		icon = generic_army_support
+		is_good = yes
+		activation = { always = no }
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			if = { 
+				limit = { 
+					has_country_flag = sending_ll_to_hun 
+				}  
+				send_equipment = { equipment = small_plane_airframe amount = 10000 target = HUN }
+				send_equipment = { equipment = large_plane_airframe amount = 10000 target = HUN }
+				send_equipment = { equipment = small_plane_cas_airframe amount = 10000 target = HUN }
+				send_equipment = { equipment = medium_plane_airframe amount = 10000 target = HUN }
+				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = HUN }
+			}
+			activate_mission = HUN_recieving_ll_2		
+		}
+	}
+	HUN_recieving_ll_2 = {
+		allowed = {	 
+			OR = { 
+				original_tag = ITA
+				original_tag = GER
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = FIN
+				original_tag = SPR
+			} 
+		}
+		available = {
+			NOT = { has_country_flag = sending_ll_to_hun }
+		}
+		icon = generic_army_support
+		is_good = yes
+		activation = { always = no }
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			if = { 
+				limit = { 
+					has_country_flag = sending_ll_to_hun 
+				}  
+				send_equipment = { equipment = small_plane_airframe amount = 10000 target = HUN }
+				send_equipment = { equipment = large_plane_airframe amount = 10000 target = HUN }
+				send_equipment = { equipment = small_plane_cas_airframe amount = 10000 target = HUN }
+				send_equipment = { equipment = medium_plane_airframe amount = 10000 target = HUN }
+				send_equipment = { equipment = medium_plane_fighter_airframe amount = 10000 target = HUN }
+			}
+			activate_mission = HUN_recieving_ll_1		
+		}
+	}
+	
 
 	### NAV BOMBER LEND LEASE
 

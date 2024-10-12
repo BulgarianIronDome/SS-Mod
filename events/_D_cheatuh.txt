@@ -31,48 +31,34 @@ news_event = {
 news_event = {
     id = cheat.3
     title = "Double Doctrine/Tech Violation Detected!"
-    desc = "Mf has violated doctrine/tech research rules."
+    desc = "Someone did double doctrine or industry."
     picture = GFX_report_event_generic_read_write
+    
     is_triggered_only = yes
-
-
-    option = {
-        trigger = { has_country_flag = double_land_doctrine }
-        name = "Mf has researched conflicting land doctrines."
+    immediate = {
+        hidden_effect = {
+            random_country = {
+                limit = {
+                    has_country_flag = double_land_doctrine
+                    has_country_flag = double_industry
+                    has_country_flag = double_naval_doctrine
+                    has_country_flag = double_air_doctrine
+                }
+            }
+        }
         clr_country_flag = double_land_doctrine
         clr_country_flag = double_industry
         clr_country_flag = double_naval_doctrine
         clr_country_flag = double_air_doctrine
     }
-
     option = {
-        trigger = { has_country_flag = double_industry }
-        name = "Mf has researched conflicting industrial techs."
-        clr_country_flag = double_industry
+        name = "Check a country with an idea that says what cheat they did!!"
         clr_country_flag = double_land_doctrine
+        clr_country_flag = double_industry
         clr_country_flag = double_naval_doctrine
         clr_country_flag = double_air_doctrine
-    }
-
-    option = {
-        trigger = { has_country_flag = double_naval_doctrine }
-        name = "Mf has researched conflicting naval doctrines."
-        clr_country_flag = double_naval_doctrine
-        clr_country_flag = double_industry
-        clr_country_flag = double_land_doctrine
-        clr_country_flag = double_air_doctrine
-    }
-
-    option = {
-        trigger = { has_country_flag = double_air_doctrine }
-        name = "Mf has researched conflicting air doctrines."
-        clr_country_flag = double_air_doctrine
-        clr_country_flag = double_naval_doctrine
-        clr_country_flag = double_industry
-        clr_country_flag = double_land_doctrine
     }
 }
-
 
 news_event = {
     id = cheat.4
@@ -96,7 +82,7 @@ news_event = {
     }
 
     option = {
-        name = "Mf has a leader with the 'hax' trait!"
+        name = "Mf has a leader with the 'hax' trait!Check country ideas!"
     }
 }
 

@@ -1,5 +1,65 @@
 ideas = {
 	country = {
+		double_land_cheater_idea = {
+			allowed = {
+				always = no
+			}
+			picture = GFX_generic_warning
+			visible = {
+				always = yes
+			}
+			modifier = {
+				# No actual modifiers; this is purely for identification.
+			}
+		}
+		double_air_cheater_idea = {
+			allowed = {
+				always = no
+			}
+			picture = GFX_generic_warning
+			visible = {
+				always = yes
+			}
+			modifier = {
+				# No actual modifiers; this is purely for identification.
+			}
+		}
+		double_navy_cheater_idea = {
+			allowed = {
+				always = no
+			}
+			picture = GFX_generic_warning
+			visible = {
+				always = yes
+			}
+			modifier = {
+				# No actual modifiers; this is purely for identification.
+			}
+		}
+		double_industry_cheater_idea = {
+			allowed = {
+				always = no
+			}
+			picture = GFX_generic_warning
+			visible = {
+				always = yes
+			}
+			modifier = {
+				# No actual modifiers; this is purely for identification.
+			}
+		}
+		illegal_trait_config_cheater_idea = {
+			allowed = {
+				always = no
+			}
+			picture = GFX_generic_warning
+			visible = {
+				always = yes
+			}
+			modifier = {
+				# No actual modifiers; this is purely for identification.
+			}
+		}
 		SOV_cheap_trade = {
 			allowed = {
 				always = no

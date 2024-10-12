@@ -146,6 +146,10 @@ on_actions = {
                         }
                         add_unit_leader_trait = hax
                     }
+                    add_timed_idea = {
+                        idea = illegal_trait_config_cheater_idea
+                        days = 8
+                    }
                     every_country = {
                         news_event = {
                             id = cheat.4
@@ -161,138 +165,156 @@ on_actions = {
     on_weekly = { # ANTI x2 DOCTRINE
         effect = {
             every_country = {
-                limit = {
-                    OR = {
-                        # FIRST DOCTRINES
-                        AND = {
-                            has_tech = mobile_warfare
-                            has_tech = superior_firepower
-                        }
-                        AND = {
-                            has_tech = mobile_warfare
-                            has_tech = trench_warfare
-                        }
-                        AND = {
-                            has_tech = mobile_warfare
-                            has_tech = mass_assault
-                        }
-                        AND = {
-                            has_tech = trench_warfare
-                            has_tech = mass_assault
-                        }
-                        AND = {
-                            has_tech = trench_warfare
-                            has_tech = superior_firepower
-                        }
-                        AND = {
-                            has_tech = superior_firepower
-                            has_tech = mass_assault
-                        }
-                        # SECOND
-                        AND = {
-                            has_tech = mobile_infantry
-                            has_tech = armored_spearhead
-                        }
-                        AND = {
-                            has_tech = dispersed_support
-                            has_tech = intergrated_support
-                        }
-                        AND = {
-                            has_tech = grand_mechanized_offensive
-                            has_tech = infantry_offensive
-                        }
-                        AND = {
-                            has_tech = large_front_operations
-                            has_tech = peoples_army
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = double_land_doctrine }
+                        NOT = { has_idea = double_land_cheater_idea }
+                        OR = {
+                            # FIRST DOCTRINES
+                            AND = {
+                                has_tech = mobile_warfare
+                                has_tech = superior_firepower
+                            }
+                            AND = {
+                                has_tech = mobile_warfare
+                                has_tech = trench_warfare
+                            }
+                            AND = {
+                                has_tech = mobile_warfare
+                                has_tech = mass_assault
+                            }
+                            AND = {
+                                has_tech = trench_warfare
+                                has_tech = mass_assault
+                            }
+                            AND = {
+                                has_tech = trench_warfare
+                                has_tech = superior_firepower
+                            }
+                            AND = {
+                                has_tech = superior_firepower
+                                has_tech = mass_assault
+                            }
+                            # SECOND
+                            AND = {
+                                has_tech = mobile_infantry
+                                has_tech = armored_spearhead
+                            }
+                            AND = {
+                                has_tech = dispersed_support
+                                has_tech = intergrated_support
+                            }
+                            AND = {
+                                has_tech = grand_mechanized_offensive
+                                has_tech = infantry_offensive
+                            }
+                            AND = {
+                                has_tech = large_front_operations
+                                has_tech = peoples_army
+                            }
                         }
                     }
-                    NOT = { has_country_flag = double_land_doctrine }
-                }
-                set_country_flag = double_land_doctrine
-                set_technology = {
-                    #MW
-                    mobile_warfare = 0
-                    delay = 0
-                    elastic_defence = 0
-                    mobile_infantry = 0
-                    armored_spearhead = 0
-                    mass_motorization = 0
-                    mechanised_offensive = 0
-                    armored_spearhead = 0
-                    schwerpunk = 0
-                    blitzkrieg = 0
-                    kampfgruppe = 0
-                    firebrigades = 0
-                    backhand_blow = 0
-                    modern_blitzkrieg = 0
-                    volkssturm = 0
-                    nd_conscription = 0
-                    werwolf_guerillas = 0
-                    #SF
-                    superior_firepower = 0
-                    sup_delay = 0
-                    mobile_defence = 0
-                    intergrated_support = 0
-                    regimental_combat_teams = 0
-                    dispersed_support = 0
-                    overwhelming_firepower = 0
-                    sup_mechanized_offensive = 0
-                    concentrated_fire_plans = 0
-                    combined_arms = 0
-                    tactical_control = 0
-                    air_land_battle = 0
-                    centralized_fire_control = 0
-                    forward_observers = 0
-                    advanced_firebases = 0
-                    shock_and_awe = 0
-                    #GBP
-                    trench_warfare = 0
-                    grand_battle_plan = 0
-                    prepared_defense = 0
-                    grand_assault = 0
-                    grand_mechanized_offensive = 0
-                    assault_concentration = 0
-                    branch_interoperation = 0
-                    assault_breakthrough = 0
-                    central_planning = 0
-                    c3i_theory = 0
-                    infantry_offensive = 0
-                    armored_operations = 0
-                    infiltration_assault = 0
-                    night_assault_tactics = 0
-                    attritional_containment = 0
-                    infiltration_in_depth = 0
-                    #MA
-                    mass_assault = 0
-                    pocket_defence = 0
-                    defence_in_depth = 0
-                    large_front_operations = 0
-                    deep_operations = 0
-                    operational_concentration = 0
-                    vast_offensives = 0
-                    breakthrough_priority = 0
-                    mechanized_wave = 0
-                    continuous_offensive = 0
-                    peoples_army = 0
-                    human_infantry_offensive = 0
-                    large_front_offensive = 0
-                    human_wave_offensive = 0
-                    guerilla_warfare = 0
-                }
-                every_country = {
-                    news_event = {
-                        id = cheat.3
-                        days = 0
+                    set_technology = {
+                        #MW
+                        mobile_warfare = 0
+                        delay = 0
+                        elastic_defence = 0
+                        mobile_infantry = 0
+                        armored_spearhead = 0
+                        mass_motorization = 0
+                        mechanised_offensive = 0
+                        armored_spearhead = 0
+                        schwerpunk = 0
+                        blitzkrieg = 0
+                        kampfgruppe = 0
+                        firebrigades = 0
+                        backhand_blow = 0
+                        modern_blitzkrieg = 0
+                        volkssturm = 0
+                        nd_conscription = 0
+                        werwolf_guerillas = 0
+                        #SF
+                        superior_firepower = 0
+                        sup_delay = 0
+                        mobile_defence = 0
+                        intergrated_support = 0
+                        regimental_combat_teams = 0
+                        dispersed_support = 0
+                        overwhelming_firepower = 0
+                        sup_mechanized_offensive = 0
+                        concentrated_fire_plans = 0
+                        combined_arms = 0
+                        tactical_control = 0
+                        air_land_battle = 0
+                        centralized_fire_control = 0
+                        forward_observers = 0
+                        advanced_firebases = 0
+                        shock_and_awe = 0
+                        #GBP
+                        trench_warfare = 0
+                        grand_battle_plan = 0
+                        prepared_defense = 0
+                        grand_assault = 0
+                        grand_mechanized_offensive = 0
+                        assault_concentration = 0
+                        branch_interoperation = 0
+                        assault_breakthrough = 0
+                        central_planning = 0
+                        c3i_theory = 0
+                        infantry_offensive = 0
+                        armored_operations = 0
+                        infiltration_assault = 0
+                        night_assault_tactics = 0
+                        attritional_containment = 0
+                        infiltration_in_depth = 0
+                        #MA
+                        mass_assault = 0
+                        pocket_defence = 0
+                        defence_in_depth = 0
+                        large_front_operations = 0
+                        deep_operations = 0
+                        operational_concentration = 0
+                        vast_offensives = 0
+                        breakthrough_priority = 0
+                        mechanized_wave = 0
+                        continuous_offensive = 0
+                        peoples_army = 0
+                        human_infantry_offensive = 0
+                        large_front_offensive = 0
+                        human_wave_offensive = 0
+                        guerilla_warfare = 0
+                    }
+                    set_country_flag = double_land_doctrine
+                    add_timed_idea = {
+                        idea = double_land_cheater_idea
+                        days = 8
+                    }
+                    every_country = {
+                        news_event = {
+                            id = cheat.3
+                            days = 0
+                        }
                     }
                     sound_effect = "cheat_sound_effect"
                 }
             }
+            every_country = {
+                if = {
+                    limit = {
+                        has_country_flag = double_land_doctrine
+                        NOT = { has_idea = double_land_cheater_idea }
+                    }
+                    clr_country_flag = double_land_doctrine
+                }
+            }
         }
-    }
+    }    
     on_weekly = { # ANTI x2 INDUSTRY
         effect = {
             every_country = {
                 limit = {
+                    NOT = { has_country_flag = double_industry }
+                    NOT = { has_idea = double_industry_cheater_idea }
                     OR = {
                         # FIRST INDUSTRIES
                         AND = {
@@ -320,9 +342,7 @@ on_actions = {
                             has_tech = streamlined_line
                         }
                     }
-                    NOT = { has_country_flag = double_industry }
                 }
-                set_country_flag = double_industry
                 set_technology = {
                     concentrated_industry = 0
                     dispersed_industry = 0
@@ -341,6 +361,11 @@ on_actions = {
                     flexible_line = 0
                     streamlined_line = 0
                 }
+                set_country_flag = double_industry
+                add_timed_idea = {
+                    idea = double_industry_cheater_idea
+                    days = 8
+                }
                 every_country = {
                     news_event = {
                         id = cheat.3
@@ -349,12 +374,23 @@ on_actions = {
                     sound_effect = "cheat_sound_effect"
                 }
             }
+            every_country = {
+                if = {
+                    limit = {
+                        has_country_flag = double_industry
+                        NOT = { has_idea = double_industry_cheater_idea }
+                    }
+                    clr_country_flag = double_industry
+                }
+            }
         }
     }
     on_weekly = { # ANTI x2 NAVAL DOCTRINE
         effect = {
             every_country = {
                 limit = {
+                    NOT = { has_country_flag = double_naval_doctrine }
+                    NOT = { has_idea = double_navy_cheater_idea }
                     OR = {
                         # FIRST NAVAL DOCTRINES
                         AND = {
@@ -370,15 +406,18 @@ on_actions = {
                             has_tech = base_strike
                         }
                     }
-                    NOT = { has_country_flag = double_naval_doctrine }
                 }
-                set_country_flag = double_naval_doctrine 
                 set_technology = {
                     submarine_offensive_bs = 0 convoy_interdiction_bs = 0 undersea_blockade_bs = 0 submarine_operations_bs = 0 carrier_battlegroups = 0 floating_fortress_bs = 0 massed_strikes = 0 floating_airfield_bs = 0 carrier_task_forces = 0 carrier_primacy = 0 base_strike = 0 integrated_convoy_defence_bs = 0 convoy_sailing_bs = 0 escort_patrols = 0 convoy_escorts_bs = 0 integrated_convoy_defence = 0 convoy_sailing_ti = 0 subsidiary_carrier_role_ti = 0 naval_air_operations = 0 floating_airfield_ti = 0 floating_fortress_ti = 0 battlefleet_concentration_ti = 0 capital_ship_raiders = 0 raider_patrols = 0 combined_operations_raiding = 0 advanced_submarine_warfare = 0 wolfpacks = 0 unrestricted_submarine_warfare = 0 convoy_interdiction_ti = 0 trade_interdiction = 0 submarine_offensive = 0 convoy_interdiction = 0 undersea_blockade = 0 submarine_operations = 0 grand_battlefleet = 0 floating_airfield = 0 floating_fortress = 0 hunter_killer_groups = 0 subsidiary_carrier_role = 0 battlefleet_concentration = 0 fleet_in_being = 0
                     convoy_escorts = 0
                     convoy_sailing = 0
                     escort_carriers = 0 
                     carrier_operations = 0
+                }
+                set_country_flag = double_naval_doctrine
+                add_timed_idea = {
+                    idea = double_navy_cheater_idea
+                    days = 8
                 }
                 every_country = {
                     news_event = {
@@ -388,12 +427,23 @@ on_actions = {
                     sound_effect = "cheat_sound_effect"
                 }
             }
+            every_country = {
+                if = {
+                    limit = {
+                        has_country_flag = double_naval_doctrine
+                        NOT = { has_idea = double_navy_cheater_idea }
+                    }
+                    clr_country_flag = double_naval_doctrine
+                }
+            }
         }
     }
     on_weekly = { # ANTI x2 AIR DOCTRINE
         effect = {
             every_country = {
                 limit = {
+                    NOT = { has_country_flag = double_air_doctrine }
+                    NOT = { has_idea = double_air_cheater_idea }
                     OR = {
                         # FIRST AIR DOCTRINES
                         AND = {
@@ -422,9 +472,7 @@ on_actions = {
                             has_tech = fighter_ace_initiative
                         }
                     }
-                    NOT = { has_country_flag = double_air_doctrine }
                 }
-                set_country_flag = double_air_doctrine 
                 set_technology = {
                     air_superiority = 0
                     infrastructure_destruction = 0
@@ -466,12 +514,26 @@ on_actions = {
                     air_skirmish = 0
                     high_level_bombing = 0
                 }
+                set_country_flag = double_air_doctrine 
+                add_timed_idea = {
+                    idea = double_air_cheater_idea
+                    days = 8
+                }
                 every_country = {
                     news_event = {
                         id = cheat.3
                         days = 0
                     }
                     sound_effect = "cheat_sound_effect"
+                }
+            }
+            every_country = {
+                if = {
+                    limit = {
+                        has_country_flag = double_air_doctrine
+                        NOT = { has_idea = double_air_cheater_idea }
+                    }
+                    clr_country_flag = double_air_doctrine
                 }
             }
         }

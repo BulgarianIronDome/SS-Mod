@@ -298,4 +298,17 @@ Fixed some loading tips , added local to new options for mech lend lease
 Fixed plane lend lease , now gives fighter meduim airplanes
 Fixed brazil right path being broke
 Made gun 3 to be in 1940 march 1st
-Vanilaied an USA focus
+Vanilaied an USA focus 
+
+Added game rule for minors MIOs , SAF CAN HUN and SPR have a decision to gain MIOs from majors.
+Fixed NZL tree a bit
+Spain when AI not to go closed eco from focus
+Some gay shit in the anti cheat shit , fixed and redone
+Motorized 2 no longer gives motorized battalion , motorized 1 does
+
+Mongolia now has chief of org instead of red army organizer (-6% org)
+Added a decision for NZL FRA AST to gain xp from SCW , FRA 125 , NZL AST 50
+Reworked the anti cheat system , 3.0! Now gives idea to the cheating country so you can not play amongus anymore.
+Changed stuff around for mongolia spirits , changed some focuses for mongolia , nerfed thier eco quite a lot -6 mills but +3 civs from conc farm acts
+Germany now isnt shadowich balance
+Lend lease button for hungary

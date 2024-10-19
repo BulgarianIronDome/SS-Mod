@@ -4,4 +4,8 @@ spriteTypes = {
 		name = "GFX_idea_trollol"
 		texturefile = "gfx/interface/ideas/trollol.dds"
 	}
+	spriteType = {
+		name = "GFX_news_hack"
+		texturefile = "gfx/event_pictures/news_hack.dds"
+	}
 }

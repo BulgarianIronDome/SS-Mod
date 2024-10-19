@@ -4,7 +4,7 @@ news_event = {
 	id = cheat.1
 	title = "Cheated Equipment Detected a Mf"
 	desc = "Mf has equipment with upgrades exceeding the allowed limits!"
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_news_hack
 
     is_triggered_only = yes
 
@@ -20,7 +20,7 @@ news_event = {
     id = cheat.2
     title = "Mf has exceeded building limits!"
     desc = "Mf has exceeded the defined building limit in [From.GetStateName]! The state has buildings over the acceptable limit: [From.GetBuildingType]."
-    picture = GFX_report_event_generic_read_write
+    picture = GFX_news_hack
 
     is_triggered_only = yes
 
@@ -32,7 +32,7 @@ news_event = {
     id = cheat.3
     title = "Double Doctrine/Tech Violation Detected!"
     desc = "Someone did double doctrine or industry."
-    picture = GFX_report_event_generic_read_write
+    picture = GFX_news_hack
     
     is_triggered_only = yes
     immediate = {
@@ -64,7 +64,7 @@ news_event = {
     id = cheat.4
     title = "Illegal Trait Combination Detected"
     desc = "A country has been caught with an illegal trait combination!"
-    picture = GFX_report_event_generic_read_write
+    picture = GFX_news_hack
 
     is_triggered_only = yes
 

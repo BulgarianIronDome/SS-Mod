@@ -19,8 +19,15 @@
 
  CHANGE_HOST_NATION_TT:0 "Change host nation"
   
- TAGSWTICH_HOST:0 "<HOSTTOOL> Host: ([?ROOT.GetTag]) [?ROOT.GetName]; Action: Tag switched to ([?ROOT.marked_states^0.owner.GetTag])"
- TAGSWTICH_HOST_DELAYED:0 ""
+
+
+ target_name:0 "[tagswtich_host_target]"
+ target_name_locked:0 "[?global.target_country.GetFlag] [?global.target_country.GetName]"
+ target_name_unlocked:0 "[?OWNER.GetFlag] [?OWNER.GetName]"
+ receiver_name:0 "[tagswtich_host_reciever]"
+ receiver_name_locked:0 "[?global.receiver_var.GetFlag] [?global.receiver_var.GetName]"
+ receiver_name_unlocked:0 "[?OWNER.GetFlag] [?OWNER.GetName]"
+
  CLEAR_ALL_MARKINGS:0 "§HClear All Marks§!\nEvery mark on world will be removed\n\n"
  CLEAR_ALL_MARKINGS_DELAYED:0 ""
 
@@ -29,6 +36,9 @@
  
  ADD_CORES:0 "§HAdd cores§!\nAdd cores to marked states for [This.Owner.GetName]\n\n"
  ADD_CORES_DELAYED:0 ""
+
+ REMOVE_CORES:0 "§HRemove cores§!\nRemove cores to marked states for this country\n\n"
+ REMOVE_CORES_DELAYED:0 ""
 
  ADD_CORES_TO_ALL_CORES_SELECTED_NATION:0 "§HGive [This.Owner.GetName] cores for cores of marked nation.§!\n[This.Owner.GetName] gets cores on the owner's cores of the selected nation.\n\nFor example if you first mark a Australian state, then select a German state and then press this button it will give Germany cores on every Australian core but not non-core states of Australia\n\n"
  ADD_CORES_TO_ALL_CORES_SELECTED_NATION_DELAYED:0 ""
@@ -39,6 +49,9 @@
  PUPPET_COUNTRY:0 "§HPuppet§!\n[This.Owner.GetName] puppets the owner of the selected state\n\n"
  PUPPET_COUNTRY_DELAYED:0 ""
  
+ FREE_COUNTRY:0 "§HFree Country§!\nSelected country is set free from any overlord\n\n"
+ FREE_COUNTRY_DELAYED:0 ""
+
  ADD_CHEAT:0 "§HCheat§!\nSelection is given to the selected country\n\n"
  ADD_CHEAT_DELAYED:0 ""
 
@@ -71,6 +84,16 @@
  ST_TOOLTIP_off:0 "§HDeactivate 'Host Tool'§!"
  transfer_states_on:0 "Host Tool:£trigger_no"
  transfer_states_off:0 "Host Tool:£trigger_yes"
+
+ COMP_AMOUNT_COMP:0 "The said amount of compliance that will be 2SETW in the state"
+ COMP_INCREASEP:0 "Increase the selected state's compliance"
+ COMP_DECREASE:0"Lower the selected state's compliance"
+ COMP_SET:0 "2Set compliance"
+
+ REST_AMOUNT_REST:0 "The said amount of resistance that will be RSETW in the state"
+ REST_INCREASEP:0 "Increase the selected state's resistance"
+ REST_DECREASE:0"Lower the selected state's resistance"
+ REST_SET:0 "RSet resistance"
 
  CHEAT_SELECT:0   "Select cheat"
  CHEAT1:0   "Generic - 50%"

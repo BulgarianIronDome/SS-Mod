@@ -24,19 +24,21 @@ st_country_powers = {
 	effects = {
 		tagswtich_host = {
 			if = {
-				limit = { has_country_flag = host }
-				var:marked_states^0 = { 
-					owner = { 
-						change_tag_from = ROOT
-					}
+				limit = { var:global.target_country = { has_country_flag = horsttool_enabled } }
+				# Move host tool access to the receiver country
+				var:global.receiver_country = { set_country_flag = horsttool_enabled }
+				var:global.target_country = {
+					clr_country_flag = horsttool_enabled
+					clr_country_flag = horsttool_window_open
 				}
 			}
-			for_each_scope_loop = {
-				array = marked_states
-				clear_variable = mark_status
-			}
-			clear_array = marked_states
-			clear_variable = first_marked_state
+			# Execute the tag switch
+			var:global.receiver_country = { change_tag_from = var:global.target_country }
+			
+			# Reset variables after switch
+			set_variable = { global.target_country = 0 }
+			set_variable = { global.receiver_country = 0 }
+			clear_array = global.state_array
 		}
 		
 		observer_click = { 
@@ -57,6 +59,15 @@ st_country_powers = {
 				var:marks = {
 					declare_war_on = { target = VEN type = annex_everything }
 					every_enemy_country = { white_peace = PREV }
+				}
+			}
+		}
+
+		declare_war_button_click = {
+			var:target_country = {
+				declare_war_on = {
+					target = var:receiver_country
+					type = annex_everything
 				}
 			}
 		}
@@ -176,6 +187,25 @@ st_country_powers = {
 			}
 		}
 
+		remove_cores_click = {
+			owner={
+				set_temp_variable = { ROOT.taker = this}
+				for_each_loop={
+					array=ROOT.host_marked_states
+					value=state
+					var:state={remove_core_of=var:taker}
+				}
+				ROOT = {
+					for_each_scope_loop={
+						array=host_marked_states
+						clear_variable=host_mark_status
+					}
+					clear_array=host_marked_states
+					clear_variable=first_marked_state
+				}
+			}
+		}
+
 		add_cores_to_all_cores_of_selected_nation_click = {			
 			owner = { set_variable = { ROOT.taker = this } }
 			var:ROOT.marked_states^0 = { owner = { set_variable = { ROOT.target = this } } }
@@ -201,6 +231,7 @@ st_country_powers = {
 			}
 		}
 
+
 		fix_production_click = { owner = { news_event = { id = horsttool.3 } add_timed_idea = { idea = fix_production_idea days = 1 } } }
 
 		award_states_click = {
@@ -224,6 +255,27 @@ st_country_powers = {
 				}
 			}
 		}
+		compliance_negative_click = { add_to_variable = { ROOT.compl = -10 } }
+		compliance_positive_click = { add_to_variable = { ROOT.compl = 10 } }
+		
+		resistance_negative_click = { add_to_variable = { ROOT.rest = -10 } }
+		resistance_positive_click = { add_to_variable = { ROOT.rest = 10 } }
+
+		compliance_set_one_click = {
+			set_compliance = ROOT.compl				
+		}
+		resistance_set_one_click = {
+			set_resistance = ROOT.rest			
+		}
+		#compliance_set_all_states_click = {
+		#		owner={
+		#			for_each_loop={
+		#			array=ROOT.marked_states
+		#			value=state
+		#			var:state={set_compliance=ROOT.compl}
+		#		}
+		#	}
+		#}
 		add_cheat_click = {
 			set_variable = { ROOT.taker = this}
 			var:taker = {
@@ -358,6 +410,25 @@ st_country_powers = {
 			}
 
 		}
+
+		free_country_click = { 
+			owner = {
+				set_country_flag = puppetee
+				OVERLORD = {
+					set_temp_variable = { ROOT.puppeteer = this}
+				}
+			}
+				every_country = {
+					limit = { has_country_flag = puppetee }
+						var:puppeteer = {
+							set_autonomy = {
+								target = PREV
+								autonomy_state = autonomy_free
+							}
+						}
+					clr_country_flag = puppetee
+				}
+		}
 		
 		toogle_mark_click = {
 			if = {
@@ -408,10 +479,16 @@ st_country_powers = {
 	triggers = {
 		observer_click_enabled = { owner = { is_ai = no } }
 		observer_visible = {}
-		tagswtich_host_enabled = { owner = { is_ai = no } }
-		tagswtich_host_visible = { always = no }
-
+		tagswtich_host_enabled = {  
+			NOT = { check_variable = { target_country = 0 } }
+			NOT = { check_variable = { receiver_country = 0 } }
+			#var:target_country = { is_ai = no }
+		}
+		tagswtich_host_visible = { }
+		compliance_negative_click_enabled = { check_variable = { ROOT.compl > 0 } }
+		compliance_positive_click_enabled = { check_variable = { ROOT.compl < 100 } }
 		add_cheat_click_enabled = { check_variable = { Root.selected_cheat>0 } }
+		free_country_click_enabled = { owner = { is_subject = yes } }
 		cheat1_visible = {}
 		cheat1_text_visible = {}
 		cheat2_visible = { ROOT = { has_country_flag = cheating } }
@@ -460,6 +537,7 @@ st_country_powers = {
 		puppet_country_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
 		add_cores_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 		add_cores_to_all_cores_of_selected_nation_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
+		remove_cores_click_enabled = { check_variable = { ROOT.host_marked_states^num > 0 } }
 
 		mill_add_click_enabled = {}
 		civ_add_click_enabled = {}
@@ -473,8 +551,13 @@ st_country_powers = {
 
 		fix_production_click_enabled = {}
 
-		# fix_xp_click_enabled = {}
+		declare_war_button_click_enabled = {
+			NOT = { check_variable = { target_country = 0 } }
+			NOT = { check_variable = { receiver_country = 0 } }
+			NOT = { var:target_country = { has_war_with = var:receiver_country } }
+			NOT = { var:target_country = { is_ally_with = var:receiver_country } }
+		}
 	}   
-}
+  }
 }
 

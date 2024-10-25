@@ -99,6 +99,10 @@ on_actions = {
 			}
 			var:host = {
 				set_variable = { marked_states = 0 }
+				set_variable = { compl = 0 }
+				set_variable = { rest = 0 }
+				set_variable = { target_country = 0 }
+				set_variable = { receiver_country = 0 }
 				set_country_flag = host
 			}
 		}

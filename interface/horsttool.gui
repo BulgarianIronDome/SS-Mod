@@ -86,11 +86,12 @@ guiTypes = {
 
 		buttonType = {
 			name = "award_states" 
-			position = {x=250 y=190}	
+			position = {x=230 y=200}	
 			spriteType = "GFX_global_diplorequest_icons"
             frame = 13
 			pdx_tooltip = "TRANSFER_STATES"
 			pdx_tooltip_delayed = "TRANSFER_STATES_DELAYED"
+			scale = 0.85
 		}
 		buttonType = {
 			name = "observer" 
@@ -110,11 +111,12 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "annex_country" 
-			position = {x=300 y=190}	
+			position = {x=270 y=200}	
 			spriteType = "GFX_global_diplorequest_icons"
             frame = 2
 			pdx_tooltip = "ANNEX_COUNTRY"
 			pdx_tooltip_delayed = "ANNEX_COUNTRY_DELAYED"
+			scale = 0.85
 		}
 		buttonType = { 
 			name = "fix_production"  
@@ -136,11 +138,17 @@ guiTypes = {
 		# }
 		buttonType = {
 			name = "whitepeace"	
-			position = {x=275 y=255}
+			position = {x=250 y=255}
 			spriteType = "GFX_relation_truce"
             scale = 1.0
 			pdx_tooltip = "WHITEPEACE"
 			pdx_tooltip_delayed = "WHITEPEACE_DELAYED"
+		}
+		buttonType = {
+			name = "declare_war_button"
+			position = { x = 279 y = 255 }
+			spriteType = "GFX_decision_border_war"
+			pdx_tooltip = ""
 		}
 		buttonType = {
 			name = "mill_add"	
@@ -278,27 +286,48 @@ guiTypes = {
 ####################################################################
 		buttonType = {
 			name = "add_cores" 
-			position = {x=350 y=190}	
+			position = {x=310 y=200}	
 			spriteType = "GFX_global_diplorequest_icons"
-            frame = 6
+            frame = 12
 			pdx_tooltip = "ADD_CORES"
 			pdx_tooltip_delayed = "ADD_CORES_DELAYED"
+			scale = 0.85
+		}
+		buttonType = {
+			name = "remove_cores" 
+			position = {x=350 y=200}	
+			spriteType = "GFX_global_diplorequest_icons"
+            frame = 7
+			pdx_tooltip = "REMOVE_CORES"
+			pdx_tooltip_delayed = "REMOVE_CORES_DELAYED"
+			scale = 0.85
 		}
 		buttonType = {
 			name = "add_cores_to_all_cores_of_selected_nation" 
-			position = {x=400 y=190}	
+			position = {x=390 y=200}	
 			spriteType = "GFX_global_diplorequest_icons"
-            frame = 6
+            frame = 12
 			pdx_tooltip = "ADD_CORES_TO_ALL_CORES_SELECTED_NATION"
 			pdx_tooltip_delayed = "ADD_CORES_TO_ALL_CORES_SELECTED_NATION_DELAYED"
+			scale = 0.85
 		}
 		buttonType = {
 			name = "puppet_country" 
-			position = {x=450 y=190}	
+			position = {x=430 y=200}	
 			spriteType = "GFX_global_diplorequest_icons"
-            frame = 6
+            frame = 5
 			pdx_tooltip = "PUPPET_COUNTRY"
 			pdx_tooltip_delayed = "PUPPET_COUNTRY_DELAYED"
+			scale = 0.85
+		}
+		buttonType = {
+			name = "free_country" 
+			position = {x=470 y=200}	
+			spriteType = "GFX_global_diplorequest_icons"
+            frame = 1
+			pdx_tooltip = "FREE_COUNTRY"
+			pdx_tooltip_delayed = "FREE_COUNTRY_DELAYED"
+			scale = 0.85
 		}
 		# pause blocker from horsttool
 		buttonType = {
@@ -333,17 +362,18 @@ guiTypes = {
 		}
 		iconType = {
 			name = "pause_blocker_shield"
-			position = {x=230 y=253}
+			position = {x=220 y=253}
 			spriteType = "GFX_ability_jap_last_stand"
 			pdx_tooltip = "pause_blocker_shield_tt"
 			pdx_tooltip_delayed = "pause_blocker_shield_delayed_tt"
-			scale = 1.3
+			scale = 1
 		}
 		buttonType = {
 			name = "pause_blocker_host"
 			position = {x=100 y=312}
 			spriteType = "GFX_generic_box_125"
 		}
+
 		instantTextboxType = {
 			name = "pause_blocker_host_text"
 			position = {x=105 y=317}
@@ -353,6 +383,73 @@ guiTypes = {
 			maxHeight = 23
 			format = left
 			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "compliance_negative" 
+			position = {x=280 y=173}
+			spriteType = "GFX_subtract_10"
+			scale = 0.8
+			pdx_tooltip = "COMP_DECREASE" 
+		}
+		buttonType = {
+			name = "compliance_positive" 
+			position = {x=325 y=173}
+			spriteType = "GFX_add_10"
+			scale = 0.8
+			pdx_tooltip = "COMP_INCREASE" 
+		}
+		instantTextboxType = {
+			name = "compliance_number"  
+			position = {x=290 y=173}
+			Orientation = "Centre" 
+			font = "hoi_20b"
+			text = "2[?ROOT.compl]"
+			maxWidth = 40
+			maxHeight = 23
+			format = centre
+			pdx_tooltip = "COMP_AMOUNT_COMP"
+		}
+		buttonType = {
+			name = "compliance_set_one" 
+			position = { x=253 y=173 }
+			spriteType = "GFX_compliance_icon"
+			pdx_tooltip = "COMP_SET"
+			scale = 0.75
+		}
+		
+
+
+		buttonType = {
+			name = "resistance_negative" 
+			position = {x=390 y=173}
+			spriteType = "GFX_subtract_10"
+			scale = 0.8
+			pdx_tooltip = "REST_DECREASE" 
+		}
+		buttonType = {
+			name = "resistance_positive" 
+			position = {x=430 y=173}
+			spriteType = "GFX_add_10"
+			scale = 0.8
+			pdx_tooltip = "REST_INCREASE" 
+		}
+		instantTextboxType = {
+			name = "resistance_number"  
+			position = {x=400 y=173}
+			Orientation = "Centre" 
+			font = "hoi_20b"
+			text = "R[?ROOT.rest]"
+			maxWidth = 40
+			maxHeight = 23
+			format = centre
+			pdx_tooltip = "REST_AMOUNT_REST"
+		}
+		buttonType = {
+			name = "resistance_set_one" 
+			position = { x=365 y=173 }
+			spriteType = "GFX_resistance_icon"
+			pdx_tooltip = "REST_SET"
+			scale = 0.75
 		}
 
 		buttonType = {

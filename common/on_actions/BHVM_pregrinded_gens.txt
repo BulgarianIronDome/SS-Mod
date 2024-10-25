@@ -149,7 +149,7 @@ on_actions = {
 						traits = { trickster career_officer infantry_officer }
 						attack_skill=4
 						defense_skill=7
-						planning_skill=3
+						planning_skill=4
 						logistics_skill=3
 					}
 				}
@@ -811,7 +811,7 @@ on_actions = {
 						traits = { trickster career_officer infantry_officer }
 						attack_skill=4
 						defense_skill=7
-						planning_skill=3
+						planning_skill=4
 						logistics_skill=3
 					}
 				}

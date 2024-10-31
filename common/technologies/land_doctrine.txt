@@ -3352,6 +3352,19 @@ technologies = {
 
 		
 		enable_tactic = tactic_human_wave_tactics
+
+		allow = {
+			OR = {
+				NOT = { tag = SOV }
+				AND = {
+					tag = SOV
+					has_game_rule = {
+						rule = barb_gorila
+						option = ALLOWED
+					}
+				}
+			}
+		}
 		
 		
 		path = {

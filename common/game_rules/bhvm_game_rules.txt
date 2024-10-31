@@ -466,6 +466,22 @@ space_marine_deleter = {
 		desc = "You will RNOT Wbe allowed to mix armor and inf in onve division"
 	}
 }
+naval_treaties = {
+	name = "Naval Treaty"
+	group = "BHVM game rules"
+	icon = "GFX_decision_category_MTG_naval_treaties"
+	option = {
+		name = off
+		text = "GOff"
+		desc = "Naval Treaty disabled (Reccomended)"
+	}
+	default = {
+		name = on
+		text = "ROn"
+		desc = "Naval Treaty enabled (Not Reccomended)"
+	}
+}
+
 BHVM_adaptable = {
 	name = "Adaptable yes or no"
 	group = "BHVM game rules"
@@ -496,6 +512,21 @@ BHVM_thorough_planner = {
 		desc = "Through planner will NOT be pickable"
 	}
 }
+BHVM_sick_wounded = {
+	name = "Generals are very healthy and bulky"
+	group = "BHVM game rules"
+	icon = "GFX_decision_category_generic_political_actions"
+	default = {
+		name = on
+		text = "GOn"
+		desc = "Sick and wounded DOES get removed"
+	}
+	option = {
+		name = off
+		text = "ROff"
+		desc = "Sick and wounded DOES NOT get removed"
+	}
+}
 soviet_airforce = {
 	name = "Soviet can make air"
 	group = "BHVM game rules"
@@ -524,6 +555,21 @@ soviet_focus_buffs = {
 		name = off
 		text = "RNo they can't"
 		desc = "Soviets can't do the funny focus(NOT REALLY RECOMENDED)"
+	}
+}
+barb_gorila = {
+	name = "Gorila On Barb settings"
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_tank"
+	default = {
+		name = ALLOWED
+		text = "GSoviets can do gorila warfare"
+		desc = "Soviets can pick the mass mob doctrine(RECOMENDED?)"
+	}
+	option = {
+		name = DISALLOWED
+		text = "RSoviets cannot do gorila warfare"
+		desc = "Soviets can't pick the mass mob doctrine(NOT REALLY RECOMENDED)"
 	}
 }
 sov_tashek_tungsten = {

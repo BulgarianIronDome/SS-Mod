@@ -102,7 +102,7 @@ on_actions = {
 			812 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 2
@@ -110,7 +110,7 @@ on_actions = {
 			808 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 3
@@ -118,7 +118,7 @@ on_actions = {
 			107 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -126,15 +126,15 @@ on_actions = {
 					level = 3
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 7
+				add_extra_state_shared_building_slots = 5
 			}
 			106 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 			}
 			108 = {
 				add_building_construction = {
@@ -142,7 +142,7 @@ on_actions = {
 					level = 2
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 			}
 			47 = {
 				add_building_construction = {

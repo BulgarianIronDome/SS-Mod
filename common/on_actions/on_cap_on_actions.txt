@@ -52,6 +52,106 @@ on_actions = {
             }
         }
     }
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					tag = DEN
+				}
+				IF = {
+					limit = {
+						OR = {
+							has_game_rule = {
+								rule = vanila_bonuses
+								option = on-overall
+							}
+							has_game_rule = {
+								rule = vanila_bonuses
+								option = on-axis
+							}
+						}
+					}
+					if = {
+						limit = {
+							country_exists = ITA
+						}
+						ITA = {
+							transfer_state = 99
+							transfer_state = 911
+							transfer_state = 37
+						}
+					}
+					else = {
+						GER = {
+							transfer_state = 99
+							transfer_state = 911
+							transfer_state = 37
+						}
+					}
+					if = {
+						limit = {
+							country_exists = GER
+						}
+						GER = {
+							transfer_state = 912
+							country_event = denmark_occupation_event.2
+							transfer_state = 910
+						}
+					}
+					else = {
+						ITA = {
+							transfer_state = 912
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_game_rule = {
+								rule = vanila_bonuses
+								option = off
+							}
+							has_game_rule = {
+								rule = vanila_bonuses
+								option = on-allies
+							}
+						}
+					}
+					if = {
+						limit = {
+							country_exists = ITA
+						}
+						ITA = {
+							transfer_state = 99
+							transfer_state = 911
+							transfer_state = 37
+						}
+					}
+					else = {
+						GER = {
+							transfer_state = 99
+							transfer_state = 911
+							transfer_state = 37
+						}
+					}
+					if = {
+						limit = {
+							country_exists = GER
+						}
+						GER = {
+							transfer_state = 912
+							transfer_state = 910
+						}
+					}
+					else = {
+						ITA = {
+							transfer_state = 912
+						}
+					}
+				}
+			}
+		}
+	}	
     on_capitulation = {
 		effect = {
 			if = {
@@ -133,13 +233,13 @@ on_actions = {
 							transfer_state = 731 # SOLUN
 							transfer_state = 47 # ATINA
 							transfer_state = 186 # PELOPONES
+							transfer_state = 185 # EPIR
 							add_named_threat = { 
-								threat = 9
+								threat = 12
 								name = GRE_peace
 							}
 						}
 						ITA = {
-							transfer_state = 185 # EPIR
 							transfer_state = 187 # OSTROVI
 							transfer_state = 182 # KRIT
 						}

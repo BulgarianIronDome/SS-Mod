@@ -107,7 +107,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { trait_mountaineer hill_fighter adaptable }
+			traits = { trait_mountaineer hill_fighter }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1

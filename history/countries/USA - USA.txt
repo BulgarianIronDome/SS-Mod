@@ -43,6 +43,20 @@ set_research_slots = 4
 set_stability = 0.75
 set_war_support = 0
 add_command_power = 20
+if = {
+    limit = {
+        OR = {
+            has_game_rule = { rule = vanila_bonuses option = on-overall }
+            has_game_rule = { rule = vanila_bonuses option = on-allies }
+        }
+    }
+    USA = {
+		country_event = { id = BHVM_swiss_gold.1 days = 1796 }
+		country_event = { id = BHVM_swiss_gold.2 days = 1858 }
+		country_event = { id = BHVM_swiss_gold.3 days = 1917 }
+		country_event = { id = BHVM_swiss_gold.4 days = 2161 }
+    }
+}
 set_variable = { var = senators_support value = 48 }
 set_variable = { var = senators_total value = 96 }
 set_variable = { var = representatives_support value = 218 }

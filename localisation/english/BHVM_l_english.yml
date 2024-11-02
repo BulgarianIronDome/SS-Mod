@@ -82,6 +82,39 @@
  SOV_annex_MON:0"Annex Mongoloidistan"
  move_capital_to_cascablanca:0"Casacablance for capital"
  move_capital_to_gabon:0"Gabon for capital"
+
+ AAT_Sweden_ball_bearing.remove.t:0 "Swedish Ball Bearing Trade Ended"
+ AAT_Sweden_ball_bearing.remove.desc:0 "Our ball bearing trade agreement with Sweden has concluded."
+ AAT_Sweden_ball_bearing.remove.a:0 "Sacré bleu!"
+
+ BBA_switzerland_trade.cancel.t:0 "Swiss Trade Agreement Expires"
+ BBA_switzerland_trade.cancel.desc:0 "Our economic agreement with Switzerland has reached its conclusion."
+ BBA_switzerland_trade.cancel.a:0 "Time to move on"
+
+ BHVM_swiss_gold.1.t:0 "Initial Swiss Gold Trade Agreement"
+ BHVM_swiss_gold.1.desc:0 "Switzerland has agreed to establish a gold trade agreement with us, providing significant economic benefits."
+ BHVM_swiss_gold.1.a:0 "Excellent"
+ 
+ BHVM_swiss_gold.2.t:0 "Expanded Swiss Gold Trade"
+ BHVM_swiss_gold.2.desc:0 "Our gold trade with Switzerland has expanded, bringing increased economic advantages."
+ BHVM_swiss_gold.2.a:0 "Our economy grows stronger"
+ 
+ BHVM_swiss_gold.3.t:0 "Peak of Swiss Gold Trade"
+ BHVM_swiss_gold.3.desc:0 "The gold trade with Switzerland has reached its peak, maximizing our economic benefits."
+ BHVM_swiss_gold.3.a:0 "Outstanding"
+ 
+ BHVM_swiss_gold.4.t:0 "End of Swiss Gold Trade"
+ BHVM_swiss_gold.4.desc:0 "Our gold trade agreement with Switzerland has come to an end."
+ BHVM_swiss_gold.4.a:0 "All good things must end"
+ 
+ swiss_gold_trade_1:0 "Swiss Gold Trade I"
+ swiss_gold_trade_1_desc:0 "Initial gold trade agreement providing economic benefits"
+ 
+ swiss_gold_trade_2:0 "Swiss Gold Trade II"
+ swiss_gold_trade_2_desc:0 "Expanded gold trade agreement with increased benefits"
+ 
+ swiss_gold_trade_3:0 "Swiss Gold Trade III"
+ swiss_gold_trade_3_desc:0 "Maximum level of gold trade agreement"
  FRA_no_asia_noobah:0"No Asia remove noob proof"
  FRA_get_BEL_colonies:0"Get the belguim colonies"
  tot_economic_mobilisation:0"Total Economic Morbilization"

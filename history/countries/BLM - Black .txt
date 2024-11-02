@@ -11,9 +11,8 @@ set_technology = {
 
 if = {
 	limit = {
-		has_game_rule = auto_tech_rush
-		game_rule = on
-	}
+        has_game_rule = { rule = auto_tech_rush option = on }
+    }
 	BLM = {
 		country_event = { id = tech_rush.1 days = 57 } #at1
 	}
@@ -53,7 +52,6 @@ if = {
 	BLM = {
 		country_event = { id = tech_rush.13 days = 1510 } #gun3
 	}
-
 }
 if = {
 	limit = {

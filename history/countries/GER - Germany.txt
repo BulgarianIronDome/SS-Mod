@@ -44,7 +44,24 @@ if = {
 		}
 	}
 }
-
+if = {
+    limit = {
+        OR = {
+            has_game_rule = { rule = vanila_bonuses option = on-overall }
+            has_game_rule = { rule = vanila_bonuses option = on-axis }
+        }
+    }
+    GER = {
+        country_event = { id = AAT_Sweden_ball_bearing.2 days = 1064 }
+		country_event = { id = AAT_Sweden_ball_bearing.remove days = 1624  }
+        country_event = { id = BBA_switzerland_trade.1 days = 1247 }
+		country_event = { id = BBA_switzerland_trade.cancel days = 1674 }
+        country_event = { id = BHVM_swiss_gold.1 days = 1796 }
+		country_event = { id = BHVM_swiss_gold.2 days = 1858 }
+		country_event = { id = BHVM_swiss_gold.3 days = 1917 }
+		country_event = { id = BHVM_swiss_gold.4 days = 2161 }
+    }
+}
 starting_train_buffer = 2
 set_fuel_ratio = 0.8
 
@@ -69,6 +86,21 @@ set_technology = {
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
+}
+if = {
+	OR = {
+		limit = {
+			has_game_rule = {
+				rule = vanila_bonuses
+				option = on-overall
+			}
+			has_game_rule = {
+				rule = vanila_bonuses
+				option = on-axis
+			}
+		}
+		
+	}
 }
 if = {
 	limit = {

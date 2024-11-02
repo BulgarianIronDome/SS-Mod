@@ -180,6 +180,9 @@ NDefines_Graphics.NGraphics.RAILWAY_CAMERA_CUTOFF = 300.0 -- railways are cut of
 NDefines_Graphics.NGraphics.RAILWAY_CAMERA_CUTOFF_SPEED = 4.0 -- railways fade in/out speed
 
 
+NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP = "BHVM"
+NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP_NAME = "BHVM"
+
 NDefines_Graphics.NGraphics.CAMERA_ZOOM_SPEED_DISTANCE_MULT = 20
 NDefines_Graphics.NGraphics.MAPICON_GROUP_STRATEGIC_SIZE = 1000
 NDefines_Graphics.NGraphics.MAP_ICONS_STATE_HUGE = 100

@@ -22,23 +22,22 @@ st_country_powers = {
 		}
 	}	
 	effects = {
-		tagswtich_host = {
+		tagswtich_host_click = {
 			if = {
-				limit = { var:global.target_country = { has_country_flag = horsttool_enabled } }
-				# Move host tool access to the receiver country
-				var:global.receiver_country = { set_country_flag = horsttool_enabled }
-				var:global.target_country = {
-					clr_country_flag = horsttool_enabled
-					clr_country_flag = horsttool_window_open
-				}
-			}
-			# Execute the tag switch
-			var:global.receiver_country = { change_tag_from = var:global.target_country }
-			
-			# Reset variables after switch
-			set_variable = { global.target_country = 0 }
-			set_variable = { global.receiver_country = 0 }
-			clear_array = global.state_array
+                limit = { 
+                    check_variable = { target_switch_var = 0 }
+                }
+                owner = {
+                    ROOT = { set_variable = { target_switch_var = PREV } }
+                }
+            }
+            else = {
+                every_country = {
+                    limit = { is_ai = no }
+                    change_tag_from = ROOT.target_switch_var
+                }
+                clear_variable = target_switch_var
+            }
 		}
 		
 		observer_click = { 
@@ -479,11 +478,7 @@ st_country_powers = {
 	triggers = {
 		observer_click_enabled = { owner = { is_ai = no } }
 		observer_visible = {}
-		tagswtich_host_enabled = {  
-			NOT = { check_variable = { target_country = 0 } }
-			NOT = { check_variable = { receiver_country = 0 } }
-			#var:target_country = { is_ai = no }
-		}
+		tagswtich_host_click_enabled = { owner = { is_ai = yes } }
 		tagswtich_host_visible = { }
 		compliance_negative_click_enabled = { check_variable = { ROOT.compl > 0 } }
 		compliance_positive_click_enabled = { check_variable = { ROOT.compl < 100 } }
@@ -551,13 +546,8 @@ st_country_powers = {
 
 		fix_production_click_enabled = {}
 
-		declare_war_button_click_enabled = {
-			NOT = { check_variable = { target_country = 0 } }
-			NOT = { check_variable = { receiver_country = 0 } }
-			NOT = { var:target_country = { has_war_with = var:receiver_country } }
-			NOT = { var:target_country = { is_ally_with = var:receiver_country } }
-		}
+		declare_war_button_click_enabled = { }
 	}   
-  }
+    }
 }
 

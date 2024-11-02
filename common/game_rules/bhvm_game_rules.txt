@@ -617,6 +617,31 @@ auto_tech_rush = {
 		desc = "There will NOT be decisions for auto-tech rushing (Not Reccomended , If noob)"
 	}
 }
+vanila_bonuses = {
+	name = "Cool vanila bonuses from minors"
+	group = "BHVM game rules"
+	icon = "GFX_decision_gre_paying_ifc_debt"
+	option = {
+		name = on-overall
+		text = "1Real100%Balance"
+		desc = "Swedish Swiss and Denmark bonuses will apply to Italy Germany and England , swiss bonuses only to France(Not exactly Reccomended)"
+	}
+	default = {
+		name = on-axis
+		text = "KAxis-Bias"
+		desc = "Swedish Swiss and Denmark bonuses will apply to Italy and Germany(Recomended)"
+	}
+	option = {
+		name = on-allies
+		text = "5Allies-Bias"
+		desc = "Swedish and Swiss bonuses will apply to England , swiss bonuses only to France(Not Reccomended)"
+	}
+	option = {
+		name = off
+		text = "YOff"
+		desc = "Absolutely no bonuses from vanila based countries(Not Reccomended)"
+	}
+}
 #upgradable_amb_mech = {
 #	name = "Upgradable Amb. Mechanized"
 #	group = "BHVM game rules"

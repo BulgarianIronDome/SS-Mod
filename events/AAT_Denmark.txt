@@ -1187,70 +1187,71 @@ country_event = { #Someone attacked us :'(
 	}
 }
 
-country_event = { #Denmark wants to become a puppet
-	id = denmark_occupation_event.2
-	title = denmark_occupation_event.2.t
-	desc = denmark_occupation_event.2.desc
-	picture = GFX_report_event_DEN_denmark_surrenders
+country_event = {
+    id = denmark_occupation_event.2
+    title = denmark_occupation_event.2.t
+    desc = denmark_occupation_event.2.desc
+    picture = GFX_report_event_DEN_denmark_surrenders
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	option = { #Accept puppet
-		name = denmark_occupation_event.2.a
-		ai_chance = {
-			base = 5
-		}
-		add_political_power = 50
+    option = {
+        name = denmark_occupation_event.2.a
+        ai_chance = {
+            base = 5
+        }
+        add_political_power = 50
 
-		effect_tooltip = {
-			ROOT = { puppet = FROM }
-			custom_effect_tooltip = DEN_denmark_keeps_government_form_tt
-			FROM = {
-				DEN_limited_manpower = yes
-				set_rule = { can_decline_call_to_war = yes }
-				add_dynamic_modifier = { modifier = DEN_occupation_laws_dynamic_modifier }
-				add_to_variable = {
-					DEN_occupation_laws_cic_to_overlord = 0.15
-					tooltip = cic_to_overlord_factor_tt
-				}
-				add_to_variable = {
-					DEN_occupation_laws_mic_to_overlord = 0.15
-					tooltip = mic_to_overlord_factor_tt
-				}
-			}
+        effect_tooltip = {
+            ROOT = { puppet = FROM }
+            custom_effect_tooltip = DEN_denmark_keeps_government_form_tt
+            FROM = {
+                DEN_limited_manpower = yes
+                set_rule = { can_decline_call_to_war = yes }
+                add_dynamic_modifier = { modifier = DEN_occupation_laws_dynamic_modifier }
+                add_to_variable = {
+                    DEN_occupation_laws_cic_to_overlord = 1
+                    tooltip = cic_to_overlord_factor_tt
+                }
+                add_to_variable = {
+                    DEN_occupation_laws_mic_to_overlord = 1
+                    tooltip = mic_to_overlord_factor_tt
+                }
+            }
 
-			every_state = {
-				limit = {
-					is_controlled_by = ROOT 
-					is_core_of = FROM 
-				}
-				transfer_state_to = FROM
-			}
+            ITA = {
+                transfer_state = 99
+                transfer_state = 911
+                transfer_state = 37
+            }
+            GER = {
+                transfer_state = 912
+            }
 
-			ROOT = {
-				add_ideas = DEN_sahnefront_ns
-			}
-		}
+            ROOT = {
+                add_ideas = DEN_sahnefront_ns
+            }
+        }
 
-		set_variable = { DEN.DEN_overlord_nation = ROOT }
+        set_variable = { DEN.DEN_overlord_nation = ROOT }
 
-		FROM = { country_event = { id = denmark_occupation_event.3 hours = 6 } }
-	}
+        FROM = { country_event = { id = denmark_occupation_event.3 hours = 6 } }
+    }
 
-	option = { #Fight on
-		name = denmark_occupation_event.2.b
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		add_stability = -0.1
-		add_war_support = 0.05
+    option = {
+        name = denmark_occupation_event.2.b
+        ai_chance = {
+            base = 1
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+        }
+        add_stability = -0.1
+        add_war_support = 0.05
 
-		FROM = { country_event = { id = denmark_occupation_event.5 hours = 6 } }
-	}
+        FROM = { country_event = { id = denmark_occupation_event.5 hours = 6 } }
+    }
 }
 
 country_event = { #Denmark becomes a puppet
@@ -1351,15 +1352,15 @@ country_event = { #Denmark becomes a puppet
 
 			set_cosmetic_tag = DEN_occupied_denmark
 		}
-
-		every_state = {
-			limit = {
-				is_controlled_by = FROM 
-				is_core_of = ROOT
-			}
-			transfer_state_to = ROOT
+		ITA = {
+			transfer_state = 99
+			transfer_state = 911
+			transfer_state = 37
 		}
-		if = {
+		GER = {
+			transfer_state = 912
+		}
+		if = {	
 			limit = {
 				has_wargoal_against = FROM
 			}
@@ -1369,13 +1370,6 @@ country_event = { #Denmark becomes a puppet
 			}
 		}
 
-		set_power_balance = { #New BoP for DEN
-			id = DEN_occupation_balance
-			left_side = DEN_annexation_side
-			right_side = DEN_autonomy_side	
-			set_value = 0.2
-		}
-			
 		hidden_effect = {
 			set_popularities = { #Denmark keeps it government form
 				democratic = DEN_democratic_popularity

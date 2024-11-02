@@ -27,7 +27,22 @@ add_ideas = {
 	limited_conscription
 	partial_economic_mobilisation
 }
-
+if = {
+    limit = {
+        OR = {
+            has_game_rule = { rule = vanila_bonuses option = on-overall }
+            has_game_rule = { rule = vanila_bonuses option = on-axis }
+        }
+    }
+    ITA = {
+        country_event = { id = BBA_switzerland_trade.1 days = 1247 }
+		country_event = { id = BBA_switzerland_trade.cancel days = 1674 }
+        country_event = { id = BHVM_swiss_gold.1 days = 1796 }
+		country_event = { id = BHVM_swiss_gold.2 days = 1858 }
+		country_event = { id = BHVM_swiss_gold.3 days = 1917 }
+		country_event = { id = BHVM_swiss_gold.4 days = 2161 }
+    }
+}
 # RESISTANCE / COMPLIANCE
 550 = { #ERITREA
 	start_resistance = yes

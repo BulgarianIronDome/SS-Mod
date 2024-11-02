@@ -84,6 +84,38 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.5
 			}
 		}
+		swiss_gold_trade_1 = {
+            picture = chi_hyper_inflation
+            
+            modifier = {
+                production_factory_max_efficiency_factor = 0.03
+                consumer_goods_factor = -0.10
+                research_speed_factor = 0.01
+                production_speed_buildings_factor = 0.03
+            }
+        }
+        
+        swiss_gold_trade_2 = {
+            picture = chi_hyper_inflation3
+            
+            modifier = {
+                production_factory_max_efficiency_factor = 0.06
+                consumer_goods_factor = -0.20
+                research_speed_factor = 0.02
+                production_speed_buildings_factor = 0.06
+            }
+        }
+        
+        swiss_gold_trade_3 = {
+            picture = chi_hyper_inflation5
+            
+            modifier = {
+                production_factory_max_efficiency_factor = 0.10
+                consumer_goods_factor = -0.25
+                research_speed_factor = 0.05
+                production_speed_buildings_factor = 0.10
+            }
+        }
 		boost_research = {
 			picture = generic_fighter_production_diverted
 			allowed = {

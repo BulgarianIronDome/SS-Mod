@@ -218,35 +218,3 @@ defined_text = { # global
 		localization_key = CHEAT18
 	}
 }
-defined_text = { #global
-	name = tagswtich_host_target
-
-	text = {
-		trigger = {
-			NOT = { check_variable = { global.target_country = 0 } }
-		}
-		localization_key = target_name_locked
-	}
-	text = {
-		trigger = {
-			check_variable = { global.target_country = 0 }
-		}
-		localization_key = target_name_unlocked
-	}
-}
-defined_text = {
-	name = tagswtich_host_reciever
-
-	text = {
-		trigger = {
-			NOT = { check_variable = { global.receiver_var = 0 } }
-		}
-		localization_key = receiver_name_locked
-	}
-	text = {
-		trigger = {
-			check_variable = { global.receiver_var = 0 }
-		}
-		localization_key = receiver_name_unlocked
-	}
-}

@@ -239,7 +239,7 @@ focus_tree = {
 				limit = { has_dynamic_modifier = { modifier = BRA_estado_novo_modifier } }
 				custom_effect_tooltip = BRA_modify_estado_novo_ns_intro
 				add_to_variable = {
-					BRA_estado_novo_production_speed_arms_factory_factor = 0.05
+					BRA_estado_novo_production_speed_arms_factory_factor = 0.02
 					tooltip = production_speed_arms_factory_factor_tt
 				}
 				add_to_variable = {
@@ -254,7 +254,7 @@ focus_tree = {
 			ELSE = {
 				custom_effect_tooltip = BRA_modify_estado_moderno_ns_intro
 				add_to_variable = {
-					BRA_estado_moderno_production_speed_arms_factory_factor = 0.05
+					BRA_estado_moderno_production_speed_arms_factory_factor = 0.02
 					tooltip = production_speed_arms_factory_factor_tt
 				}
 				add_to_variable = {
@@ -292,7 +292,7 @@ focus_tree = {
 				limit = { has_dynamic_modifier = { modifier = BRA_estado_novo_modifier } }
 				custom_effect_tooltip = BRA_modify_estado_novo_ns_intro
 				add_to_variable = {
-					BRA_estado_novo_production_factory_max_efficiency_factor = 0.05
+					BRA_estado_novo_production_factory_max_efficiency_factor = 0.02
 					tooltip = production_factory_max_efficiency_factor_tt
 				}
 				add_to_variable = {
@@ -307,7 +307,7 @@ focus_tree = {
 			ELSE = {
 				custom_effect_tooltip = BRA_modify_estado_moderno_ns_intro
 				add_to_variable = {
-					BRA_estado_moderno_production_factory_max_efficiency_factor = 0.05
+					BRA_estado_moderno_production_factory_max_efficiency_factor = 0.02
 					tooltip = industrial_capacity_factory_tt
 				}
 				add_to_variable = {
@@ -1223,7 +1223,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_resource = {
 					type = rubber
-					amount = 20
+					amount = 5
 				}
 				add_to_variable = {
 					BRA_state_development_local_building_slots_factor = 0.2
@@ -1404,7 +1404,7 @@ focus_tree = {
 			938 = {
 				add_resource = {
 					type = rubber
-					amount = 10
+					amount = 5
 				}
 				add_extra_state_shared_building_slots = 1
 				add_victory_points = {
@@ -2334,7 +2334,7 @@ focus_tree = {
 	focus = {
 		id = BRA_greater_federalism
 		icon = GFX_focus_BRA_greater_federalism
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = BRA_repeal_the_national_security_law
 		prerequisite = { focus = BRA_repeal_the_national_security_law }
@@ -2374,50 +2374,6 @@ focus_tree = {
 	#		custom_effect_tooltip = "TODO: Unlock some socialist advisors"
 	#	}
 	#}
-
-	focus = {
-		id = BRA_continue_centralization
-		icon = GFX_focus_BRA_centralization
-		x = 1
-		y = 1
-		relative_position_id = BRA_repeal_the_national_security_law
-		prerequisite = { focus = BRA_repeal_the_national_security_law }
-		mutually_exclusive = { focus = BRA_greater_federalism }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-
-		completion_reward = {
-			add_ideas = BRA_presidential_republic
-		}
-	}
-
-	focus = {
-		id = BRA_court_the_military
-		icon = GFX_focus_BRA_reach_out_to_military_dem
-		x = 0
-		y = 2
-		relative_position_id = BRA_continue_centralization
-		prerequisite = { focus = BRA_continue_centralization }
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-			add_ideas = BRA_court_the_military_idea
-		}
-	}
-
 
 	focus = {
 		id = BRA_implement_a_national_guard
@@ -2523,52 +2479,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BRA_establish_the_brazilian_investment_bank
-		icon = GFX_focus_BRA_pro_business_taxes
-		x = 0
-		y = 1
-		relative_position_id = BRA_court_the_military
-		prerequisite = { 
-			focus = BRA_court_the_military 
-		#	focus = BRA_constitutional_monarchy
-		}
-		#mutually_exclusive = { focus = BRA_nationalize_the_banks }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_ideas = BRA_tax_haven
-		}
-	}
-
-	focus = {
-		id = BRA_church
-		icon = GFX_focus_por_concordat
-		x = 0
-		y = 1
-		relative_position_id = BRA_establish_the_brazilian_investment_bank
-		prerequisite = { focus = BRA_establish_the_brazilian_investment_bank }
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-
-		completion_reward = {
-			add_ideas = BRA_collaboration_with_the_church
-		}
-	}
-
-	focus = {
 		id = BRA_implement_article_138
 		icon = GFX_focus_generic_population_growth
 		x = 0
@@ -2607,101 +2517,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = BRA_ban_the_communist_party
-		icon = GFX_focus_BRA_ban_communist_party
-		x = 2
-		y = 1
-		relative_position_id = BRA_court_the_military
-		prerequisite = { 
-			focus = BRA_court_the_military 
-			#focus = BRA_constitutional_monarchy 
-		}
-		cost = 5
-		ai_will_do = {
-			factor = 20
-		}
-		available = {
-			communism < 0.20
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
-
-		completion_reward = {
-			hidden_effect = {
-				set_temp_variable = {
-					var = ban_ideology_var
-					value = party_popularity@communism
-				}
-				multiply_temp_variable = {
-					var = ban_ideology_var
-					value = -1
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = ban_ideology_var
-				}
-				multiply_temp_variable = {
-					var = ban_ideology_var
-					value = 0.66
-				}
-				set_country_flag = banned_communism_flag
-			}
-			custom_effect_tooltip = ban_communist_party_tt
-			add_stability = ban_ideology_var
-			custom_effect_tooltip = BRA_ban_the_communist_party_dynamic_tt
-		}
-	}
-
-	focus = {
-		id = BRA_posts_for_generals
-		icon = GFX_focus_generic_military_mission
-		x = 0
-		y = 2
-		relative_position_id = BRA_ban_the_communist_party
-		prerequisite = { focus = BRA_ban_the_communist_party }
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER}
-
-		completion_reward = {
-			remove_dynamic_modifier = {
-				modifier = BRA_weak_government
-			}
-			custom_effect_tooltip = BRA_posts_for_generals_tt
-		}
-	}
-
-	focus = {
-		id = BRA_third_republic
-		icon = GFX_focus_BRA_third_republic
-		x = 0
-		y = 1
-		relative_position_id = BRA_posts_for_generals
-		prerequisite = { focus = BRA_posts_for_generals }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			num_of_factories > 25
-			has_stability > 0.7
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			set_cosmetic_tag = BRA_third_republic_democratic
-			add_ideas = BRA_stability_and_unity
-			remove_ideas = BRA_separatism_idea
 		}
 	}
 

@@ -23,7 +23,7 @@ focus_tree = {
 	continuous_focus_position = { x = 0 y = 2500 }
 
 	initial_show_position = {
-		x = 27
+		x = 0
 		y = 0
 	}
 
@@ -223,7 +223,7 @@ focus_tree = {
 		icon = GFX_focus_BRA_autarky
 		prerequisite = { focus = BRA_the_polaca focus = BRA_anaue }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = BRA_the_polaca
 		mutually_exclusive = { focus = BRA_corporatism }
 		cost = 5
@@ -275,8 +275,8 @@ focus_tree = {
 		prerequisite = { focus = BRA_anaue focus = BRA_the_polaca}
 		mutually_exclusive = { focus = BRA_autarky }
 		x = 2
-		y = 6
-		relative_position_id = BRA_anaue
+		y = 1
+		relative_position_id = BRA_the_polaca
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -344,7 +344,7 @@ focus_tree = {
 		id = BRA_departamento_de_ordem_politica_e_social
 		icon = GFX_focus_SWI_embrace_rote_drei
 		prerequisite = { focus = BRA_corporatism focus = BRA_autarky  }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = BRA_corporatism
 		cost = 5
@@ -380,8 +380,8 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = BRA_departamento_de_ordem_politica_e_social  focus = BRA_departamendo_de_propaganda }
 		x = 0
-		y = 6
-		relative_position_id = BRA_cohen_plan
+		y = 1
+		relative_position_id = BRA_departamendo_de_propaganda
 		cost = 10
 		ai_will_do = {
 			factor = 20
@@ -600,7 +600,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = BRA_decree_no_37 focus = BRA_federal_employment_plan }
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = BRA_decree_no_37
 		cost = 10
 		available = {
@@ -654,7 +654,7 @@ focus_tree = {
 		prerequisite = { focus = BRA_reward_army_loyalty focus = BRA_restoration_of_honor }
 		#mutually_exclusive = { focus = BRA_the_international_crisis }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = BRA_reward_army_loyalty
 		cost = 10
 		ai_will_do = {
@@ -1630,7 +1630,7 @@ focus_tree = {
 			focus = BRA_secure_our_borders 
 			focus = BRA_the_international_crisis
 		}
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = BRA_secure_our_borders
 		cost = 5
@@ -2266,7 +2266,7 @@ focus_tree = {
 	focus = {
 		id = BRA_end_the_state_of_emergency
 		icon = GFX_focus_BRA_end_the_state_of_emergency
-		x = -10
+		x = -7
 		y = 0
 		relative_position_id = BRA_tribunal_de_seguranca_nacional
 		mutually_exclusive = { focus = BRA_tribunal_de_seguranca_nacional focus = BRA_prepare_for_second_intentona }
@@ -2379,7 +2379,7 @@ focus_tree = {
 		id = BRA_implement_a_national_guard
 		icon = GFX_focus_BRA_national_guard
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = BRA_greater_federalism
 		prerequisite = { focus = BRA_greater_federalism }
 		cost = 10
@@ -2502,10 +2502,10 @@ focus_tree = {
 	focus = {
 		id = BRA_tech_slot_2
 		icon = GFX_focus_BRA_university_of_sao_paulo
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = BRA_implement_article_138
-		prerequisite = { focus = BRA_implement_article_138 focus = BRA_church }
+		prerequisite = { focus = BRA_implement_article_138 }
 		cost = 10
 		ai_will_do = {
 			factor = 20
@@ -2651,8 +2651,8 @@ focus_tree = {
 	focus = {
 		id = BRA_war_bonds
 		icon = GFX_focus_SWI_issue_war_bonds
-		x = 2
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = BRA_address_labor_disputes
 		prerequisite = { focus = BRA_address_labor_disputes }
 		cost = 5
@@ -2680,7 +2680,7 @@ focus_tree = {
 				NOT = { has_completed_focus = BRA_prepare_for_second_intentona }
 			}
 		}
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = BRA_address_labor_disputes
 		prerequisite = { focus = BRA_address_labor_disputes }
@@ -2737,7 +2737,7 @@ focus_tree = {
 		id = BRA_the_international_crisis
 		icon = GFX_focus_BRA_international_crisis
 		x = 0
-		y = 4
+		y = 3
 		relative_position_id = BRA_tech_slot_2
 		prerequisite = { focus = BRA_address_labor_disputes }
 		#mutually_exclusive = { focus = BRA_secure_our_borders }

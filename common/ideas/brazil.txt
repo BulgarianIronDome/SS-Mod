@@ -693,6 +693,23 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_bunker_factor = 0.1
+			}
+		}
+
+		BRA_army_reward_nerfed = {
+			picture = MEX_politicised_army
+			allowed = {
+				original_tag = BRA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
 				production_speed_bunker_factor = 0.1
 			}

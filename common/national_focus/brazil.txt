@@ -238,9 +238,28 @@ focus_tree = {
 			IF = {
 				limit = { has_dynamic_modifier = { modifier = BRA_estado_novo_modifier } }
 				custom_effect_tooltip = BRA_modify_estado_novo_ns_intro
-				add_to_variable = {
-					BRA_estado_novo_production_speed_arms_factory_factor = 0.02
-					tooltip = production_speed_arms_factory_factor_tt
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = brazil_nerf
+							option = off
+						}
+					}
+					add_to_variable = {
+						BRA_estado_novo_production_speed_arms_factory_factor = 0.05
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						has_game_rule = {
+							rule = brazil_nerf
+							option = on
+						}
+					}
+					add_to_variable = {
+						BRA_estado_novo_production_speed_arms_factory_factor = 0.02
+						tooltip = production_speed_arms_factory_factor_tt
+					}
 				}
 				add_to_variable = {
 					BRA_estado_novo_production_speed_dockyard_factor = 0.05
@@ -253,9 +272,28 @@ focus_tree = {
 			}
 			ELSE = {
 				custom_effect_tooltip = BRA_modify_estado_moderno_ns_intro
-				add_to_variable = {
-					BRA_estado_moderno_production_speed_arms_factory_factor = 0.02
-					tooltip = production_speed_arms_factory_factor_tt
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = brazil_nerf
+							option = off
+						}
+					}
+					add_to_variable = {
+						BRA_estado_moderno_production_speed_dockyard_factor = 0.05
+						tooltip = production_speed_arms_factory_factor_tt
+					}
+				}IF = {
+					limit = {
+						has_game_rule = {
+							rule = brazil_nerf
+							option = on
+						}
+					}
+					add_to_variable = {
+						BRA_estado_moderno_production_speed_dockyard_factor = 0.02
+						tooltip = production_speed_arms_factory_factor_tt
+					}
 				}
 				add_to_variable = {
 					BRA_estado_moderno_production_speed_dockyard_factor = 0.05
@@ -608,10 +646,31 @@ focus_tree = {
 
 		search_filters = { }
 
+
 		completion_reward = {
-			add_timed_idea = {
-				idea = BRA_army_reward
-				days = 730
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = brazil_nerf
+						option = off
+					}
+				}
+				add_timed_idea = {
+					idea = BRA_army_reward
+					days = 730
+				}
+			}
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = brazil_nerf
+						option = on
+					}
+				}
+				add_timed_idea = {
+					idea = BRA_army_reward_nerfed
+					days = 730
+				}
 			}
 		}
 	}
@@ -1221,9 +1280,29 @@ focus_tree = {
 					}	
 				}
 				add_extra_state_shared_building_slots = 1
-				add_resource = {
-					type = rubber
-					amount = 5
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = brazil_nerf
+							option = off
+						}
+					}
+					add_resource = {
+						type = rubber
+						amount = 20
+					}
+				}
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = brazil_nerf
+							option = on
+						}
+					}
+					add_resource = {
+						type = rubber
+						amount = 5
+					}
 				}
 				add_to_variable = {
 					BRA_state_development_local_building_slots_factor = 0.2
@@ -1402,9 +1481,29 @@ focus_tree = {
 
 		completion_reward = {
 			938 = {
-				add_resource = {
-					type = rubber
-					amount = 5
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = brazil_nerf
+							option = off
+						}
+					}
+					add_resource = {
+						type = rubber
+						amount = 10
+					}
+				}
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = brazil_nerf
+							option = on
+						}
+					}
+					add_resource = {
+						type = rubber
+						amount = 5
+					}
 				}
 				add_extra_state_shared_building_slots = 1
 				add_victory_points = {

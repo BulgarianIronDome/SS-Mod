@@ -757,6 +757,20 @@ spanish_production = {
 		desc = "No DDAY wall :("
 	}
 }
+brazil_nerf = {
+	name = "Brazil Eco & Rubber Nerf"
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_industry"
+	option = {
+		name = off
+		text = "Brazil isn't nerfed"
+	}
+	option = {
+		name = on
+		text = "Brazil is nerfed"
+		desc = "Brazil right side eco is nerfed and rubber is reduced by ~66%"
+	}
+}
 no_market = {
 	name = "Market options"
 	group = "BHVM game rules"

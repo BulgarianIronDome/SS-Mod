@@ -320,4 +320,15 @@ Buffed england pregrinds +1 planning
 Added brazil pregrinds for tanks fuck you shadow
 
 
-TBA WHAT HAS BEEN ADDED!!
+Time to feast your slop work! 
+Less bloat in the ai nations , regarding eco
+Minks is now a supply hub
+Couple of new game rules , vanila balance etc etc
+Fixed a minor bug where NOR divs spawned inside finland
+Updated quite a lot the host tool yet again
+Rebalanced germany focus tree a bit
+Fixed italian ethopia triggering the anti cheat
+Added a special gui to display all game rules and changed game rules
+Fixing the fixes of the fix for the fixes yknow fix
+Fix mod fix bhvm
+Idk bazil has been touched with game rules ofc

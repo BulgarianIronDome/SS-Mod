@@ -26,18 +26,7 @@ if = {
 		set_naval_oob = "ENG_1936_Naval_Legacy"
 	}
 }
-if = {
-    limit = {
-        OR = {
-            has_game_rule = { rule = vanila_bonuses option = on-overall }
-            has_game_rule = { rule = vanila_bonuses option = on-allies }
-        }
-    }
-    ENG = {
-        country_event = { id = AAT_Sweden_ball_bearing.2 days = 1613 }
-		country_event = { id = AAT_Sweden_ball_bearing.remove days = 1978 }
-    }
-}
+
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "ENG_1936_air_bba"

@@ -82,6 +82,28 @@ victory_requierements = {
 
 	
 }
+check_vp_control = {
+    if = {
+        limit = {
+            controls_state = var:captured_state
+        }
+        return = yes
+    }
+    else = {
+        return = no
+    }
+}
+
+check_pending_captures = {
+    if = {
+        limit = {
+            has_variable = captured_state
+            NOT = { controls_state = var:captured_state }
+        }
+        clear_variable = captured_state
+    }
+}
+
 initilize_victory_system = {
 	# state = 613 #Nanjing
 	# state = 439 #Dehli

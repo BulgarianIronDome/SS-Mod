@@ -49,6 +49,12 @@ USA_heavy_fighter:0 "Gives you the best improved Fighter design"
 USA_heavy_fighter_1:0 "Gives you the best advanced Fighter design"
 USA_strategic_bomber:0 "Gives you the best Bomber design"
 
+vps.1.t:0 "Victory Point Capture Confirmed - Allies"
+vps.2.t:0 "Victory Point Capture Confirmed - Axis"
+vps_pending_capture:0 "Securing Victory Point"
+still_controls_vp_tooltip:0 "Still controls the victory point after 10 days"
+vp_contested:0 "§RContested Victory Point§!"
+
 MOD_countdown_to_victory_cat:0 "Victory!"
 MOD_countdown_to_victory_cat_desc:0 "The winner of the game is the team who controlls 7 or more of the 10 following Cities for §Y365 days§!:\n\n§YNanjing§! - [GetNanjingOwner]\n§YDehli§! - [GetDehliOwner]\n§YAlexandria§! - [GetAlexandriaOwner]\n§YBenghasi§! - [GetBenghasiOwner]\n§YAmsterdam§! - [GetAmsterdamOwner]\n§YParis§! - [GetParisOwner]\n§YLyon§! - [GetLyonOwner]\n§YBryansk§! - [GetBryanskOwner]\n§YMoscow§! - [GetMoscowOwner]\n§YStalingrad§! - [GetStalingradOwner]\n\n\n§YCurrent Score§!:\n\n[GER.GetFlag] §RAxis§!: [?global.axis_score]/§Y10§!\n\n[ENG.GetFlag] §CAllies§!: [?global.allies_score]/§Y10§!\n"
 

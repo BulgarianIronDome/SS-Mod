@@ -62,81 +62,34 @@ on_actions = {
 						option = on
 					}
 					FROM.FROM = {
-						OR = {
-							state = 613 #Nanjing
-							state = 439 #Dehli
-							state = 447 #Alexandria
-							state = 450 #Benghasi
-							state = 7 #Amsterdam
-							state = 16 #Paris
-							state = 20 #Lyon
-							state = 224 #Bryansk
-							state = 219 #Moscow
-							state = 217 #Stalingrad
-						}
+						is_victory_point_state = yes
 					}
 				}
-				ROOT = { #gained controll (add var)
+				ROOT = { #gained control
+					set_variable = {
+						var = captured_state
+						value = FROM.FROM.id
+					}
 					if = {
 						limit = {
 							is_allied_country = yes
 						}
-						add_to_variable = {
-							var = global.allies_score
-							value = 1
-						}
-						clamp_variable = {
-							var = global.allies_score
-							min = 0
-							max = 10
+						country_event = {
+							id = vps.1
+							days = 10
 						}
 					}
 					else_if = {
 						limit = { 
 							is_axis_country = yes
 						}
-						add_to_variable = {
-							var = global.axis_score
-							value = 1
-						}
-						clamp_variable = {
-							var = global.axis_score
-							min = 0
-							max = 10
-						}
-					}
-				}
-				FROM = { #lost controll (sub var)
-					if = {
-						limit = {
-							is_allied_country = yes
-						}
-						subtract_from_variable = {
-							var = global.allies_score
-							value = 1
-						}
-						clamp_variable = {
-							var = global.allies_score
-							min = 0
-							max = 10
-						}
-					}
-					else_if = {
-						limit = { 
-							is_axis_country = yes
-						}
-						subtract_from_variable = {
-							var = global.axis_score
-							value = 1
-						}
-						clamp_variable = {
-							var = global.axis_score
-							min = 0
-							max = 10
+						country_event = {
+							id = vps.2
+							days = 10
 						}
 					}
 				}
 			}
 		}
-	}
+	}	
 }

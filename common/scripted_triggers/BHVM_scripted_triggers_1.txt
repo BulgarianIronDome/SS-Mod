@@ -40,6 +40,28 @@ is_limited_country = {
 		original_tag = IRQ
 	}
 }
+is_victory_point_state = {
+    OR = {
+        state = 613 #Nanjing
+        state = 439 #Dehli
+        state = 447 #Alexandria
+        state = 450 #Benghasi
+        state = 7 #Amsterdam
+        state = 16 #Paris
+        state = 20 #Lyon
+        state = 224 #Bryansk
+        state = 219 #Moscow
+        state = 217 #Stalingrad
+    }
+}
+
+still_controls_captured_vp = {
+    custom_trigger_tooltip = {
+        tooltip = still_controls_vp_tooltip
+        controls_state = var:captured_state
+    }
+}
+
 DIPLOMACY_PEACE_PROPOSAL_ENABLE_TRIGGER = {
 	always = no
 }

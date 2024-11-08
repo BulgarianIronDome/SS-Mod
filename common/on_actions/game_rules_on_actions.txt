@@ -31,6 +31,106 @@ on_actions = {
             }
         }
 	}
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = { rule = vanila_bonuses option = on-overall }
+				}
+				GER = {
+					country_event = { id = AAT_Sweden_ball_bearing.2 days = 974 }
+					country_event = { id = AAT_Sweden_ball_bearing.remove days = 1571 }
+					country_event = { id = BBA_switzerland_trade.1 days = 1388 }
+					country_event = { id = BBA_switzerland_trade.cancel days = 1705  }
+					country_event = { id = BHVM_swiss_gold.1 days = 1885  }
+					country_event = { id = BHVM_swiss_gold.2 days = 1920 }
+					country_event = { id = BHVM_swiss_gold.3 days = 2130 }
+					country_event = { id = BHVM_swiss_gold.4 days = 2530 }
+				}
+				ITA = {
+					country_event = { id = BBA_switzerland_trade.1 days = 1388 }
+					country_event = { id = BBA_switzerland_trade.cancel days = 1705 }
+					country_event = { id = BHVM_swiss_gold.1 days = 1885 }
+					country_event = { id = BHVM_swiss_gold.2 days = 1920 }
+					country_event = { id = BHVM_swiss_gold.3 days = 2130 }
+					country_event = { id = BHVM_swiss_gold.4 days = 2530 }
+				}
+				USA = {
+					country_event = { id = BBA_switzerland_trade.1 days = 1420 }
+					country_event = { id = BBA_switzerland_trade.cancel days = 1800 }
+					country_event = { id = BHVM_swiss_gold.1 days = 2000 }
+					country_event = { id = BHVM_swiss_gold.2 days = 2100 }
+					country_event = { id = BHVM_swiss_gold.3 days = 2200 }
+					country_event = { id = BHVM_swiss_gold.4 days = 2800 }
+				}
+				ENG = {
+					country_event = { id = AAT_Sweden_ball_bearing.2 days = 1020 }
+					country_event = { id = AAT_Sweden_ball_bearing.remove days = 1720 }
+					country_event = { id = BHVM_swiss_gold.1 days = 1790 }
+					country_event = { id = BHVM_swiss_gold.2 days = 1900 }
+					country_event = { id = BHVM_swiss_gold.3 days = 2035 }
+					country_event = { id = BHVM_swiss_gold.4 days = 2320 }
+				}
+				FRA = {
+					country_event = { id = BHVM_swiss_gold.1 days = 1795 }
+					country_event = { id = BHVM_swiss_gold.2 days = 1820 }
+					country_event = { id = BHVM_swiss_gold.3 days = 1950 }
+					country_event = { id = BHVM_swiss_gold.4 days = 2200 }
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = { rule = vanila_bonuses option = on-allies }
+				}
+				USA = {
+					country_event = { id = BBA_switzerland_trade.1 days = 1420 }
+					country_event = { id = BBA_switzerland_trade.cancel days = 1800 }
+					country_event = { id = BHVM_swiss_gold.1 days = 2000 }
+					country_event = { id = BHVM_swiss_gold.2 days = 2100 }
+					country_event = { id = BHVM_swiss_gold.3 days = 2200 }
+					country_event = { id = BHVM_swiss_gold.4 days = 2800 }
+				}
+				ENG = {
+					country_event = { id = AAT_Sweden_ball_bearing.2 days = 1020 }
+					country_event = { id = AAT_Sweden_ball_bearing.remove days = 1720 }
+					country_event = { id = BHVM_swiss_gold.1 days = 1790 }
+					country_event = { id = BHVM_swiss_gold.2 days = 1900 }
+					country_event = { id = BHVM_swiss_gold.3 days = 2035 }
+					country_event = { id = BHVM_swiss_gold.4 days = 2320 }
+				}
+				FRA = {
+					country_event = { id = BHVM_swiss_gold.1 days = 1795 }
+					country_event = { id = BHVM_swiss_gold.2 days = 1820 }
+					country_event = { id = BHVM_swiss_gold.3 days = 1950 }
+					country_event = { id = BHVM_swiss_gold.4 days = 2200 }
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = { rule = vanila_bonuses option = on-axis }
+				}
+				GER = {
+					country_event = { id = AAT_Sweden_ball_bearing.2 days = 974 }
+					country_event = { id = AAT_Sweden_ball_bearing.remove days = 1571 }
+					country_event = { id = BBA_switzerland_trade.1 days = 1388 }
+					country_event = { id = BBA_switzerland_trade.cancel days = 1705  }
+					country_event = { id = BHVM_swiss_gold.1 days = 1885  }
+					country_event = { id = BHVM_swiss_gold.2 days = 1920 }
+					country_event = { id = BHVM_swiss_gold.3 days = 2130 }
+					country_event = { id = BHVM_swiss_gold.4 days = 2530 }
+				}
+				ITA = {
+					country_event = { id = BBA_switzerland_trade.1 days = 1388 }
+					country_event = { id = BBA_switzerland_trade.cancel days = 1705 }
+					country_event = { id = BHVM_swiss_gold.1 days = 1885 }
+					country_event = { id = BHVM_swiss_gold.2 days = 1920 }
+					country_event = { id = BHVM_swiss_gold.3 days = 2130 }
+					country_event = { id = BHVM_swiss_gold.4 days = 2530 }
+				}
+			}
+		}
+	}
+	
 	on_daily = {
         effect = {
             if = {

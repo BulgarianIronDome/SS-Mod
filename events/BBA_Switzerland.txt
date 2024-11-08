@@ -2267,14 +2267,14 @@ country_event = {
         name = BBA_switzerland_trade.1.a
         FROM = { add_ideas = SWI_active_trade_agreement }
         add_ideas = SWI_trading_with_switzerland_military
-        country_event = { id = BBA_switzerland_trade.cancel days = 180 }
+        #country_event = { id = BBA_switzerland_trade.cancel days = 180 }
     }
 
     option = { #Civilian stuff
         name = BBA_switzerland_trade.1.b
         FROM = { add_ideas = SWI_active_trade_agreement }
         add_ideas = SWI_trading_with_switzerland_civilian
-        country_event = { id = BBA_switzerland_trade.cancel days = 180 }
+        #country_event = { id = BBA_switzerland_trade.cancel days = 180 }
     }
 
     option = { #Reject

@@ -19,7 +19,6 @@ set_party_name = {
 #COUNTRY LEADERS
 recruit_character = SOV_iosif_stalin
 recruit_character = SOV_supreme_soviet #This is a fake character! Proper country leader role is added via focus
-add_to_tech_sharing_group = comintern_research
 if = {
 	limit = {
 		has_dlc = "No Step Back"
@@ -128,6 +127,18 @@ recruit_character = SOV_vasily_korzh
 recruit_character = SOV_sidor_kovpak
 recruit_character = SOV_lev_dovator
 recruit_character = SOV_pavel_rybalko
+recruit_character = SOV_abram_ioffe
+recruit_character = SOV_boris_stechkin
+recruit_character = SOV_arkady_nazarov
+recruit_character = SOV_vladimir_kotelnikov
+
+# Lokot Autonomy Characters
+recruit_character = SOV_konstantin_voskoboinik
+recruit_character = SOV_bronislav_kaminski
+
+# Even without NSB so Germany can access them on historical
+recruit_character = SOV_pyotr_krasnov
+recruit_character = SOV_konstantin_nechayev
 
 if = {
 	limit = {
@@ -146,9 +157,6 @@ if = {
 	recruit_character = SOV_yan_nagursky
 	recruit_character = SOV_vasily_yanchenko
 	recruit_character = SOV_tsar_vladimir_kirillovich
-
-	recruit_character = SOV_pyotr_krasnov
-	recruit_character = SOV_konstantin_nechayev
 	recruit_character = SOV_aleksandr_rodzyanko
 	recruit_character = SOV_vladimir_kosmin
 	recruit_character = SOV_andrey_shkuro
@@ -559,7 +567,8 @@ set_variable = { SOV_defense_industry_production_factory_efficiency_gain_factor 
 set_variable = { SOV_defense_industry_line_change_production_efficiency_factor = -0.1 }
 
 set_variable = { SOV_defense_industry_tank_manufacturer_cost_factor = 0 } #-> Tank Designer focus
-set_variable = { SOV_defense_industry_land_equipment_upgrade_xp_cost = 0 } #-> Tankograd
+set_variable = { SOV_defense_industry_land_equipment_upgrade_xp_cost = 0
+0 } #-> Tankograd
 set_variable = { SOV_defense_industry_materiel_manufacturer_cost_factor = 0 } #-> Equipment Designers focus
 set_variable = { SOV_defense_industry_breakthrough_factor = 0 } #-> PC of Mortar Armament
 set_variable = { SOV_defense_industry_production_speed_coastal_bunker_factor = 0 } #-> Military Engineering University
@@ -583,7 +592,7 @@ set_variable = { SOV_the_red_army_heat_attrition_factor = 0 } # -> An Adaptable 
 set_variable = { SOV_the_red_army_winter_attrition_factor = 0 } # -> An Adaptable Army
 set_variable = { SOV_the_red_army_acclimatization_cold_climate_gain_factor = 0 } # -> An Adaptable Army
 set_variable = { SOV_the_red_army_acclimatization_hot_climate_gain_factor = 0 } # -> An Adaptable Army
-set_variable = { SOV_the_red_army_terrain_penalty_reduction = 0 } # -> An Adaptable Army
+set_variable = { SOV_the_red_army_terrain_trait_xp_gain_factor = 0 } # -> An Adaptable Army
 set_variable = { SOV_the_red_army_unit_infantry_design_cost_factor = 0 } # -> Military Reorganization
 set_variable = { SOV_the_red_army_unit_artillery_brigade_design_cost_factor = 0 } # -> Military Reorganization
 set_variable = { SOV_the_red_army_army_org_regain = 0 } # -> Barrier Troops
@@ -690,7 +699,7 @@ set_technology = {
 #### VANILLA ####
 ####
 
-capital = 219
+capital = 219 # Moscow
 
 starting_train_buffer = 3.0
 
@@ -715,10 +724,56 @@ if = {
 		set_naval_oob = "SOV_1936_naval_legacy"
 	}
 }
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "SOV_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			early_bombs = 1
+			engines_1 = 1
+			engines_2 = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_small_airframe = 1
+			basic_medium_airframe = 1
+			aircraft_construction = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
+		}
+	else = {
+		set_air_oob = "SOV_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			early_bomber = 1
+			strategic_bomber1 = 1
+			naval_bomber1 = 1
+			early_transport_plane = 1
+		}
+	}
+}
 
 set_research_slots = 3
 set_stability = 0.5
 set_war_support = 0.3
+
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 0.2
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.2
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 0.3
+}
+
 # Starting tech
 set_technology = { #WARNING: Do not just remove techs from here -> It can impact a lot of stuff. Before removing, double check that content does not count on these techs being researched
 	infantry_weapons = 1
@@ -805,10 +860,12 @@ if = {
 }
 
 set_country_flag = SOV_TEST_REMOVE_VANILLA_ADVISORS_flag
+
 add_ideas = {	
 	home_of_revolution
 	trotskyite_plot_nsb
 	SOV_politicized_military
+
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
 }
 
@@ -828,6 +885,19 @@ add_ideas = {
 		extensive_conscription
 	}
 
+
+	IF = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		complete_special_project = {
+			project = sp:sp_land_flamethrower_tank
+		}
+	}
+
+	complete_special_project = {
+		project = sp:sp_naval_cruiser_submarine
+	}
 
 	###################
 	### Purge stuff ###
@@ -1137,7 +1207,6 @@ add_ideas = {
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
-		radio_detection = 1
 		mechanical_computing = 1
 		computing_machine = 1
 		basic_encryption = 1
@@ -1157,6 +1226,13 @@ add_ideas = {
 		concentrated_industry2 = 1
 		concentrated_industry3 = 1
 	}
+	
+	complete_special_project = {
+		project = sp:sp_air_radar
+		scientist = SOV_vladimir_kotelnikov
+		state = 260
+	}
+
 	if = {
 		limit = {
 			NOT = { has_dlc = "No Step Back" }
@@ -1221,8 +1297,9 @@ if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}
+
 	create_operative_leader = {
-		name = "Alexander Radó"
+		name = SOV_alexander_rado
 		GFX = GFX_portrait_alexander_rado
 		traits = { operative_natural_orator }
 		bypass_recruitment = no
@@ -1231,26 +1308,98 @@ if = {
 	}
 
 	create_operative_leader = {
-		name = "Kim Philby"
+		name = SOV_kim_philby
 		GFX = GFX_portrait_kim_philby
 		traits = { operative_double_agent operative_infiltrator }
 		bypass_recruitment = no
 		available_to_spy_master = yes
 		nationalities = { SOV ENG }
 	}
+
 	create_operative_leader = {
-		name = "Richard Sorge"
+		name = SOV_richard_sorge
 		GFX = GFX_portrait_richard_sorge
 		traits = { operative_well_groomed }
 		bypass_recruitment = no
 		available_to_spy_master = yes
 		nationalities = { SOV GER }
 	}
+
+	create_operative_leader = {
+		name = SOV_yan_chernyak
+		GFX = GFX_portrait_SOV_yan_chernyak
+		traits = { operative_linguist operative_infiltrator }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { SOV GER HUN ROM CZE SLO }
+	}
+
 }
 
 
 ### VARIANTS ###
 # 1936 Start #
+
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = { #Note: There is a copy of this variant in Finnish Scripted Effects file (FIN_purchase_soviet_equipment_for_cw). Any changes here should also be applied there
+		name = "I-15" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "I-16" #
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_SOV_fighter1_medium"
+	}
+	create_equipment_variant = {
+		name = "DB-3" #
+		type = medium_plane_airframe_0
+		design_team = mio:SOV_ilyushin_design_bureau_organization
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+		icon = "GFX_SOV_early_bomber_medium"
+	}
+	create_equipment_variant = {
+		name = "TB-3" #
+		type = large_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_1_4x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		icon = "GFX_SOV_transport_plane_equipment_1_medium"
+	}
+	create_equipment_variant = {
+		name = "ANT-40" #
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		icon = "GFX_SOV_tactical_bomber1_medium"
+	}
+}
+
 if = {
 	limit = {
 		has_dlc = "No Step Back"

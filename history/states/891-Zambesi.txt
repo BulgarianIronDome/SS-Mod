@@ -9,11 +9,11 @@ state={
 	}
 
 	history={
-		owner = BLM
+		owner = POR
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = BLM
+		add_core_of = ANG
 
 	}
 

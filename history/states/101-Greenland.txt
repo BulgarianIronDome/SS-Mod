@@ -13,10 +13,11 @@ state = {
 		buildings = {
 			infrastructure = 1
 			12512 ={
-				naval_base = 2
+				naval_base = 1
 			}
 		}
 		add_core_of = DEN
+		add_core_of = GRN
 
 		victory_points = { #Nuuk
 			12512 1

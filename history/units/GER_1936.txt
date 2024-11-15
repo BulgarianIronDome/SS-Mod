@@ -1,27 +1,4 @@
 ﻿division_template = {
-	name = "Infanterie-Division"
-
-	division_names_group = GER_Inf_01
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-	}
-	
-	support = {
-        engineer = { x = 0 y = 0 }
-        artillery = { x = 0 y = 1 }
-	}
-}
-##### 1 div training #####
-division_template = {
 	name = "1-Div-Training"
 
 	regiments = {
@@ -92,8 +69,7 @@ units = {
 		start_equipment_factor = 1
 
 	}
-}				
-### Air oob in its own file
+}
 
 
 #########################
@@ -105,7 +81,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_1
-			creator = "GER"
+			creator = GER
 		}
 		requested_factories = 10
 		progress = 0.1
@@ -116,17 +92,18 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
-			creator = "GER" 
+			creator = GER
 		}
 		requested_factories = 2
 		progress = 0.3
 		efficiency = 50
+		industrial_manufacturer = mio:GER_carl_walther_organization
 	}
 
 	add_equipment_production = {
 		equipment = {
 			type = artillery_equipment_1
-			creator = "GER" 
+			creator = GER 
 		}
 		requested_factories = 1
 		progress = 0.3
@@ -137,7 +114,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = light_tank_equipment_2
-			creator = "GER" 
+			creator = GER
 		}
 		requested_factories = 2
 		progress = 0.4
@@ -148,13 +125,14 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = motorized_equipment_1
-			creator = "GER" 
+			creator = GER 
 		}
 		requested_factories = 2
 		progress = 0.4
 		efficiency = 50
 		industrial_manufacturer = mio:GER_opel_organization
 	}
+	
 }
 
 #####################

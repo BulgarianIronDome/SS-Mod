@@ -1,0 +1,266 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = FRA }
+					FROM.FROM = { is_core_of = FRA }
+					OR ={  AND ={  FRA = { surrender_progress > 0.50 NOT = { controls_state = 16 } } }	FRA = { surrender_progress	> 0.7	}	 }
+					NOT = { FRA = { has_country_flag = france_tp} }
+				}
+
+			FRA = { 
+				set_country_flag = france_tp
+				transfer_units_fraction = {
+					target = IRE
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 0
+					navy_ratio = 1
+					air_ratio = 1
+						keep_unit_leaders_trigger = {
+							always = yes
+						}
+					}					
+				}
+			}
+		}
+	}
+	on_capitulation = {
+        effect = {
+            if = {
+                limit = {
+                    tag = CHI
+                }
+                JAP = {
+                    add_equipment_to_stockpile = {
+                        type = infantry_equipment_0
+                        amount = 58000
+                        producer = CHI
+                    }
+					add_equipment_to_stockpile = {
+                        type = support_equipment_1
+                        amount = 1500
+                        producer = CHI
+                    }
+					add_equipment_to_stockpile = {
+                        type = infantry_equipment_1
+                        amount = 12000
+                        producer = CHI
+                    }
+                }
+            }
+        }
+    }
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					tag = DEN
+				}
+				IF = {
+					limit = {
+						OR = {
+							has_game_rule = {
+								rule = vanila_bonuses
+								option = on-overall
+							}
+							has_game_rule = {
+								rule = vanila_bonuses
+								option = on-axis
+							}
+						}
+					}
+					if = {
+						limit = {
+							country_exists = ITA
+						}
+						ITA = {
+							transfer_state = 99
+							transfer_state = 911
+							transfer_state = 37
+						}
+					}
+					else = {
+						GER = {
+							transfer_state = 99
+							transfer_state = 911
+							transfer_state = 37
+						}
+					}
+					if = {
+						limit = {
+							country_exists = GER
+						}
+						GER = {
+							transfer_state = 912
+							country_event = denmark_occupation_event.2
+							transfer_state = 910
+						}
+					}
+					else = {
+						ITA = {
+							transfer_state = 912
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_game_rule = {
+								rule = vanila_bonuses
+								option = off
+							}
+							has_game_rule = {
+								rule = vanila_bonuses
+								option = on-allies
+							}
+						}
+					}
+					if = {
+						limit = {
+							country_exists = ITA
+						}
+						ITA = {
+							transfer_state = 99
+							transfer_state = 911
+							transfer_state = 37
+						}
+					}
+					else = {
+						GER = {
+							transfer_state = 99
+							transfer_state = 911
+							transfer_state = 37
+						}
+					}
+					if = {
+						limit = {
+							country_exists = GER
+						}
+						GER = {
+							transfer_state = 912
+							transfer_state = 910
+						}
+					}
+					else = {
+						ITA = {
+							transfer_state = 912
+						}
+					}
+				}
+			}
+		}
+	}	
+    on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					tag = YUG
+				}
+				IF = {
+					limit = {
+						NOT = { has_global_flag = ITA_no_scripted }
+					}
+					if = {
+						limit = {
+							country_exists = BUL
+						}
+						BUL = {
+							transfer_state = 106 # MACEDONIA
+							transfer_state = 803 # PIROT
+						}
+					}
+					else = {
+						ITA = {
+							transfer_state = 106 # MACEDONIA
+							transfer_state = 803 # PIROT
+						}
+						ITA = { add_state_core = 106 }
+						ITA = { add_state_core = 803 }
+					}
+					if = {
+						limit = {
+							country_exists = HUN
+						}
+						HUN = {
+							transfer_state = 45 # VOJVODINA
+							transfer_state = 764 # BANAT
+						}
+					}
+					else = {
+						ITA = {
+							transfer_state = 45 # VOJVODINA
+							transfer_state = 764 # BANAT
+						}
+					}
+					GER = {
+						transfer_state = 102 # GERMAN SLOVENIA
+					}
+					ITA = {
+						transfer_state = 853 # SLOVENIA
+						transfer_state = 103 # DALMATIA
+						transfer_state = 109 # CROATIA
+						transfer_state = 104 # BOSNIA
+						transfer_state = 804 # HERZEG
+						transfer_state = 105 # MNT
+						transfer_state = 802 # KOSOVO
+						transfer_state = 108 # NIS
+						transfer_state = 107 # SERBIA
+						add_named_threat = { 
+							threat = 12
+							name = YUG_peace
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = GRE
+				}
+				IF = {
+					limit = {
+						NOT = { has_global_flag = ITA_no_scripted }
+					}
+					IF = {
+						limit = {
+							country_exists = BUL
+						}
+						BUL = {
+							transfer_state = 184 # THRACE
+							transfer_state = 731 # SOLUN
+							transfer_state = 47 # ATINA
+							transfer_state = 186 # PELOPONES
+							transfer_state = 185 # EPIR
+							add_named_threat = { 
+								threat = 12
+								name = GRE_peace
+							}
+						}
+						ITA = {
+							transfer_state = 187 # OSTROVI
+							transfer_state = 182 # KRIT
+						}
+					}
+					else = {
+						ITA = {
+							transfer_state = 184 # THRACE
+							transfer_state = 731 # SOLUN
+							transfer_state = 185 # EPIR
+							transfer_state = 47 # ATINA
+							transfer_state = 186 # PELOPONES
+							transfer_state = 187 # OSTROVI
+							transfer_state = 182 # KRIT
+							add_named_threat = { 
+								threat = 9
+								name = GRE_peace
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -4353,7 +4353,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { ITA_military_industry_dm_equipment_upgrade_xp_cost = -0.15 }
+			add_to_variable = { ITA_military_industry_dm_equipment_upgrade_xp_cost = 0
+-0.15 }
 			add_to_variable = { ITA_military_industry_dm_industrial_capacity_factory = 0.05 }
 			add_to_variable = { ITA_military_industry_dm_industrial_capacity_dockyard = 0.05 }
 			custom_effect_tooltip = ITA_modernize_ansaldo_facilities_military_industry_tt
@@ -4538,15 +4539,17 @@ focus_tree = {
 			has_full_control_of_state = 2
 		}
 
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+
 			add_tech_bonus = {
 				name = ITA_citta_dell_aria
 				bonus = 0.25
-				uses = 4
+				uses = 3 # was 4
 				category = air_equipment
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			if = {
 				limit = {
@@ -4566,6 +4569,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			else = {
 				random_core_state = {
@@ -4585,12 +4589,38 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+
+			custom_effect_tooltip = ITA_citta_dell_aria_tt
+			hidden_effect = {
+				IF = {
+					limit = { 
+						2 = {
+							is_fully_controlled_by = ROOT
+							air_facility < 1
+							land_facility < 1
+							naval_facility < 1
+							nuclear_facility < 1
+						}
+					}
+
+					2 = {
+						add_building_construction = {
+							type = air_facility
+							level = 1
+							instant_build = yes
+							province = 11751 # North of Rome
+						}
+					}
+				}
 			}
 
 			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				ITA_add_citta_dell_aria_templates = yes
 			}
 		}
@@ -4842,7 +4872,8 @@ focus_tree = {
 
 		completion_reward = {
 			#More expensive to edit templates, more cheap to produce aircraft
-			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0.25 }
+			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0
+0.25 }
 			custom_effect_tooltip = ITA_standardization_ra_tt
 
 			hidden_effect = {
@@ -4899,7 +4930,8 @@ focus_tree = {
 
 		completion_reward = {
 			#More expensive to edit templates, more cheap to produce aircraft
-			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = -0.5 }
+			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0
+-0.5 }
 			custom_effect_tooltip = ITA_specialization_ra_tt
 
 			hidden_effect = {
@@ -5088,7 +5120,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = -0.25 }
+			add_to_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0
+-0.25 }
 			custom_effect_tooltip = ITA_multirole_aircraft_military_industry_tt
 
 			add_to_variable = { ITA_ra_air_mission_xp_gain_factor = 0.1 }

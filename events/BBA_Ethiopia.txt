@@ -4401,8 +4401,10 @@ country_event = {
 				set_variable = { ETH_industrialization_industry_air_damage_factor = ETH.ETH_industrialization_industry_air_damage_factor } 
 				set_variable = { ETH_industrialization_industry_repair_factor = ETH.ETH_industrialization_industry_repair_factor } 
 				set_variable = { ETH_production_factory_max_efficiency_factor = ETH.ETH_production_factory_max_efficiency_factor } 
-				set_variable = { ETH_air_equipment_upgrade_xp_cost = ETH.ETH_air_equipment_upgrade_xp_cost } 
-				set_variable = { ETH_land_equipment_upgrade_xp_cost = ETH.ETH_land_equipment_upgrade_xp_cost } 
+				set_variable = { ETH_air_equipment_upgrade_xp_cost = 0
+ETH.ETH_air_equipment_upgrade_xp_cost } 
+				set_variable = { ETH_land_equipment_upgrade_xp_cost = 0
+ETH.ETH_land_equipment_upgrade_xp_cost } 
 				set_variable = { ETH_production_speed_buildings_factor = ETH.ETH_production_speed_buildings_factor }
 
 				add_dynamic_modifier = {

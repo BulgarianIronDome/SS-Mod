@@ -5,8 +5,8 @@ state={
 		5006 8030 10870 12768 
 	}
 	history = {
-		owner = BLM
-		add_core_of = BLM
+		owner = SAU
+		add_core_of = SAU
 	}
 	manpower=69
 	state_category=pastoral

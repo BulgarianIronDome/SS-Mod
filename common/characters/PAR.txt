@@ -400,6 +400,12 @@ characters = {
 				original_tag = PAR
 				has_dlc = "Trial of Allegiance"
 			}
+			visible = {
+				has_government = democratic
+			}
+			available = {
+				has_government = democratic
+			}
 			traits = {
 				JUNO_minister_of_finance
 			}

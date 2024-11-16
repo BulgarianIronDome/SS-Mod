@@ -7,8 +7,6 @@ state={
 
 	history={
 		owner = NONE
-		add_core_of = NONE
-
 	}
 
 	provinces={

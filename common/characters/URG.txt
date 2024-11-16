@@ -67,7 +67,7 @@ characters = {
 		
 	}
 
-	URG_bernardo_gonzalez={
+	URG_bernardo_gonzález={
 		portraits={
 			civilian={
 				large=GFX_portrait_Bernardo_Gonzalez

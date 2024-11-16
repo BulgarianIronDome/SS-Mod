@@ -510,57 +510,15 @@ on_actions = {
             CZE = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 25800
+					amount = 15800
 				}
                 add_equipment_to_stockpile = {
 					type = support_equipment_1
-					amount = 620
+					amount = 420
 				}
 				add_equipment_to_stockpile = {
 					type = train_equipment
 					amount = 24
-				}
-			}
-			YUG = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 17800
-				}
-                add_equipment_to_stockpile = {
-					type = support_equipment_1
-					amount = 200
-				}
-				add_equipment_to_stockpile = {
-					type = train_equipment
-					amount = 24
-				}
-			}
-			GRE = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 9800
-				}
-                add_equipment_to_stockpile = {
-					type = support_equipment_1
-					amount = 150
-				}
-				add_equipment_to_stockpile = {
-					type = train_equipment
-					amount = 10
-				}
-			}
-			ALB = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 5800
-				}
-                add_equipment_to_stockpile = {
-					type = support_equipment_1
-					amount = 50
-				}
-				add_equipment_to_stockpile = {
-					type = train_equipment
-					amount = 6
 				}
 			}
 			BLM = {

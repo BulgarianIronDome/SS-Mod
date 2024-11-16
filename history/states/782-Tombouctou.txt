@@ -9,7 +9,6 @@ state={
 
 	history={
 		owner = NONE
-		add_core_of = NONE
 		buildings = {
 			infrastructure = 0
 		}

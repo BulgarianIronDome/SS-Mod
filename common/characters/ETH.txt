@@ -1426,7 +1426,7 @@ characters = {
 				traits = {
 					air_chief_reform_1
 				}
-				cost = 50
+				cost = 100
 				ai_will_do = {
 					factor = 1.000
 				}
@@ -1580,10 +1580,7 @@ characters = {
 			ledger = army
 			idea_token = ETH_wehib_pasha
 			allowed  = {
-				OR = {
-					original_tag = ETH
-					original_tag = TUR
-				}
+				original_tag = ETH
 			}
 			available = {
 				has_government = neutrality 
@@ -1616,10 +1613,7 @@ characters = {
 			ledger = army
 			idea_token = ETH_feodor_konovalov
 			allowed  = {
-				OR = {
-					original_tag = ETH
-					original_tag = SOV
-				}
+				original_tag = ETH
 			}
 			available = {
 				OR = {

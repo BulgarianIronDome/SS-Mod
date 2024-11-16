@@ -5,7 +5,7 @@ oob = "MAN_1936"
 set_technology = {
 	infantry_weapons = 1
 	gw_artillery = 1
-	tech_trucks = 1
+	
 }
 
 if = {
@@ -16,7 +16,6 @@ if = {
 	add_ideas = MAN_banditry
 	add_ideas = MAN_kwantung_veto
 	add_ideas = MAN_low_legitimacy_5
-	recruit_character = MAN_songgotu_zhanshan
 }
 
 recruit_character = MAN_aisin_gioro_puyi
@@ -35,7 +34,7 @@ recruit_character = MAN_yin_zuoqian
 recruit_character = MAN_hesehn_tiemei
 recruit_character = MAN_xian_yuan
 recruit_character = MAN_guan_xingde
-recruit_character = MAN_megata_toshiro
+
 if = {
 	limit = { has_dlc = "No Step Back" }
 	recruit_character = SOV_grigory_semyonov
@@ -122,6 +121,7 @@ set_convoys = 5
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
+		radio_detection = 1
 		mechanical_computing = 1
 
 		#industry
@@ -133,9 +133,6 @@ set_convoys = 5
 		construction2 = 1
 		dispersed_industry = 1
 		dispersed_industry2 = 1
-	}
-	complete_special_project = {
-		project = sp:sp_air_radar
 	}
 }
 

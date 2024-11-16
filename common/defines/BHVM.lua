@@ -26,6 +26,7 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.00                        -- Unlim
 
 NDefines.NRailwayGun.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0		-- The percentage of manpower returned when an encircled unit is disbanded
 
+NDefines.NProduction.RAILWAY_GUN_MAX_MIL_FACTORIES_PER_LINE = 10
 NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0					-- Free license
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                        -- Free license
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0						    -- Base IC cost for lended license
@@ -38,8 +39,8 @@ NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0
 
 NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 40.0 -- base game 30 changed to 40
 
-NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_xp_cost = 0
-
+-- NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 0.9 -- You get 90% of all factories was 0.5
+NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 1
 NDefines.NIndustrialOrganisation.DESIGN_TEAM_RESEARCH_BONUS = 0.15
 NDefines.NIndustrialOrganisation.FUNDS_FOR_CREATING_EQUIPMENT_VARIANT = 1
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 50
@@ -63,7 +64,23 @@ NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0.05
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 	--Base cost to unlock a regiment slot,
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0	--Base cost to change a regiment column.
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 	--Base cost to unlock a support slot
-
+--NDefines.NAir.MISSION_COMMAND_POWER_COSTS = { -- vilkata defines strongest deversus modding right here
+	--	0.0, -- AIR_SUPERIORITY
+	--	0.0, -- CAS
+	--	0.0, -- INTERCEPTION
+	--	0.0, -- STRATEGIC_BOMBER
+	--	0.0, -- NAVAL_BOMBER
+	--	0.0, -- DROP_NUKE
+	--	0.0, -- PARADROP
+	--	0.0, -- NAVAL_KAMIKAZE
+    --    0.0, -- PORT_STRIKE
+	--	0.25, -- ATTACK_LOGISTICS
+	--	0.0, -- AIR_SUPPLY
+	--	0.0, -- TRAINING
+	--	10.0, -- NAVAL_MINES_PLANTING
+	--	10.0, -- NAVAL_MINES_SWEEPING
+	--	0.0, -- MISSION_RECON
+	--}
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.5 --makes redeployement of fighters faster vanilla is 0.02
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0                              -- Down from 3 | Makes AC player have brain 
 

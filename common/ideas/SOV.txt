@@ -226,8 +226,7 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = -0.15
 				training_time_factor = 0.25
-				land_equipment_upgrade_xp_cost = 0
-0.15
+				land_equipment_upgrade_xp_cost = 0.15
 			}
 		}
 
@@ -411,8 +410,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_dockyard = -0.1
-				naval_equipment_upgrade_xp_cost = 0
-0.2
+				naval_equipment_upgrade_xp_cost = 0.2
 				refit_speed = -0.1
 			}
 		}
@@ -5324,8 +5322,7 @@ ideas = {
 			modifier = {
 				equipment_conversion_speed = 0.15
 				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = 0
--0.1
+				land_equipment_upgrade_xp_cost = -0.1
 			}
 		}
 
@@ -5355,8 +5352,7 @@ ideas = {
 			modifier = {
 				equipment_conversion_speed = 0.15
 				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = 0
--0.1
+				land_equipment_upgrade_xp_cost = -0.1
 			}
 
 			equipment_bonus = {
@@ -5392,8 +5388,7 @@ ideas = {
 			modifier = {
 				equipment_conversion_speed = 0.15
 				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = 0
--0.1
+				land_equipment_upgrade_xp_cost = -0.1
 			}
 
 			equipment_bonus = {
@@ -5429,8 +5424,7 @@ ideas = {
 			modifier = {
 				equipment_conversion_speed = 0.15
 				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = 0
--0.1
+				land_equipment_upgrade_xp_cost = -0.1
 			}
 
 			equipment_bonus = {
@@ -5466,8 +5460,7 @@ ideas = {
 			modifier = {
 				equipment_conversion_speed = 0.15
 				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = 0
--0.1
+				land_equipment_upgrade_xp_cost = -0.1
 			}
 
 			equipment_bonus = {
@@ -5504,8 +5497,7 @@ ideas = {
 			modifier = {
 				equipment_conversion_speed = 0.15
 				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = 0
--0.1
+				land_equipment_upgrade_xp_cost = -0.1
 			}
 
 			equipment_bonus = {
@@ -5542,8 +5534,7 @@ ideas = {
 			modifier = {
 				equipment_conversion_speed = 0.15
 				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = 0
--0.1
+				land_equipment_upgrade_xp_cost = -0.1
 			}
 
 			equipment_bonus = {
@@ -5580,8 +5571,7 @@ ideas = {
 			modifier = {
 				equipment_conversion_speed = 0.15
 				equipment_capture_factor = 0.15
-				land_equipment_upgrade_xp_cost = 0
--0.1
+				land_equipment_upgrade_xp_cost = -0.1
 			}
 
 			equipment_bonus = {

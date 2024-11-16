@@ -62,15 +62,9 @@ if = {
 
 set_technology = {
 	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_trucks = 1
-	gw_artillery = 1
 	interwar_antiair = 1
 	tech_recon = 1
 	tech_support = 1		
-	tech_engineers = 1
-	basic_train = 1
-	interwar_antitank = 1 # 
 }
 
 if = {
@@ -219,6 +213,7 @@ if = {
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
+		radio_detection = 1
 		mechanical_computing = 1
 		computing_machine = 1
 
@@ -234,9 +229,6 @@ if = {
 		construction2 = 1
 		dispersed_industry = 1
 		dispersed_industry2 = 1
-	}
-	complete_special_project = {
-		project = sp:sp_air_radar
 	}
 	if = {
 		limit = {
@@ -333,6 +325,14 @@ recruit_character = SWE_osten_unden
 
 ### VARIANTS ###
 # 1936 Start #
+create_equipment_variant = {
+	name = "Cheap Mechanized"
+	type = mechanized_equipment_1
+	parent_version = 0
+	upgrades = {
+		mech_cost_upgrade = 5
+	}
+}
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Ship Variants ###
@@ -788,7 +788,6 @@ if = {
 	recruit_character = SWE_raoul_wallenberg
 	recruit_character = SWE_natanael_beskow
 	recruit_character = SWE_olof_thornell
-	recruit_character = SWE_lise_meitner
 }
 
 if = {

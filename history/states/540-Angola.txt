@@ -6,19 +6,15 @@ state={
 	state_category=rural
 
 	history={
-		owner = POR
+		owner = BLM
 		buildings = {
 			infrastructure = 1
-			8248 = {
-				naval_base = 1
-
-			}
 
 		}
 		victory_points = {
 			8248 1 
 		}
-		add_core_of = ANG
+		add_core_of = BLM
 
 	}
 

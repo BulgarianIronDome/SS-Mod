@@ -11,11 +11,6 @@ air_wings = {
 			amount = 72
 			version_name = "CR.32"
 		}
-		small_plane_airframe_0 = {
-			owner = "HUN" 
-			amount = 14
-			version_name = "Weiss WM-10 Ölyv"
-		}
 
 	}
 	154 = {
@@ -23,7 +18,7 @@ air_wings = {
 		small_plane_cas_airframe_0 = {
 			owner = "HUN" 
 			amount = 12
-			version_name = "Weiss WM-16 Budapest"
+			version_name = "WM-16"
 		}
 		medium_plane_airframe_0 = {
 			owner = "HUN" 

@@ -12,10 +12,10 @@ state={
 		add_core_of = PRC
 		buildings = {
 			infrastructure = 3 #was: 5
-			industrial_complex = 2
-			air_base = 3
+			industrial_complex = 5
+			air_base = 5
 			10068 = {
-				naval_base = 2
+				naval_base = 5
 			}
 		}
 		victory_points = {
@@ -25,9 +25,6 @@ state={
 			10068 1 
 		}
 
-		1938.10.25 = {
-			controller = JAP
-		}
 	}
 
 	provinces={

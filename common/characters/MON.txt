@@ -1,4 +1,5 @@
 characters={
+
 	MON_anandyn_amar={
 		name="Anandyn Amar"
 		portraits={
@@ -41,6 +42,20 @@ characters={
 	}
 	MON_songgotu_kangan={
 		name="Songgotu Kang'an"
+		advisor={
+			cost = 150
+			
+			slot = political_advisor
+			idea_token = MON_kangan
+			ledger = army
+				allowed = {
+					original_tag = MON
+				}
+				
+				traits = {
+					captain_of_industry
+				}
+		}
 		portraits={
 			civilian={
 				large=GFX_portrait_Songgotu_Kangan
@@ -64,6 +79,7 @@ characters={
 			ideology=stalinism
 			expire="1948.1.1.12"
 			id=-1
+			traits={ silent_workhorse patriotic_socialist socialist_justice }
 		}
 	}
 	MON_haidav={
@@ -106,12 +122,17 @@ characters={
 				traits = {
 					military_theorist
 				}
+				available = {
+					has_Completed_focus = MON_spirit_of_genkhis			
+				}
 		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
-		name="Dagva"
+		name="Dagva Skibidriosil"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_asia_5"
+			}
+			army={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_warlord2.dds"
 			}
 		}
 	}
@@ -299,14 +320,13 @@ characters={
 					original_tag = MON
 				}
 				traits = {
-					army_chief_morale_2
+					army_chief_organizational_2
 				}
 				cost = 100
 				ai_will_do = {
 					factor = 1.000
 				}
 		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Horloogiyn Choybalsan"
 		portraits={
 			army={
@@ -321,17 +341,20 @@ characters={
 			slot = army_chief
 			idea_token = MON_olziytrygyn_badrak
 			allowed = {
-					original_tag = MON
-				}
-				traits = {
-					army_chief_defensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = MON
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			available = {
+				has_completed_focus = MON_army 
+			}
 		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+
 		name="Ölziytrygyn Badrak"
 		portraits={
 			army={
@@ -397,7 +420,7 @@ characters={
 					original_tag  = MON
 				}
 				traits  = {
-					compassionate_gentleman 
+					ideological_crusader 
 				}
 		}
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!

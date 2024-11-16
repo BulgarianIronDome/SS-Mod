@@ -1,15 +1,14 @@
 ﻿capital = 277
 
 oob = "MEX_1936"
-
-IF = {
+if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "MEX_1936_naval_mtg"
-	ELSE = {
+	else = {
 		set_naval_oob = "MEX_1936_naval_legacy"
 	}
 }
-IF = {
+if = {
 	limit = { has_dlc = "By Blood Alone" }
 	set_air_oob = "MEX_1936_air_bba"
 	set_technology = {
@@ -19,7 +18,7 @@ IF = {
 		aircraft_construction = 1
 		iw_small_airframe = 1
 	}
-	ELSE = {
+	else = {
 		set_air_oob = "MEX_1936_air_legacy"
 		set_technology = {
 			early_fighter = 1
@@ -40,7 +39,7 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 }
-IF = {
+if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
@@ -48,7 +47,7 @@ IF = {
 		gwtank_chassis = 1
 	}
 }
-IF = {
+if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }
 	}
@@ -56,7 +55,7 @@ IF = {
 		gwtank = 1
 	}
 }
-IF = {
+if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	set_technology = {
 		early_submarine = 1
@@ -65,7 +64,7 @@ IF = {
 		early_heavy_cruiser = 1
 	}
 }
-IF = {
+if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
 		basic_naval_mines = 1
@@ -113,9 +112,6 @@ recruit_character = MEX_plutarco_calles
 recruit_character = MEX_francisco_mugica
 recruit_character = MEX_jesus_degollado_guizar
 recruit_character = MEX_valentin_campa
-recruit_character = MEX_luis_maria_martinez
-recruit_character = MEX_indigenous_council
-recruit_character = MEX_maria_de_iturbide
 
 set_country_flag = monroe_doctrine
 
@@ -123,7 +119,7 @@ set_convoys = 45
 set_stability = 0.2
 set_war_support = 0.1
 
-IF = {
+if = {
 	limit = {
 		has_dlc = "Man the Guns"
 	}
@@ -143,17 +139,17 @@ IF = {
 	set_global_flag = flag_mexico_cedillo_has_revolted
 	
 	oob = "MEX_1939"
-	IF = {
+	if = {
 		limit = { has_dlc = "By Blood Alone" }
 			set_air_oob = "MEX_1936_air_bba" #deliberately using 1936
-		ELSE = {
+		else = {
 			set_air_oob = "MEX_1936_air_legacy"
 		}
 	}
-	IF = {
+	if = {
 		limit = { has_dlc = "Man the Guns" }
 			set_naval_oob = "MEX_1939_naval_mtg"
-		ELSE = {
+		else = {
 			set_naval_oob = "MEX_1939_naval_legacy"
 		}
 	}
@@ -174,6 +170,7 @@ IF = {
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
+		radio_detection = 1
 		mechanical_computing = 1
 		computing_machine = 1
 
@@ -189,11 +186,8 @@ IF = {
 		dispersed_industry2 = 1
 		dispersed_industry3 = 1
 	}
-	complete_special_project = {
-		project = sp:sp_air_radar
-	}
 
-	IF = {
+	if = {
 		limit = {
 			has_dlc = "Man the Guns"
 		}
@@ -255,7 +249,7 @@ IF = {
 			modifier = embargo
 		}
 		
-		ELSE = {
+		else = {
 			#generic focuses
 			complete_national_focus = army_effort
 			complete_national_focus = equipment_effort
@@ -285,7 +279,7 @@ set_popularities = {
 
 ### VARIANTS ###
 # 1936 Start #
-IF = {
+if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	create_equipment_variant = {
 		name = "Durango Class"
@@ -306,7 +300,7 @@ IF = {
 		}
 	}
 }
-IF = {
+if = {
 	limit = { has_dlc = "Man the Guns" }
 	# Destroyers #
 	create_equipment_variant = {
@@ -360,7 +354,3 @@ IF = {
 		}
 	}
 }
-
-
-
-

@@ -68,10 +68,11 @@ characters = {
 				allowed  = {
 					original_tag  = CHL
 				}
-				
+				#CM
 				visible = {
 					has_completed_focus = CHL_denounce_the_anarchy
 				}
+				#END
 
 				available = {
 					has_completed_focus = CHL_denounce_the_anarchy

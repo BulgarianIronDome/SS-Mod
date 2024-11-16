@@ -169,15 +169,18 @@ on_actions = {
 						BUL = {
 							transfer_state = 106 # MACEDONIA
 							transfer_state = 803 # PIROT
+							transfer_state = 970 # DOMBUR
 						}
 					}
 					else = {
 						ITA = {
 							transfer_state = 106 # MACEDONIA
 							transfer_state = 803 # PIROT
+							transfer_state = 970 # DOMBUR
 						}
 						ITA = { add_state_core = 106 }
 						ITA = { add_state_core = 803 }
+						ITA = { add_state_core = 970 }
 					}
 					if = {
 						limit = {

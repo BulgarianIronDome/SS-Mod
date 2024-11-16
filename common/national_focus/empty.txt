@@ -10,15 +10,15 @@ focus_tree = {
 			tag = PER
 		}
 		modifier = {
-			add = 10
+			add = 100
 			tag = BLM
 		}
 		modifier = {
-			add = 10
+			add = 100
 			tag = SWE
 		}
 		modifier = {
-			add = 10
+			add = 100
 			tag = HOL
 		}
 		modifier = {
@@ -65,12 +65,16 @@ focus_tree = {
 			tag = POL
 		}
 		modifier = {
-			add = 10
+			add = 1000
 			tag = BEL
 		}
 		modifier = {
-			add = 10
+			add = 100
 			tag = NOR
+		}
+		modifier = {
+			add = 100
+			tag = AUS
 		}
 	}
 	default = no

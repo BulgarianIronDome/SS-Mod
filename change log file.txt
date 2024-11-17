@@ -332,3 +332,6 @@ Added a special gui to display all game rules and changed game rules
 Fixing the fixes of the fix for the fixes yknow fix
 Fix mod fix bhvm
 Idk bazil has been touched with game rules ofc
+
+
+GDU 1.15:

@@ -159,8 +159,7 @@ NDefines_Graphics.NGraphics.SUPPLY_ICON_UNUSED_CUTOFF = 900.0        -- where we
 NDefines_Graphics.NGraphics.SUPPLY_ICON_NUMBERS_CUTOFF = 900.0       -- where we stop showing numbers on hubs (ignored for selected and problem hubs)
 NDefines_Graphics.NGraphics.RESOURCE_MAP_ICON_TEXT_CUTOFF = 1000  -- At what camera distance the resource name/amount text disappears.
 
-NDefines_Graphics.NGraphics.RAILWAY_CAMERA_CUTOFF = 300.0 -- railways are cut off above this camera height
-NDefines_Graphics.NGraphics.RAILWAY_CAMERA_CUTOFF_SPEED = 4.0 -- railways fade in/out speed
+
 
 
 NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP = "BHVM"

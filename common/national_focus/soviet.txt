@@ -48,129 +48,129 @@ focus_tree = {
  ######  ####    ###    #### ######## #### ##     ## ##    ##    #### ##    ## ########   #######   ######     ##    ##     ##    ##    
 
 
-	focus = {
-		id = SOV_infrastructure_effort_nsb
+ focus = {
+	id = SOV_infrastructure_effort_nsb
 
-		icon = GFX_goal_generic_construction
-		x = 1
-		y = 0
-		cost = 5
+	icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+	x = 1
+	y = 0
+	cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
+	ai_will_do = {
+		factor = 1
+	}
 
-		available = {
+	available = {
 
-		}
+	}
 
-		bypass = {
-			custom_trigger_tooltip =  {
-				tooltip = infrastructure_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = infrastructure
-						size < 2
-					}
+	bypass = {
+		custom_trigger_tooltip =  {
+			tooltip = infrastructure_effort_tt
+			all_owned_state = {
+				free_building_slots = {
+					building = infrastructure
+					size < 2
 				}
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = SOV_infrastructure_effort_3Inf }
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = { #TODO_Manu: This is just copy-pasted from the old focus -> Is this what we want?
-			if = {
-				limit = {
-					all_owned_state = {
-						infrastructure > 2
-					}
-				}
-				651 = {
-					limit = {
-						free_building_slots = {
-							building = infrastructure
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes						
-					}
-					set_state_flag = SOV_infrastructure_effort_3Inf
-				}
-				218 = {
-					limit = {
-						free_building_slots = {
-							building = infrastructure
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-					set_state_flag = SOV_infrastructure_effort_3Inf
-				}				
-			}
-			653 = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
-			}
-			582 = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
-			}
-			251 = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
-			}
-			652 = {
-				limit = {
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = SOV_infrastructure_effort_3Inf	
 			}
 		}
 	}
+	
+	search_filters = {FOCUS_FILTER_INDUSTRY}
+
+	complete_tooltip = {
+		every_state = {
+			limit = { has_state_flag = SOV_infrastructure_effort_3Inf }
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+	completion_reward = { #TODO_Manu: This is just copy-pasted from the old focus -> Is this what we want?
+		if = {
+			limit = {
+				all_owned_state = {
+					infrastructure > 2
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes						
+				}
+				set_state_flag = SOV_infrastructure_effort_3Inf
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SOV_infrastructure_effort_3Inf
+			}				
+		}
+		random_owned_controlled_state = {
+			limit = {
+				infrastructure < 3
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = SOV_infrastructure_effort_3Inf	
+		}
+		random_owned_controlled_state = {
+			limit = {
+				infrastructure < 3
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = SOV_infrastructure_effort_3Inf	
+		}
+		random_owned_controlled_state = {
+			limit = {
+				infrastructure < 3
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = SOV_infrastructure_effort_3Inf	
+		}
+		random_owned_controlled_state = {
+			limit = {
+				infrastructure < 3
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = SOV_infrastructure_effort_3Inf	
+		}
+	}
+}
 
 	focus = {
 		id = SOV_heavy_industry
@@ -314,7 +314,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = SOV_finish_the_five_year_plan
 
@@ -8351,7 +8350,7 @@ focus = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_collectivist_propaganda }
 
@@ -8403,7 +8402,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_revive_the_stakhanovite_movement
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -8490,7 +8489,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_positive_heroism }
 
@@ -8539,7 +8538,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_socialist_emulation
-		cost = 5
+		cost = 10
 
 		available = {
 

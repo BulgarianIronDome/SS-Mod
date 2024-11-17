@@ -18,6 +18,13 @@ equipments = {
 					has_idea = BUL_army_restrictions
 				}
 			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
 		}
 
 		is_archetype = yes
@@ -209,7 +216,29 @@ equipments = {
 		}
 	}
 
-	small_plane_airframe_0 = { #Inter-War
+	small_plane_airframe_0 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Inter-War
 		abbreviation = "afs0"
 		derived_variant_name = fighter_equipment_0
 		year = 1933
@@ -227,7 +256,29 @@ equipments = {
 		naval_strike_targetting = 1
 	}
 
-	small_plane_airframe_1 = { #Basic
+	small_plane_airframe_1 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Basic
 		abbreviation = "afs1"
 		derived_variant_name = fighter_equipment_1
 		year = 1936
@@ -304,7 +355,29 @@ equipments = {
 			}
 		}
 	}
-	small_plane_airframe_2 = { #Improved
+	small_plane_airframe_2 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Improved
 		abbreviation = "afs2"
 		derived_variant_name = fighter_equipment_2
 		year = 1939
@@ -408,7 +481,29 @@ equipments = {
 		}
 	}
 
-	small_plane_airframe_3 = { #Advanced
+	small_plane_airframe_3 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Advanced
 		abbreviation = "afs3"
 		derived_variant_name = fighter_equipment_3
 		year = 1942
@@ -531,7 +626,29 @@ equipments = {
 		}
 	}
 
-	small_plane_airframe_4 = { #modern
+	small_plane_airframe_4 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#modern
 		abbreviation = "afs4"
 		derived_variant_name = jet_fighter_equipment_1 # We should use "jet" for this or any of the ones below, but this is good enough for now.
 		year = 1945
@@ -657,7 +774,28 @@ equipments = {
 		}
 	}
 
-	small_plane_airframe_5 = { #supersonic
+	small_plane_airframe_5 = { can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = SOV_nuhuh_air
+					}
+				}
+			}
+		}#supersonic
 		abbreviation = "afs5"
 		derived_variant_name = jet_fighter_equipment_1 # We should use "jet" for this or any of the ones below, but this is good enough for now.
 		year = 1950
@@ -818,6 +956,13 @@ equipments = {
 					has_idea = BUL_army_restrictions
 				}
 			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
 		}
 
 		is_archetype = yes
@@ -1010,7 +1155,29 @@ equipments = {
 		}
 	}
 
-	cv_small_plane_airframe_0 = { #Inter-War
+	cv_small_plane_airframe_0 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Inter-War
 		abbreviation = "afc0"
 		derived_variant_name = cv_fighter_equipment_0
 		year = 1933
@@ -1030,7 +1197,29 @@ equipments = {
 		lend_lease_cost = 8
 	}
 
-	cv_small_plane_airframe_1 = { #Basic
+	cv_small_plane_airframe_1 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Basic
 		abbreviation = "afc1"
 		derived_variant_name = cv_fighter_equipment_1
 		year = 1936
@@ -1106,7 +1295,29 @@ equipments = {
 			}
 		}
 	}
-	cv_small_plane_airframe_2 = { #Improved
+	cv_small_plane_airframe_2 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Improved
 		abbreviation = "afc2"
 		derived_variant_name = cv_fighter_equipment_2
 		year = 1939
@@ -1209,7 +1420,29 @@ equipments = {
 		}
 	}
 
-	cv_small_plane_airframe_3 = { #Advanced
+	cv_small_plane_airframe_3 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Advanced
 		abbreviation = "afc3"
 		derived_variant_name = cv_fighter_equipment_3
 		year = 1942
@@ -1319,7 +1552,29 @@ equipments = {
 		}
 	}
 
-	cv_small_plane_airframe_4 = { #modern
+	cv_small_plane_airframe_4 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#modern
 		abbreviation = "afc4"
 		year = 1945
 
@@ -1448,6 +1703,13 @@ equipments = {
 					has_idea = BUL_army_restrictions
 				}
 			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
 		}
 
 		is_archetype = yes
@@ -1685,7 +1947,29 @@ equipments = {
 		}
 	}
 
-	medium_plane_airframe_0 = { #Inter-War
+	medium_plane_airframe_0 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Inter-War
 		abbreviation = "afm0"
 		derived_variant_name = tac_bomber_equipment_0
 		year = 1933
@@ -1705,7 +1989,29 @@ equipments = {
 		lend_lease_cost = 10
 	}
 
-	medium_plane_airframe_1 = { #Basic
+	medium_plane_airframe_1 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Basic
 		abbreviation = "afm1"
 		derived_variant_name = tac_bomber_equipment_1
 		year = 1936
@@ -1836,7 +2142,29 @@ equipments = {
 		}
 	}
 
-	medium_plane_airframe_2 = { #Improved
+	medium_plane_airframe_2 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Improved
 		abbreviation = "afm2"
 		derived_variant_name = tac_bomber_equipment_2
 		year = 1939
@@ -1984,7 +2312,29 @@ equipments = {
 		}
 	}
 
-	medium_plane_airframe_3 = { #Advanced
+	medium_plane_airframe_3 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Advanced
 		abbreviation = "afm3"
 		derived_variant_name = tac_bomber_equipment_3
 		year = 1942
@@ -2144,7 +2494,29 @@ equipments = {
 		}
 	}
 
-	medium_plane_airframe_4 = { #Modern
+	medium_plane_airframe_4 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Modern
 		abbreviation = "afm4"
 		derived_variant_name = jet_tac_bomber_equipment_1
 		year = 1945
@@ -2321,6 +2693,13 @@ equipments = {
 					has_idea = BUL_army_restrictions
 				}
 			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
 		}
 
 		is_archetype = yes
@@ -2556,7 +2935,29 @@ equipments = {
 		}
 	}
 
-	large_plane_airframe_0 = { #Inter-War
+	large_plane_airframe_0 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Inter-War
 		abbreviation = "afl0"
 		year = 1933
 
@@ -2573,7 +2974,29 @@ equipments = {
 		naval_strike_targetting = 1
 	}
 
-	large_plane_airframe_1 = { #Basic
+	large_plane_airframe_1 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Basic
 		abbreviation = "afl1"
 		derived_variant_name = strat_bomber_equipment_1
 		year = 1936
@@ -2713,7 +3136,29 @@ equipments = {
 		}
 	}
 
-	large_plane_airframe_2 = { #Improved
+	large_plane_airframe_2 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Improved
 		abbreviation = "afl2"
 		derived_variant_name = strat_bomber_equipment_2
 		year = 1939
@@ -2879,7 +3324,29 @@ equipments = {
 		}
 	}
 
-	large_plane_airframe_3 = { #Advanced
+	large_plane_airframe_3 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Advanced
 		abbreviation = "afl3"
 		derived_variant_name = strat_bomber_equipment_3
 		year = 1942
@@ -3045,7 +3512,29 @@ equipments = {
 		}
 	}
 
-	large_plane_airframe_4 = { #Modern
+	large_plane_airframe_4 = { 
+		can_be_produced = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_idea = BUL_army_restrictions_aat
+				}
+			}
+			else = {
+				NOT = {
+					has_idea = BUL_army_restrictions
+				}
+			}
+			if = {
+                limit = {
+                    NOT = {
+                        has_idea = SOV_nuhuh_air
+                    }
+                }
+            }
+		}#Modern
 		abbreviation = "afl4"
 		derived_variant_name = jet_strat_bomber_equipment_1
 		year = 1945

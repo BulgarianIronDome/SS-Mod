@@ -67,7 +67,7 @@ focus_tree = {
 	focus = {
 		id = RAJ_provincial_elections
 		icon = GFX_goal_generic_forceful_treaty
-		x = 0
+		x = 6
 		y = 0
 
 		cost = 10
@@ -113,6 +113,7 @@ focus_tree = {
 		id = RAJ_indian_national_congress
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = RAJ_provincial_elections }
+		mutually_exclusive = { focus = RAJ_swaraj }
 		x = 0
 		y = 1
 		relative_position_id = RAJ_provincial_elections
@@ -149,13 +150,13 @@ focus_tree = {
 		}
 	}
 
-focus = {
+	focus = {
 		id = RAJ_quit_india_movement
 		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = RAJ_cripps_mission }
+		prerequisite = {  focus = RAJ_cripps_mission }
 		x = -2
-		y = 2
-		relative_position_id = RAJ_indian_national_congress
+		y = 1
+		relative_position_id = RAJ_cripps_mission 
 
 		cost = 10
 
@@ -187,6 +188,20 @@ focus = {
 			}
 		}
 	}
+
+	############################
+	###### COMMIE/FASCIST ######
+	############################
+
+
+	############################
+	######### SHARED ###########
+	############################
+
+
+	############################
+	######### GERMANY ##########
+	############################
 
 	############################
 	### SOMEWHAT DEMOCRATIC ####
@@ -497,6 +512,7 @@ focus = {
 						type = ship_hull_cruiser_2
 						name_group = RAJ_CL_HISTORICAL
 						parent_version = 0
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						modules = {
 							fixed_ship_battery_slot = ship_light_medium_battery_2
 							fixed_ship_anti_air_slot = ship_anti_air_1
@@ -676,7 +692,18 @@ focus = {
 		}
 
 		available = {
-
+			IF = {
+				limit = {
+					ETH = { has_character = RAJ_orde_wingate }
+				}
+				OR = {
+					ETH = { controls_state = 271 }
+					any_owned_state = {
+						NOT = { is_controlled_by = ROOT }
+					}
+					date > 1942.1.1
+				}			
+			}
 		}
 
 		bypass = {
@@ -691,14 +718,27 @@ focus = {
 		completion_reward = {
 		custom_effect_tooltip = RAJ_orde_wingate_tt
 		hidden_effect = {
-			add_corps_commander_role = {
-				character = RAJ_orde_wingate
-				traits = { jungle_rat commando }
-				skill = 4
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 5
+			IF = {
+				limit = {
+					ETH = { has_character = RAJ_orde_wingate }
+				}
+				ETH = {
+					country_event = {
+						id = BBA_ethiopia_exile_events.05
+						hours = 1
+					}
+				}
+			}
+			ELSE = {
+				add_corps_commander_role = {
+					character = RAJ_orde_wingate
+					traits = { jungle_rat commando }
+					skill = 4
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 5
+					}
 				}
 			}
 			add_tech_bonus = {
@@ -754,7 +794,7 @@ focus = {
 	focus = {
 		id = RAJ_lessons_of_the_great_war
 		icon = GFX_goal_generic_small_arms
-		x = 14
+		x = 20
 		y = 0
 
 		cost = 10
@@ -1273,6 +1313,10 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
 			add_tech_bonus = {
 				name = RAJ_indian_armor
 				bonus = 1.0
@@ -1599,6 +1643,10 @@ focus = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			air_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
 			add_doctrine_cost_reduction = {
 				name = RAJ_royal_indian_air_force
 				cost_reduction = 0.5
@@ -1644,12 +1692,31 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = RAJ_the_smiling_buddha
-				bonus = 3.0
-				uses = 1
-				category = nuclear
+			
+			if = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = RAJ_the_smiling_buddha
+					bonus = 3.0
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
 			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 1
+				}
+			}
+
 		}
 	}
 
@@ -1662,7 +1729,7 @@ focus = {
 	focus = {
 		id = RAJ_great_indian_peninsula_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 28
+		x = 31
 		y = 0
 
 		cost = 10
@@ -1909,14 +1976,35 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+
+			if = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = RAJ_institute_of_fundamental_research
+					bonus = 1.0
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.25
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.75
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = RAJ_homi_j_bhabha
-			add_tech_bonus = {
-				name = RAJ_institute_of_fundamental_research
-				bonus = 1.0
-				uses = 1
-				category = nuclear
-			}
 		}
 	}
 
@@ -2369,7 +2457,7 @@ focus = {
 		id = RAJ_east_india_railways
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = RAJ_great_indian_peninsula_railway }
-		x = 4
+		x = 5
 		y = 1
 		relative_position_id = RAJ_great_indian_peninsula_railway
 
@@ -2429,7 +2517,7 @@ focus = {
 		id = RAJ_integrate_princely_railways
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = RAJ_east_india_railways }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = RAJ_east_india_railways
 
@@ -2485,7 +2573,7 @@ focus = {
 		id = RAJ_ishapore_arsenal
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = RAJ_east_india_railways }
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = RAJ_east_india_railways
 
@@ -2580,7 +2668,7 @@ focus = {
 			remove_ideas = RAJ_risk_of_famine
 		}
 	}
-
+	
 	focus = {
 		id = RAJ_administrative_oversight
 		icon = GFX_goal_generic_forceful_treaty
@@ -2693,7 +2781,6 @@ focus = {
 			custom_effect_tooltip = RAJ_integration_tooltip_post
 		}
 	}
-
 
 	focus = {
 		id = RAJ_strengthen_ties_with_british_investors

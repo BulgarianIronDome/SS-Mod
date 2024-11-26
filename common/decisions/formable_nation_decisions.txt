@@ -254,9 +254,11 @@ form_nordic_league_category = {
 					all_state = {
 						OR = {
 							controls_or_subject_of = yes
-							controller = {
-								original_tag = FIN
-								is_in_faction_with = ROOT
+							state = {
+								controller = {
+									original_tag = FIN
+									is_in_faction_with = ROOT
+								}
 							}
 							NOT = {
 								AND = {

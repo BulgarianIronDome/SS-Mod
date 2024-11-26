@@ -3018,12 +3018,12 @@ GER_make_some_radar_2 = {
 	}
 
 	abort = {
-		has_tech = decimetric_radar
+		has_tech = phased_array
 	}
 
 	ai_strategy = {
 		type = research_weight_factor
-		id = decimetric_radar
+		id = phased_array
 		value = 2000
 	}
 }
@@ -3033,11 +3033,7 @@ GER_make_some_radar_3 = {
 		original_tag = GER
 	}
 	enable = {
-		has_tech = decimetric_radar
-	}
-
-	abort = {
-		has_tech = improved_decimetric_radar
+		has_tech = phased_array
 	}
 
 	ai_strategy = {

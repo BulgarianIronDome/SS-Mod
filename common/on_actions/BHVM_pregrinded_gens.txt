@@ -292,32 +292,32 @@ on_actions = {
 				SOV = {
 					add_corps_commander_role = {
 						character = SOV_konstantin_rokossovsky
-						traits = { commando cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer}
-						skill = 7
-						attack_skill = 5
-						defense_skill = 5
+						traits = { commando cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer hill_fighter}
+						skill = 9
+						attack_skill = 6
+						defense_skill = 6
 						planning_skill = 6
-						logistics_skill = 4
+						logistics_skill = 6
 					}
 
 					add_corps_commander_role = {
 						character = SOV_leonid_govorov
 						traits = { skilled_staffer commando cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer}
-						skill = 7
-						attack_skill = 5
-						defense_skill = 5
-						planning_skill = 5
-						logistics_skill = 7
-					}
-
-					add_corps_commander_role = {
-						character = SOV_georgy_zhukov
-						traits = { skilled_staffer cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer media_personality war_hero}
-						skill = 7
+						skill = 8
 						attack_skill = 6
-						defense_skill = 4
+						defense_skill = 5
 						planning_skill = 6
-						logistics_skill = 5
+						logistics_skill = 4
+					}
+					
+					add_corps_commander_role = {
+						character = SOV_vasily_kuznetsov
+						traits = { infantry_officer commando infantry_leader cavalry_leader }
+						skill = 8
+						attack_skill = 4
+						defense_skill = 7
+						planning_skill = 3
+						logistics_skill = 6
 					}
 				}
 				SPR = {
@@ -606,32 +606,32 @@ on_actions = {
 				SOV = {
 					add_corps_commander_role = {
 						character = SOV_konstantin_rokossovsky
-						traits = { commando cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer}
-						skill = 7
-						attack_skill = 5
-						defense_skill = 5
+						traits = { commando cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer hill_fighter}
+						skill = 9
+						attack_skill = 6
+						defense_skill = 6
 						planning_skill = 6
-						logistics_skill = 4
+						logistics_skill = 6
 					}
 
 					add_corps_commander_role = {
 						character = SOV_leonid_govorov
 						traits = { skilled_staffer commando cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer}
-						skill = 7
-						attack_skill = 5
-						defense_skill = 5
-						planning_skill = 5
-						logistics_skill = 7
-					}
-
-					add_corps_commander_role = {
-						character = SOV_georgy_zhukov
-						traits = { skilled_staffer cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer media_personality war_hero}
-						skill = 7
+						skill = 8
 						attack_skill = 6
-						defense_skill = 4
+						defense_skill = 5
 						planning_skill = 6
-						logistics_skill = 5
+						logistics_skill = 4
+					}
+					
+					add_corps_commander_role = {
+						character = SOV_vasily_kuznetsov
+						traits = { infantry_officer commando infantry_leader cavalry_leader }
+						skill = 8
+						attack_skill = 4
+						defense_skill = 7
+						planning_skill = 3
+						logistics_skill = 6
 					}
 				}
 				SPR = {
@@ -838,32 +838,32 @@ on_actions = {
 				SOV = {
 					add_corps_commander_role = {
 						character = SOV_konstantin_rokossovsky
-						traits = { cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger organizer}
-						skill = 7
-						attack_skill = 5
-						defense_skill = 7
-						planning_skill = 5
+						traits = { commando cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer hill_fighter}
+						skill = 9
+						attack_skill = 6
+						defense_skill = 6
+						planning_skill = 6
 						logistics_skill = 6
 					}
 
 					add_corps_commander_role = {
 						character = SOV_leonid_govorov
 						traits = { skilled_staffer commando cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer}
-						skill = 6
+						skill = 8
 						attack_skill = 6
 						defense_skill = 5
-						planning_skill = 5
-						logistics_skill = 8
-					}
-
-					add_corps_commander_role = {
-						character = SOV_georgy_zhukov
-						traits = { skilled_staffer cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer media_personality war_hero}
-						skill = 7
-						attack_skill = 7
-						defense_skill = 4
 						planning_skill = 6
-						logistics_skill = 5
+						logistics_skill = 4
+					}
+					
+					add_corps_commander_role = {
+						character = SOV_vasily_kuznetsov
+						traits = { infantry_officer commando infantry_leader cavalry_leader }
+						skill = 8
+						attack_skill = 4
+						defense_skill = 7
+						planning_skill = 3
+						logistics_skill = 6
 					}
 				}
 				if = {

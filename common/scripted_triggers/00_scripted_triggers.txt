@@ -663,10 +663,12 @@ owns_or_subject_of = {
 controls_or_subject_of = {
 	custom_trigger_tooltip = {
 		tooltip = controls_or_subject_of_tt
-		controller = {
-			OR = {
-				tag = ROOT
-				is_subject_of = ROOT
+		state = {
+			controller = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
 			}
 		}
 	}

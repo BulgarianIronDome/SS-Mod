@@ -2,7 +2,7 @@ state = {
 	id = 910
 	name="STATE_910"
 	state_category = small_island
-	manpower = 45819
+	manpower = 1
 
 	history = {
 		owner = DEN

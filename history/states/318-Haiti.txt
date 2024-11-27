@@ -2,7 +2,7 @@ state=
 {
 	id=318
 	name="STATE_318"
-	manpower = 2380000
+	manpower = 1
 	
 	state_category = town
 	
@@ -21,7 +21,6 @@ state=
 				naval_base = 3
 			}
 		}
-		add_core_of = HAI
 		victory_points = {
 			4641 5 
 		}

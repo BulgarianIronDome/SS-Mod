@@ -1148,12 +1148,6 @@ characters = {
 			planning_skill = 4
 			logistics_skill = 4
 			legacy_id = 24
-
-			visible = {
-				OR = {
-					has_global_flag = GER_civil_war_has_started
-				}
-			}
 		}
 	}
 

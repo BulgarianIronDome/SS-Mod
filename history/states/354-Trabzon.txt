@@ -7,7 +7,7 @@ state={
 	state_category = town
 
 	history={
-		owner = TUR
+		owner = NONE
 		
 		victory_points = {
 			9932 15
@@ -21,7 +21,6 @@ state={
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = TUR
 	}
 
 	provinces={

@@ -14,15 +14,13 @@ state = {
 			}
 		}
 		add_core_of = SOV
-		add_core_of = CKK
-		add_core_of = FER
 
 	}
 
 	provinces = {
 		13204 13254
 	}
-	manpower = 30000
+	manpower = 1
 	buildings_max_level_factor = 1
 	state_category = "pastoral"
 

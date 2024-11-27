@@ -1,7 +1,7 @@
 state= {
 	id=315
 	name="STATE_315"
-	manpower = 3607919
+	manpower = 1
 	resources={
 		steel=3 # was: 4
 		chromium=90 # was: 160
@@ -23,7 +23,6 @@ state= {
 				naval_base = 1
 			}
 		}
-		add_core_of = CUB
 		victory_points = {
 			7622 5 
 		}

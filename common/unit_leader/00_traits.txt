@@ -779,7 +779,9 @@ leader_traits = {
 					original_tag = ITA
 					original_tag = SWI
 					original_tag = SWE
+					original_tag = AUS
 					original_tag = BRA
+					original_tag = GER
 				}
 			}
 		}
@@ -795,7 +797,9 @@ leader_traits = {
 					original_tag = ITA
 					original_tag = SWI
 					original_tag = SWE
+					original_tag = AUS
 					original_tag = BRA
+					original_tag = GER
 				}
 				NOT = {
 					OR = {
@@ -988,22 +992,7 @@ leader_traits = {
 		specialist_advisor_trait = army_chief_planning_1
 		expert_advisor_trait = army_chief_planning_2
 		genius_advisor_trait = army_chief_planning_3
-		custom_tooltip = "thorough_planner_tooltip"
-		custom_prerequisite_tooltip = "thorough_planner_tooltip"
-			allowed = {
-				OR = {
-					has_game_rule = {
-						rule = BHVM_thorough_planner
-						option = on
-					}
-					NOT = {
-						has_game_rule = {
-							rule = BHVM_thorough_planner
-							option = off
-						}
-					}
-				}
-			}
+		
 		ai_will_do = {
 			factor = 1
 		}
@@ -1310,22 +1299,7 @@ leader_traits = {
 			acclimatization_cold_climate_gain_factor = 0.1
 			acclimatization_hot_climate_gain_factor = 0.1
 		}
-		custom_tooltip = "adaptable_tooltip"
-		custom_prerequisite_tooltip = "adaptable_tooltip"
-			allowed = {
-				OR = {
-					has_game_rule = {
-						rule = BHVM_adaptable
-						option = on
-					}
-					NOT = {
-						has_game_rule = {
-							rule = BHVM_adaptable
-							option = off
-						}
-					}
-				}
-			}
+		
 		ai_will_do = {
 			factor = 1
 		}
@@ -2163,7 +2137,7 @@ leader_traits = {
 	concealment_expert = { 
 		type = navy
 		modifier = {
-			navy_visibility = -0.2
+			navy_visibility = -0.15
 		}
 				
 		ai_will_do = {
@@ -2229,7 +2203,8 @@ leader_traits = {
 		}
 		
 		trait_type = assignable_trait
-		any_parent = { seawolf spotter fleet_protector superior_tactician }
+		any_parent = { seawolf spotter fleet_protector superior_tactician } 
+		mutually_exclusive = silent_hunter
 		
 		gui_row = 3
 		gui_column = 1
@@ -3398,6 +3373,26 @@ leader_traits = {
 		allowed = {
 			FROM = { original_tag = GRE }
 		}
+
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	trait_HUN_fascist_sympathies = {
+
+		type = all
+		trait_type = personality_trait
+
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	trait_HUN_vitez = {
+
+		type = all
+		trait_type = personality_trait
 
 		new_commander_weight = {
 			factor = 0

@@ -335,3 +335,16 @@ Idk bazil has been touched with game rules ofc
 
 
 GDU 1.15:
+
+Optimized the game quite a bit ig
+Updated the game to be more vanila with 1.15
+Fixed a bug where you turn off equipment in div for flame tank and it gives the terrain buffs but not the stats , now when you turn it off it gives nothing as it should be
+Fixed a lot of states for the new update
+Changed how brazil looks , might revert of change it a bit depending on what people say
+Buffed sov gens , fixed ger gens
+Fixed a few focus tree bugs
+(Shadow did this)He fixed some vanila bugs that were repetetive
+Fixed Mongolia not doing its focuses properly
+And back again to what i did xd ,
+Added game rules for the new funny raids stuff
+Added game rules for the new funny tech stuff from the dlc , check what the game rules say for each one

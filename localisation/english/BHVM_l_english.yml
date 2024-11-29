@@ -3,6 +3,8 @@
  motr_gun_upgrade:0 "Bigger Caliber Guns"
  adaptable_tooltip:0 "This trait is only pickable when the 'BHVM_adaptable' game rule option is set to 'on'."
  thorough_planner_tooltip:0 "This trait is only pickable when the 'BHVM_thorough_planner' game rule option is set to 'on'."
+ wounded_tooltip:0 "This trait can happen only when the 'BHVM_sick_wounded' game rule option is set to 'on'."
+ sick_tooltip:0 "This trait can happen only when the 'BHVM_sick_wounded' game rule option is set to 'on'."
  SOV_no_air_tooltip:0 "Soviets cannot produce air!"
  E_ll:"Air Decision Lend Lease"
  tactic_guerrilla_tactics_plains:"Ape tacitcs (not rollable on plains)"

@@ -992,7 +992,22 @@ leader_traits = {
 		specialist_advisor_trait = army_chief_planning_1
 		expert_advisor_trait = army_chief_planning_2
 		genius_advisor_trait = army_chief_planning_3
-		
+		custom_tooltip = "thorough_planner_tooltip"
+		custom_prerequisite_tooltip = "thorough_planner_tooltip"
+			allowed = {
+				OR = {
+					has_game_rule = {
+						rule = BHVM_thorough_planner
+						option = on
+					}
+					NOT = {
+						has_game_rule = {
+							rule = BHVM_thorough_planner
+							option = off
+						}
+					}
+				}
+			}
 		ai_will_do = {
 			factor = 1
 		}
@@ -1299,7 +1314,22 @@ leader_traits = {
 			acclimatization_cold_climate_gain_factor = 0.1
 			acclimatization_hot_climate_gain_factor = 0.1
 		}
-		
+		custom_tooltip = "adaptable_tooltip"
+		custom_prerequisite_tooltip = "adaptable_tooltip"
+			allowed = {
+				OR = {
+					has_game_rule = {
+						rule = BHVM_adaptable
+						option = on
+					}
+					NOT = {
+						has_game_rule = {
+							rule = BHVM_adaptable
+							option = off
+						}
+					}
+				}
+			}
 		ai_will_do = {
 			factor = 1
 		}
@@ -3060,7 +3090,22 @@ leader_traits = {
 	sick = { 
 		type = all
 		trait_type = status_trait
-		
+		custom_tooltip = "sick_tooltip"
+		custom_prerequisite_tooltip = "sick_tooltip"
+			allowed = {
+				OR = {
+					has_game_rule = {
+						rule = BHVM_sick_wounded
+						option = on
+					}
+					NOT = {
+						has_game_rule = {
+							rule = BHVM_sick_wounded
+							option = off
+						}
+					}
+				}
+			}
 		non_shared_modifier = {
 			skill_bonus_factor = -0.5
 			cannot_use_abilities = 1
@@ -3070,7 +3115,22 @@ leader_traits = {
 	wounded = { 
 		type = all
 		trait_type = status_trait
-		
+		custom_tooltip = "wounded_tooltip"
+		custom_prerequisite_tooltip = "wounded_tooltip"
+			allowed = {
+				OR = {
+					has_game_rule = {
+						rule = BHVM_sick_wounded
+						option = on
+					}
+					NOT = {
+						has_game_rule = {
+							rule = BHVM_sick_wounded
+							option = off
+						}
+					}
+				}
+			}
 		non_shared_modifier = {
 			skill_bonus_factor = -0.5
 			cannot_use_abilities = 1

@@ -1438,56 +1438,75 @@ on_actions = {
 					769 = { set_compliance = 70 }
 				}
 			}
-            on_game_rule_change = { ##adaptable removed 
-                effect = {
-                    if = {
-                        limit = {
-                            has_game_rule = BHVM_adaptable
-                            game_rule = off
-                        }
-                        # y no work
-                        remove_trait = adaptable
-                    }
-                }
-            }
-			on_game_rule_change = { ##thorough_planner removed
-                effect = {
-                    if = {
-                        limit = {
-                            has_game_rule = BHVM_thorough_planner
-                            game_rule = off
-                        }
-                        # y no work
-                        remove_trait = thorough_planner
-                    }
-                }
-            }
-			on_game_rule_change = { ##sick and wounded removed 
-                effect = {
-                    if = {
-                        limit = {
-                            has_game_rule = BHVM_sick_wounded
-                            game_rule = on
-                        }
-                        # y no work
-                        remove_trait = sick
-						remove_trait = wounded
-                    }
-                }
-            }
-			on_daily = { ##sick and wounded removed 
-                effect = {
-                    if = {
-                        limit = {
-                            has_game_rule = BHVM_sick_wounded
-                            game_rule = on
-                        }
-                        # y no work
-                        remove_trait = sick
-						remove_trait = wounded
-                    }
-                }
-            }
         } 
     }
+	on_game_rule_change = { ##adaptable removed 
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = BHVM_adaptable
+					game_rule = off
+				}
+				# y no work
+				every_army_leader = {
+					if = {
+						limit = {
+							OR = {
+								has_trait = adaptable
+							}
+						}
+						remove_trait = adaptable
+					}
+				}
+				remove_trait = adaptable
+			}
+		}
+	}
+	on_game_rule_change = { ##thorough_planner removed
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = BHVM_thorough_planner
+					game_rule = off
+				}
+				# y no work
+				every_army_leader = {
+					if = {
+						limit = {
+							OR = {
+								has_trait = thorough_planner
+							}
+						}
+						remove_trait = thorough_planner
+					}
+				}
+				remove_trait = thorough_planner
+			}
+		}
+	}
+	on_daily = { ##sick and wounded removed 
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = BHVM_sick_wounded
+					game_rule = on
+				}
+				# y no work
+				every_army_leader = {
+					if = {
+						limit = {
+							OR = {
+								has_trait = sick
+								has_trait = wounded
+							}
+						}
+						remove_trait = sick
+						remove_trait = wounded
+					}
+				}
+				remove_trait = sick
+				remove_trait = wounded
+			}
+		}
+	}
 }

@@ -954,9 +954,15 @@ technologies = {
 		research_cost = 4.5
 		
 		allow = {
-			has_game_rule = {
-				rule = acoustic_guerilla_tatctics
-				option = PLAINS
+			OR = {
+				has_game_rule = {
+					rule = acoustic_guerilla_tatctics
+					option = PLAINS
+				}
+				has_game_rule = {
+					rule = acoustic_guerilla_tatctics
+					option = ALLOWED
+				}
 			}
 		}
 
@@ -1001,9 +1007,15 @@ technologies = {
 		research_cost = 4.5
 
 		allow = {
-			has_game_rule = {
-				rule = acoustic_guerilla_tatctics
-				option = BLOCKED
+			OR = {
+				has_game_rule = {
+					rule = acoustic_guerilla_tatctics
+					option = BLOCKED
+				}
+				has_game_rule = {
+					rule = acoustic_guerilla_tatctics
+					option = ALLOWED
+				}
 			}
 		}
 
@@ -3589,10 +3601,11 @@ technologies = {
 		resistance_growth_on_our_occupied_states = 0.25 
 		
 		allow = {
-			has_game_rule = {
-				rule = acoustic_guerilla_tatctics
-				option = ALLOWED
-			}
+				has_game_rule = {
+					rule = acoustic_guerilla_tatctics
+					option = ALLOWED
+				}
+				
 		}
 
 		enable_tactic = tactic_guerrilla_tactics
@@ -3635,9 +3648,15 @@ technologies = {
 		}
 
 		allow = {
-			has_game_rule = {
-				rule = acoustic_guerilla_tatctics
-				option = BLOCKED
+			OR = {
+				has_game_rule = {
+					rule = acoustic_guerilla_tatctics
+					option = BLOCKED
+				}
+				has_game_rule = {
+					rule = acoustic_guerilla_tatctics
+					option = ALLOWED
+				}
 			}
 		}
 
@@ -3695,9 +3714,15 @@ technologies = {
 		research_cost = 4.5
 		
 		allow = {
-			has_game_rule = {
-				rule = acoustic_guerilla_tatctics
-				option = PLAINS
+			OR = {
+				has_game_rule = {
+					rule = acoustic_guerilla_tatctics
+					option = PLAINS
+				}
+				has_game_rule = {
+					rule = acoustic_guerilla_tatctics
+					option = ALLOWED
+				}
 			}
 		}
 

@@ -396,12 +396,12 @@ eng_ape_convoys = {
 	default = {
 		name = on
 		text = "POn"
-		desc = "The Uk is silly (Recommmended)"
+		desc = "The Uk is silly-gives 2.5k convoys(Recommmended)"
 	}
 	option = {
 		name = off
 		text = "WOff"
-		desc = "The Uk has more than 10 hours(Not Recommmended)"
+		desc = "The Uk has more than 10 hours-does not give 2.5k convoys(Not Recommmended)"
 	}
 }     
 #	 ________ ________  ________  ________  _______           ________  _________  _________  ________  ________  ___  __            ___       ________  ________  _________        ________  _________  ________  ________   ________     

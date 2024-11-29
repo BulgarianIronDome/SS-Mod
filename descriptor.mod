@@ -11,5 +11,5 @@ tags={
 name="BHVM-2"
 picture="thumbnail.png"
 supported_version="1.15.*"
-path="mod/BHVM-2"
+path="C:/Users/dev-cop/Documents/Paradox Interactive/Hearts of Iron IV/mod/BHVM-2"
 remote_file_id="3340061093"

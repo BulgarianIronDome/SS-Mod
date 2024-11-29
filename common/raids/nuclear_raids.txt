@@ -45,6 +45,7 @@ types = {
 		# Raid Type is visible
 		visible = {
 			is_special_project_completed = sp:sp_nuclear_bomb
+			has_game_rule = { rule = nuclear_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -56,6 +57,7 @@ types = {
 		# Can prepare
 		available = {
 			#has_war_with = FROM
+			has_game_rule = { rule = nuclear_raids option = on }
 		}
 		launchable = {
 			has_war_with = FROM
@@ -276,6 +278,7 @@ types = {
 		# Raid Type is visible
 		visible = {
 			is_special_project_completed = sp:sp_nuclear_warheads
+			has_game_rule = { rule = nuclear_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -287,6 +290,7 @@ types = {
 		# Can prepare
 		available = {
 			#has_war_with = FROM
+			has_game_rule = { rule = nuclear_raids option = on }
 		}
 		launchable = {
 			has_war_with = FROM
@@ -439,6 +443,7 @@ types = {
 		# Raid Type is visible
 		visible = {
 			is_special_project_completed = sp:sp_thermo_nuclear_bomb
+			has_game_rule = { rule = nuclear_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -450,6 +455,7 @@ types = {
 		# Can prepare
 		available = {
 			#has_war_with = FROM
+			has_game_rule = { rule = nuclear_raids option = on }
 		}
 		launchable = {
 			has_war_with = FROM
@@ -686,6 +692,7 @@ types = {
 		# Raid Type is visible
 		visible = {
 			is_special_project_completed = sp:sp_nuclear_warheads
+			has_game_rule = { rule = nuclear_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -697,6 +704,7 @@ types = {
 		# Can prepare
 		available = {
 			#has_war_with = FROM
+			has_game_rule = { rule = nuclear_raids option = on }
 		}
 		launchable = {
 			has_war_with = FROM

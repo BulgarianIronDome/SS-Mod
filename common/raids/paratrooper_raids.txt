@@ -45,6 +45,7 @@ types = {
 		# Raid Type is visible
 		visible = {
 			has_tech = paratroopers
+			has_game_rule = { rule = para_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -55,7 +56,7 @@ types = {
 
 		# Can prepare
 		available = {
-
+			has_game_rule = { rule = para_raids option = on }
 		}
 
 		launchable = {
@@ -332,6 +333,7 @@ types = {
 		# Raid Type is visible
 		visible = {
 			has_tech = paratroopers
+			has_game_rule = { rule = para_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -341,7 +343,7 @@ types = {
 
 		# Can prepare
 		available = {
-
+			has_game_rule = { rule = para_raids option = on }
 			has_naval_invasion_against_state = {
 				state = var:target_state
 				preparation > 0.1

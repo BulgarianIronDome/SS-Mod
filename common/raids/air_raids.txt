@@ -44,7 +44,7 @@ types = {
 
 		# Raid Type is visible
 		visible = {
-
+			has_game_rule = { rule = air_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -53,7 +53,7 @@ types = {
 
 		# Can prepare
 		available = {
-
+			has_game_rule = { rule = air_raids option = on }
 		}
 		launchable = {
 			has_war_with = FROM
@@ -295,7 +295,7 @@ types = {
 		}
 		# Raid Type is visible
 		visible = {
-
+			has_game_rule = { rule = air_raids option = on }
 		}
 
 		# Specific Target is visible
@@ -307,6 +307,7 @@ types = {
 		available = {
 			is_special_project_completed = sp:sp_air_bouncing_bomb
 			has_war_with = FROM
+			has_game_rule = { rule = air_raids option = on }
 		}
 
 		target_type = {
@@ -541,7 +542,7 @@ types = {
 		}
 		# Raid Type is visible
 		visible = {
-
+			has_game_rule = { rule = air_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -553,7 +554,7 @@ types = {
 		# Can prepare
 		available = {
 			is_special_project_completed = sp:sp_air_bouncing_bomb
-
+			has_game_rule = { rule = air_raids option = on }
 		}
 
 		launchable = {
@@ -857,7 +858,7 @@ types = {
 		}
 		# Raid Type is visible
 		visible = {
-
+			has_game_rule = { rule = air_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -868,7 +869,7 @@ types = {
 
 		# Can prepare
 		available = {
-
+			has_game_rule = { rule = air_raids option = on }
 		}
 
 
@@ -1116,7 +1117,7 @@ types = {
 
 		# Raid Type is visible
 		visible = {
-
+			has_game_rule = { rule = air_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -1126,6 +1127,7 @@ types = {
 		# Can prepare
 		available = {
 			is_special_project_completed = sp:sp_air_earthshaker_bomb
+			has_game_rule = { rule = air_raids option = on }
 		}
 		launchable = {
 			has_war_with = FROM
@@ -1343,6 +1345,7 @@ types = {
 		# Raid Type is visible
 		visible = {
 			is_special_project_completed = sp:sp_air_earthshaker_bomb
+			has_game_rule = { rule = air_raids option = on }
 		}
 		# Specific Target is visible
 		show_target = {
@@ -1351,7 +1354,7 @@ types = {
 
 		# Can prepare
 		available = {
-
+			has_game_rule = { rule = air_raids option = on }
 		}
 		launchable = {
 			has_war_with = FROM

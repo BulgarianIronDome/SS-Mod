@@ -15,12 +15,12 @@ sov_no_tradebacks = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Soviets won't have tradeback on thier own (Reccomended)"
+		desc = "Soviets won't have tradeback on thier own (Recommmended)"
 	}
 	option = {
 		name = on
 		text = "ROn"
-		desc = "Soviets get their own no-tradeback spirit (no factory resource penalty) until war with Germany (Not Reccomended)"
+		desc = "Soviets get their own no-tradeback spirit (no factory resource penalty) until war with Germany (Not Recommmended)"
 	}
 }
 sov_basic_heavy = {
@@ -30,12 +30,12 @@ sov_basic_heavy = {
 	default = {
 		name = on
 		text = "GOn"
-		desc = "Soviets START with basic heavy tech(Reccomended)"
+		desc = "Soviets START with basic heavy tech(Recommmended)"
 	}
 	option = {
 		name = off
 		text = "ROff"
-		desc = "Soviets DON'T start with basic heavy tech(Not Reccomended)"
+		desc = "Soviets DON'T start with basic heavy tech(Not Recommmended)"
 	}
 }
 
@@ -46,12 +46,12 @@ sov_closed_eco = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Soviets start on export focus (Reccomended)"
+		desc = "Soviets start on export focus (Recommmended)"
 	}
 	option = {
 		name = on
 		text = "ROn"
-		desc = "Soviets start the game on closed eco, free trade bonuses and cannot change it , as well 5 civs (Not Reccomended)"
+		desc = "Soviets start the game on closed eco, free trade bonuses and cannot change it , as well 5 civs (Not Recommmended)"
 	}
 }
 
@@ -62,12 +62,12 @@ japan_closed_eco = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Japan starts on limited exports (Reccomended)"
+		desc = "Japan starts on limited exports (Recommmended)"
 	}
 	option = {
 		name = on
 		text = "ROn"
-		desc = "Japan start the game on closed eco, free trade bonuses and cannot change it , as well 5 civs (Not Reccomended)"
+		desc = "Japan start the game on closed eco, free trade bonuses and cannot change it , as well 5 civs (Not Recommmended)"
 	}
 }
 tradebacks = {
@@ -77,22 +77,22 @@ tradebacks = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "No tradeback idea (Reccomended)"
+		desc = "No tradeback idea (Recommmended)"
 	}
 	option = {
 		name = on
 		text = "ROn"
-		desc = "Everyone has a tradeback idea that givens -100% missing resource penalty until September 1939. Germany must declare war then (Not usually Reccomended)"
+		desc = "Everyone has a tradeback idea that givens -100% missing resource penalty until September 1939. Germany must declare war then (Not usually Recommmended)"
 	}
 	option = {
 		name = no_export
 		text = "BNo Exports"
-		desc = "Everyone has a tradeback idea that givens -100% missing resource penalty and no exports until September 1939. Germany must declare war then (Not usually Reccomended)"
+		desc = "Everyone has a tradeback idea that givens -100% missing resource penalty and no exports until September 1939. Germany must declare war then (Not usually Recommmended)"
 	}
 	option = {
 		name = not_allies
 		text = "YNot Allies"
-		desc = "Everyone has no tradeback idea except for Allies. Germany has to attack Sept 1939 (Not usually Reccomended)"
+		desc = "Everyone has no tradeback idea except for Allies. Germany has to attack Sept 1939 (Not usually Recommmended)"
 	}
 }
 
@@ -103,17 +103,17 @@ tradebacks = {
 #	default = {
 #		name = sub2
 #		text = "G1936"
-#		desc = "Submarine 3 and Snorkel 1 banned (Reccomended)"
+#		desc = "Submarine 3 and Snorkel 1 banned (Recommmended)"
 #	}
 #	option = {
 #		name = sub3
 #		text = "R1940"
-#		desc = "Submarine 3 and Snorkel 1 allowed (Not Reccomended)"
+#		desc = "Submarine 3 and Snorkel 1 allowed (Not Recommmended)"
 #	}
 #	option = {
 #		name = sub4
 #		text = "R1944"
-#		desc = "Submarine 4 and Snorkel 2 allowed (Not Reccomended)"
+#		desc = "Submarine 4 and Snorkel 2 allowed (Not Recommmended)"
 #	}
 #}
 
@@ -154,12 +154,12 @@ ger_one_research_slot = {
 #	option = {
 #		name = on
 #		text = "ROn"
-#		desc = "Italy free compliance on greece/yugo and Japan free compliance on China (Not Reccomended)"
+#		desc = "Italy free compliance on greece/yugo and Japan free compliance on China (Not Recommmended)"
 #	}
 #	default = {
 #		name = off
 #		text = "GOff"
-#		desc = "Countries need to do their own collaboration governments (Reccomended)"
+#		desc = "Countries need to do their own collaboration governments (Recommmended)"
 #	}
 #}
 
@@ -210,7 +210,7 @@ no_collabs = {
 	default = {
 		name = on
 		text = "RON"
-		desc = "You don't get to decide to make a collab gov , I do.(Reccomended)"
+		desc = "You don't get to decide to make a collab gov , I do.(Recommmended)"
 	}
 	option = {
 		name = off
@@ -225,22 +225,22 @@ sov_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Soviets won't have civilian factories buff (Reccomended)"
+		desc = "Soviets won't have civilian factories buff (Recommmended)"
 	}
 	option = {
 		name = sov4
 		text = "ROn-4"
-		desc = "Soviets get 4 Civilian factories (Not Reccomended)"
+		desc = "Soviets get 4 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = sov8
 		text = "ROn-8"
-		desc = "Soviets get 8 Civilian factories (Not Reccomended)"
+		desc = "Soviets get 8 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = sov12
 		text = "ROn-12"
-		desc = "Soviets get 12 Civilian factories (Not Reccomended)"
+		desc = "Soviets get 12 Civilian factories (Not Recommmended)"
 	}
 }     
   
@@ -251,22 +251,22 @@ ger_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Germany won't have civilian factories buff (Reccomended)"
+		desc = "Germany won't have civilian factories buff (Recommmended)"
 	}
 	option = {
 		name = ger4
 		text = "ROn-4"
-		desc = "Germany get 4 Civilian factories (Not Reccomended)"
+		desc = "Germany get 4 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = ger8
 		text = "ROn-8"
-		desc = "Germany get 8 Civilian factories (Not Reccomended)"
+		desc = "Germany get 8 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = ger12
 		text = "ROn-12"
-		desc = "Germany get 12 Civilian factories (Not Reccomended)"
+		desc = "Germany get 12 Civilian factories (Not Recommmended)"
 	}
 } 
 jap_boost = {
@@ -276,22 +276,22 @@ jap_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Japan won't have civilian factories buff (Reccomended)"
+		desc = "Japan won't have civilian factories buff (Recommmended)"
 	}
 	option = {
 		name = jap4
 		text = "ROn-4"
-		desc = "Japan get 4 Civilian factories (Not Reccomended)"
+		desc = "Japan get 4 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = jap8
 		text = "ROn-8"
-		desc = "Japan get 8 Civilian factories (Not Reccomended)"
+		desc = "Japan get 8 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = jap12
 		text = "ROn-12"
-		desc = "Japan get 12 Civilian factories (Not Reccomended)"
+		desc = "Japan get 12 Civilian factories (Not Recommmended)"
 	}
 }          
 eng_boost = {
@@ -301,22 +301,22 @@ eng_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Britain won't have civilian factories buff (Reccomended)"
+		desc = "Britain won't have civilian factories buff (Recommmended)"
 	}
 	option = {
 		name = eng4
 		text = "ROn-4"
-		desc = "Britain get 4 Civilian factories (Not Reccomended)"
+		desc = "Britain get 4 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = eng8
 		text = "ROn-8"
-		desc = "Britain get 8 Civilian factories (Not Reccomended)"
+		desc = "Britain get 8 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = eng12
 		text = "ROn-12"
-		desc = "Britain get 12 Civilian factories (Not Reccomended)"
+		desc = "Britain get 12 Civilian factories (Not Recommmended)"
 	}
 }
 ita_boost = {
@@ -326,22 +326,22 @@ ita_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Italiano won't have civilian factories buff (Reccomended)"
+		desc = "Italiano won't have civilian factories buff (Recommmended)"
 	}
 	option = {
 		name = ita4
 		text = "ROn-4"
-		desc = "Italiano get 4 Civilian factories (Not Reccomended)"
+		desc = "Italiano get 4 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = ita8
 		text = "ROn-8"
-		desc = "Italiano get 8 Civilian factories (Not Reccomended)"
+		desc = "Italiano get 8 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = ita12
 		text = "ROn-12"
-		desc = "Italiano get 12 Civilian factories (Not Reccomended)"
+		desc = "Italiano get 12 Civilian factories (Not Recommmended)"
 	}
 }
 fra_boost = {
@@ -351,22 +351,22 @@ fra_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Français won't have civilian factories buff (Reccomended)"
+		desc = "Français won't have civilian factories buff (Recommmended)"
 	}
 	option = {
 		name = fra4
 		text = "ROn-4"
-		desc = "Français get 4 Civilian factories (Not Reccomended)"
+		desc = "Français get 4 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = fra8
 		text = "ROn-8"
-		desc = "Français get 8 Civilian factories (Not Reccomended)"
+		desc = "Français get 8 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = fra12
 		text = "ROn-12"
-		desc = "Français get 12 Civilian factories (Not Reccomended)"
+		desc = "Français get 12 Civilian factories (Not Recommmended)"
 	}
 }
 usa_boost = {
@@ -376,17 +376,17 @@ usa_boost = {
 	default = {
 		name = off
 		text = "GOff"
-		desc = "USA won't have civilian factories buff (Reccomended)"
+		desc = "USA won't have civilian factories buff (Recommmended)"
 	}
 	option = {
 		name = usa4
 		text = "ROn-4"
-		desc = "USA get 4 Civilian factories (Not Reccomended)"
+		desc = "USA get 4 Civilian factories (Not Recommmended)"
 	}
 	option = {
 		name = usa8
 		text = "ROn-8"
-		desc = "USA get 8 Civilian factories (Not Reccomended)"
+		desc = "USA get 8 Civilian factories (Not Recommmended)"
 	}
 }
 eng_ape_convoys = {
@@ -396,12 +396,12 @@ eng_ape_convoys = {
 	default = {
 		name = on
 		text = "POn"
-		desc = "The Uk is silly (Reccomended)"
+		desc = "The Uk is silly (Recommmended)"
 	}
 	option = {
 		name = off
 		text = "WOff"
-		desc = "The Uk has more than 10 hours(Not Reccomended)"
+		desc = "The Uk has more than 10 hours(Not Recommmended)"
 	}
 }     
 #	 ________ ________  ________  ________  _______           ________  _________  _________  ________  ________  ___  __            ___       ________  ________  _________        ________  _________  ________  ________   ________     
@@ -421,12 +421,12 @@ force_attack_last_stand = {
 	default = {
 		name = on
 		text = "POn"
-		desc = "I am noob and i like vanila (Reccomended)"
+		desc = "I am noob and i like vanila (Recommmended)"
 	}
 	option = {
 		name = off
 		text = "BOff"
-		desc = "Enjoy TFB but vanila (Not Reccomended)"
+		desc = "Enjoy TFB but vanila (Not Recommmended)"
 	}
 }
 
@@ -473,12 +473,12 @@ naval_treaties = {
 	option = {
 		name = off
 		text = "GOff"
-		desc = "Naval Treaty disabled (Reccomended)"
+		desc = "Naval Treaty disabled (Recommmended)"
 	}
 	default = {
 		name = on
 		text = "ROn"
-		desc = "Naval Treaty enabled (Not Reccomended)"
+		desc = "Naval Treaty enabled (Not Recommmended)"
 	}
 }
 
@@ -579,12 +579,12 @@ sov_tashek_tungsten = {
 	default = {
 		name = on
 		text = "GOn"
-		desc = "Soviets HAVE tungsten in Tashek(Not Reccomended If Soviet Closed Eco is on)"
+		desc = "Soviets HAVE tungsten in Tashek(Not Recommmended If Soviet Closed Eco is on)"
 	}
 	option = {
 		name = off
 		text = "ROff"
-		desc = "Soviets DON'T HAVE tungsten in Tashek(Reccomended IF Soviet Closed Eco is off)"
+		desc = "Soviets DON'T HAVE tungsten in Tashek(Recommmended IF Soviet Closed Eco is off)"
 	}
 }
 spr_asturias_tungsten = {
@@ -609,12 +609,12 @@ auto_tech_rush = {
 	option = {
 		name = on
 		text = "ROn"
-		desc = "There will be decisions for auto-tech rushing (Reccomended)"
+		desc = "There will be decisions for auto-tech rushing (Recommmended)"
 	}
 	default = {
 		name = off
 		text = "GOff"
-		desc = "There will NOT be decisions for auto-tech rushing (Not Reccomended , If noob)"
+		desc = "There will NOT be decisions for auto-tech rushing (Not Recommmended , If noob)"
 	}
 }
 vanila_bonuses = {
@@ -624,7 +624,7 @@ vanila_bonuses = {
 	option = {
 		name = on-overall
 		text = "1Real100%Balance"
-		desc = "Swedish Swiss and Denmark bonuses will apply to Italy Germany and England , swiss bonuses only to France(Not exactly Reccomended)"
+		desc = "Swedish Swiss and Denmark bonuses will apply to Italy Germany and England , swiss bonuses only to France(Not exactly Recommmended)"
 	}
 	default = {
 		name = on-axis
@@ -634,12 +634,12 @@ vanila_bonuses = {
 	option = {
 		name = on-allies
 		text = "5Allies-Bias"
-		desc = "Swedish and Swiss bonuses will apply to England , swiss bonuses only to France(Not Reccomended)"
+		desc = "Swedish and Swiss bonuses will apply to England , swiss bonuses only to France(Not Recommmended)"
 	}
 	option = {
 		name = off
 		text = "YOff"
-		desc = "Absolutely no bonuses from vanila based countries(Not Reccomended)"
+		desc = "Absolutely no bonuses from vanila based countries(Not Recommmended)"
 	}
 }
 #upgradable_amb_mech = {
@@ -649,12 +649,12 @@ vanila_bonuses = {
 #	default = {
 #		name = on
 #		text = "ROn"
-#		desc = "You CAN upgrade amb mech and mot rocket arty(Reccomended)"
+#		desc = "You CAN upgrade amb mech and mot rocket arty(Recommmended)"
 #	}
 #	option = {
 #		name = off
 #		text = "GOff"
-#		desc = "You ARE UNABLE TO upgrade amb mech and mot rocket arty (Not Reccomended)"
+#		desc = "You ARE UNABLE TO upgrade amb mech and mot rocket arty (Not Recommmended)"
 #	}
 #}
 vichy_france = {
@@ -664,12 +664,12 @@ vichy_france = {
 	option = {
 		name = forced
 		text = "RForce"
-		desc = "Germany has to make Vichy (Not Reccomended)"
+		desc = "Germany has to make Vichy (Not Recommmended)"
 	}
 	default = {
 		name = banned
 		text = "GBanned"
-		desc = "Germany can't make Vichy (Reccomended)"
+		desc = "Germany can't make Vichy (Recommmended)"
 	}
 }
 super_heavy_tanks = {
@@ -679,12 +679,12 @@ super_heavy_tanks = {
 	default = {
 		name = on
 		text = "GOn"
-		desc = "You're ALLOWED to research Super-Heavy tank technology(Reccomended)"
+		desc = "You're ALLOWED to research Super-Heavy tank technology(Recommmended)"
 	}
 	option = {
 		name = off
 		text = "ROff"
-		desc = "You're NOT ALLOWD TO research Super-Heavy tank technology(Not Reccomended)"
+		desc = "You're NOT ALLOWD TO research Super-Heavy tank technology(Not Recommmended)"
 	}
 }
 mental_hospitals = {
@@ -694,12 +694,12 @@ mental_hospitals = {
 	default = {
 		name = on
 		text = "GOn"
-		desc = "You're ALLOWED to research Mental Hospital technology(Reccomended)"
+		desc = "You're ALLOWED to research Mental Hospital technology(Recommmended)"
 	}
 	option = {
 		name = off
 		text = "ROff"
-		desc = "You're NOT ALLOWD TO research Mental Hospital technology(Not Reccomended)"
+		desc = "You're NOT ALLOWD TO research Mental Hospital technology(Not Recommmended)"
 	}
 }
 finish_support_comp = {
@@ -709,12 +709,12 @@ finish_support_comp = {
 	default = {
 		name = on
 		text = "GOn"
-		desc = "Finland has its companies(Reccomended)"
+		desc = "Finland has its companies(Recommmended)"
 	}
 	option = {
 		name = off
 		text = "ROff"
-		desc = "Finland DOES NOT have its companies avaible(Not Reccomended)"
+		desc = "Finland DOES NOT have its companies avaible(Not Recommmended)"
 	}
 }
 spanish_franco_cp = {
@@ -778,12 +778,12 @@ no_market = {
 	default = {
 		name = on
 		text = "GOn"
-		desc = "You won't be able to acces the market(Reccomended)"
+		desc = "You won't be able to acces the market(Recommmended)"
 	}
 	option = {
 		name = off
 		text = "ROff"
-		desc = "You are bale to acces the market(Not Reccomended)"
+		desc = "You are bale to acces the market(Not Recommmended)"
 	}
 }
 anti_troll = {
@@ -793,12 +793,12 @@ anti_troll = {
 	default = {
 		name = on
 		text = "GOn"
-		desc = "IF on accident you delete your starting production line , it will give back efficiency(Reccomended)"
+		desc = "IF on accident you delete your starting production line , it will give back efficiency(Recommmended)"
 	}
 	option = {
 		name = off
 		text = "ROff"
-		desc = "You won't get efficiency when you fuck up your production line(Not Reccomended)"
+		desc = "You won't get efficiency when you fuck up your production line(Not Recommmended)"
 	}
 }
 pregrinds_4_factions = {
@@ -808,7 +808,7 @@ pregrinds_4_factions = {
 	default = {
 		name = on
 		text = "GOn"
-		desc = "Allies Axis have pregrinds(Reccomended)"
+		desc = "Allies Axis have pregrinds(Recommmended)"
 	}
 	option = {
 		name = axis
@@ -833,7 +833,7 @@ mios_for_minors = {
     default = {
         name = on
         text = "GOn"
-        desc = "Allied and Axis tank minors have MIOs from the main major nation(Reccomended)"
+        desc = "Allied and Axis tank minors have MIOs from the main major nation(Recommmended)"
     }
     option = {
         name = axis_mio
@@ -859,7 +859,7 @@ sov_purges = {
 	default = {
 		name = yes
 		text = "GOn"
-		desc = "There is a chance that top SOV generals will get purged(Reccomended)"
+		desc = "There is a chance that top SOV generals will get purged(Recommmended)"
 	}
 	option = {
 		name = no
@@ -874,12 +874,12 @@ juggle_slot = {
 	default = {
 		name = ALLOWED
 		text = "GALLOWED"
-		desc = "There is a special juggle slot(Reccomended)"
+		desc = "There is a special juggle slot(Recommmended)"
 	}
 	option = {
 		name = DISALLOWED
 		text = "RDISALLOWED"
-		desc = "There is NO special juggle slot(Not Reccomended)"
+		desc = "There is NO special juggle slot(Not Recommmended)"
 	}
 }
 ger_pupets = {
@@ -897,21 +897,6 @@ ger_pupets = {
 		desc = "You get factories and compliance in the benelux"
 	}
 }
-atom_bombs = {
-	name = "Nukes"
-	group = "BHVM game rules"
-	icon = "GFX_decision_category_generic"
-	default = {
-		name = ALLOWED
-		text = "GALLOWED"
-		desc = "There is researchable nukes(Reccomended)"
-	}
-	option = {
-		name = DISALLOWED
-		text = "RDISALLOWED"
-		desc = "There is NO researchable nukes(Not Reccomended)"
-	}
-}
 rb_vps_system = {
 	name = "Victory Points"
 	group = "BHVM game rules"
@@ -919,12 +904,12 @@ rb_vps_system = {
 	default = {
 		name = on
 		text = "GOn"
-		desc = "There is A VPS(Reccomended)"
+		desc = "There is A VPS(Recommmended)"
 	}
 	option = {
 		name = off
 		text = "ROff"
-		desc = "There is NO VPS(Not Reccomended)"
+		desc = "There is NO VPS(Not Recommmended)"
 	}
 }
 no_asia_gamemode = {
@@ -934,17 +919,17 @@ no_asia_gamemode = {
 	option = {
 		name = on
 		text = "ROn"
-		desc = "No asia, TURN OFF VPS!!(NOT Reccomended)"
+		desc = "No asia, TURN OFF VPS!!(NOT Recommmended)"
 	}
 	option = {
 		name = alt
 		text = "ROn-Alt"
-		desc = "No asia+extra allies, TURN OFF VPS!!(NOT Reccomended)"
+		desc = "No asia+extra allies, TURN OFF VPS!!(NOT Recommmended)"
 	}
 	default = {
 		name = off
 		text = "GOff"
-		desc = "With Asia(Reccomended)"
+		desc = "With Asia(Recommmended)"
 	}
 }
 china_war_difficulty = {
@@ -954,17 +939,137 @@ china_war_difficulty = {
 	option = {
 		name = hard
 		text = "RHard"
-		desc = "China will get in total 160 divs , 45 are of them veterans-Juntuáns tho , all fully equiped also they get air(Not Reccomended)"
+		desc = "China will get in total 160 divs , 45 are of them veterans-Juntuáns tho , all fully equiped also they get air(Not Recommmended)"
 	}
 	option = {
 		name = super_ez
 		text = "BNoob"
-		desc = "BDOESNT WORK CURRENTLYThere is no Sino-China war , it will be scripted via decisions , making Japan's game extra easy(Not Reccomended)"
+		desc = "BDOESNT WORK CURRENTLYThere is no Sino-China war , it will be scripted via decisions , making Japan's game extra easy(Not Recommmended)"
 	}
 	default = {
 		name = easy
 		text = "GEasy"
-		desc = "China will get in total 54 divs , under equiped (Reccomended)"
+		desc = "China will get in total 54 divs , under equiped (Recommmended)"
+	}
+}
+sp_air = {
+	name = "Special Air projects" 
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_air"
+	option = {
+		name = on
+		text = "GOn"
+		desc = "You will be able to research every single special air projects (Not Recommmended)"
+	}
+	default = {
+		name = off
+		text = "ROff"
+		desc = "You will be allowed to research these:Air jets,axial jets,supersonic jets,helicopters(Recommmended)"
+	}
+}
+sp_land = {
+	name = "Special Land projects" 
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_tank"
+	option = {
+		name = on
+		text = "GOn"
+		desc = "You will be able to research every single special land projects (Not Recommmended)"
+	}
+	default = {
+		name = off
+		text = "ROff"
+		desc = "You will be allowed to research these:flametanks,SAV,SHH,SPSHH,SPRG,strongholds, (Recommmended)"
+	}
+}
+sp_nuke = {
+	name = "Special Nuke projects" 
+	group = "BHVM game rules"
+	icon = "GFX_raid_unit_icon_nuclear_raids"
+	default = {
+		name = on
+		text = "GOn"
+		desc = "You will be able to research every single special nuclear projects that isnt affiliated with the atom bombs game rule (Recommmended)"
+	}
+	option = {
+		name = off
+		text = "ROff"
+		desc = "You will be allowed research these:NONE XD (Not Recommmended)"
+	}
+}
+atom_bombs = {
+	name = "Nukes"
+	group = "BHVM game rules"
+	icon = "GFX_raid_unit_icon_nuclear_raids"
+	default = {
+		name = ALLOWED
+		text = "GALLOWED"
+		desc = "There is researchable nukes, thermonukes and warheads(Recommmended)"
+	}
+	option = {
+		name = DISALLOWED
+		text = "RDISALLOWED"
+		desc = "There is NO nukes, thermonukes and warheads(Not Recommmended)"
+	}
+}
+sp_navy = {
+	name = "Special Navy projects" 
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_naval"
+	option = {
+		name = on
+		text = "GOn"
+		desc = "You will be able to research every single special navy projects (Not Recommmended)"
+	}
+	default = {
+		name = off
+		text = "ROff"
+		desc = "You will be ale to research these:cruiser sub,midget sub,naval torpedo cruiser,super heavy battleship,modern ships (Recommmended)"
+	}
+}
+air_raids = {
+	name = "Air raids avaiblity" 
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_intelligence_operation"
+	option = {
+		name = on
+		text = "GOn"
+		desc = "You will be able to conduct special air raids on places (Not Recommmended)"
+	}
+	default = {
+		name = off
+		text = "ROff"
+		desc = "You will NOT BE able to conduct special air raids on places (Recommmended)"
+	}
+}
+nuclear_raids = {
+	name = "Nuclear raids avaiblity" 
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_intelligence_operation"
+	option = {
+		name = on
+		text = "GOn"
+		desc = "You will be able to conduct special nuclear raids on places (Not Recommmended)"
+	}
+	default = {
+		name = off
+		text = "ROff"
+		desc = "You will NOT BE able to conduct special nuclear raids on places (Recommmended)"
+	}
+}
+para_raids = {
+	name = "Paratroopers raids avaiblity" 
+	group = "BHVM game rules"
+	icon = "GFX_decision_generic_intelligence_operation"
+	option = {
+		name = on
+		text = "GOn"
+		desc = "You will be able to conduct special para raids on places (Not Recommmended)"
+	}
+	default = {
+		name = off
+		text = "ROff"
+		desc = "You will NOT BE able to conduct special para raids on places (Recommmended)"
 	}
 }
 air_production_cont_focus = {
@@ -974,12 +1079,12 @@ air_production_cont_focus = {
 	option = {
 		name = on
 		text = "GOn"
-		desc = "Its on and there for air war is a joke(Not Reccomended)"
+		desc = "Its on and there for air war is a joke(Not Recommmended)"
 	}
 	default = {
 		name = off
 		text = "ROff"
-		desc = "Its OFF there for the air war is not a joke(Reccomended)"
+		desc = "Its OFF there for the air war is not a joke(Recommmended)"
 	}
 }
 manpower_cont_focus = {
@@ -989,12 +1094,12 @@ manpower_cont_focus = {
 	option = {
 		name = off
 		text = "GOff"
-		desc = "The cont. focus Manpower recruitment is OFF(Not Reccomended)"
+		desc = "The cont. focus Manpower recruitment is OFF(Not Recommmended)"
 	}
 	default = {
 		name = on
 		text = "ROn"
-		desc = "The cont. focus Manpower recruitment is ON(Reccomended)"
+		desc = "The cont. focus Manpower recruitment is ON(Recommmended)"
 	}
 }
 anti_noob_modefier = {
@@ -1004,12 +1109,12 @@ anti_noob_modefier = {
 	option = {
 		name = off
 		text = "GOff"
-		desc = "France can build in mainland(Not Reccomended)"
+		desc = "France can build in mainland(Not Recommmended)"
 	}
 	default = {
 		name = on
 		text = "ROn"
-		desc = "France CAN'T build in mainland(Reccomended)"
+		desc = "France CAN'T build in mainland(Recommmended)"
 	}
 }
 peace_training_xp= {
@@ -1019,11 +1124,11 @@ peace_training_xp= {
 	option = {
 		name = off
 		text = "GOff"
-		desc = "No xp from peace time trraining!(Not Reccomended)"
+		desc = "No xp from peace time trraining!(Not Recommmended)"
 	}
 	default = {
 		name = on
 		text = "ROn"
-		desc = "You gain daily xp with peace time training(Reccomended)"
+		desc = "You gain daily xp with peace time training(Recommmended)"
 	}
 }

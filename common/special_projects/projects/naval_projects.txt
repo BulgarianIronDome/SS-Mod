@@ -178,7 +178,9 @@ sp_naval_fleet_submarine = {
 	
 
 	project_tags = sp_tag_submarine
-
+	visible = {
+		has_game_rule = { rule = sp_navy option = on }
+	}
 	allowed = {
 		#FREE PROJECT
 	}
@@ -356,7 +358,9 @@ sp_naval_fleet_submarine = {
 # Nuclear Powered Submarine
 sp_naval_nuclear_submarine = {
 	specialization = specialization_naval  
-	
+	visible = {
+		has_game_rule = { rule = sp_nuke option = on }
+	}
 	project_tags = {
 		sp_tag_nuclear_power
 		sp_tag_submarine
@@ -539,7 +543,9 @@ sp_naval_nuclear_submarine = {
 # Rocket Launching Submarine
 sp_naval_rocket_launching_submarine = {
 	specialization = specialization_naval 
-
+	visible = {
+		has_game_rule = { rule = sp_navy option = on }
+	}
 	project_tags = {
 		sp_tag_rocket
 		sp_tag_submarine
@@ -731,7 +737,9 @@ sp_naval_rocket_launching_submarine = {
 # Nuclear Missile Submarine
 sp_naval_nuclear_missile_submarine = {
 	specialization = specialization_naval 
-	
+	visible = {
+		has_game_rule = { rule = sp_navy option = on }
+	}
 	project_tags = {
 		sp_tag_nuclear_warfare
 		sp_tag_submarine
@@ -904,7 +912,9 @@ sp_naval_nuclear_missile_submarine = {
 #Nuclear Torpedo
 sp_naval_nuclear_torpedo = {
 	specialization = specialization_naval
-
+	visible = {
+		has_game_rule = { rule = sp_navy option = on }
+	}
 
 	project_tags = {
 		sp_tag_submarine
@@ -1295,7 +1305,9 @@ sp_naval_midget_submarine = {
 #Air-Independent Propulsion
 sp_naval_aip_engine = {
 	specialization = specialization_naval
-
+	visible = {
+		has_game_rule = { rule = sp_navy option = on }
+	}
 	resource_cost = {
 		resources = { 
 			steel = 8
@@ -1467,7 +1479,9 @@ sp_naval_aip_engine = {
 #ANECHOIC TILES
 sp_naval_anechoic_tiles = {
 	specialization = specialization_naval
-
+	visible = {
+		has_game_rule = { rule = sp_navy option = on }
+	}
 
 	project_tags = sp_tag_submarine
 
@@ -2620,7 +2634,7 @@ sp_naval_modern_carrier = {
 		sp_naval_generic_reward_armor_tech_3					
 	}
 
-unique_prototype_rewards = {
+	unique_prototype_rewards = {
 		sp_naval_modern_carrier_unique_reward_a = {
 			fire_only_once = yes
 
@@ -2856,7 +2870,9 @@ unique_prototype_rewards = {
 #ICE CARRIER
 sp_naval_ice_carrier = {
 	specialization = specialization_naval
-
+	visible = {
+		has_game_rule = { rule = sp_navy option = on }
+	}
 
 	project_tags = sp_tag_surface_ship
 
@@ -3065,7 +3081,9 @@ sp_naval_underway_replenishment = {
 	specialization = specialization_naval
 
 	project_tags = sp_tag_surface_ship
-
+	visible = {
+		has_game_rule = { rule = sp_navy option = on }
+	}
 	ai_will_do = {
 		base = 1
 	}

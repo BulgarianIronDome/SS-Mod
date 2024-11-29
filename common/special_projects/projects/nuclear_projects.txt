@@ -4,7 +4,9 @@ sp_nuclear_reactor = {
 	complexity = sp_complexity.large 
 
 	project_tags = sp_tag_nuclear_power
-
+	visible = {
+		has_game_rule = { rule = sp_nuke option = on }
+	}
 	allowed = {
 		
 	}
@@ -265,7 +267,9 @@ sp_commercial_nuclear_reactor = {
 	
 	prototype_time = sp_time.prototype.long	 
 	complexity = sp_complexity.large
-
+	visible = {
+		has_game_rule = { rule = sp_nuke option = on }
+	}
 	special_project_parent = {
 		sp_nuclear_reactor
 	}
@@ -405,7 +409,9 @@ sp_nuclear_engines = {
 	icon = GFX_sp_nuclear_engines
 
 	project_tags = sp_tag_nuclear_power
-	
+	visible = {
+		has_game_rule = { rule = sp_nuke option = on }
+	}
 	prototype_time = sp_time.prototype.long	 
 	complexity = sp_complexity.medium
 
@@ -465,6 +471,9 @@ sp_nuclear_bomb = {
 	
 	prototype_time = sp_time.prototype.long	
 	complexity = sp_complexity.large
+	visible = {
+		has_game_rule = { rule = atom_bombs option = ALLOWED }
+	}
 	resource_cost = {
 		resources = { steel=2 tungsten=8 chromium=2 }
 	}
@@ -681,6 +690,9 @@ sp_thermo_nuclear_bomb = {
 	project_tags = sp_tag_nuclear_warfare
 	
 	prototype_time = sp_time.prototype.long 
+	visible = {
+		has_game_rule = { rule = atom_bombs option = ALLOWED }
+	}
 	complexity = sp_complexity.insane
 
 	resource_cost = {
@@ -783,7 +795,9 @@ sp_nuclear_warheads = {
 	
 	prototype_time = sp_time.prototype.long	 
 	complexity = sp_complexity.large
-
+	visible = {
+		has_game_rule = { rule = atom_bombs option = ALLOWED }
+	}
 	resource_cost = {
 		resources = { aluminium=4 tungsten=4 chromium=2 }
 	}

@@ -1821,7 +1821,7 @@ war_measures = {
         }
    }
 
-    war_bonds = {
+	war_bonds = {
 
     	icon = generic_industry
 
@@ -1960,6 +1960,7 @@ war_measures = {
 						tag = BRA #has a focus
 						tag = AST #has a focus
 						tag = FRA #has a focus
+						tag = GER #has a focus
 						tag = FIN #is too op
 					}
 				} 

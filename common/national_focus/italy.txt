@@ -8180,9 +8180,17 @@ focus_tree = {
 
 		cost = 5
 
+		bypass = {
+			OR = {
+				tag = ITA
+				is_italian_puppet = yes
+			}
+			271 = { is_controlled_by = ROOT }
+		}
+
 
 		available = {
-			always = no
+			#always = no
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}

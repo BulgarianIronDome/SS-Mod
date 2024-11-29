@@ -212,7 +212,9 @@ sp_land_land_cruiser = {
 	specialization = specialization_land
 
 	project_tags = sp_tag_tank
-
+	visible = {
+		has_game_rule = { rule = sp_land option = on }
+	}
 	allowed = {
 		has_dlc = "Gotterdammerung"
 	}
@@ -1278,7 +1280,9 @@ sp_land_multi_charge_large_caliber_gun = {
 	specialization = specialization_land
 
 	project_tags = sp_tag_artillery
-
+	visible = {
+		has_game_rule = { rule = sp_land option = on }
+	}
 	allowed = {
 		has_dlc = "Gotterdammerung"
 	}

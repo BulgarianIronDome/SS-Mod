@@ -1028,27 +1028,6 @@ defined_text = {
     }
 }
 
-defined_text = {
-    name = GetAtomBombsStatus
-    text = {
-        trigger = {
-            has_game_rule = {
-                rule = atom_bombs
-                option = ALLOWED
-            }
-        }
-        localization_key = "check_gamerules_allowed"
-    }
-    text = {
-        trigger = {
-            has_game_rule = {
-                rule = atom_bombs
-                option = DISALLOWED
-            }
-        }
-        localization_key = "check_gamerules_disallowed"
-    }
-}
 
 defined_text = {
     name = GetRbVpsSystemStatus
@@ -1415,6 +1394,182 @@ defined_text = {
         localization_key = "check_gamerules_off"
     }
 }
+defined_text = {
+    name = GetParaRaidsStatus
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = para_raids
+                option = on
+            }
+        }
+        localization_key = "check_gamerules_on"
+    }
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = para_raids
+                option = off
+            }
+        }
+        localization_key = "check_gamerules_off"
+    }
+}
+
+defined_text = {
+    name = GetNuclearRaidsStatus
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = nuclear_raids
+                option = on
+            }
+        }
+        localization_key = "check_gamerules_on"
+    }
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = nuclear_raids
+                option = off
+            }
+        }
+        localization_key = "check_gamerules_off"
+    }
+}
+
+defined_text = {
+    name = GetAirRaidsStatus
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = air_raids
+                option = on
+            }
+        }
+        localization_key = "check_gamerules_on"
+    }
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = air_raids
+                option = off
+            }
+        }
+        localization_key = "check_gamerules_off"
+    }
+}
+
+defined_text = {
+    name = GetSpNavyStatus
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = sp_navy
+                option = on
+            }
+        }
+        localization_key = "check_gamerules_on"
+    }
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = sp_navy
+                option = off
+            }
+        }
+        localization_key = "check_gamerules_off"
+    }
+}
+
+defined_text = {
+    name = GetSpNukeStatus
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = sp_nuke
+                option = on
+            }
+        }
+        localization_key = "check_gamerules_on"
+    }
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = sp_nuke
+                option = off
+            }
+        }
+        localization_key = "check_gamerules_off"
+    }
+}
+
+defined_text = {
+    name = GetAtomBombsStatus
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = atom_bombs
+                option = ALLOWED
+            }
+        }
+        localization_key = "check_gamerules_allowed"
+    }
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = atom_bombs
+                option = DISALLOWED
+            }
+        }
+        localization_key = "check_gamerules_disallowed"
+    }
+}
+
+defined_text = {
+    name = GetSpLandStatus
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = sp_land
+                option = on
+            }
+        }
+        localization_key = "check_gamerules_on"
+    }
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = sp_land
+                option = off
+            }
+        }
+        localization_key = "check_gamerules_off"
+    }
+}
+
+defined_text = {
+    name = GetSpAirStatus
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = sp_air
+                option = on
+            }
+        }
+        localization_key = "check_gamerules_on"
+    }
+    text = {
+        trigger = {
+            has_game_rule = {
+                rule = sp_air
+                option = off
+            }
+        }
+        localization_key = "check_gamerules_off"
+    }
+}
+
 
 
 

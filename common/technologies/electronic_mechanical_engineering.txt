@@ -1639,8 +1639,8 @@ technologies = {
 	atomic_research = {
 		allow = {
 			has_game_rule = {
-				rule = atom_bombs
-				option = ALLOWED
+				rule = sp_nuke
+				option = on
 			}
 		}
 		research_speed_factor = 0.04

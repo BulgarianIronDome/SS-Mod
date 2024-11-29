@@ -237,6 +237,44 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = ENG_expand_the_secret_intelligence_service_focus 
+
+		prerequisite = { focus = limited_rearmament_focus }
+
+		dynamic = yes
+
+		available = {
+		} 
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
+
+		icon = GFX_focus_generic_secret_service_agency
+
+		x = 2
+		y = 1
+		relative_position_id = limited_rearmament_focus
+
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			IF = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = yes
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+
+			add_ideas = ENG_mi6_ns
+
+		}
+	}
+	focus = {
 		id = ENG_motorized_focus
 		prerequisite = {
 			focus = limited_rearmament_focus
@@ -699,6 +737,69 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = ENG_vickers_experimental_facility_focus 
+
+		prerequisite = { focus = uk_industrial_focus }
+
+		dynamic = yes
+
+		available = {
+			126 = {
+				is_fully_controlled_by = ROOT
+			}
+		} 
+
+		icon = GFX_focus_generic_aircraft_production
+
+		x = 1
+		y = 2
+		
+		relative_position_id = uk_industrial_focus
+
+		cost = 5
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = ENG_vickers_experimental_facility_focus_tt
+			hidden_effect = {
+				IF = {
+					limit = { 
+						126 = {
+							is_fully_controlled_by = ROOT
+							air_facility < 1
+							land_facility < 1
+							naval_facility < 1
+							nuclear_facility < 1
+						}
+					}
+
+					126 = {
+						add_building_construction = {
+							type = air_facility
+							level = 1
+							instant_build = yes
+							province = 11333 # South London
+						}
+					}
+				}
+			}
+
 		}
 	}
 	focus = {
@@ -4619,6 +4720,41 @@ focus_tree = {
 				type = take_state_focus
 				target = IRQ
 				generator = { 291 }
+				expire = 0
+			}
+		}
+	}
+	focus = {
+		id = uk_iran_focus
+		available = {
+			PER = {
+				exists = yes
+				OR = { 
+					communism > 0.2
+			 		fascism > 0.2
+			 	} 
+			}
+		} #UK at war with fascist/commie. iran is fascist/commie
+
+		bypass = {
+			PER = { exists = no }
+		}
+
+		will_lead_to_war_with = PER
+		prerequisite = { focus = uk_iraq_focus }
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		relative_position_id = uk_iraq_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = PER
+				generator = { 266 }
 				expire = 0
 			}
 		}

@@ -18,7 +18,9 @@ sp_air_bouncing_bomb = {
 	allowed = {
 		has_dlc = "Gotterdammerung"		
 	}
-
+	visible = {
+		has_game_rule = { rule = air_raids option = on }
+	}
 	available = { 
 		# FROM is country 
 		# THIS/ROOT is project
@@ -195,7 +197,9 @@ sp_air_earthshaker_bomb = {
 		sp_tag_aircraft
 		sp_tag_bomb
 	}
-
+	visible = {
+		has_game_rule = { rule = sp_air option = on }
+	}
 	allowed = {
 		has_dlc = "Gotterdammerung"		
 	}
@@ -393,7 +397,9 @@ sp_air_intercontinental_bomber = {
 	allowed = {
 		has_dlc = "Gotterdammerung"	
 	}
-
+	visible = {
+		has_game_rule = { rule = sp_air option = on }
+	}
 	available = { 
 		FROM = {
 			if = {
@@ -590,7 +596,9 @@ sp_air_mothership_aircraft = {
 	project_tags = sp_tag_aircraft
 
 	complexity = sp_complexity.medium 
-
+	visible = {
+		has_game_rule = { rule = sp_air option = on }
+	}
 	allowed = {
 		has_dlc = "Gotterdammerung"		
 	}
@@ -1568,7 +1576,6 @@ sp_air_supersonic_jet = {
 sp_air_helicopter = {
 	specialization = specialization_air 	
 	icon = GFX_sp_air_helicopter
-
 	project_tags = {
 		sp_tag_aircraft
 		sp_tag_helicopter

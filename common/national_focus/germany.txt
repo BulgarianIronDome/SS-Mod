@@ -10683,6 +10683,10 @@ focus_tree = {
 						receiver = ROOT 
 						state = 918 #Västerbotten 
 					}
+					give_resource_rights = {
+						receiver = ROOT 
+						state = 666 #Northbotten 
+					}
 				}
 
 				add_opinion_modifier = {

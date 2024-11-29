@@ -348,3 +348,5 @@ Fixed Mongolia not doing its focuses properly
 And back again to what i did xd ,
 Added game rules for the new funny raids stuff
 Added game rules for the new funny tech stuff from the dlc , check what the game rules say for each one
+
+Fixed naval invasion and paradrop pop up , fixed some land doctrine stuff , fixed the sick and wounded traits , fixed the japan and sov closed eco stuff

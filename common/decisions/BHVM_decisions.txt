@@ -177,7 +177,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-            date > 1938.01.30
+            date > 1938.1.1
         }
         complete_effect = {
             BLM = {
@@ -385,7 +385,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1940.03.1
+           date > 1939.10.1
         }
         complete_effect = {
             BLM = {

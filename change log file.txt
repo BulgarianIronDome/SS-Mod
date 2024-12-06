@@ -350,3 +350,16 @@ Added game rules for the new funny raids stuff
 Added game rules for the new funny tech stuff from the dlc , check what the game rules say for each one
 
 Fixed naval invasion and paradrop pop up , fixed some land doctrine stuff , fixed the sick and wounded traits , fixed the japan and sov closed eco stuff
+
+Fixed some AI stuff , like guaranteed what they deploy etc
+Made the save game files smaller
+Did some stuff in the country selection tab , only playable countries now
+Did some stuff to the buildings
+Fixed colour schemes for countries
+Added 2 more game rules for GER , about MEFO and eco path
+Fixed a bug where a RK caps it gives it to the enemy and not GER
+Fixed some game rule stuff about traits
+Buffed MLRS
+Brought back topbar BHVM resources
+Brought back upgrades for MLRS
+Shadow:Railroaded some sov focuses;made gun 3 and gun 2 earlier for some reason;changed SHC 45=>50 hard attack

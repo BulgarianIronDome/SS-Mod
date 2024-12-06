@@ -1504,8 +1504,6 @@ on_actions = {
 						remove_trait = wounded
 					}
 				}
-				remove_trait = sick
-				remove_trait = wounded
 			}
 		}
 	}

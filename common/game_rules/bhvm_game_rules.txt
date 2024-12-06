@@ -801,6 +801,41 @@ anti_troll = {
 		desc = "You won't get efficiency when you fuck up your production line(Not Recommmended)"
 	}
 }
+ger_eco = {
+	name = "Germany eco paths allownonce "
+	group = "BHVM game rules"
+	icon = "GFX_decision_category_generic_arms_trade"
+	default = {
+		name = both
+		text = "GOn-All"
+		desc = "Germany can go both left and right side(Recommmended)"
+	}
+	option = {
+		name = left_ban
+		text = "RLeft Ban"
+		desc = "Germany cannot do left side of the eco tree(Not Recommmended)"
+	}
+	option = {
+		name = right_ban
+		text = "YRight Ban"
+		desc = "Germany cannot do right side of the eco tree(Not Recommmended)"
+	}
+}
+ger_mefo = {
+	name = "Germany can cancel MEFO bills"
+	group = "BHVM game rules"
+	icon = "GFX_decision_category_generic_arms_trade"
+	default = {
+		name = yes
+		text = "GYes"
+		desc = "Germany CAN cancel MEFO bills(Recommmended)"
+	}
+	option = {
+		name = no
+		text = "RNope"
+		desc = "Germany CANNOT cancel MEFO bills(Not Recommmended)"
+	}
+}
 pregrinds_4_factions = {
 	name = "Pregrinds: Game rule"
 	group = "BHVM game rules"

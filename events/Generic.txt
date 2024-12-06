@@ -1501,6 +1501,7 @@ country_event = {
 }
 
 # Notification event that leader has gotten sick
+# Notification event that leader has gotten sick
 unit_leader_event = {
 	id = generic.17
 	title = generic.17.t
@@ -1525,15 +1526,24 @@ unit_leader_event = {
 	option = {
 		name = unfortunate
 		effect_tooltip = {
-			FROM = {
-				add_timed_unit_leader_trait = {
-					trait = sick
-					days = 30
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = BHVM_sick_wounded
+						option = off
+					}
+				}
+				FROM = {
+					add_timed_unit_leader_trait = {
+						trait = sick
+						days = 30
+					}
 				}
 			}
 		}
 	}	
 }
+
 
 # Notification event that leader has been wounded
 country_event = {
@@ -1548,15 +1558,24 @@ country_event = {
 	option = {
 		name = unfortunate
 		effect_tooltip = {
-			FROM = {
-				add_timed_unit_leader_trait = {
-					trait = wounded
-					days = 90
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = BHVM_sick_wounded
+						option = off
+					}
+				}
+				FROM = {
+					add_timed_unit_leader_trait = {
+						trait = wounded
+						days = 90
+					}
 				}
 			}
 		}
 	}	
 }
+
 
 # Notification event that FROM has sent industrial support
 country_event = {

@@ -1444,8 +1444,10 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					has_game_rule = BHVM_adaptable
-					game_rule = off
+					has_game_rule = {
+						rule = BHVM_adaptable
+						option = off
+					}
 				}
 				# y no work
 				every_army_leader = {
@@ -1466,8 +1468,10 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					has_game_rule = BHVM_thorough_planner
-					game_rule = off
+					has_game_rule = {
+						rule = BHVM_thorough_planner
+						option = off
+					}
 				}
 				# y no work
 				every_army_leader = {
@@ -1488,8 +1492,35 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					has_game_rule = BHVM_sick_wounded
-					game_rule = on
+					has_game_rule = {
+						rule = BHVM_sick_wounded
+						option = on
+					}
+				}
+				# y no work
+				every_army_leader = {
+					if = {
+						limit = {
+							OR = {
+								has_trait = sick
+								has_trait = wounded
+							}
+						}
+						remove_trait = sick
+						remove_trait = wounded
+					}
+				}
+			}
+		}
+	}
+	on_game_rule_change = { ##sick and wounded removed 
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = BHVM_sick_wounded
+						option = on
+					}
 				}
 				# y no work
 				every_army_leader = {

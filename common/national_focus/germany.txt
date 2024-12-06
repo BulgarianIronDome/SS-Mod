@@ -131,7 +131,19 @@ focus_tree = {
 		#relative_position_id = GER_strengthen_the_kriegsmarine
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
-
+		available = {
+			OR = {
+				has_game_rule = {
+					rule = ger_eco
+					option = both
+				}
+				has_game_rule = {
+					rule = ger_eco
+					option = right_ban
+				}
+			}
+			
+		}
 		completion_reward = {
 
 			add_stability = -0.1
@@ -1583,7 +1595,17 @@ focus_tree = {
 		relative_position_id = GER_prioritize_economic_growth
 		cost = 5
 		available = {
-
+			OR = {
+				has_game_rule = {
+					rule = ger_eco
+					option = both
+				}
+				has_game_rule = {
+					rule = ger_eco
+					option = left_ban
+				}
+			}
+			
 		}
 		
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }

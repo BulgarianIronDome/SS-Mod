@@ -49,5 +49,4 @@ thx_beethoven = {
 		id = air_transport
 		value = -1000
 	}	
-
 }

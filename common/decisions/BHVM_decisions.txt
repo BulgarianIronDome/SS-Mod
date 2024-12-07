@@ -63,6 +63,7 @@ MOD_countdown_to_victory_cat = {
 	}
 }
 auto_tech_rush = {
+	####IMPORTANT!!! EVERY DECISIONS FOR AUTO TECH RUSH THAT IS GIVEN TO THE BLM NATION IN ORDER TO WORK ARE GIVEN VIA AN EVENT ON A CERTAIN DATE!! EDIT THOSE IF YOU WANT TO EDIT THE AUTO TECH RUSH AS WELLL!!!####
 	auto_aa1 = {
         # icon = generic_operation
         allowed = {}
@@ -177,7 +178,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-            date > 1938.1.1
+            date > 1938.01.30
         }
         complete_effect = {
             BLM = {
@@ -385,7 +386,7 @@ auto_tech_rush = {
         }
         visible = {}
         available = {
-           date > 1939.10.1
+           date > 1940.03.1
         }
         complete_effect = {
             BLM = {

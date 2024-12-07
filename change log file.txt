@@ -363,3 +363,6 @@ Buffed MLRS
 Brought back topbar BHVM resources
 Brought back upgrades for MLRS
 Shadow:Railroaded some sov focuses;made gun 3 and gun 2 earlier for some reason;changed SHC 45=>50 hard attack
+
+Changed a lot of the pregrinds , mainly nerfs to: GER , HUN , BUL , CAN , SAF , AST , JAP ; Buffs to: SOV , ENG , MAN
+Returned the old dates for gun 3 and gun 2 cuz shadow is silly and has no idea how balance works :)

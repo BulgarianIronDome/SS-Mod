@@ -1,3 +1,14 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+
 focus_tree = {
 	id = MON_focuses
 
@@ -18,9 +29,11 @@ focus_tree = {
 	focus = {
 		id = MON_indusrial
 		icon = GFX_focus_spa_the_spanish_miracle
+		
 		prerequisite = { 
 
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		available_if_capitulated = yes
 		cost = 5
 		x = 5
@@ -74,6 +87,7 @@ focus_tree = {
 		prerequisite = { focus = MON_indusrial }
 		available_if_capitulated = yes
 		cost = 5
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		x = -1
 		y = 1
 		available = {
@@ -147,6 +161,7 @@ focus_tree = {
 		relative_position_id = MON_upgrade_eco
 		prerequisite = { focus = MON_indusrial }
 		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cost = 5
 		x = 1
 		y = 1
@@ -196,6 +211,7 @@ focus_tree = {
 		prerequisite = { focus = MON_railway }
 		prerequisite = { focus = MON_diversefy_roads }
 		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cost = 10
 		x = 0
 		y = 3
@@ -238,9 +254,10 @@ focus_tree = {
 	}
 	focus = {
 		id = MON_economic_bloom
-		icon = GFX_focus_generic_industry_1
+		icon = GFX_focus_generic_economic_recovery
 		relative_position_id = MON_indusrial
 		prerequisite = { focus = MON_self_development }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		available_if_capitulated = yes
 		cost = 7.2
 		x = 0
@@ -249,29 +266,8 @@ focus_tree = {
 			has_completed_focus = MON_mobilize_the_workers
 		}
 		completion_reward = { 
-			random_owned_controlled_state = {
-				limit = {
-					industrial_complex > 0
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_ideas = MON_economic_bloom
 			remove_ideas = MON_economic_disaster_3 
-			# TODO 
-			#swap_ideas = {
-			#	remove_idea = MON_economic_disaster_1
-			#	add_idea = MON_economic_disaster_2
-			#}
 		}
 	}
 	focus = {
@@ -281,20 +277,24 @@ focus_tree = {
 		prerequisite = { focus = MON_economic_bloom }
 		prerequisite = { focus = MON_increase_wartime focus = MON_grande_economy }
 		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_STABILITY}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		cost = 14.3
 		x = 0
 		y = 6
 		available = {
-			has_completed_focus = MON_force_out
+			has_completed_focus = MON_family_planning
 			date > 1940.2.12
 		}
 		completion_reward = { 
 			# bloat!
-			add_timed_idea = { idea = MON_infra_rebuilding days = 120 }
+			add_timed_idea = { idea = MON_infra_rebuilding days = 150 }
 			remove_ideas = MON_mobilize_the_workers_idea
-			add_stability = 0.15
+			add_stability = 0.05
+			add_war_support = 0.05
 			330 = {
-				add_manpower = 165000
+				add_manpower = 100000
 				set_state_category = large_city
 				add_building_construction = {
 					type = industrial_complex
@@ -307,55 +307,166 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			817 = {
-				add_manpower = 65000
-				set_state_category = city
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
+	
+			# South option states
+			if = {
+				limit = { has_country_flag = MON_plunder_south_flag }
+				817 = {
+					add_manpower = 20000
+					if = {
+						limit = { state_category = rural }
+						set_state_category = town
+					}
+					else_if = {
+						limit = { state_category = town }
+						set_state_category = large_town
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+				760 = {
+					add_manpower = 20000
+					if = {
+						limit = { state_category = rural }
+						set_state_category = town
+					}
+					else_if = {
+						limit = { state_category = town }
+						set_state_category = large_town
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
-			818 = {
-				add_manpower = 60000
-				set_state_category = large_town
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
+	
+			# East option states
+			if = {
+				limit = { has_country_flag = MON_plunder_east_flag }
+				819 = {
+					add_manpower = 20000
+					if = {
+						limit = { state_category = rural }
+						set_state_category = town
+					}
+					else_if = {
+						limit = { state_category = town }
+						set_state_category = large_town
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+				563 = {
+					add_manpower = 20000
+					if = {
+						limit = { state_category = rural }
+						set_state_category = town
+					}
+					else_if = {
+						limit = { state_category = town }
+						set_state_category = large_town
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
-			618 = {
-				add_manpower = 85000
-				set_state_category = large_city
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
+	
+			# West option states
+			if = {
+				limit = { has_country_flag = MON_plunder_west_flag }
+				818 = {
+					add_manpower = 20000
+					if = {
+						limit = { state_category = rural }
+						set_state_category = town
+					}
+					else_if = {
+						limit = { state_category = town }
+						set_state_category = large_town
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+				618 = {
+					add_manpower = 20000
+					if = {
+						limit = { state_category = rural }
+						set_state_category = town
+					}
+					else_if = {
+						limit = { state_category = town }
+						set_state_category = large_town
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
-			}
-			819 = {
-				add_manpower = 50000
-				set_state_category = town
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
+				617 = {
+					add_manpower = 20000
+					if = {
+						limit = { state_category = rural }
+						set_state_category = town
+					}
+					else_if = {
+						limit = { state_category = town }
+						set_state_category = large_town
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -367,6 +478,8 @@ focus_tree = {
 		prerequisite = { focus = MON_self_development }
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = MON_wartime_bastion }
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cost = 10
 		x = 2
 		y = 1
@@ -374,6 +487,12 @@ focus_tree = {
 			has_completed_focus = MON_new_constitution
 		}
 		completion_reward = { 
+			add_tech_bonus = {
+				name = "Rapid contruction"
+				bonus = 1
+				uses = 1
+				category = industry
+			}
 			817 = {
 				limit = {
 					industrial_complex > 0
@@ -412,21 +531,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 1
-						include_locked = yes
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					infrastructure > 0
-					free_building_slots = {
-						building = infrastructure
-						size > 3
 						include_locked = yes
 					}
 				}
@@ -457,52 +561,6 @@ focus_tree = {
 					free_building_slots = {
 						building = infrastructure
 						size > 1
-						include_locked = yes
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			617 = {
-				add_extra_state_shared_building_slots = 1
-				limit = {
-					industrial_complex > 0
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			817 = {
-				limit = {
-					infrastructure > 0
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			818 = {
-				limit = {
-					infrastructure > 0
-					free_building_slots = {
-						building = infrastructure
-						size > 0
 						include_locked = yes
 					}
 				}
@@ -519,11 +577,13 @@ focus_tree = {
 		icon = GFX_focus_generic_industry_3
 		relative_position_id = MON_self_development
 		prerequisite = { focus = MON_civilian_bastion }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		available_if_capitulated = yes
 		cost = 10
 		x = 2
 		y = 2
 		available = {
+			has_tech = construction3
 		}
 		completion_reward = { 
 			617 = {
@@ -582,6 +642,8 @@ focus_tree = {
 		relative_position_id = MON_self_development
 		prerequisite = { focus = MON_grande_economy }
 		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cost = 10
 		x = 2
 		y = 3
@@ -594,6 +656,51 @@ focus_tree = {
 				uses = 2
 				category = industry
 			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure > 0
+					free_building_slots = {
+						building = infrastructure
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure > 0
+					free_building_slots = {
+						building = infrastructure
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure > 0
+					free_building_slots = {
+						building = infrastructure
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -601,6 +708,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		relative_position_id = MON_self_development
 		prerequisite = { focus = MON_self_development }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		available_if_capitulated = yes
 		cost = 5
 		x = 4
@@ -631,7 +739,11 @@ focus_tree = {
 		icon = GFX_focus_SMB_a_land_of_mountains
 		relative_position_id = MON_more_mills
 		prerequisite = { focus = MON_more_mills }
-		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available_if_capitulated = no
+		available = {
+			has_country_flag = MON_plunder_west_flag
+		}
 		cost = 5
 		x = 0
 		y = 1
@@ -643,15 +755,10 @@ focus_tree = {
 					OR = {
 						state = 617
 						state = 618
-						state = 760
-						
 					}
 				}
 				add_extra_state_shared_building_slots = 2
 			} 
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-			}
 		}
 	}
 	focus = {
@@ -661,6 +768,8 @@ focus_tree = {
 		prerequisite = { focus = MON_self_development }
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = MON_civilian_bastion }
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cost = 10
 		x = -2
 		y = 1
@@ -668,6 +777,12 @@ focus_tree = {
 			has_completed_focus = MON_new_constitution
 		}
 		completion_reward = { 
+			add_tech_bonus = {
+				name = "Rapid weapons research"
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
 			random_owned_controlled_state = {
 				limit = {
 					arms_factory > 0
@@ -709,12 +824,14 @@ focus_tree = {
 		prerequisite = { focus = MON_wartime_bastion }
 		available_if_capitulated = yes
 		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		x = 0
 		y = 1
 		available = {
+			has_tech = advanced_machine_tools
 		}
 		completion_reward = { 
-			820 = {
+			random_owned_controlled_state = {
 				limit = {
 					arms_factory > 0
 					free_building_slots = {
@@ -730,12 +847,44 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			618 = {
+			random_owned_controlled_state = {
 				limit = {
 					arms_factory > 0
 					free_building_slots = {
 						building = arms_factory
 						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 1
 						include_locked = yes
 					}
 				}
@@ -754,6 +903,8 @@ focus_tree = {
 		relative_position_id = MON_wartime_bastion
 		prerequisite = { focus = MON_increase_wartime }
 		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cost = 10
 		x = 0
 		y = 2
@@ -768,6 +919,30 @@ focus_tree = {
 					category = suupport_equipment
 					category = infantry_weapons
 			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			IF = {
+				limit = { 
+					330 = {
+						is_fully_controlled_by = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+
+				330 = {
+					add_building_construction = {
+						type = land_facility
+						level = 1
+						instant_build = yes
+						province = 4801 # South London
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -776,6 +951,7 @@ focus_tree = {
 		relative_position_id = MON_self_development
 		prerequisite = { focus = MON_self_development }
 		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		cost = 5
 		x = -4
 		y = 1
@@ -805,6 +981,13 @@ focus_tree = {
 		icon = GFX_focus_SOV_merge_plants
 		relative_position_id = MON_self_development
 		prerequisite = { focus = MON_more_jobs }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		available = {
+			OR = {
+				has_country_flag = MON_plunder_south_flag
+				has_country_flag = MON_plunder_east_flag
+			}
+		}
 		available_if_capitulated = yes
 		cost = 5
 		x = -4
@@ -815,19 +998,14 @@ focus_tree = {
 			every_state = {
 				limit = {
 					OR = {
+						state = 563
 						state = 817
 						state = 819
-						state = 818
+						state = 760
 					}
 				}
 				add_extra_state_shared_building_slots = 1
 			} 
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-			}
 		}
 	}
 	focus = {
@@ -855,6 +1033,7 @@ focus_tree = {
         icon = GFX_focus_wonderweapons
         prerequisite = { focus = MON_economic_slot }
         relative_position_id = MON_economic_bloom
+		search_filters = {FOCUS_FILTER_RESEARCH}
         x = 0
         y = 3
         cost = 12.2
@@ -906,8 +1085,8 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = MON_indusrial
-
-		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -933,13 +1112,14 @@ focus_tree = {
 	focus = {
 		id = MON_buddhist_compromise
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		x = 14
+		x = 16
 		y = 0
 		cost = 10
 
 		available_if_capitulated = yes
-		
-		
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_STABILITY}
 		ai_will_do = {
 			factor = 2
 		}
@@ -962,7 +1142,8 @@ focus_tree = {
 		prerequisite = { focus = MON_buddhist_compromise }
 
 		available_if_capitulated = yes
-		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		relative_position_id = MON_buddhist_compromise
 		
 		ai_will_do = {
@@ -987,7 +1168,9 @@ focus_tree = {
 		prerequisite = { focus = MON_buddhist_compromise }
 
 		available_if_capitulated = yes
-		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_STABILITY}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		relative_position_id = MON_buddhist_compromise
 		
 		ai_will_do = {
@@ -1013,7 +1196,7 @@ focus_tree = {
 		prerequisite = { focus = MON_buddhist_compromise }
 
 		available_if_capitulated = yes
-		
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		relative_position_id = MON_buddhist_compromise
 		
 		ai_will_do = {
@@ -1042,7 +1225,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		relative_position_id = MON_remove_religious_figureheads
-		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_STABILITY}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		ai_will_do = {
 			factor = 2
 		}
@@ -1101,7 +1286,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		relative_position_id = MON_remove_religious_figureheads
-		
+		search_filters = {FOCUS_FILTER_STABILITY}
 		ai_will_do = {
 			factor = 2
 		}
@@ -1154,7 +1339,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		relative_position_id = MON_remove_religious_figureheads
-		
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		ai_will_do = {
 			factor = 2
 		}
@@ -1208,6 +1393,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		relative_position_id = MON_government_reforms
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		ai_will_do = {
 			factor = 2
 		}
@@ -1238,7 +1424,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		relative_position_id = MON_society_reforms
-		
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		ai_will_do = {
 			factor = 2
 		}
@@ -1263,7 +1449,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		relative_position_id = MON_new_constitution
-		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		ai_will_do = {
 			factor = 2
 		}
@@ -1291,13 +1477,15 @@ focus_tree = {
 		icon = GFX_focus_DEN_no_regulations
 		mutually_exclusive = { focus = MON_ask_soviets_for_stepes }
 		x = 1
-		y = 2
+		y = 3
 		cost = 10
 		prerequisite = { focus = MON_unite_steppes }
 
 		available_if_capitulated = no
 		
 		relative_position_id = MON_unite_steppes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		available = {
 			has_government = communism
 		}
@@ -1329,7 +1517,7 @@ focus_tree = {
 		icon = GFX_focus_ARG_crackdown_on_corruption
 		mutually_exclusive = { focus = MON_give_up_tanatuva }
 		x = -1
-		y = 2
+		y = 3
 		cost = 10
 		prerequisite = { focus = MON_unite_steppes }
 
@@ -1340,7 +1528,8 @@ focus_tree = {
 			has_completed_focus = MON_mineral_exploration
 		}
 		relative_position_id = MON_unite_steppes
-		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		ai_will_do = {
 			factor = 2
 		}
@@ -1365,6 +1554,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		relative_position_id = MON_new_constitution
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		available = {
 			has_government = communism
 		}
@@ -1389,7 +1579,8 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = MON_soviet_subsidies }
 
-		available_if_capitulated = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		
 		relative_position_id = MON_new_constitution
 		available = {
@@ -1484,6 +1675,52 @@ focus_tree = {
 			
 		}
 	}
+	focus = {
+		id = MON_natural_gas
+		icon = GFX_focus_generic_resource_extraction
+		x = -4
+		y = 3
+		cost = 5
+		prerequisite = { focus = MON_mineral_exploration }
+
+		available_if_capitulated = no
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		relative_position_id = MON_new_constitution
+		available = {
+			has_government = communism
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			
+		}
+		completion_reward = {
+			563 = {
+				add_resource = {
+					type = oil
+					amount = 6
+				}
+				add_resource = {
+					type = tungsten 
+					amount = 1
+				}
+			}
+			819 = {
+				add_resource = {
+					type = oil
+					amount = 12
+				}
+				add_resource = {
+					type = tungsten 
+					amount = 2
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = MON_mobilize_the_workers
@@ -1495,6 +1732,7 @@ focus_tree = {
 		relative_position_id = MON_soviet_subsidies
 
 		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		
 		available = {
 			has_completed_focus = MON_stabalize_the_country
@@ -1519,7 +1757,7 @@ focus_tree = {
 	focus = {
 		id = MON_invite_soviet_scientists
 		icon = GFX_focus_spr_unify_the_london_bureau
-		x = 2
+		x = 3
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_new_constitution }
@@ -1544,13 +1782,13 @@ focus_tree = {
 			MON = {
   				modify_tech_sharing_bonus = {
      				id = comintern_research
-     				bonus = 0.1  
+     				bonus = 0.2  
 				}
 			}
 			SOV = {
   				modify_tech_sharing_bonus = {
      				id = comintern_research
-     				bonus = 0.1  
+     				bonus = 0.2  
 				}
 			}
 			if = {
@@ -1575,7 +1813,7 @@ focus_tree = {
 	focus = {
 		id = MON_invite_soviet_companies
 		icon = GFX_focus_ARG_legitimize_the_PCA
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = MON_invite_soviet_scientists
 		prerequisite = { focus = MON_invite_soviet_scientists }
@@ -1596,7 +1834,7 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
-
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 
 			show_mio_tooltip = SOV_astrov_design_bureau_organization			
@@ -1650,15 +1888,208 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = MON_the_horse_of_the_east
+		icon = GFX_focus_URG_turmoil_of_paso_morlan
+		x = 0
+		y = 5
+		cost = 5
+		prerequisite = { focus = MON_unite_steppes }
 
+		available_if_capitulated = yes
+		
+		relative_position_id = MON_new_constitution
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_war = yes
+			date > 1941.1.1
+		}
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea =  MON_bidnii_khuvid
+				days = 625
+			}
+		}
+	}
 focus = {
-    id = MON_force_out
-    icon = GFX_focus_POL_riot_of_37
-    x = 0
+    id = MON_human_reorganization
+    icon = GFX_focus_generic_population_growth
+    x = 2
     y = 1
     cost = 3.7
-    prerequisite = { focus = MON_invite_soviet_scientists }
-    relative_position_id = MON_invite_soviet_scientists
+	prerequisite = { focus = MON_unite_steppes }
+    relative_position_id = MON_unite_steppes
+    available_if_capitulated = no
+    search_filters = {FOCUS_FILTER_STABILITY}
+	search_filters = {FOCUS_FILTER_INDUSTRY}
+    ai_will_do = {
+        factor = 2
+    }
+
+    complete_tooltip = {
+        
+    }
+
+    completion_reward = {
+        add_stability = -0.15
+		#custom_effect_tooltip = MON_warning_tooltip
+        
+		MON = { country_event = { id = mongolia.3 hours = 24 random_hours = 12 } }
+    }
+}
+focus = {
+    id = MON_plunder_south
+    icon = GFX_focus_generic_military_industry
+    x = 0
+    y = 1
+    cost = 2
+    prerequisite = { focus = MON_human_reorganization }
+    relative_position_id = MON_human_reorganization
+	mutually_exclusive = { focus = MON_plunder_east }
+    available_if_capitulated = no
+	search_filters = {FOCUS_FILTER_INDUSTRY}
+    available = {
+        has_country_flag = MON_plunder_south_flag
+    }
+    ai_will_do = {
+        factor = 2
+    }
+
+    complete_tooltip = {
+        
+    }
+
+    completion_reward = {
+		760 = {
+			limit = {
+				arms_factory > 0
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		817 = { add_manpower = 36000 }
+		760 = { add_manpower = 66000 }
+		817 = {
+			
+			limit = {
+				arms_factory > 0
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+        add_stability = 0.15
+    }
+}
+focus = {
+    id = MON_plunder_east
+    icon = GFX_focus_GER_proletarian_dictatorship
+    x = 2
+    y = 1
+    cost = 2
+    prerequisite = { focus = MON_human_reorganization }
+    relative_position_id = MON_human_reorganization
+	mutually_exclusive = { focus = MON_plunder_west}
+    available_if_capitulated = no
+	search_filters = {FOCUS_FILTER_INDUSTRY}
+    available = {
+        has_country_flag = MON_plunder_east_flag
+    }
+    ai_will_do = {
+        factor = 2
+    }
+
+    complete_tooltip = {
+        
+    }
+
+    completion_reward = {
+		563 = { add_manpower = 416000 }
+		819 = { add_manpower = 99000 }
+        add_stability = 0.10
+		add_war_support = 0.05
+    }
+}
+focus = {
+    id = MON_plunder_west
+    icon = GFX_focus_AUS_osterreichische_gebirgsjager
+    x = 4
+    y = 1
+    cost = 2
+    prerequisite = { focus = MON_human_reorganization }
+    relative_position_id = MON_human_reorganization
+	mutually_exclusive = { focus = MON_plunder_east }
+    available_if_capitulated = no
+	search_filters = {FOCUS_FILTER_INDUSTRY}
+    available = {
+        has_country_flag = MON_plunder_west_flag
+    }
+    ai_will_do = {
+        factor = 2
+    }
+
+    complete_tooltip = {
+        
+    }
+
+    completion_reward = {
+		617 = {
+			limit = {
+				arms_factory > 0
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		618 = { add_manpower = 95300 }
+		818 = { add_manpower = 66000 }
+		617 = { add_manpower = 126600 }
+        add_stability = 0.05
+		add_war_support = 0.10
+    }
+}
+focus = {
+    id = MON_family_planning
+    icon = GFX_focus_generic_low_cost_housing
+    x = 2
+    y = 3
+    cost = 5
+	search_filters = {FOCUS_FILTER_INDUSTRY}
+    prerequisite = { focus = MON_plunder_south focus = MON_plunder_east focus = MON_plunder_west }
+
+    relative_position_id = MON_human_reorganization
 
     available_if_capitulated = yes
     
@@ -1670,67 +2101,47 @@ focus = {
         
     }
 
-    completion_reward = {
-        add_stability = -0.15
-		custom_effect_tooltip = MON_warning_tooltip
-        330 = {
-            add_manpower = -85000
-            set_building_level = {
-                type = infrastructure
-                level = 2
+	completion_reward = {
+        if = {
+            limit = {
+                329 = { is_controlled_by = MON }
             }
-			set_building_level = {
-                type = industrial_complex
-                level = 1
-            }
-			 set_building_level = {
-                type = arms_factory
-                level = 1
-            }
+            330 = { add_manpower = 563265 }
+            329 = { add_manpower = 563265 }
         }
-        618 = {
-            add_manpower = -55000
-            set_building_level = {
-                type = infrastructure
-                level = 2
-            }
-			set_building_level = {
-                type = industrial_complex
-                level = 1
-            }
-			 set_building_level = {
-                type = arms_factory
-                level = 1
-            }
+        else = {
+            330 = { add_manpower = 1126530 }
         }
-        817 = {
-            add_manpower = -20000
-             set_building_level = {
-                type = infrastructure
-                level = 1
+
+        # Add family planning modifier based on chosen option
+		if = {
+            limit = {
+                329 = { is_controlled_by = MON }
             }
-			set_building_level = {
-                type = industrial_complex
-                level = 1
-            }
+            330 =  { add_dynamic_modifier = { modifier = MON_family_planning }}
+            329 = { add_dynamic_modifier = { modifier = MON_family_planning }}
         }
-        818 = {
-            add_manpower = -15000
-             set_building_level = {
-                type = infrastructure
-                level = 1
-            }
+		else = {
+            330 = { add_dynamic_modifier = { modifier = MON_family_planning }}
         }
-        819 = {
-            set_building_level = {
-                type = infrastructure
-                level = 1
-            }
-            add_manpower = -12500
+        if = {
+            limit = { has_country_flag = MON_plunder_south_flag }
+            817 = { add_dynamic_modifier = { modifier = MON_family_planning }}
+            760 = { add_dynamic_modifier = { modifier = MON_family_planning }}
+        }
+        else_if = {
+            limit = { has_country_flag = MON_plunder_east_flag }
+            819 = { add_dynamic_modifier = { modifier = MON_family_planning }}
+            563 = { add_dynamic_modifier = { modifier = MON_family_planning }}
+        }
+        else_if = {
+            limit = { has_country_flag = MON_plunder_west_flag }
+            818 = { add_dynamic_modifier = { modifier = MON_family_planning }}
+            618 = { add_dynamic_modifier = { modifier = MON_family_planning }}
+            617 = { add_dynamic_modifier = { modifier = MON_family_planning }}
         }
     }
 }
-
 	focus = {
 		id = MON_army
 		icon = GFX_goal_generic_army_artillery
@@ -1739,7 +2150,7 @@ focus = {
 		}
 		available_if_capitulated = yes
 		cost = 5
-		x = 25
+		x = 30
 		y = 0
 		available = {
 		}
@@ -1802,7 +2213,7 @@ focus = {
 	}
 	focus = { #gen kiss kiss
 		id = MON_spirit_of_genkhis
-		icon = GFX_focus_ARG_invite_ghioldi_back_to_argentina
+		icon = GFX_focus_PAR_put_estigarribia_on_a_pedestal
 		prerequisite = { focus = MON_army }
 		relative_position_id = MON_army
 		available_if_capitulated = yes
@@ -1818,15 +2229,14 @@ focus = {
 			create_corps_commander ={
 				name="Dagva Skibidriosil-Reborn of Genkhis Khan"
 				picture = "Portrait_Asia_Generic_warlord2.dds"
-				traits={ trait_engineer commander_trait commando cavalry_officer cavalry_leader skilled_staffer }
+				traits={ trait_engineer commando cavalry_officer cavalry_leader skilled_staffer }
 				skill=6
-				attack_skill=5
-				defense_skill=3
+				attack_skill=6
+				defense_skill=5
 				planning_skill=4
-				logistics_skill=5
+				logistics_skill=3
 			}
 			custom_effect_tooltip = MON_dagva_tooltip
-			
 		}
 	}
 	focus = {
@@ -2070,7 +2480,7 @@ focus = {
 	focus = {
 		id = MON_modern_tanks
 		icon = GFX_focus_NZL_bob_semple_tank
-		x = -2
+		x = -1
 		y = 1
 		cost = 5
 		prerequisite = { focus = MON_meduim_tank_variants }
@@ -2208,7 +2618,7 @@ focus = {
 		prerequisite = { focus = MON_combined_armament }
 		relative_position_id = MON_follow_allied
 		available_if_capitulated = yes
-		
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		ai_will_do = {
 			factor = 2
 		}
@@ -2463,7 +2873,7 @@ focus = {
 	}
 	focus = {
 		id = MON_superior_squads
-		icon = GFX_focus_ETH_expand_the_kebur_zabagna
+		icon = GFX_focus_NOR_empower_sivorg
 		x = 1
 		y = 3
 		cost = 10
@@ -2517,6 +2927,598 @@ focus = {
 				add_unit_leader_trait = hill_fighter
 			}
 			add_ideas = MON_new_generals
+		}
+	}
+	focus = {
+		id = MON_military_aeronautical_institute
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		x = 42
+		y = 0
+
+		cost = 5
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			air_experience = 100
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+		}
+	}
+
+	focus = {
+		id = MON_import_foreign_fighters
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = MON_military_aeronautical_institute }
+		x = -2
+		y = 1
+		relative_position_id = MON_military_aeronautical_institute
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		cost = 5
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_import_foreign_fighters #@#
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = MON_light_fighter_focus
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = MON_import_foreign_fighters }
+		mutually_exclusive = { focus = MON_heavy_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = MON_import_foreign_fighters
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		cost = 10	
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MON_light_fighter_focus #@#
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = MON_heavy_fighter_focus
+		icon = GFX_focus_usa_escort_fighters
+		prerequisite = { focus = MON_import_foreign_fighters }
+		mutually_exclusive = { focus = MON_light_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = MON_import_foreign_fighters
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MON_heavy_fighter_focus #@#
+				bonus = 1.0
+				uses = 1
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = MON_air_is_our_sea
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = MON_military_aeronautical_institute }
+		x = 0
+		y = 1
+		relative_position_id = MON_military_aeronautical_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_ideas = CZE_air_focus
+		}
+	}
+
+	focus = {
+		id = MON_rule_the_air
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = MON_air_is_our_sea }
+		prerequisite = { focus = MON_light_fighter_focus focus = MON_heavy_fighter_focus }
+		prerequisite = { focus = MON_tac_focus focus = MON_cas_focus }
+		x = 0
+		y = 3
+		relative_position_id = MON_military_aeronautical_institute
+		cost = 5
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = MON_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = MON_rule_the_air }
+		x = 0
+		y = 2
+		relative_position_id = MON_rule_the_air
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 1 # was 2
+				category = rocketry
+				category = jet_technology
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = MON_import_foreign_bombers
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = MON_military_aeronautical_institute }
+		x = 2
+		y = 1
+		relative_position_id = MON_military_aeronautical_institute
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		cost = 5
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MON_import_foreign_bombers #@#
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = MON_cas_focus
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = MON_import_foreign_bombers }
+		mutually_exclusive = { focus = MON_tac_focus }
+		x = -1
+		y = 1
+		relative_position_id = MON_import_foreign_bombers
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MON_cas_focus #@#
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = MON_tac_focus
+		icon = GFX_focus_SWE_marauder_bombers
+		prerequisite = { focus = MON_import_foreign_bombers }
+		mutually_exclusive = { focus = MON_cas_focus }
+		x = 1
+		y = 1
+		relative_position_id = MON_import_foreign_bombers
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MON_tac_focus #@#
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = MON_convoy_trade
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 50
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 100
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 150
+			}
+		}
+	}
+
+	focus = {
+		id = MON_sudden_shipyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = MON_convoy_trade }
+		x = -2
+		y = 1
+		relative_position_id = MON_convoy_trade
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			any_state = {
+				is_controlled_by = ROOT
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			navy_experience = 10
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MON_shipbuilding_demands
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = MON_convoy_trade }
+		x = 0
+		y = 1
+		relative_position_id = MON_convoy_trade
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			any_state = {
+				is_controlled_by = ROOT
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_naval_focus
 		}
 	}
 }

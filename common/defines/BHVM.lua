@@ -20,7 +20,7 @@ NDefines.NCountry.NAVY_SCORE_MULTIPLIER = 0					-- Based on number of navies.
 NDefines.NCountry.AIR_SCORE_MULTIPLIER = 0					-- Based on number of planes (which is typically a lot).
 NDefines.NCountry.INDUSTRY_SCORE_MULTIPLIER = 0				-- Based on number of factories.
 NDefines.NCountry.PROVINCE_SCORE_MULTIPLIER = 0				-- Based on number of controlled provinces.
-NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.005825                     -- reduced so there won't be copuis amount of mass mob and the save games to be smaller
+NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.009825                     -- reduced so there won't be copuis amount of mass mob and the save games to be smaller
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 9999						    -- Unlimited special forces
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.00                        -- Unlimited special forces
 

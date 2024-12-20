@@ -45,3 +45,51 @@ country_event = {
 		name = mongolia.2.b
 	}
 }
+
+country_event = {
+	id = mongolia.3
+	title = mongolia.3.t
+	desc = mongolia.3.d
+	picture = GFX_report_event_gathering_protest
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mongolia.3.a #south
+		set_country_flag = MON_plunder_south_flag
+		817 = { 
+			add_manpower = -9230
+		}
+		760 = {
+			add_manpower = -321000
+			add_extra_state_shared_building_slots = -1
+		}
+	}
+	option = {
+		name = mongolia.3.b #east
+		set_country_flag = MON_plunder_east_flag
+		819 = {
+			add_manpower = -72300
+		}
+		563 = {
+			add_manpower = -421000
+			add_extra_state_shared_building_slots = -1
+		}
+	}
+	option = {
+		name = mongolia.3.c #west
+		set_country_flag = MON_plunder_west_flag
+		818 = {
+			add_manpower = -82300
+		}
+		618 = {
+			add_manpower = -352000
+			add_extra_state_shared_building_slots = -1
+		}
+		617 = {
+			add_manpower = -692000
+			add_extra_state_shared_building_slots = -2
+		}
+	}
+	
+}

@@ -39,3 +39,10 @@ ENG_no_raj_allowed = {
 
 	local_manpower = -0.95
 }
+MON_family_planning = {
+	enable = { always = yes }
+
+	icon = "GFX_population_icon"
+	monthly_population = 0.45
+	local_manpower = -0.05
+}

@@ -1,2 +1,0 @@
-BLM = "countries/Black.txt"
-SOL = "countries/Solomon.txt"

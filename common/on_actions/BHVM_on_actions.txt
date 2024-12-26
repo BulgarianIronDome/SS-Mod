@@ -25,7 +25,7 @@ on_actions = {
             }
         }
     }
-	on_weekly = { ### NO COLLABS COUNTRIES
+	on_startup = { ### NO COLLABS COUNTRIES
         effect = {
             if = { 
                 every_country = {
@@ -55,7 +55,7 @@ on_actions = {
             }
         }
     }
-	on_daily = {
+	on_monthly = {
 		effect = {
 			every_country = {
 				limit = { NOT = { is_ai = yes } }

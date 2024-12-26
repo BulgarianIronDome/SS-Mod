@@ -574,25 +574,31 @@ operations = {
             if = {
                 limit = { date > 1943.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4000 producer = SPR } }
+                BUL ={ add_manpower = 60000 }
             }
             else_if = {
                 limit = { date > 1942.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = SPR } }
+                BUL ={ add_manpower = 45000 }
             }
             else_if = {
                 limit = { date > 1941.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 producer = SPR } }
+                BUL ={ add_manpower = 35000 }
             }
             else_if = {
                 limit = { date > 1940.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2550 producer = SPR } }
+                BUL ={ add_manpower = 25000 }
             }
             else_if = {
                 limit = { date > 1939.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1600 producer = SPR } }
+                BUL ={ add_manpower = 25000 }
             }
             else = {
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 producer = SPR } }
+                BUL ={ add_manpower = 15000 }
             }
             activate_mission = GER_recieving_ll_mech_bul_2a
         }
@@ -638,25 +644,31 @@ operations = {
             if = {
                 limit = { date > 1943.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4000 producer = SPR } }
+                BUL ={ add_manpower = 60000 }
             }
             else_if = {
                 limit = { date > 1942.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = SPR } }
+                BUL ={ add_manpower = 45000 }
             }
             else_if = {
                 limit = { date > 1941.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 producer = SPR } }
+                BUL ={ add_manpower = 35000 }
             }
             else_if = {
                 limit = { date > 1940.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2550 producer = SPR } }
+                BUL ={ add_manpower = 25000 }
             }
             else_if = {
                 limit = { date > 1939.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1600 producer = SPR } }
+                BUL ={ add_manpower = 25000 }
             }
             else = {
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 producer = SPR } }
+                BUL ={ add_manpower = 15000 }
             }
             activate_mission = GER_recieving_ll_mech_bul_1a    
         }

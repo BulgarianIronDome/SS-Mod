@@ -793,30 +793,6 @@ GER_china_ally = {
 	}
 }
 
-GER_turkey_ally = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_completed_focus = GER_befriend_turkey
-		country_exists = TUR
-	}
-	abort = {
-		NOT = { country_exists = TUR }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = TUR
-		value = 100
-	}
-	ai_strategy = {
-		type = alliance
-		id = TUR
-		value = 100
-	}
-}
-
 GER_spain_ally = {
 	allowed = {
 		NOT = { has_dlc = "La Resistance" }

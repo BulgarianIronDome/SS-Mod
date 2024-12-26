@@ -1430,22 +1430,18 @@ country_event = {
 				random_days = 2
 			} 
 		}
-		add_stability = -0.25
-		add_war_support = -0.1
-
-	}
-
-	option = { #no 
-		name = DOD_hungary.50.b
-		ai_chance = {
-			base = 90
-		}
-		HUN = { 
-			country_event = { 
-				id = DOD_hungary.52 
-				days = 1
-				random_days = 2
-			} 
+		46 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+					level = 2
+					instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+					level = 1
+					instant_build = yes
+			}
 		}
 	}
 }

@@ -22,5 +22,5 @@ soundeffect = {
 		sound = 
 			cheat_sound_effect
 	}
-	volume = 30
+	volume = 10
 }

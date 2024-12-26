@@ -2456,15 +2456,17 @@ country_event = {
 			factor = 30
 		}
 		name = mtg_usa_civil_war_democrats.41.d
-		create_country_leader = {
-			name = "Charles Lindbergh"
-			desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
-			picture = GFX_portrait_USA_charles_lindbergh
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-				famous_aviator
+
+		add_country_leader_role  = {
+			character = USA_charles_lindbergh
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					famous_aviator
+				}
 			}
+			promote_leader = yes
 		}
 	}
 }
@@ -3753,7 +3755,7 @@ country_event = {
 	id = mtg_usa_foreign_support.2
 	title = mtg_usa_foreign_support.2.t
 	desc = mtg_usa_foreign_support.2.desc
-	picture = GFX_report_event_hitler_handshake
+	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
 	option = { #agree
@@ -4009,7 +4011,7 @@ country_event = {
 	id = mtg_usa_foreign_support.12
 	title = mtg_usa_foreign_support.12.t
 	desc = mtg_usa_foreign_support.12.desc
-	picture = GFX_report_event_hitler_handshake
+	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
 	option = { #agree
@@ -4351,6 +4353,43 @@ country_event = {
 
 	is_triggered_only = yes
 
+	option = { #Pull forces out of China - low war support
+		name = panay_incident.2.a
+		custom_effect_tooltip = panay_incident.2.a.tt
+		trigger = { has_war_support < 0.4 }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				USA_is_on_historical_plan_trigger = yes
+			}
+		}
+		add_war_support = -0.05
+		add_stability = 0.05
+		if = {
+			limit = {
+				has_completed_focus = USA_neutrality_act
+			}
+			add_political_power = 50
+		}
+		add_opinion_modifier = { target = JAP modifier = panay_inc_opinion_modifier }
+		hidden_effect = { JAP = { country_event = { id = panay_incident.6 days = 2 } } } #Info event for Japan
+	}
+	option = { #Pull forces out of China - medium or above war support
+		name = panay_incident.2.a
+		custom_effect_tooltip = panay_incident.2.e.tt
+		trigger = { has_war_support > 0.39 }
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				USA_is_on_historical_plan_trigger = yes
+			}
+		}
+		add_war_support = -0.05
+		add_opinion_modifier = { target = JAP modifier = panay_inc_opinion_modifier }
+		hidden_effect = { JAP = { country_event = { id = panay_incident.6 days = 2 } } } #Info event for Japan
+	}
 	option = { #Demand compensation
 		name = panay_incident.2.b
 		custom_effect_tooltip = panay_incident.2.b.tt
@@ -4359,6 +4398,36 @@ country_event = {
 		set_country_flag = { flag = USA_panay_window days = 90 value = 1 }
 		hidden_effect = { JAP = { country_event = { id = panay_incident.3 days = 2 } } } #Delay added so events are spaced out - historically it took months to get JAP to agree to compensation, but that'd be a bit hard to follow in-game, so timelines compressed.
 		add_opinion_modifier = { target = JAP modifier = panay_inc_opinion_modifier }
+	}
+	option = { #War
+		name = panay_incident.2.c
+		custom_effect_tooltip = panay_incident.2.c.tt
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				USA_is_on_historical_plan_trigger = yes
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = USA_neutrality_act
+			}
+			add_war_support = -0.1
+			add_stability = -0.3
+		}
+		add_opinion_modifier = { target = JAP modifier = panay_inc_opinion_modifier }
+		create_wargoal = {
+				target = JAP
+				type = topple_government
+			}
+		add_state_claim = 633
+		add_state_claim = 684
+		add_state_claim = 645
+		add_state_claim = 646
+		add_state_claim = 647
+		add_state_claim = 648
+		hidden_effect = { news_event = { id = news.335 } } #Triggers news event for war between JAP and USA
 	}
 }
 
@@ -4376,6 +4445,19 @@ country_event = {
 		ai_chance = { factor = 70 }
 		add_political_power = -100
 		hidden_effect = { USA = { country_event = { id = panay_incident.4 days = 2 } } } #Delay added to space things out
+	}
+	option = { #We shall never bw down to the western Imperialists!
+		name = panay_incident.3.b
+		custom_effect_tooltip = panay_incident.3.b.tt
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = 100
+		hidden_effect = { USA = { country_event = { id = panay_incident.5 days = 2 } } } #Delay added here and in earlier event so rest of the world doesn't get Panay Incident one day and War the next, unless US is particularly gung-ho in response to initial event.
 	}
 }
 

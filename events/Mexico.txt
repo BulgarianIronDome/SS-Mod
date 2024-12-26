@@ -1042,37 +1042,107 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	# fire_only_once = yes
+	fire_only_once = yes
 	
-	# trigger = {
-	# 	tag = MEX
-	# 	date > 1936.08.28
-	# 	OR = {
-	# 		has_government = neutrality
-	# 		AND = {
-	# 			has_government = communism
-	# 			NOT = {
-	# 				has_country_leader = { ruling_only = yes character = MEX_dionisio_encina }
-	# 			} 
-	# 		}
+	trigger = {  
+		OR = {
+			has_government = neutrality
+			AND = {
+				has_government = communism
+				NOT = {
+					has_country_leader = { ruling_only = yes character = MEX_dionisio_encina }
+				} 
+			}
+		}
+		NOT = {
+			has_global_flag = trotsky_not_welcome_in_mexico
+		}
+		NOT = {
+			SOV_is_left_opposition = yes 
+			NOT = { SOV_soviet_civil_war_not_started = yes } # IF the civil war has already started, and Left Opposition has risen up, Trotsky probably won't appear in Mexico
+		}
+		NOT = {
+			has_global_flag = flag_trotsky_dead
+		}
+	}
 
-	# 	}
-	# 	NOT = {
-	# 		has_global_flag = trotsky_not_welcome_in_mexico
-	# 	}
-	# 	NOT = {
-	# 		SOV_is_left_opposition = yes 
-	# 		NOT = { SOV_soviet_civil_war_not_started = yes } # IF the civil war has already started, and Left Opposition has risen up, Trotsky probably won't appear in Mexico
-	# 	}
-	# 	NOT = {
-	# 		has_global_flag = flag_trotsky_dead
-	# 	}
-
-	# }
-	
-	# mean_time_to_happen = {
-	# 	months = 3 # Historically arrived in January 1937
-	# }
+	option = {
+		name = mexico.17.a # We aren't Stalin's puppets, let him stay
+		
+		if = {
+			limit = {
+				SOV = {
+					has_country_leader = { character = SOV_iosif_stalin }
+				}
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = mexico_trotskyite_wreckers
+				}
+			}
+		}
+		USA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = mexico_snubbed_stalin
+			}
+		}
+		set_global_flag = trotsky_exile_mexico
+		set_global_flag = AAT_trotsky_in_mexico
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				add = 100
+				OR = {
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = DEFAULT
+					}
+					has_country_flag = MEX_AI_SECULAR_REPUBLIC 
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SECULAR_REPUBLIC
+					}
+					has_country_flag = MEX_AI_SOCIAL_CATHOLICISM 
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SOCIAL_CATHOLICISM
+					}
+					has_country_flag = MEX_AI_FASCIST_DICTATORSHIP 
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = FASCIST_DICTATORSHIP
+					}
+				}
+			}
+			
+			modifier = {
+				add = 100
+				is_historical_focus_on = yes
+				NOT = {
+					OR = {
+						has_country_flag = MEX_AI_THEOCRATIC_ORDER 
+						has_game_rule = {
+							rule = MEX_ai_behavior
+							option = THEOCRATIC_ORDER
+						}
+						has_country_flag = MEX_AI_SOVIET_REPUBLIC 
+						has_game_rule = {
+							rule = MEX_ai_behavior
+							option = SOVIET_REPUBLIC
+						}
+						has_country_flag = MEX_AI_CARDENISMO 
+						has_game_rule = {
+							rule = MEX_ai_behavior
+							option = CARDENISMO
+						}
+					}
+				}
+			}
+		}
+	}
 	
 	option = {
 		trigger = {
@@ -1116,10 +1186,80 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			factor = 0
+			
+			modifier = {
+				add = 100
+				OR = {
+					has_country_flag = MEX_AI_THEOCRATIC_ORDER 
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = THEOCRATIC_ORDER
+					}
+					has_country_flag = MEX_AI_SOVIET_REPUBLIC 
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = SOVIET_REPUBLIC
+					}
+				}
+			}
 		}
 	}
 	
+	option = {
+		name = mexico.17.c # Invite him to join the government
+		
+		trigger = {
+			OR = {
+				has_government = communism
+				has_government = neutrality
+			}
+			has_dlc = "Man the Guns"
+		}
+		
+		custom_effect_tooltip = available_chief_of_army
+		show_ideas_tooltip = MEX_leon_trotsky
+		
+		add_stability = -0.03
+		
+		if = {
+			limit = {
+				SOV = {
+					has_country_leader = { character = SOV_iosif_stalin }
+				}
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = mexico_trotskyite_wreckers
+				}
+			}
+		}
+		USA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = mexico_communist_menace
+			}
+		}
+		
+		set_global_flag = flag_mexico_invited_trotsky_to_government
+		set_global_flag = AAT_trotsky_in_mexico
+		
+		ai_chance = {
+			factor = 0
+			
+			modifier = {
+				add = 100
+				OR = {
+					has_country_flag = MEX_AI_CARDENISMO 
+					has_game_rule = {
+						rule = MEX_ai_behavior
+						option = CARDENISMO
+					}
+				}
+			}
+		}
+	}
 }
 
 # The 1940 election begins
@@ -1897,40 +2037,51 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = MEX
-		has_global_flag = flag_trotsky_returning_to_ussr_from_mexico
-		has_global_flag = flag_mexico_invited_trotsky_to_government
+		OR = {
+			AND = {
+				tag = MEX
+				has_global_flag = flag_trotsky_returning_to_ussr_from_mexico
+				has_global_flag = flag_mexico_invited_trotsky_to_government
+			}
+			AND = {
+				tag = NOR 
+				has_global_flag = flag_trotsky_returning_to_ussr_from_norway
+				has_global_flag = trotsky_in_norwegian_government
+			}
+		}
 		NOT = {
 			has_global_flag = flag_trotsky_dead
 		}
-		has_dlc = "Man the Guns"
+		OR = {
+			has_dlc = "Man the Guns"
+			has_aat = yes 
+		}
 	}
 	
 	mean_time_to_happen = {
-		days = 3
+		days = 1
 	}
 	
 	option = {
 		name = mexico.22.a
-		
 		if = {
-			limit = {
-				has_idea = MEX_leon_trotsky
-			}			
-			remove_ideas = MEX_leon_trotsky
-			
-			add_political_power = 100
-		}
-		
-		set_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico # Prevents taking Trotsky as Chief of Staff
-		
-		add_stability = 0.02 # Divisive to have a Russian Bolshevik cabinet minister (gave -0.03 on recruiting him)
-		
-		if = {
-			limit = {
-				has_country_leader = { character = MEX_leon_trotsky }
+			limit = { tag = MEX }
+			if = {
+				limit = {
+					has_idea = MEX_leon_trotsky
+				}			
+				remove_ideas = MEX_leon_trotsky
+				
+				add_political_power = 100
 			}
-			promote_character = MEX_hernan_laborde
+			set_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico # Prevents taking Trotsky as Chief of Staff
+			add_stability = 0.02 # Divisive to have a Russian Bolshevik cabinet minister (gave -0.03 on recruiting him)
+			if = {
+				limit = {
+					has_country_leader = { character = MEX_leon_trotsky }
+				}
+				promote_character = MEX_hernan_laborde
+			}
 		}
 	}
 }
@@ -3592,7 +3743,9 @@ country_event = {
 					}
 				}
 			}
-			give_resource_rights = { receiver = GER state = 476 }
+			MEX = {
+				give_resource_rights = { receiver = GER state = 476 }
+			}
 		}
 	}
 }
@@ -4449,6 +4602,7 @@ country_event = {
 	}
 }
 
+#MM: Never used. Unlocalized
 news_event = {
 	id = mexico.57
 	title = mexico.57.title

@@ -3586,15 +3586,6 @@ ETH_italian_occupation_category = {
 	#Expand Regional Control
 	ITA_expand_regional_control = {
 		icon = GFX_decision_oppression
-		target_trigger = {
-			FROM = {
-				owner = {
-					tag = ETH # For now - change if making it generic
-					is_government_in_exile = yes
-				}
-				is_fully_controlled_by = ROOT
-			}
-		}
 		target_root_trigger = { tag = ITA } # For now - change if making it generic
 		state_target = yes
 		on_map_mode = map_only
@@ -3611,10 +3602,6 @@ ETH_italian_occupation_category = {
 			FROM = {
 				compliance > 60
 				any_neighbor_state = { is_owned_by = ROOT }
-				owner = {
-					#has_legitimacy < 60
-					faction_leader = { NOT = { has_war_with = ROOT } }
-				}
 			}
 		}
 
@@ -6737,83 +6724,6 @@ ITA_diplomacy_balkan_decision_category = {
 			}
 		}
 	}
-
-
-	ITA_give_the_dodecanese_islands_to_turkey_for_an_alliance = {
-		priority = 24
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		ai_will_do = {
-			base = 7
-			modifier = {
-				factor = 10
-				TUR = { is_ai = no }
-			}
-		}
-
-		allowed = {
-			original_tag = ITA
-		}
-
-		available = {
-			ITA = {
-				has_completed_focus = ITA_befriend_turkey
-				is_faction_leader = yes
-				controls_state = 164
-			}
-			TUR = {
-				is_subject = no
-				has_civil_war = no
-				NOT = {
-					has_government = communism
-				}
-			}
-		}
-
-		visible = {
-			TUR = {
-				exists = yes
-				NOT = { is_in_faction_with = ROOT }
-			}
-			ITA = {
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-				controls_state = 164
-			}
-			NOT = {
-				has_country_flag = ITA_dodecanese_offered_to_turkey
-			}
-		}
-
-		cost = 75
-
-		complete_effect = {
-
-			random_country = {
-				limit = {
-					original_tag = TUR
-					is_subject = no
-					has_civil_war = no
-					NOT = {
-						has_government = communism
-					}
-				}
-				country_event = {
-				    id = BBA_italy_interaction_events.21
-				    days = 1
-				    random = 4
-				}
-			}
-
-			hidden_effect = {
-				set_country_flag = ITA_dodecanese_offered_to_turkey
-			}
-		}
-	}
-
 }
 
 

@@ -1,9 +1,10 @@
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 999 -- Lag days
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 999 -- pause days
-NDefines.NGame.GAME_SPEED_SECONDS = { 6000.0, 0.75, 0.22, 0.08, 0.0 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 100.0, 0.25, 0.19, 0.06, 0.0 } 
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 14
 NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14
-
+NDefines.NCountry.EVENT_PROCESS_OFFSET = 25 -- Performance enhancer. --TW/WTT
+NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3 -- Default days before a mission is removed from the interface after having failed or completed
 
 NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0.5
 NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0.5
@@ -20,11 +21,10 @@ NDefines.NCountry.NAVY_SCORE_MULTIPLIER = 0					-- Based on number of navies.
 NDefines.NCountry.AIR_SCORE_MULTIPLIER = 0					-- Based on number of planes (which is typically a lot).
 NDefines.NCountry.INDUSTRY_SCORE_MULTIPLIER = 0				-- Based on number of factories.
 NDefines.NCountry.PROVINCE_SCORE_MULTIPLIER = 0				-- Based on number of controlled provinces.
-NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.009825                     -- reduced so there won't be copuis amount of mass mob and the save games to be smaller
+NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.0158                     -- reduced so there won't be copuis amount of mass mob and the save games to be smaller
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 9999						    -- Unlimited special forces
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.00                        -- Unlimited special forces
 
-NDefines.NRailwayGun.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0		-- The percentage of manpower returned when an encircled unit is disbanded
 
 NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0					-- Free license
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                        -- Free license
@@ -55,7 +55,6 @@ NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 25 	-- vilkata defines
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.0001
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3, 0.75, 0.9 }		-- Experience needed to progress to the next level
 NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0.05 -- was 0.5
-NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0
 NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 0.05 -- was something along the lines of 20
 NDefines.NMilitary.RELIABILTY_RECOVERY = 0.001 -- WAS 0.1 , reason why i keep it is not to loose so much ic, factor affecting how much equipment is returned "from the dead"
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2 -- from lvl 1 to lvl 2 divs
@@ -67,6 +66,9 @@ NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 	--Base cost to unlock a 
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.5 --makes redeployement of fighters faster vanilla is 0.02
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0                              -- Down from 3 | Makes AC player have brain 
 
+
+NDefines.NRailwayGun.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0		-- The percentage of manpower returned when an encircled unit is disbanded
+NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0
 
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0   -- vilkata defines
 
@@ -80,8 +82,27 @@ NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- Trade factor is modified by Opin
 
 
 
-
-
+NDefines.NAI.GENERATE_WARGOAL_ANTAGONIZE_SCALE = 0
+NDefines.NAI.BASE_DISTANCE_TO_CARE = 0                -- Countries that are too far away are less interesting in diplomacy
+NDefines.NAI.DIPLO_PREFER_OTHER_FACTION = 0
+NDefines.NAI.DEMOCRATIC_AI_FACTION_KICKING_PLAYER_THREAT_DIFFERENCE = 0 -- World threat generation difference needed to kick a player from a democratic faction
+NDefines.NAI.BEFRIEND_FACTOR_FOR_KICKING_COUNTRIES = 0		-- World threat difference addition per 100 befriend against a country, democratic leaders will forgive allies if they are befriending them
+NDefines.NAI.ACCESS_SCORE_FOR_DEMOCRATIC_COUNTRIES = 0	 ----------GOOD------------	
+NDefines.NAI.MICRO_POCKET_SIZE = 0		-- Pockets with a size equal to or lower than this will be mocroed by the AI, for efficiency.
+NDefines.NAI.DIPLOMACY_CREATE_FACTION_FACTOR = 0
+NDefines.NAI.AI_UPDATE_ROLES_FREQUENCY_HOURS = 48000000               -- Update the roles for a country AI this often (affects performance)
+NDefines.NAI.UPDATE_SUPPLY_MOTORIZATION_FREQUENCY_HOURS = 50000002     -- Check if activating motorization would improve supply situation this often.
+NDefines.NAI.UPDATE_SUPPLY_BOTTLENECKS_FREQUENCY_HOURS = 168000     -- Check for and try to fix supply bottlenecks this often. (168 hours = 1 week)
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 7000       -- Recalculate desired best doctrine to unlock with this many days inbetween.
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 7000       -- Recalculate desired best template to upgrade with this many days inbetween.
+NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 7000      -- Recalculate desired best equipment to upgrade with this many days inbetween.
+NDefines.NAI.HOURS_BETWEEN_ENCIRCLEMENT_DISCOVERY = 700001	-- Per army, interval in hours between refresh of which provinces it considers make up potential encirclement points
+NDefines.NAI.WANTED_UNITS_INDUSTRY_FACTORY = 0                       -- How many units a country wants is partially based on how much military industry that is available
+NDefines.NAI.WANTED_UNITS_THREAT_MAX = 0                            -- Normalized threat is clamped to this
+NDefines.NAI.WANTED_UNITS_WAR_THREAT_FACTOR = 0                      -- Factor threat with this if country are fascist, communist or at war
+NDefines.NAI.WANTED_UNITS_MILFACTORY_MIN = 0                          -- Military factory factor is min-clamped to this
+NDefines.NAI.WANTED_UNITS_MANPOWER_MIN = 0                         -- Manpower factor is min-clamped to this
+NDefines.NAI.WANTED_UNITS_MANPOWER_DIVISOR = 50000                     -- Normalizing divisor for AI manpower. (below this they will be careful making more divisions, above they want more)
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0

@@ -280,7 +280,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-		cost = 14.3
+		cost = 12.2
 		x = 0
 		y = 6
 		available = {
@@ -288,6 +288,7 @@ focus_tree = {
 			date > 1940.2.12
 		}
 		completion_reward = { 
+			custom_effect_tooltip = MON_economic_tooltip
 			# bloat!
 			add_timed_idea = { idea = MON_infra_rebuilding days = 150 }
 			remove_ideas = MON_mobilize_the_workers_idea
@@ -493,7 +494,7 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			817 = {
+			random_owned_controlled_state = {
 				limit = {
 					industrial_complex > 0
 					free_building_slots = {
@@ -509,7 +510,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			818 = {
+			random_owned_controlled_state = {
 				limit = {
 					industrial_complex > 0
 					free_building_slots = {
@@ -540,7 +541,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			617 = {
+			random_owned_controlled_state = {
 				limit = {
 					infrastructure > 0
 					free_building_slots = {
@@ -555,7 +556,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			330 = {
+			random_owned_controlled_state = {
 				limit = {
 					infrastructure > 0
 					free_building_slots = {
@@ -586,7 +587,7 @@ focus_tree = {
 			has_tech = construction3
 		}
 		completion_reward = { 
-			617 = {
+			random_owned_controlled_state = {
 				limit = {
 					industrial_complex > 0
 					free_building_slots = {
@@ -602,7 +603,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			618 = {
+			random_owned_controlled_state = {
 				limit = {
 					industrial_complex > 0
 					free_building_slots = {
@@ -618,7 +619,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			760 = {
+			random_owned_controlled_state = {
 				limit = {
 					industrial_complex > 0
 					free_building_slots = {
@@ -1059,7 +1060,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MON_indusrial
 
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -1182,7 +1183,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = -0.1
+			add_stability = -0.15
 			add_war_support = 0.1
 		}
 	}
@@ -1280,7 +1281,7 @@ focus_tree = {
 		icon = GFX_focus_ARG_women_in_industry
 		x = 2
 		y = 2
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_communist_propagnda }
 
 		available_if_capitulated = yes
@@ -1333,7 +1334,7 @@ focus_tree = {
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
 		x = -2
 		y = 2
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_anti_fascist_campaing }
 
 		available_if_capitulated = yes
@@ -1387,7 +1388,7 @@ focus_tree = {
 		icon = GFX_goal_generic_soviet_construction
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_government_reforms }
 
 		available_if_capitulated = yes
@@ -1403,7 +1404,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = communism
-			date > 1937.9.30
+			date > 1937.3.30
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -1913,7 +1914,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = {
-				idea =  MON_bidnii_khuvid
+				idea =  MON_mori_bosdog
 				days = 625
 			}
 		}
@@ -1939,8 +1940,7 @@ focus = {
 
     completion_reward = {
         add_stability = -0.15
-		#custom_effect_tooltip = MON_warning_tooltip
-        
+		custom_effect_tooltip = MON_warning_tooltip
 		MON = { country_event = { id = mongolia.3 hours = 24 random_hours = 12 } }
     }
 }
@@ -2177,7 +2177,7 @@ focus = {
 			}
 		}
 	}
-	focus = {
+	focus = {#gives extra 2 HP to mechanized battalions aka 8% increase
 		id = MON_tradional_warfare_a
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = MON_army }
@@ -2190,11 +2190,15 @@ focus = {
 		available = {
 		}
 		completion_reward = { 
-			army_exp = 25
+			custom_effect_tooltip = MON_mech_HP
+			army_experience = 25
 			add_ideas = MON_superior_modern_horse_power
+			hidden_effect = {
+				MON = { set_technology = { fullhouse_mech = 1 popup = no } }
+			}
 		}
 	}
-	focus = {
+	focus = {#gives some 6 extra HP to horse battalions aka 24% increase
 		id = MON_tradional_warfare_b
 		icon = GFX_focus_generic_horse_studs
 		prerequisite = { focus = MON_army }
@@ -2207,8 +2211,12 @@ focus = {
 		available = {
 		}
 		completion_reward = { 
-			army_exp = 25
+			custom_effect_tooltip = MON_horse_HP
+			army_experience = 25
 			add_ideas = MON_classic_horse_power
+			hidden_effect = {
+				MON = { set_technology = { fullhouse_horses = 1 popup = no } }
+			}
 		}
 	}
 	focus = { #gen kiss kiss
@@ -2857,6 +2865,7 @@ focus = {
 		}
 
 		completion_reward = {
+			add_manpower = 135000
 			add_doctrine_cost_reduction = {
 				name = "Long-line battle"
 				cost_reduction = 0.75
@@ -2890,6 +2899,7 @@ focus = {
 		}
 
 		completion_reward = {
+			add_manpower = 120000
 			add_ideas = MON_organized_squads
 			add_tech_bonus = {
 				name = "Advanced weapon programing"

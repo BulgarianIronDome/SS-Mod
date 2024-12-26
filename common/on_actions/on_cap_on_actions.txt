@@ -35,8 +35,21 @@ on_actions = {
                         surrender_progress > 0.50
                     }
                 }
+				FROM = {
+					transfer_units_fraction = {
+						target = GER
+						size = 1
+						stockpile_ratio = 1
+						army_ratio = 1
+						navy_ratio = 1
+						air_ratio = 1
+						keep_unit_leaders_trigger = {
+							always = yes
+						}
+					}
+				}
                 GER = {
-                    annex_country = { target = FROM transfer_troops = yes }
+                    annex_country = { target = FROM transfer_troops = no }
                 }
             }
         }
@@ -168,15 +181,20 @@ on_actions = {
 		}
 	}	
     on_capitulation = {
+		# Yugoslavia
 		effect = {
 			if = {
 				limit = {
 					tag = YUG
+					OR = {
+						ITA = { has_war_with = YUG }
+						BUL = { has_war_with = YUG }
+						HUN = { has_war_with = YUG }
+						ROM = { has_war_with = YUG }
+					}
 				}
 				IF = {
-					limit = {
-						NOT = { has_global_flag = ITA_no_scripted }
-					}
+					
 					if = {
 						limit = {
 							country_exists = BUL
@@ -185,6 +203,10 @@ on_actions = {
 							transfer_state = 106 # MACEDONIA
 							transfer_state = 803 # PIROT
 							transfer_state = 970 # DOMBUR
+							if = {
+								limit = { NOT = { has_idea = peace_training } }
+								add_ideas = peace_training
+							}
 						}
 					}
 					else = {
@@ -204,6 +226,21 @@ on_actions = {
 						HUN = {
 							transfer_state = 45 # VOJVODINA
 							transfer_state = 764 # BANAT
+							if = {
+								limit = { NOT = { has_idea = peace_training } }
+								add_ideas = peace_training
+							}
+						}
+					}
+					if = {
+						limit = {
+							country_exists = ROM
+						}
+						ROM = {
+							if = {
+								limit = { NOT = { has_idea = peace_training } }
+								add_ideas = peace_training
+							}
 						}
 					}
 					else = {
@@ -214,6 +251,9 @@ on_actions = {
 					}
 					GER = {
 						transfer_state = 102 # GERMAN SLOVENIA
+					}
+					YUG = {
+						transfer_navy = { target = ITA }
 					}
 					ITA = {
 						transfer_state = 853 # SLOVENIA
@@ -234,6 +274,29 @@ on_actions = {
 			}
 		}
 		effect = {
+			# Albania
+			if = {
+				limit = { 
+					original_tag = ALB 
+					ITA = { has_war_with = ALB }
+				} 
+				ALB = {
+					transfer_navy = { target = ITA }
+				}
+				ITA = {
+					add_named_threat = { 
+						threat = 2
+						name = ALB_peace
+					}
+					annex_country = {
+						target = ALB
+						transfer_troops = no
+					}
+				}
+			} 
+		}
+		effect = {
+			# Greece
 			if = {
 				limit = {
 					tag = GRE
@@ -246,33 +309,31 @@ on_actions = {
 						limit = {
 							country_exists = BUL
 						}
+						GRE = {
+							transfer_navy = { target = ITA }
+						}
 						BUL = {
-							transfer_state = 184 # THRACE
-							transfer_state = 731 # SOLUN
-							transfer_state = 47 # ATINA
-							transfer_state = 186 # PELOPONES
-							transfer_state = 185 # EPIR
 							add_named_threat = { 
 								threat = 12
 								name = GRE_peace
 							}
-						}
-						ITA = {
-							transfer_state = 187 # OSTROVI
-							transfer_state = 182 # KRIT
+							annex_country = {
+								target = GRE
+								transfer_troops = no
+							}
 						}
 					}
 					else = {
+						GRE = {
+							transfer_navy = { target = ITA }
+						}
 						ITA = {
-							transfer_state = 184 # THRACE
-							transfer_state = 731 # SOLUN
-							transfer_state = 185 # EPIR
-							transfer_state = 47 # ATINA
-							transfer_state = 186 # PELOPONES
-							transfer_state = 187 # OSTROVI
-							transfer_state = 182 # KRIT
+							annex_country = {
+								target = GRE
+								transfer_troops = no
+							}
 							add_named_threat = { 
-								threat = 9
+								threat = 12
 								name = GRE_peace
 							}
 						}

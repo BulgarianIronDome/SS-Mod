@@ -7,19 +7,17 @@ country_event = {
 	desc = mtg_britain.1.d
 	picture = GFX_report_event_eng_edward_and_wallis
 
-	# trigger = {
-	# 	tag = ENG
-	# 	has_country_flag = ENG_king_died
-	# 	date > 1936.6.1
-	# 	NOT = { has_country_flag = ENG_edward_abdicating }
-	# 	has_dlc = "Man the Guns"
-	# }
+	trigger = {
+		tag = ENG
+		has_country_flag = ENG_king_died
+		date > 1936.6.1
+		NOT = { has_country_flag = ENG_edward_abdicating }
+		has_dlc = "Man the Guns"
+	}
 	
-	# fire_only_once = yes
+	fire_only_once = yes
 
-	# mean_time_to_happen = { days = 14 }
-
-	is_triggered_only = yes
+	mean_time_to_happen = { days = 14 }
 
 	# Reject
 	option = {
@@ -43,155 +41,155 @@ country_event = {
 	}
 
 	# Accept - Morganatic marriage
-	# option = {
-	# 	name = mtg_britain.1.b
-	# 	trigger = {
-	# 		NOT = {
-	# 			OR = {
-	# 				has_completed_focus = ENG_organize_the_blackshirts
-	# 				has_completed_focus = ENG_concessions_to_the_trade_unions
-	# 				has_completed_focus = ENG_steady_as_she_goes
-	# 			}
-	# 		}
-	# 	}
-	# 	ai_chance = {
-	# 		factor = 20
-	# 		modifier = {
-	# 			factor = 0
-	# 			ENG_is_on_historical_plan_trigger = yes
-	# 		}
-	# 		modifier = {
-	# 			factor = 0
-	# 			has_completed_focus = ENG_steady_as_she_goes
-	# 		}
-	# 		modifier = {
-	# 			factor = 0
-	# 			has_completed_focus = ENG_organize_the_blackshirts
-	# 		}
-	# 		modifier = {
-	# 			factor = 0
-	# 			has_completed_focus = ENG_concessions_to_the_trade_unions
-	# 		}
-	# 		modifier = {
-	# 			factor = 0
-	# 			OR = {
-	# 				has_game_rule = {
-	# 					rule = ENG_ai_behavior 
-	# 					option = DEMOCRATIC_HISTORICAL
-	# 				}
-	# 				has_game_rule = {
-	# 					rule = ENG_ai_behavior 
-	# 					option = DEMOCRATIC_ALTERNATE
-	# 				}
-	# 				has_game_rule = {
-	# 					rule = ENG_ai_behavior 
-	# 					option = COMMUNIST
-	# 				}
-	# 				has_game_rule = {
-	# 					rule = ENG_ai_behavior 
-	# 					option = FASCIST
-	# 				}
-	# 				has_country_flag = ENG_AI_RANDOM_FASCIST
-	# 				has_country_flag = ENG_AI_RANDOM_COMMUNIST
-	# 				has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
-	# 				has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
-	# 			}
-	# 		}
-	# 	}
-	# 	add_stability = -0.05
-	# 	add_popularity = { ideology = neutrality popularity = 0.05 }
-	# 	custom_effect_tooltip = mtg_britain.1_tt
-	# 	activate_mission = ENG_abdication_crisis
-	# 	hidden_effect = { 
-	# 		country_event = { id = mtg_britain.2 days = 50 }
-	# 		country_event = { id = mtg_britain.6 days = 15 random_days = 10 }
-	# 	}
-	# 	set_country_flag = ENG_abdication_crisis_morganatic_marriage
-	# 	set_country_flag = edward_viii_refused_to_abdicate_flag
-	# 	hidden_effect = {
-	# 		CAN = { country_event = { id = mtg_britain.15 } }
-	# 		SAF = { country_event = { id = mtg_britain.15 } }
-	# 		RAJ = { country_event = { id = mtg_britain.15 } }
-	# 		AST = { country_event = { id = mtg_britain.15 } }
-	# 		NZL = { country_event = { id = mtg_britain.15 } }
-	# 	}
-	# }
+	option = {
+		name = mtg_britain.1.b
+		trigger = {
+			NOT = {
+				OR = {
+					has_completed_focus = ENG_organize_the_blackshirts
+					has_completed_focus = ENG_concessions_to_the_trade_unions
+					has_completed_focus = ENG_steady_as_she_goes
+				}
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				ENG_is_on_historical_plan_trigger = yes
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = ENG_steady_as_she_goes
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = ENG_organize_the_blackshirts
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ENG_ai_behavior 
+						option = DEMOCRATIC_HISTORICAL
+					}
+					has_game_rule = {
+						rule = ENG_ai_behavior 
+						option = DEMOCRATIC_ALTERNATE
+					}
+					has_game_rule = {
+						rule = ENG_ai_behavior 
+						option = COMMUNIST
+					}
+					has_game_rule = {
+						rule = ENG_ai_behavior 
+						option = FASCIST
+					}
+					has_country_flag = ENG_AI_RANDOM_FASCIST
+					has_country_flag = ENG_AI_RANDOM_COMMUNIST
+					has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
+					has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
+				}
+			}
+		}
+		add_stability = -0.05
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		custom_effect_tooltip = mtg_britain.1_tt
+		activate_mission = ENG_abdication_crisis
+		hidden_effect = { 
+			country_event = { id = mtg_britain.2 days = 50 }
+			country_event = { id = mtg_britain.6 days = 15 random_days = 10 }
+		}
+		set_country_flag = ENG_abdication_crisis_morganatic_marriage
+		set_country_flag = edward_viii_refused_to_abdicate_flag
+		hidden_effect = {
+			CAN = { country_event = { id = mtg_britain.15 } }
+			SAF = { country_event = { id = mtg_britain.15 } }
+			RAJ = { country_event = { id = mtg_britain.15 } }
+			AST = { country_event = { id = mtg_britain.15 } }
+			NZL = { country_event = { id = mtg_britain.15 } }
+		}
+	}
 
 	# Accept - Normal marriage
-	# option = {
-	# 	name = mtg_britain.1.a
-	# 	trigger = {
-	# 		NOT = {
-	# 			OR = {
-	# 				has_completed_focus = ENG_organize_the_blackshirts
-	# 				has_completed_focus = ENG_concessions_to_the_trade_unions
-	# 				has_completed_focus = ENG_steady_as_she_goes
-	# 			}
-	# 		}
-	# 	}
-	# 	ai_chance = {
-	# 		factor = 10
-	# 		modifier = {
-	# 			factor = 0
-	# 			ENG_is_on_historical_plan_trigger = yes
-	# 		}
-	# 		modifier = {
-	# 			factor = 0
-	# 			has_completed_focus = ENG_steady_as_she_goes
-	# 		}
-	# 		modifier = {
-	# 			factor = 0
-	# 			has_completed_focus = ENG_organize_the_blackshirts
-	# 		}
-	# 		modifier = {
-	# 			factor = 0
-	# 			has_completed_focus = ENG_concessions_to_the_trade_unions
-	# 		}
-	# 		modifier = {
-	# 			factor = 0
-	# 			OR = {
-	# 				has_game_rule = {
-	# 					rule = ENG_ai_behavior 
-	# 					option = DEMOCRATIC_HISTORICAL
-	# 				}
-	# 				has_game_rule = {
-	# 					rule = ENG_ai_behavior 
-	# 					option = DEMOCRATIC_ALTERNATE
-	# 				}
-	# 				has_game_rule = {
-	# 					rule = ENG_ai_behavior 
-	# 					option = COMMUNIST
-	# 				}
-	# 				has_game_rule = {
-	# 					rule = ENG_ai_behavior 
-	# 					option = FASCIST
-	# 				}
-	# 				has_country_flag = ENG_AI_RANDOM_FASCIST
-	# 				has_country_flag = ENG_AI_RANDOM_COMMUNIST
-	# 				has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
-	# 				has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
-	# 			}
-	# 		}
-	# 	}
-	# 	add_stability = -0.15
-	# 	add_popularity = { ideology = neutrality popularity = 0.1 }
-	# 	add_political_power = -25
-	# 	custom_effect_tooltip = mtg_britain.1_tt
-	# 	activate_mission = ENG_abdication_crisis
-	# 	hidden_effect = { 
-	# 		country_event = { id = mtg_britain.2 days = 50 }
-	# 		country_event = { id = mtg_britain.6 days = 15 random_days = 10 }
-	# 	}
-	# 	set_country_flag = ENG_abdication_crisis_normal_marriage
-	# 	set_country_flag = edward_viii_refused_to_abdicate_flag
-	# 	hidden_effect = {
-	# 		CAN = { country_event = { id = mtg_britain.15 } }
-	# 		SAF = { country_event = { id = mtg_britain.15 } }
-	# 		RAJ = { country_event = { id = mtg_britain.15 } }
-	# 		AST = { country_event = { id = mtg_britain.15 } }
-	# 		NZL = { country_event = { id = mtg_britain.15 } }
-	# 	}
-	# }
+	option = {
+		name = mtg_britain.1.a
+		trigger = {
+			NOT = {
+				OR = {
+					has_completed_focus = ENG_organize_the_blackshirts
+					has_completed_focus = ENG_concessions_to_the_trade_unions
+					has_completed_focus = ENG_steady_as_she_goes
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				ENG_is_on_historical_plan_trigger = yes
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = ENG_steady_as_she_goes
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = ENG_organize_the_blackshirts
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = ENG_concessions_to_the_trade_unions
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ENG_ai_behavior 
+						option = DEMOCRATIC_HISTORICAL
+					}
+					has_game_rule = {
+						rule = ENG_ai_behavior 
+						option = DEMOCRATIC_ALTERNATE
+					}
+					has_game_rule = {
+						rule = ENG_ai_behavior 
+						option = COMMUNIST
+					}
+					has_game_rule = {
+						rule = ENG_ai_behavior 
+						option = FASCIST
+					}
+					has_country_flag = ENG_AI_RANDOM_FASCIST
+					has_country_flag = ENG_AI_RANDOM_COMMUNIST
+					has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
+					has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
+				}
+			}
+		}
+		add_stability = -0.15
+		add_popularity = { ideology = neutrality popularity = 0.1 }
+		add_political_power = -25
+		custom_effect_tooltip = mtg_britain.1_tt
+		activate_mission = ENG_abdication_crisis
+		hidden_effect = { 
+			country_event = { id = mtg_britain.2 days = 50 }
+			country_event = { id = mtg_britain.6 days = 15 random_days = 10 }
+		}
+		set_country_flag = ENG_abdication_crisis_normal_marriage
+		set_country_flag = edward_viii_refused_to_abdicate_flag
+		hidden_effect = {
+			CAN = { country_event = { id = mtg_britain.15 } }
+			SAF = { country_event = { id = mtg_britain.15 } }
+			RAJ = { country_event = { id = mtg_britain.15 } }
+			AST = { country_event = { id = mtg_britain.15 } }
+			NZL = { country_event = { id = mtg_britain.15 } }
+		}
+	}
 }
 
 # Abdication Crisis Edward VIII - King's support coalesces
@@ -1762,7 +1760,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 4
+		days = 2
 	}
 
 	immediate = {
@@ -3535,7 +3533,7 @@ country_event = {
 	id = mtg_britain.50
 	title = mtg_britain.50.t
 	desc = mtg_britain.50.d
-	picture = GFX_report_event_hitler_handshake
+	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
 	
@@ -3814,6 +3812,15 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_country_flag = ENG_march_temp_man
+			}
+			add_stability = -0.009
+			add_popularity = { ideology = fascism popularity = 0.006 }
+			120 = { set_state_flag = ENG_has_blackshirt_support }
+			custom_effect_tooltip = ENG_blackshirt_march_tt
+		}
+		if = {
+			limit = {
 				has_country_flag = ENG_march_temp_aberdeenshire
 			}
 			add_stability = -0.026
@@ -3846,6 +3853,15 @@ country_event = {
 			add_stability = -0.072
 			add_popularity = { ideology = fascism popularity = 0.048 }
 			131 = { set_state_flag = ENG_has_blackshirt_support }
+			custom_effect_tooltip = ENG_blackshirt_march_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = ENG_march_temp_cumbria
+			}
+			add_stability = -0.048
+			add_popularity = { ideology = fascism popularity = 0.032 }
+			121 = { set_state_flag = ENG_has_blackshirt_support }
 			custom_effect_tooltip = ENG_blackshirt_march_tt
 		}
 		if = {
@@ -3940,9 +3956,11 @@ country_event = {
 		}
 		clr_country_flag = ENG_march_temp_northern_ireland
 		clr_country_flag = ENG_march_temp_highlands
+		clr_country_flag = ENG_march_temp_man
 		clr_country_flag = ENG_march_temp_aberdeenshire
 		clr_country_flag = ENG_march_temp_lanark
 		clr_country_flag = ENG_march_temp_lothian
+		clr_country_flag = ENG_march_temp_cumbria
 		clr_country_flag = ENG_march_temp_northern_england
 		clr_country_flag = ENG_march_temp_yorkshire
 		clr_country_flag = ENG_march_temp_lancashire
@@ -3991,6 +4009,15 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_country_flag = ENG_march_temp_man
+			}
+			add_stability = -0.012
+			add_popularity = { ideology = fascism popularity = 0.006 }
+			120 = { set_state_flag = ENG_has_blackshirt_support }
+			custom_effect_tooltip = ENG_blackshirt_march_tt
+		}
+		if = {
+			limit = {
 				has_country_flag = ENG_march_temp_aberdeenshire
 			}
 			add_stability = -0.034
@@ -4010,6 +4037,15 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = ENG_march_temp_lothian
+			}
+			add_stability = -0.064
+			add_popularity = { ideology = fascism popularity = 0.032 }
+			121 = { set_state_flag = ENG_has_blackshirt_support }
+			custom_effect_tooltip = ENG_blackshirt_march_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = ENG_march_temp_cumbria
 			}
 			add_stability = -0.064
 			add_popularity = { ideology = fascism popularity = 0.032 }
@@ -4117,6 +4153,7 @@ country_event = {
 		}
 		clr_country_flag = ENG_march_temp_northern_ireland
 		clr_country_flag = ENG_march_temp_highlands
+		clr_country_flag = ENG_march_temp_man
 		clr_country_flag = ENG_march_temp_aberdeenshire
 		clr_country_flag = ENG_march_temp_lanark
 		clr_country_flag = ENG_march_temp_lothian
@@ -4168,6 +4205,15 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_country_flag = ENG_march_temp_man
+			}
+			add_stability = -0.018
+			add_popularity = { ideology = fascism popularity = 0.006 }
+			120 = { set_state_flag = ENG_has_blackshirt_support }
+			custom_effect_tooltip = ENG_blackshirt_march_tt
+		}
+		if = {
+			limit = {
 				has_country_flag = ENG_march_temp_aberdeenshire
 			}
 			add_stability = -0.051
@@ -4178,6 +4224,15 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = ENG_march_temp_lanark
+			}
+			add_stability = -0.153
+			add_popularity = { ideology = fascism popularity = 0.051 }
+			133 = { set_state_flag = ENG_has_blackshirt_support }
+			custom_effect_tooltip = ENG_blackshirt_march_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = ENG_march_temp_cumbria
 			}
 			add_stability = -0.153
 			add_popularity = { ideology = fascism popularity = 0.051 }
@@ -4294,9 +4349,11 @@ country_event = {
 		}
 		clr_country_flag = ENG_march_temp_northern_ireland
 		clr_country_flag = ENG_march_temp_highlands
+		clr_country_flag = ENG_march_temp_man
 		clr_country_flag = ENG_march_temp_aberdeenshire
 		clr_country_flag = ENG_march_temp_lanark
 		clr_country_flag = ENG_march_temp_lothian
+		clr_country_flag = ENG_march_temp_cumbria
 		clr_country_flag = ENG_march_temp_northern_england
 		clr_country_flag = ENG_march_temp_yorkshire
 		clr_country_flag = ENG_march_temp_lancashire
@@ -5832,6 +5889,75 @@ country_event = {
 		}
 		ENG_imperial_conference_set_subject_counter = yes
 	}
+
+	# Exert diplomatic pressure
+	option = {
+		name = mtg_britain.83.b
+		add_political_power = -25
+		set_country_flag = ENG_diplomatic_pressure_flag
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_subject_of = ENG
+						tag = CAN
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = SAF
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = RAJ
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = AST
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = NZL
+					}
+				}
+			}
+			country_event = { id = mtg_britain.84 hours = 48 random_hours = 24 }
+		}
+		ENG_imperial_conference_set_subject_counter = yes
+	}
+	# Exert extensive diplomatic pressure
+	option = {
+		name = mtg_britain.83.c
+		add_political_power = -50
+		set_country_flag = ENG_extensive_diplomatic_pressure_flag
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_subject_of = ENG
+						tag = CAN
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = SAF
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = RAJ
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = AST
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = NZL
+					}
+				}
+			}
+			country_event = { id = mtg_britain.84 hours = 48 random_hours = 24 }
+		}
+		ENG_imperial_conference_set_subject_counter = yes
+	}
 }
 
 # Event for Dominions asking for vote on Imperial Defense
@@ -5887,6 +6013,30 @@ country_event = {
 		}
 	}
 
+	# Reject
+	option = {
+		name = mtg_britain.84.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 0 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 25 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 50 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 75 }
+			}
+		}
+		FROM = { country_event = { id = mtg_britain.86 } }
+	}
 }
 
 # Event for ENG telling FROM voted yes on Imperial Defense
@@ -6017,6 +6167,75 @@ country_event = {
 		}
 		ENG_imperial_conference_set_subject_counter = yes
 	}
+
+	# Exert diplomatic pressure
+	option = {
+		name = mtg_britain.83.b
+		add_political_power = -25
+		set_country_flag = ENG_diplomatic_pressure_flag
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_subject_of = ENG
+						tag = CAN
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = SAF
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = RAJ
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = AST
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = NZL
+					}
+				}
+			}
+			country_event = { id = mtg_britain.88 hours = 48 random_hours = 24 }
+		}
+		ENG_imperial_conference_set_subject_counter = yes
+	}
+	# Exert extensive diplomatic pressure
+	option = {
+		name = mtg_britain.83.c
+		add_political_power = -50
+		set_country_flag = ENG_extensive_diplomatic_pressure_flag
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_subject_of = ENG
+						tag = CAN
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = SAF
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = RAJ
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = AST
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = NZL
+					}
+				}
+			}
+			country_event = { id = mtg_britain.88 hours = 48 random_hours = 24 }
+		}
+		ENG_imperial_conference_set_subject_counter = yes
+	}
 }
 
 # Event for Dominions asking for vote on Imperial Trade
@@ -6051,6 +6270,30 @@ country_event = {
 		FROM = { country_event = { id = mtg_britain.89 } }
 	}
 
+	# Reject
+	option = {
+		name = mtg_britain.88.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 0 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 25 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 50 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 75 }
+			}
+		}
+		FROM = { country_event = { id = mtg_britain.90 } }
+	}
 }
 
 # Event for ENG telling FROM voted yes on Imperial Trade
@@ -6180,6 +6423,75 @@ country_event = {
 		}
 		ENG_imperial_conference_set_subject_counter = yes
 	}
+
+	# Exert diplomatic pressure
+	option = {
+		name = mtg_britain.83.b
+		add_political_power = -25
+		set_country_flag = ENG_diplomatic_pressure_flag
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_subject_of = ENG
+						tag = CAN
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = SAF
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = RAJ
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = AST
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = NZL
+					}
+				}
+			}
+			country_event = { id = mtg_britain.92 hours = 48 random_hours = 24 }
+		}
+		ENG_imperial_conference_set_subject_counter = yes
+	}
+	# Exert extensive diplomatic pressure
+	option = {
+		name = mtg_britain.83.c
+		add_political_power = -50
+		set_country_flag = ENG_extensive_diplomatic_pressure_flag
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_subject_of = ENG
+						tag = CAN
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = SAF
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = RAJ
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = AST
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = NZL
+					}
+				}
+			}
+			country_event = { id = mtg_britain.92 hours = 48 random_hours = 24 }
+		}
+		ENG_imperial_conference_set_subject_counter = yes
+	}
 }
 
 # Event for Dominions asking for vote on Imperial Economy
@@ -6233,6 +6545,31 @@ country_event = {
 				value = 1
 			}
 		}
+	}
+
+	# Reject
+	option = {
+		name = mtg_britain.92.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 0 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 25 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 50 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 75 }
+			}
+		}
+		FROM = { country_event = { id = mtg_britain.94 } }
 	}
 }
 
@@ -6365,6 +6702,74 @@ country_event = {
 		ENG_imperial_conference_set_subject_counter = yes
 	}
 
+	# Exert diplomatic pressure
+	option = {
+		name = mtg_britain.83.b
+		add_political_power = -25
+		set_country_flag = ENG_diplomatic_pressure_flag
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_subject_of = ENG
+						tag = CAN
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = SAF
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = RAJ
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = AST
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = NZL
+					}
+				}
+			}
+			country_event = { id = mtg_britain.96 hours = 48 random_hours = 24 }
+		}
+		ENG_imperial_conference_set_subject_counter = yes
+	}
+	# Exert extensive diplomatic pressure
+	option = {
+		name = mtg_britain.83.c
+		add_political_power = -50
+		set_country_flag = ENG_extensive_diplomatic_pressure_flag
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_subject_of = ENG
+						tag = CAN
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = SAF
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = RAJ
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = AST
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = NZL
+					}
+				}
+			}
+			country_event = { id = mtg_britain.96 hours = 48 random_hours = 24 }
+		}
+		ENG_imperial_conference_set_subject_counter = yes
+	}
 }
 
 # Event for Dominions asking for vote on Appeasement
@@ -6555,6 +6960,74 @@ country_event = {
 		ENG_imperial_conference_set_subject_counter = yes
 	}
 
+	# Exert diplomatic pressure
+	option = {
+		name = mtg_britain.83.b
+		add_political_power = -25
+		set_country_flag = ENG_diplomatic_pressure_flag
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_subject_of = ENG
+						tag = CAN
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = SAF
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = RAJ
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = AST
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = NZL
+					}
+				}
+			}
+			country_event = { id = mtg_britain.100 hours = 48 random_hours = 24 }
+		}
+		ENG_imperial_conference_set_subject_counter = yes
+	}
+	# Exert extensive diplomatic pressure
+	option = {
+		name = mtg_britain.83.c
+		add_political_power = -50
+		set_country_flag = ENG_extensive_diplomatic_pressure_flag
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_subject_of = ENG
+						tag = CAN
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = SAF
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = RAJ
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = AST
+					}
+					AND = {
+						is_subject_of = ENG
+						tag = NZL
+					}
+				}
+			}
+			country_event = { id = mtg_britain.100 hours = 48 random_hours = 24 }
+		}
+		ENG_imperial_conference_set_subject_counter = yes
+	}
 }
 
 # Event for Dominions asking for vote on Imperial Federation
@@ -6582,13 +7055,96 @@ country_event = {
 			modifier = {
 				factor = 0
 				tag = RAJ
-				ENG = { NOT = { has_completed_focus = ENG_indian_autonomy } }
+				ENG = {
+					AND = {
+						NOT = { has_completed_focus = ENG_indian_autonomy } 
+						NOT = { has_country_leader_with_trait = viceroy_emeritus }
+					}
+				}
 			}
 		}
 		custom_effect_tooltip = mtg_britain.100_tt #"If all accept you will get:"
 		effect_tooltip = { add_ideas = ENG_federal_integration }
 		set_country_flag = ENG_accepted_federation
 		FROM = { country_event = { id = mtg_britain.101 } }
+	}
+
+	# Reject
+	option = {
+		name = mtg_britain.100.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 0 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 25 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 50 }
+			}
+			modifier = {
+				factor = 0.8
+				has_opinion = { target = ENG value > 75 }
+			}
+			modifier = {
+				factor = 0
+				tag = RAJ
+				ENG = { 
+					OR = {
+						has_completed_focus = ENG_indian_autonomy 
+						has_country_leader_with_trait = viceroy_emeritus
+					}
+				}
+				has_opinion = { target = ENG value > 99 }
+			}
+			modifier = {
+				factor = 0
+				tag = RAJ
+				ENG = { 
+					OR = {
+						has_completed_focus = ENG_indian_autonomy 
+						has_country_leader_with_trait = viceroy_emeritus
+					}
+				}
+				has_opinion = { target = ENG value > 89 }
+				FROM = { has_country_flag = ENG_diplomatic_pressure_flag }
+			}
+			modifier = {
+				factor = 0
+				tag = RAJ
+				ENG = { 
+					OR = {
+						has_completed_focus = ENG_indian_autonomy 
+						has_country_leader_with_trait = viceroy_emeritus
+					}
+				}
+				has_opinion = { target = ENG value > 79 }
+				FROM = { has_country_flag = ENG_extensive_diplomatic_pressure_flag }
+			}
+			modifier = {
+				factor = 0
+				NOT = { tag = RAJ }
+				has_opinion = { target = ENG value > 99 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { tag = RAJ }
+				has_opinion = { target = ENG value > 89 }
+				FROM = { has_country_flag = ENG_diplomatic_pressure_flag }
+			}
+			modifier = {
+				factor = 0
+				NOT = { tag = RAJ }
+				has_opinion = { target = ENG value > 79 }
+				FROM = { has_country_flag = ENG_extensive_diplomatic_pressure_flag }
+			}
+		}
+		set_country_flag = ENG_rejected_federation
+		FROM = { country_event = { id = mtg_britain.102 } }
 	}
 }
 

@@ -1501,7 +1501,6 @@ country_event = {
 }
 
 # Notification event that leader has gotten sick
-# Notification event that leader has gotten sick
 unit_leader_event = {
 	id = generic.17
 	title = generic.17.t

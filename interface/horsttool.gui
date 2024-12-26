@@ -148,7 +148,8 @@ guiTypes = {
 			name = "declare_war_button"
 			position = { x = 279 y = 255 }
 			spriteType = "GFX_decision_border_war"
-			pdx_tooltip = ""
+			pdx_tooltip = "DECLARE_WAR"
+			pdx_tooltip_delayed = "DECLARE_WAR_DELAYED"
 		}
 		buttonType = {
 			name = "mill_add"	
@@ -772,7 +773,7 @@ guiTypes = {
 		containerWindowType = {
 		name = "st_state_manager_powers_container"
 		position = {x=230 y=100}
-		size = { width=600 height=300}
+		size = { width=400 height=300}
 
 		fade_time = 300
 		fade_type = linear 

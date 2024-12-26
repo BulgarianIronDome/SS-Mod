@@ -282,13 +282,14 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-
+			#gives 8% more HP to mechanized units
 			modifier = {
+				custom_modifier_tooltip = MON_mech_HP_tooltip
                 army_org_factor = 0.05
                 motorized_attack_factor = 0.175
                 motorized_defence_factor = 0.175
-                mechanized_defence_factor = 0.045
-                mechanized_attack_factor = 0.045
+                mechanized_defence_factor = 0.075
+                mechanized_attack_factor = 0.075
                 experience_gain_motorized_training_factor = 0.25
                 experience_gain_motorized_combat_factor = 0.25
                 experience_gain_mechanized_training_factor = 0.25
@@ -298,11 +299,21 @@ ideas = {
 			}
             equipment_bonus = {
                 motorized_rocket_equipment = {
-                    soft_attack = 0.125
+                    soft_attack = 0.15
                     breakthrough = 0.2
-                    hard_attack = 1
+                    hard_attack = 2
                     defense = 0.35
 					build_cost_ic = 0.25
+					instant = yes
+				}
+            }
+			equipment_bonus = {
+                mechanized_equipment = {
+                    breakthrough = 0.15
+                    hard_attack = 1
+                    defense = 0.03
+					hardness = -0.15
+					build_cost_ic = -0.05
 					instant = yes
 				}
             }
@@ -319,16 +330,19 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-
+			#gives 24% more HP to cav units with tech
+			
 			modifier = {
+				custom_modifier_tooltip = MON_horse_HP_tooltip
 				org_loss_when_moving = -0.25
-				cavalry_attack_factor = 0.25
-				cavalry_defence_factor = 0.25
-				experience_gain_cavalry_training_factor = 0.2
-				experience_gain_cavalry_combat_factor = 0.2
-				experience_gain_recon_training_factor = 0.2
-				experience_gain_recon_combat_factor = 0.2
-				high_command_cost_factor = -0.1
+				cavalry_attack_factor = 0.4
+				cavalry_defence_factor = 0.5
+				experience_gain_cavalry_training_factor = 0.4
+				experience_gain_cavalry_combat_factor = 0.4
+				experience_gain_recon_training_factor = 0.4
+				experience_gain_recon_combat_factor = 0.4
+				high_command_cost_factor = -0.5
+				command_power_gain = 0.2
 			}
 		}
         MON_new_generals = {
@@ -345,11 +359,11 @@ ideas = {
 			}
 
 			modifier = {
-                max_command_power = 20
-                command_power_gain = 0.1
+                max_command_power = 40
+                command_power_gain = 0.15
                 army_leader_start_logistics_level = 1
                 army_leader_start_planning_level = 1
-				army_leader_cost_factor = -0.1 
+				army_leader_cost_factor = -0.5 
 				unit_leader_as_advisor_cp_cost_factor = -0.3
                 high_command_cost_factor = -0.1
 			}
@@ -368,6 +382,8 @@ ideas = {
 			}
 
 			modifier = {
+				conscription_factor = 0.05
+				conscription = 0.05
 			    experience_gain_infantry_training_factor = 0.1825
                 experience_gain_infantry_combat_factor = 0.1825
                 army_infantry_attack_factor = 0.185
@@ -380,8 +396,16 @@ ideas = {
                 army_armor_attack_factor = -0.05
                 army_armor_defence_factor -0.05
 			}
+			equipment_bonus = {
+                infantry_equipment = {
+                    soft_attack = 0.02
+                    breakthrough = 0.02
+					build_cost_ic = -0.05
+					instant = yes
+				}
+            }
 		}
-		MON_bidnii_khuvid = {
+		MON_mori_bosdog = { #war buffs focus heheheaw the horse is coming
 			picture = SOV_desperate_measures_ns_nsb_ccp_sov_compatibility
 
 			removal_cost = -1
@@ -421,6 +445,7 @@ ideas = {
 			}
 
 			modifier = {
+				conscription_factor = 0.1
 			    supply_combat_penalties_on_core_factor = -0.25
 				supply_consumption_factor = -0.15
 				army_core_attack_factor = 0.25

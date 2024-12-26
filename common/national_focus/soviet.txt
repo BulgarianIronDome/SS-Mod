@@ -1704,7 +1704,7 @@ focus = {
     x = 10
     y = 0
     relative_position_id = SOV_infrastructure_effort_nsb
-    cost = 2.2
+    cost = 0
 
     ai_will_do = {
         factor = 1
@@ -1833,7 +1833,7 @@ focus = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_transpolar_flights
-		cost = 5
+		cost = 10
 
 		available = {
 			any_owned_state = {
@@ -2041,7 +2041,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_transpolar_flights
-		cost = 5
+		cost = 10
 
 		available = {
 

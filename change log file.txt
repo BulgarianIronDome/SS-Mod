@@ -1,4 +1,4 @@
-Every single change in the mod Bulgarian  Historical Vanila Multiplauer (BHVM for short)
+Every single change in the mod Bulgarian Historical Vanila Multiplayer (BHVM for short)
 
 Field marshal division cap from 24 --> 50 this is logical hence fourth he is a marhsal and should be able to command more divisions
 Reduced the monthly field population growth to -70% , saves are smaller this way
@@ -366,3 +366,37 @@ Shadow:Railroaded some sov focuses;made gun 3 and gun 2 earlier for some reason;
 
 Changed a lot of the pregrinds , mainly nerfs to: GER , HUN , BUL , CAN , SAF , AST , JAP ; Buffs to: SOV , ENG , MAN
 Returned the old dates for gun 3 and gun 2 cuz shadow is silly and has no idea how balance works :)
+
+Gutted the save game files a tiny wee bit smaller by that i mean ~5mbs smaller
+Liquidated turkey
+Buffed bulgaria only dday wall , added a manpower gain from the lendlease mech program , buffed bul caudillo 25+ extra command power
+Fixed repeating errors
+Improved game stability
+Improved game speed from semi fast on 4 speed to fast on 4 speed
+Improved 3-2 speed to be faster
+Made AI dumber
+Reworked mongolia - will go into further detail for that one later
+Made it so that when romania looses transilvania to get some extra 2 civs and 2 mills into muntenia so it isnt a fully sub nation
+Changed the first focus for soviets for air
+Updated occupation laws
+Changed BUL FRA CAN ENG GER  SPR SOV pregrinds a bit TLDR; 1+ extra pregrind for spain stronger eng pregrind +1 attack on a ger general added ranger to bul pregrinds , eng has lvl 8 instead of lvl 6 pregrind can +1 planning fra 1+ planning
+HOPEFULLY made the sick and wounded impossible to roll if the game rule is on
+Changed how the german pupets equipment goes when they "capitulate"
+Fixed some more repeating errors
+Removed refusing for transilvania and czeks
+Hopefully nothing bad for england
+Belguim hopefully doesnt explode anymore
+Made the cheating sound effect less loud
+Reworked mongolia a bit
+Mongolian rework in question: Those who know
+MON: 
+Reworked how the economy works
+Added 5 new focuses which can dicate your future economy and reworked a lot of spirits for how mongolian army works
+Skibidriosil guy now has 6 attack 5 defense and 3 logistics
+Choosing between Traditional and Motorized army has huge impact as mongolia now , horse is not very very good and your mech is now even better , you gain 2+ hp per mech battalion for Motorized and 6+ hp per horse battalion for traditional
+New branches for air and navy for mongolia!!
+Buffed every single army path , now having its quirks and buffs
+Fixed air focus main buffs 
+The plundering: There are 3 options south , east and west , south gives you the most amount of factories but the least amount of manpower  , east gives you the most amount of manpower but no factories , west gives you a balance of manpower and industry
+What ever option you pick for the plundering , you will get a buff for that region later down the focus tree and there the concentrated farm acts will be applied aka you get the eco there
+You can now gain a tiny wee bit amount of oil as mongolia so you dont starve the soviet as much , plus its hist accurate ;)

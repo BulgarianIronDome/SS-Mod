@@ -574,31 +574,28 @@ operations = {
             if = {
                 limit = { date > 1943.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4000 producer = SPR } }
-                BUL ={ add_manpower = 60000 }
             }
             else_if = {
                 limit = { date > 1942.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = SPR } }
-                BUL ={ add_manpower = 45000 }
             }
             else_if = {
                 limit = { date > 1941.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 producer = SPR } }
-                BUL ={ add_manpower = 35000 }
+                BUL ={ add_manpower = 100000 }
             }
             else_if = {
                 limit = { date > 1940.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2550 producer = SPR } }
-                BUL ={ add_manpower = 25000 }
+                BUL ={ add_manpower = 50000 }
             }
             else_if = {
                 limit = { date > 1939.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1600 producer = SPR } }
-                BUL ={ add_manpower = 25000 }
+                BUL ={ add_manpower = 50000 }
             }
             else = {
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 producer = SPR } }
-                BUL ={ add_manpower = 15000 }
             }
             activate_mission = GER_recieving_ll_mech_bul_2a
         }
@@ -644,31 +641,28 @@ operations = {
             if = {
                 limit = { date > 1943.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4000 producer = SPR } }
-                BUL ={ add_manpower = 60000 }
             }
             else_if = {
                 limit = { date > 1942.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = SPR } }
-                BUL ={ add_manpower = 45000 }
             }
             else_if = {
                 limit = { date > 1941.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 producer = SPR } }
-                BUL ={ add_manpower = 35000 }
+                BUL ={ add_manpower = 100000 }
             }
             else_if = {
                 limit = { date > 1940.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2550 producer = SPR } }
-                BUL ={ add_manpower = 25000 }
+                BUL ={ add_manpower = 50000 }
             }
             else_if = {
                 limit = { date > 1939.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1600 producer = SPR } }
-                BUL ={ add_manpower = 25000 }
+                BUL ={ add_manpower = 50000 }
             }
             else = {
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 producer = SPR } }
-                BUL ={ add_manpower = 15000 }
             }
             activate_mission = GER_recieving_ll_mech_bul_1a    
         }
@@ -690,23 +684,23 @@ operations = {
             SPR = {
                 if = {
                     limit = { date > 1943.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4000 }
                 }
                 else_if = {
                     limit = { date > 1942.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 }
                 }
                 else_if = {
                     limit = { date > 1941.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 }
                 }
                 else_if = {
                     limit = { date > 1940.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2550 }
                 }
                 else_if = {
                     limit = { date > 1939.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1600 }
                 }
                 else = {
                     add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 }
@@ -714,23 +708,23 @@ operations = {
             }
             if = {
                 limit = { date > 1943.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4000 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1942.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1941.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1940.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2550 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1939.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1600 producer = SPR } }
             }
             else = {
                 GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 producer = SPR } }
@@ -754,23 +748,23 @@ operations = {
             SPR = {
                 if = {
                     limit = { date > 1943.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4000 }
                 }
                 else_if = {
                     limit = { date > 1942.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 }
                 }
                 else_if = {
                     limit = { date > 1941.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 }
                 }
                 else_if = {
                     limit = { date > 1940.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2550 }
                 }
                 else_if = {
                     limit = { date > 1939.12.31 }
-                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 }
+                    add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1600 }
                 }
                 else = {
                     add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 }
@@ -778,23 +772,23 @@ operations = {
             }
             if = {
                 limit = { date > 1943.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3200 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4000 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1942.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3100 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1941.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2800 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1940.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2100 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2550 producer = SPR } }
             }
             else_if = {
                 limit = { date > 1939.12.31 }
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1350 producer = SPR } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1600 producer = SPR } }
             }
             else = {
                 GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 750 producer = SPR } }

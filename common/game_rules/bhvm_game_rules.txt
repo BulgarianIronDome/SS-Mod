@@ -1166,4 +1166,9 @@ peace_training_xp= {
 		text = "ROn"
 		desc = "You gain daily xp with peace time training(Recommmended)"
 	}
+	option = {
+		name = infinite
+		text = "RInfinite xp"
+		desc = "You gain (essentially) infinite land army xp"
+	}
 }

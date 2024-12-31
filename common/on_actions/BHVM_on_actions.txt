@@ -17,6 +17,17 @@ on_actions = {
                     limit = {
                         is_playable_country = yes
                         has_war = no
+                        has_game_rule = { rule = peace_training_xp option = infinite }
+                        NOT = { has_idea = peace_training_infinite_xp }
+                    }
+                    add_ideas = peace_training_infinite_xp
+                }
+            }
+            if = { 
+                every_country = {
+                    limit = {
+                        is_playable_country = yes
+                        has_war = no
                         has_game_rule = { rule = peace_training_xp option = off }
                         NOT = { has_idea = peace_training_no_xp }
                     }

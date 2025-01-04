@@ -1833,7 +1833,7 @@ focus = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_transpolar_flights
-		cost = 10
+		cost = 2
 
 		available = {
 			any_owned_state = {
@@ -1902,7 +1902,7 @@ focus = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_expand_the_aircraft_industry
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -1989,7 +1989,7 @@ focus = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_expand_the_aircraft_industry
-		cost = 10
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_intensify_pilot_training_program }
 
@@ -2041,7 +2041,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_transpolar_flights
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -2068,7 +2068,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_foster_flying_clubs
-		cost = 10
+		cost = 2
 
 		available = {
 			OR = {
@@ -2101,7 +2101,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_women_in_aviation
-		cost = 10
+		cost = 2
 
 		available = {
 			any_enemy_country = {
@@ -2188,7 +2188,7 @@ focus = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_foster_flying_clubs
-		cost = 10
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_increase_aircraft_production }
 
@@ -2219,7 +2219,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_expand_the_aircraft_industry
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -2244,7 +2244,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_increase_aircraft_production
-		cost = 10
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_long_range_aircraft }
 
@@ -2276,7 +2276,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_intensify_pilot_training_program
-		cost = 10
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_ground_support }
 
@@ -2309,7 +2309,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_ground_support
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -2344,7 +2344,7 @@ focus = {
 		x = 6
 		y = 0
 		relative_position_id = SOV_transpolar_flights
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -2391,7 +2391,7 @@ focus = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 1
 
 		available = {
 			195 = { #LENINGRAD
@@ -2535,7 +2535,7 @@ focus = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 1
 
 		available = {
 			OR = {
@@ -2624,7 +2624,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 1
 
 		available = {
 			OR = {
@@ -2751,7 +2751,7 @@ focus = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 1
 
 		available = {
 			OR = {
@@ -2838,7 +2838,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_reinforce_northern_naval_bases
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -2974,7 +2974,7 @@ focus = {
 		x = 4
 		y = 2
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 1
 
 		available = {
 
@@ -3027,7 +3027,7 @@ focus = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_pc_of_the_ussr_navy
-		cost = 10
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_submarine_warfare }
 
@@ -3076,7 +3076,7 @@ focus = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_pc_of_the_ussr_navy
-		cost = 10
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_surface_warfare }
 
@@ -3126,7 +3126,7 @@ focus = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_surface_warfare
-		cost = 10
+		cost = 2
 
 		available = {
 			if = {
@@ -3243,7 +3243,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_surface_warfare
-		cost = 10
+		cost = 2
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -3251,7 +3251,6 @@ focus = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
-				has_tech = basic_ship_hull_heavy
 			}
 		}
 		
@@ -3357,7 +3356,7 @@ focus = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_submarine_warfare
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -3406,7 +3405,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_submarine_warfare
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -3580,7 +3579,7 @@ focus = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_expand_shipbuilding_plants
-		cost = 10
+		cost = 2
 
 		available = {
 		}
@@ -3607,7 +3606,7 @@ focus = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_advanced_maneuvers
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -3896,7 +3895,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_advanced_maneuvers
-		cost = 10
+		cost = 2
 
 		available = {
 
@@ -4468,7 +4467,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { SOV_defense_industry_breakthrough_factor = 0.05 }
+			add_to_variable = { SOV_defense_industry_breakthrough_factor = 0.1 }
 			add_to_variable = { SOV_defense_industry_army_artillery_defence_factor = 0.05 }
 			custom_effect_tooltip = SOV_pc_of_mortar_armament_ns_tt
 

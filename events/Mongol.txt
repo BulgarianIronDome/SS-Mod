@@ -56,6 +56,11 @@ country_event = {
 	
 	option = {
 		name = mongolia.3.a #south
+		
+		ai_chance = {
+			base = 99999
+		}
+
 		set_country_flag = MON_plunder_south_flag
 		817 = { 
 			add_manpower = -9230
@@ -67,6 +72,11 @@ country_event = {
 	}
 	option = {
 		name = mongolia.3.b #east
+		
+		ai_chance = {
+			base = 0
+		}
+		
 		set_country_flag = MON_plunder_east_flag
 		819 = {
 			add_manpower = -72300
@@ -78,6 +88,11 @@ country_event = {
 	}
 	option = {
 		name = mongolia.3.c #west
+		
+		ai_chance = {
+			base = 0
+		}
+		
 		set_country_flag = MON_plunder_west_flag
 		818 = {
 			add_manpower = -82300

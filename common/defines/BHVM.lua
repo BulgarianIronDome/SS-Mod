@@ -82,6 +82,7 @@ NDefines.NTrade.RELATION_TRADE_FACTOR = 0				-- Trade factor is modified by Opin
 
 
 
+NDefines.NAI.RESEARCH_AHEAD_OF_TIME_FACTOR = 0
 NDefines.NAI.GENERATE_WARGOAL_ANTAGONIZE_SCALE = 0
 NDefines.NAI.BASE_DISTANCE_TO_CARE = 0                -- Countries that are too far away are less interesting in diplomacy
 NDefines.NAI.DIPLO_PREFER_OTHER_FACTION = 0

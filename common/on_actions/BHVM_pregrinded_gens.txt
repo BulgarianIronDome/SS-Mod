@@ -311,7 +311,7 @@ on_actions = {
 					
 					add_corps_commander_role = {
 						character = SOV_vasily_kuznetsov
-						traits = { infantry_officer commando cavalry_leader trickster organizer }
+						traits = { infantry_officer commando cavalry_leader trickster organizer infantry_leader }
 						skill = 8
 						attack_skill = 4
 						defense_skill = 7
@@ -321,11 +321,11 @@ on_actions = {
 					
 					add_corps_commander_role = {
 						character = SOV_nikolay_berzarin
-						traits = { infantry_officer infantry_leader infantry_expert }
-						skill = 6
-						attack_skill = 3
+						traits = { infantry_officer infantry_leader infantry_expert commando }
+						skill = 8
+						attack_skill = 5
 						defense_skill = 6
-						planning_skill = 2
+						planning_skill = 3
 						logistics_skill = 6
 					}
 					
@@ -654,7 +654,7 @@ on_actions = {
 					
 					add_corps_commander_role = {
 						character = SOV_vasily_kuznetsov
-						traits = { infantry_officer commando cavalry_leader trickster organizer }
+						traits = { infantry_officer commando cavalry_leader trickster organizer infantry_leader }
 						skill = 8
 						attack_skill = 4
 						defense_skill = 7
@@ -664,7 +664,7 @@ on_actions = {
 					
 					add_corps_commander_role = {
 						character = SOV_nikolay_berzarin
-						traits = { infantry_officer infantry_leader infantry_expert }
+						traits = { infantry_officer infantry_leader infantry_expert commando }
 						skill = 6
 						attack_skill = 3
 						defense_skill = 6
@@ -924,7 +924,7 @@ on_actions = {
 					
 					add_corps_commander_role = {
 						character = SOV_vasily_kuznetsov
-						traits = { infantry_officer commando cavalry_leader trickster organizer }
+						traits = { infantry_officer commando cavalry_leader trickster organizer infantry_leader }
 						skill = 8
 						attack_skill = 4
 						defense_skill = 7
@@ -934,7 +934,7 @@ on_actions = {
 					
 					add_corps_commander_role = {
 						character = SOV_nikolay_berzarin
-						traits = { infantry_officer infantry_leader infantry_expert }
+						traits = { infantry_officer infantry_leader infantry_expert commando }
 						skill = 6
 						attack_skill = 3
 						defense_skill = 6

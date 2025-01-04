@@ -621,7 +621,7 @@ vanila_bonuses = {
 	name = "Cool vanila bonuses from minors"
 	group = "BHVM game rules"
 	icon = "GFX_decision_gre_paying_ifc_debt"
-	default = {
+	option = {
 		name = on-overall
 		text = "1Real100%Balance"
 		desc = "Swedish Swiss and Denmark bonuses will apply to Italy Germany and England , swiss bonuses only to France(Not exactly Recommmended)"
@@ -629,17 +629,17 @@ vanila_bonuses = {
 	option = {
 		name = on-axis
 		text = "KAxis-Bias"
-		desc = "Swedish Swiss and Denmark bonuses will apply to Italy and Germany(Recomended)"
+		desc = "Swedish Swiss and Denmark bonuses will apply to Italy and Germany(Not Recommmended)"
 	}
 	option = {
 		name = on-allies
 		text = "5Allies-Bias"
 		desc = "Swedish and Swiss bonuses will apply to England , swiss bonuses only to France(Not Recommmended)"
 	}
-	option = {
+	default = {
 		name = off
 		text = "YOff"
-		desc = "Absolutely no bonuses from vanila based countries(Not Recommmended)"
+		desc = "Absolutely no bonuses from vanila based countries(Recommmended)"
 	}
 }
 #upgradable_amb_mech = {

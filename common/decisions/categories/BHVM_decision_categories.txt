@@ -45,7 +45,7 @@ game_check = {
     }
 
     visible = {
-        always = yes
+        always = no
     }
 
     priority = 1000

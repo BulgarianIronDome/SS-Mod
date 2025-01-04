@@ -584,7 +584,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		available = {
-			has_tech = construction3
+			has_tech = construction2
 		}
 		completion_reward = { 
 			random_owned_controlled_state = {

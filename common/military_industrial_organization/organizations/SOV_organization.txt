@@ -15,6 +15,7 @@
 @tank_max_speed = 0.05
 @tank_production_capacity_factor = 0.05
 @tank_soft_attack = 0.05
+@tank_hard_attack = 0.05
 
 
 ### SHIPS
@@ -241,6 +242,7 @@ SOV_morozov_design_bureau_organization = {
 
 		equipment_bonus = {
 			soft_attack = @tank_soft_attack
+			hard_attack = @tank_hard_attack
 		}
 	}
 }
@@ -383,6 +385,7 @@ SOV_astrov_design_bureau_organization = {
 
 		equipment_bonus = {
 			soft_attack = @tank_soft_attack
+			hard_attack = @tank_hard_attack
 		}
 	}
 }
@@ -555,6 +558,7 @@ SOV_okmo_organization = {
 
 		equipment_bonus = {
 			soft_attack = @tank_soft_attack
+			hard_attack = @tank_hard_attack
 		}
 	}
 }
@@ -698,6 +702,7 @@ SOV_mytishchy_machine_building_plant_organization = {
 
 		equipment_bonus = {
 			soft_attack = @tank_soft_attack
+			hard_attack = @tank_hard_attack
 		}
 	}
 }
@@ -844,6 +849,7 @@ SOV_kirov_organization = {
 
 		equipment_bonus = {
 			soft_attack = @tank_soft_attack
+			hard_attack = @tank_hard_attack
 		}
 	}
 }

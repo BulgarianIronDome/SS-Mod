@@ -1653,12 +1653,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
-			
-			modifier = {
-				factor = 5
-				date > "1937.1.1"
-			}
+			factor = 99999
 		}
 	}
 
@@ -1740,12 +1735,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 10
-				date > "1937.1.1"
-			}			
+			factor = 99999		
 		}
 	}
 
@@ -1829,22 +1819,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
-			
-			modifier = {
-				factor = 1.5
-				has_war = yes
-			}
-			
-			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1940.1.1"
-			}
+			factor = 9999999999999
 		}
 	}
 

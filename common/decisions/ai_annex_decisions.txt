@@ -1512,7 +1512,6 @@ operations = {
         available = {
             original_tag = SOV
             MON = { is_ai = yes }
-            date > 1940.01.01
         }
         visible = {
             original_tag = SOV

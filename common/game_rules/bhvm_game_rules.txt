@@ -984,7 +984,7 @@ china_war_difficulty = {
 	default = {
 		name = easy
 		text = "GEasy"
-		desc = "China will get in total 54 divs , under equiped (Recommmended)"
+		desc = "China will get in total ~40 divs , under equiped (Recommmended)"
 	}
 }
 sp_air = {

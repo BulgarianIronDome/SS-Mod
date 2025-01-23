@@ -9,7 +9,7 @@ state={
 		chromium=2 # was: 2
 	}
 	history={
-		owner = RAJ
+		owner = NONE
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1 
@@ -17,7 +17,6 @@ state={
 		victory_points = {
 			4987 3 
 		}
-		add_core_of = RAJ
 	}
 
 	provinces={

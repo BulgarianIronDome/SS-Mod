@@ -385,12 +385,12 @@ operations = {
             if = {
                 limit = { date > 1943.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 producer = SPR } }
-                ITA = { add_offsite_building = { type = arms_factory level = 1 } 
+                ITA = { add_offsite_building = { type = arms_factory level = 1 } }
             }
             else_if = {
                 limit = { date > 1942.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 producer = SPR } }
-                ITA = { add_offsite_building = { type = arms_factory level = 1 } 
+                ITA = { add_offsite_building = { type = arms_factory level = 1 } }
             }
             else_if = {
                 limit = { date > 1941.12.31 }
@@ -455,12 +455,12 @@ operations = {
             if = {
                 limit = { date > 1943.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 producer = SPR } }
-                ITA = { add_offsite_building = { type = arms_factory level = 1 } 
+                ITA = { add_offsite_building = { type = arms_factory level = 1 } }
             }
             else_if = {
                 limit = { date > 1942.12.31 }
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3400 producer = SPR } }
-                ITA = { add_offsite_building = { type = arms_factory level = 1 } 
+                ITA = { add_offsite_building = { type = arms_factory level = 1 } }
             }
             else_if = {
                 limit = { date > 1941.12.31 }

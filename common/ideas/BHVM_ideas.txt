@@ -410,7 +410,7 @@ ideas = {
 			picture = generic_infantry_bonus
 			modifier = {
 				experience_gain_army_unit_factor = 1
-				experience_gain_army = 0.2
+				experience_gain_army = 0.4
 				training_time_army_factor = -0.85
 				air_training_xp_gain_factor = 9
 				experience_gain_navy_unit_factor = 10
@@ -423,130 +423,6 @@ ideas = {
 				navy_fuel_consumption_factor = -9
 				repair_speed_factor = 100
 			}
-		}
-		peace_training_infinite_xp = {
-			allowed = {
-				always = no
-			}
-			cancel = {
-				OR = {
-					has_war = yes
-					AND = {
-						tag = SPR
-						OR = {								
-									GER = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-									HUN = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-									ITA = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-									FIN = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-									ROM = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-									BUL = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-								}
-					}
-				}
-			}
-			removal_cost = -1
-			picture = generic_infantry_bonus
-			modifier = {
-				experience_gain_army_unit_factor = 1
-				experience_gain_army = 0.35
-				training_time_army_factor = -0.85
-				air_training_xp_gain_factor = 9
-				experience_gain_navy_unit_factor = 10
-				attrition = -1
-				air_accidents_factor = -9
-				naval_accidents_chance = -9
-				mobilization_speed = 2
-				army_fuel_consumption_factor = -9
-				air_fuel_consumption_factor = -9
-				navy_fuel_consumption_factor = -9
-				repair_speed_factor = 100
-			}
-		}
-		peace_training_no_xp = {
-			allowed = {
-				always = no
-			}
-			cancel = {
-				OR = {
-					has_war = yes
-					AND = {
-						tag = SPR
-						OR = {								
-									GER = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-									HUN = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-									ITA = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-									FIN = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-									ROM = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-									BUL = { 
-										has_volunteers_amount_from = {
-											tag = ROOT
-										} 
-									}
-								}
-					}
-				}
-			}
-			removal_cost = -1
-			picture = generic_infantry_bonus
-			modifier = {
-				
-				experience_gain_army_unit_factor = 1
-				training_time_army_factor = -0.85
-				air_training_xp_gain_factor = 9
-				experience_gain_navy_unit_factor = 10
-				attrition = -1
-				air_accidents_factor = -9
-				naval_accidents_chance = -9
-				mobilization_speed = 2
-				army_fuel_consumption_factor = -9
-				air_fuel_consumption_factor = -9
-				navy_fuel_consumption_factor = -9
-				repair_speed_factor = 100
-			}	
 		}
 		tradeback_is_cancer = {
 			allowed = {

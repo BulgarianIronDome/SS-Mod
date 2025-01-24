@@ -15,6 +15,7 @@ NDefines.NDiplomacy.DIPLOMACY_HOURS_BETWEEN_REQUESTS = 6           -- more spam 
 NDefines.NDiplomacy.PEACE_SCORE_PER_PASS = 100.0						-- When you pass once you should get enough points to finish the peace deal
 
 
+NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.0001
 NDefines.NCountry.COUNTRY_SCORE_MULTIPLIER = 0				-- Weight of the country score.
 NDefines.NCountry.ARMY_SCORE_MULTIPLIER = 0					-- Based on number of armies.
 NDefines.NCountry.NAVY_SCORE_MULTIPLIER = 0					-- Based on number of navies.
@@ -46,7 +47,7 @@ NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 50
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 9999                            -- WAS 500 || XP Cap
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 9999			                    -- WAS 500 || XP Cap
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 9999		                    -- WAS 500 || XP Cap
-NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.0015 	-- vilkata defines
+NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0 	-- vilkata defines 0015
 NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.20	-- vilkata defines
 NDefines.NMilitary.FIELD_MARSHAL_XP_RATIO = 0.15 	-- vilkata defines
 NDefines.NMilitary.LEADER_EXPERIENCE_SCALE = 0.3 	-- vilkata defines

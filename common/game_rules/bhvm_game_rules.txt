@@ -1152,23 +1152,3 @@ anti_noob_modefier = {
 		desc = "France CAN'T build in mainland(Recommmended)"
 	}
 }
-peace_training_xp= {
-	name = "Peace time with xp/no xp" 
-	group = "BHVM game rules"
-	icon = "GFX_decision_eng_trade_unions_demand"
-	option = {
-		name = off
-		text = "GOff"
-		desc = "No xp from peace time trraining!(Not Recommmended)"
-	}
-	default = {
-		name = on
-		text = "ROn"
-		desc = "You gain daily xp with peace time training(Recommmended)"
-	}
-	option = {
-		name = infinite
-		text = "RInfinite xp"
-		desc = "You gain (essentially) infinite land army xp"
-	}
-}

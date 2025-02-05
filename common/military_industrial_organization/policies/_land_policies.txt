@@ -15,7 +15,7 @@ mio_policy_land_armor_welding_specialists = {
 	available = { has_mio_size > 5}
 	equipment_bonus = {
 		same_as_mio = {
-			armor_value = 0.10
+			armor_value = 0.05
 		}
 	}
 }
@@ -40,7 +40,6 @@ mio_policy_land_casting_specialists = {
 	equipment_bonus = {
 		same_as_mio = {
 			hardness = 0.025
-			ap_attack = 0.05
 		}
 	}
 }
@@ -95,9 +94,8 @@ mio_policy_land_factory_applied_camouflage  = {
 	available = { has_mio_size > 5}
 	equipment_bonus = {
 		same_as_mio = {
-			defense = 0.04
-			breakthrough = 0.04
-			recon = 0.05
+			defense = 0.02
+			breakthrough = 0.02
 		}
 	}
 }
@@ -127,7 +125,6 @@ mio_policy_land_cutting_corners  = {
 			soft_attack = -0.05
 			hard_attack = -0.05
 			armor_value = -0.05
-			supply_consumption = -0.015
 		}
 	}
 }

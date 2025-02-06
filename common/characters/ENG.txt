@@ -853,6 +853,15 @@ characters={
 			cost = 100
 			ai_will_do = {
 				base = 0.5
+
+				modifier = {
+					# Increase weight of navy chief after army chief is hired
+					factor = 2
+					amount_taken_ideas = {
+						amount > 0
+						slots = { army_chief }
+					}
+				}
 			}
 		}
 		
@@ -1274,6 +1283,15 @@ characters={
 			cost = 100
 			ai_will_do = {
 				base = 3
+
+				modifier = {
+					# Increase weight of navy chief after army chief is hired
+					factor = 2
+					amount_taken_ideas = {
+						amount > 0
+						slots = { army_chief }
+					}
+				}
 			}
 		}
 	}
@@ -1297,6 +1315,15 @@ characters={
 			cost =  50
 			ai_will_do = {
 				base = 1
+
+				modifier = {
+					# Increase weight of navy chief after army chief is hired
+					factor = 2
+					amount_taken_ideas = {
+						amount > 0
+						slots = { army_chief }
+					}
+				}
 			}
 		}
 	}
@@ -1323,6 +1350,15 @@ characters={
 			cost = 100
 			ai_will_do = {
 				base = 2
+
+				modifier = {
+					# Increase weight of air chief after navy chief is hired
+					factor = 3
+					amount_taken_ideas = {
+						amount > 0
+						slots = { navy_chief }
+					}
+				}
 			}
 		}
 	}
@@ -1346,6 +1382,15 @@ characters={
 			cost = 100
 			ai_will_do = {
 				base = 3
+
+				modifier = {
+					# Increase weight of air chief after navy chief is hired
+					factor = 3
+					amount_taken_ideas = {
+						amount > 0
+						slots = { navy_chief }
+					}
+				}
 			}
 		}
 	}
@@ -1369,6 +1414,15 @@ characters={
 			cost = 100
 			ai_will_do = {
 				base = 1
+
+				modifier = {
+					# Increase weight of air chief after navy chief is hired
+					factor = 3
+					amount_taken_ideas = {
+						amount > 0
+						slots = { navy_chief }
+					}
+				}
 			}
 		}		
 	}

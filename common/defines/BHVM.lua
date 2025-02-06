@@ -1,3 +1,10 @@
+NDefines.NProject.RECRUIT_SCIENTIST_COST = { -- Amount of pp to hire a scientist based on available scientist
+		10,			-- pp cost if no available scientist
+		10,			-- pp cost if 1 available scientist
+		10,			-- pp cost if 2 available scientist
+		10			-- pp cost if more than 2 available scientist
+	}
+
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 999 -- Lag days
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 999 -- pause days
 NDefines.NGame.GAME_SPEED_SECONDS = { 100.0, 0.25, 0.19, 0.06, 0.0 } 

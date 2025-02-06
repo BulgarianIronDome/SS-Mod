@@ -1,3 +1,66 @@
+mute_cheat_sound_category = {
+	mute_cheat_sound = {
+		icon = generic_decision_icon
+		cost = 0
+		available = {
+			NOT = {
+				has_country_flag = mute_cheat_sound_flag 
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = mute_cheat_sound_flag 
+			}
+		}
+		complete_effect = {
+			set_country_flag = mute_cheat_sound_flag
+		}
+	}
+	unmute_cheat_sound = {
+		icon = generic_decision_icon
+		cost = 0
+		available = {
+			has_country_flag = mute_cheat_sound_flag
+		}
+		visible = {
+			has_country_flag = mute_cheat_sound_flag
+		}
+		complete_effect = {
+			clr_country_flag = mute_cheat_sound_flag
+		}
+	}
+	mute_cheat_event = {
+		icon = generic_decision_icon
+		cost = 0
+		available = {
+			NOT = {
+				has_country_flag = mute_cheat_event_flag
+			} 
+		}
+		visible = {
+			NOT = {
+				has_country_flag = mute_cheat_event_flag
+			} 
+		}
+		complete_effect = {
+			set_country_flag = mute_cheat_event_flag
+		}
+	}
+	unmute_cheat_event = {
+		icon = generic_decision_icon
+		cost = 0
+		available = {
+			has_country_flag = mute_cheat_event_flag
+		}
+		visible = {
+			has_country_flag = mute_cheat_event_flag
+		}
+		complete_effect = {
+			clr_country_flag = mute_cheat_event_flag
+		}
+	}
+}
+
 MOD_countdown_to_victory_cat = {
 	MOD_countdown_to_allied_victory_mission = {
 

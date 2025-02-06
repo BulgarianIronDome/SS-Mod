@@ -589,15 +589,6 @@ defined_text = {
         }
         localization_key = "check_gamerules_blocked"
     }
-    text = {
-        trigger = {
-            has_game_rule = {
-                rule = acoustic_guerilla_tatctics
-                option = PLAINS
-            }
-        }
-        localization_key = "check_gamerules_plains"
-    }
 }
 
 defined_text = {

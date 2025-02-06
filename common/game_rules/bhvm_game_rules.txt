@@ -445,11 +445,6 @@ acoustic_guerilla_tatctics = {
 		text = "RBanned"
 		desc = "Gurilla Tatics are not able to be Selected"
 	}
-	option = {
-		name = PLAINS
-		text = "PPlains"
-		desc = "Guerilla Tatics are RNOT able to get rolled on plains"
-	}
 }
 space_marine_deleter = {
 	name = "Mixing inf and armor"
@@ -558,18 +553,18 @@ soviet_focus_buffs = {
 	}
 }
 barb_gorila = {
-	name = "Gorila On Barb settings"
+	name = "Guerilla On Barb settings"
 	group = "BHVM game rules"
 	icon = "GFX_decision_generic_tank"
 	default = {
 		name = ALLOWED
-		text = "GSoviets can do gorila warfare"
-		desc = "Soviets can pick the mass mob doctrine(RECOMENDED?)"
+		text = "GSoviets can do guerilla warfare"
+		desc = "Soviets can pick the guerilla warfare doctrine(RECOMENDED?)"
 	}
 	option = {
 		name = DISALLOWED
-		text = "RSoviets cannot do gorila warfare"
-		desc = "Soviets can't pick the mass mob doctrine(NOT REALLY RECOMENDED)"
+		text = "RSoviets cannot do guerilla warfare"
+		desc = "Soviets can't pick the guerilla warfare doctrine(NOT REALLY RECOMENDED)"
 	}
 }
 sov_tashek_tungsten = {
@@ -758,7 +753,7 @@ spanish_production = {
 	}
 }
 brazil_nerf = {
-	name = "Brazil Eco & Rubber Nerf"
+	name = "Brazil Rubber Nerf"
 	group = "BHVM game rules"
 	icon = "GFX_decision_generic_industry"
 	option = {
@@ -768,7 +763,7 @@ brazil_nerf = {
 	option = {
 		name = on
 		text = "Brazil is nerfed"
-		desc = "Brazil right side eco is nerfed and rubber is reduced by ~66%"
+		desc = "Brazil rubber is reduced by ~50%"
 	}
 }
 no_market = {

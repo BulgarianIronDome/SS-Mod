@@ -309,6 +309,15 @@ on_actions = {
 						logistics_skill = 6
 					}
 					
+					add_corps_commander_role = {
+						character = SOV_vasily_kuznetsov
+						traits = { commando trickster infantry_officer organizer engineer trickster skilled_staffer urban_assault_specialist ranger defensive_doctrine }
+						skill = 8
+						attack_skill = 4
+						defense_skill = 8
+						planning_skill = 3
+						logistics_skill = 6
+					}
 				}
 				SPR = {
 					add_corps_commander_role = {
@@ -631,6 +640,16 @@ on_actions = {
 						planning_skill = 7
 						logistics_skill = 6
 					}
+
+					add_corps_commander_role = {
+						character = SOV_vasily_kuznetsov
+						traits = { commando trickster infantry_officer organizer engineer trickster skilled_staffer urban_assault_specialist ranger defensive_doctrine }
+						skill = 8
+						attack_skill = 4
+						defense_skill = 8
+						planning_skill = 3
+						logistics_skill = 6
+					}
 					
 				}
 				SPR = {
@@ -882,6 +901,15 @@ on_actions = {
 						logistics_skill = 6
 					}
 					
+					add_corps_commander_role = {
+						character = SOV_vasily_kuznetsov
+						traits = { commando trickster infantry_officer organizer engineer trickster skilled_staffer urban_assault_specialist ranger defensive_doctrine }
+						skill = 8
+						attack_skill = 4
+						defense_skill = 8
+						planning_skill = 3
+						logistics_skill = 6
+					}
 				}
 				if = {
 					limit = {

@@ -1,4 +1,3 @@
-picture="thumbnail.png"
 version="1a"
 tags={
 	"Balance"
@@ -9,6 +8,6 @@ tags={
 	"National Focuses"
 	"Military"
 }
-name="Shadow's Sigma Mod"
+name="Shadow's Test Mod"
 supported_version="1.15.*"
-remote_file_id="3396746002"
+remote_file_id="3422646109"

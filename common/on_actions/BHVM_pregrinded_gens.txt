@@ -63,21 +63,21 @@ on_actions = {
 				FRA = {
 					add_corps_commander_role = {
 						character = FRA_alphonse_juin
-						traits = {  armor_officer panzer_leader trickster hill_fighter }
-						skill=5
-						attack_skill=5
+						traits = { cavalry_leader armor_officer panzer_leader trickster urban_assault_specialist }
+						skill=6
+						attack_skill=6
 						defense_skill=4
 						planning_skill=6
-						logistics_skill=5
+						logistics_skill=7
 					}
 					add_corps_commander_role = {
 						character = FRA_jean_de_lattre_de_tassigny
-						traits = { cavalry_leader armor_officer trickster organizer }
-						skill=5
-						attack_skill=5
-						defense_skill=4
+						traits = { cavalry_leader armor_officer trickster organizer brilliant_strategist commando trait_engineer }
+						skill=8
+						attack_skill=7
+						defense_skill=5
 						planning_skill=6
-						logistics_skill=5
+						logistics_skill=7
 					}
 				}
 				HUN = {
@@ -664,21 +664,21 @@ on_actions = {
 				FRA = {
 					add_corps_commander_role = {
 						character = FRA_alphonse_juin
-						traits = {  armor_officer panzer_leader trickster hill_fighter }
-						skill=5
-						attack_skill=5
+						traits = { cavalry_leader armor_officer panzer_leader trickster urban_assault_specialist }
+						skill=6
+						attack_skill=6
 						defense_skill=4
 						planning_skill=6
-						logistics_skill=5
+						logistics_skill=7
 					}
 					add_corps_commander_role = {
 						character = FRA_jean_de_lattre_de_tassigny
-						traits = { cavalry_leader armor_officer trickster organizer }
-						skill=5
-						attack_skill=5
-						defense_skill=4
+						traits = { cavalry_leader armor_officer panzer_leader trickster organizer brilliant_strategist commando trait_engineer }
+						skill=8
+						attack_skill=7
+						defense_skill=5
 						planning_skill=6
-						logistics_skill=5
+						logistics_skill=7
 					}
 				}
 				CAN = {

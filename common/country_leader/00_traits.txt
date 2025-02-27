@@ -5293,6 +5293,8 @@ leader_traits = {
 		war_support_factor = 0.1
 		army_morale_factor = 0.05
 		annex_cost_factor = -0.1
+		army_armor_attack_factor = 0.05
+		offence = 0.03
 	}
 
 	stalin_architect_of_communism = {
@@ -5308,6 +5310,8 @@ leader_traits = {
 		compliance_gain = 0.05
 		justify_war_goal_when_in_major_war_time = -0.5
 		conscription = 0.02
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.1
 	}
 
 	stalin_authority_undermined = {

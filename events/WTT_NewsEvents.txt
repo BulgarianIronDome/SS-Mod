@@ -2771,7 +2771,6 @@ news_event = {
 		trigger = {
 			OR = {
 				original_tag = PER
-				original_tag = AFG
 			}
 			NOT = { has_war_with = FROM }
 		}
@@ -2780,7 +2779,6 @@ news_event = {
 		name = wtt_news.65.b
 		trigger = {
 			NOT = { original_tag = PER }
-			NOT = { original_tag = AFG }
 			NOT = { has_war_with = FROM }
 		}
 	}

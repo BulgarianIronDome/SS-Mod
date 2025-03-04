@@ -5735,15 +5735,6 @@ country_event = {
 					target = PER
 				}
 			}
-			if = {
-				limit = {
-					tag = AFG
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = AFG
-				}
-			}
 		}
 		FROM = { country_event = { id = mtg_britain.81 hours = 6 } }
 		hidden_effect = { news_event = { id = mtg_news.29 hours = 30 } }

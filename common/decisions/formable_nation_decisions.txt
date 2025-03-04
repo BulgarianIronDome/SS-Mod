@@ -5982,7 +5982,6 @@ form_persian_empire_category = {
 		allowed = {
 			OR = {
 				original_tag = PER
-				original_tag = AFG
 			}
 			has_dlc = "Waking the Tiger"
 		}
@@ -6004,12 +6003,6 @@ form_persian_empire_category = {
 				controls_state = 416
 				controls_state = 414
 				controls_state = 410
-			}
-			# Afghanistan
-			custom_trigger_tooltip = {
-				tooltip = form_country_afghanistan_required_states_tt
-				controls_state = 415
-				controls_state = 267
 			}
 			# Iraq
 			custom_trigger_tooltip = {
@@ -6080,7 +6073,6 @@ form_persian_empire_category = {
 		visible = {
 			OR = {
 				original_tag = PER
-				original_tag = AFG
 			}
 			NOT = { has_global_flag = form_persian_empire_flag }
 		}
@@ -6102,12 +6094,6 @@ form_persian_empire_category = {
 				416 = { add_core_of = ROOT }
 				414 = { add_core_of = ROOT }
 				410 = { add_core_of = ROOT }
-			}
-			# Afghanistan
-			custom_effect_tooltip = form_country_afghanistan_coring_states_tt
-			hidden_effect = {
-				415 = { add_core_of = ROOT }
-				267 = { add_core_of = ROOT }
 			}
 			# Iraq
 			custom_effect_tooltip = form_country_iraq_coring_states_tt
@@ -8617,12 +8603,6 @@ form_andalusia_category = {
 				controls_state = 414
 				controls_state = 410
 			}
-			# Afghanistan
-			custom_trigger_tooltip = {
-				tooltip = form_country_afghanistan_required_states_tt
-				controls_state = 415
-				controls_state = 267
-			}
 			# Pakistan
 			custom_trigger_tooltip = {
 				tooltip = form_country_pakistani_required_states_tt
@@ -8659,12 +8639,6 @@ form_andalusia_category = {
 				416 = { add_core_of = ROOT }
 				414 = { add_core_of = ROOT }
 				410 = { add_core_of = ROOT }
-			}
-			# Afghanistan
-			custom_effect_tooltip = form_country_afghanistan_coring_states_tt
-			hidden_effect = {
-				415 = { add_core_of = ROOT }
-				267 = { add_core_of = ROOT }
 			}
 			# Pakistan
 			custom_effect_tooltip = form_country_pakistan_coring_states_tt
@@ -9470,12 +9444,6 @@ form_macedonian_empire_category = {
 				controls_state = 414
 				controls_state = 410
 			}
-			# Afghanistan
-			custom_trigger_tooltip = {
-				tooltip = form_country_afghanistan_required_states_tt
-				controls_state = 415
-				controls_state = 267
-			}
 			# Central Asia
 			custom_trigger_tooltip = {
 				tooltip = form_country_southern_central_asia_required_states_tt
@@ -9594,12 +9562,6 @@ form_macedonian_empire_category = {
 				416 = { add_core_of = ROOT }
 				414 = { add_core_of = ROOT }
 				410 = { add_core_of = ROOT }
-			}
-			# Afghanistan
-			custom_effect_tooltip = form_country_afghanistan_coring_states_tt
-			hidden_effect = {
-				415 = { add_core_of = ROOT }
-				267 = { add_core_of = ROOT }
 			}
 			# Iraq
 			custom_effect_tooltip = form_country_iraq_coring_states_tt

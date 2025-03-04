@@ -1230,6 +1230,10 @@ communism_on_the_rise = {
 			OR = {
 				has_idea_with_trait = communist_revolutionary
 				has_idea_with_trait = ambitious_union_boss
+				AND = {
+					has_idea_with_trait = ARG_communist_insurrectionist
+					original_tag = IRQ
+				}
 			}
 			NOT = { has_government = communism }
 			check_has_focus_tree_to_switch_to_communism = yes

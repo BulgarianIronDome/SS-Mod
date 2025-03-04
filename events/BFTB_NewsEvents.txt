@@ -988,7 +988,6 @@ news_event = {
 			OR =  {
 				tag = GER
 				tag = PER
-				tag = AFG
 			}
 		}
 	}
@@ -1013,7 +1012,6 @@ news_event = {
 					tag = POL
 					tag = GER
 					tag = PER
-					tag = AFG
 				}
 			}
 		}

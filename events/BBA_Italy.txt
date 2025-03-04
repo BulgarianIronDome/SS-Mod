@@ -9339,7 +9339,6 @@ country_event = {
 			release_on_controlled = PER
 			release_on_controlled = AZR
 			release_on_controlled = TUR
-			release_on_controlled = AFG
 			release_on_controlled = KUR
 		}
 	}

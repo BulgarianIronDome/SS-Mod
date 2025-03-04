@@ -66,6 +66,7 @@ leader_traits = {
 
 	underage_monarch = {
 		random = no
+		sprite = 13
 		stability_factor = 0.10
 		political_advisor_cost_factor = 0.25
 		trade_laws_cost_factor = 0.25
@@ -471,6 +472,19 @@ leader_traits = {
 		ai_strategy = {
 			type = alliance
 			id = "GER"
+			value = 300
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	likes_mexico = {
+		random = no
+		ai_strategy = {
+			type = alliance
+			id = "MEX"
 			value = 300
 		}
 

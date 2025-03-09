@@ -612,6 +612,68 @@ operations = {
     #        }
     #    }
     #}
+    FRA_annex_LEB = {
+        # icon used to be here rip icon 04/29/2024
+        targets = {
+            LEB
+        }
+        fire_only_once = yes
+
+        available = {
+            original_tag = FRA
+            LEB = { is_ai = yes }
+            #date > 1940.01.01
+        }
+        visible = {
+            original_tag = FRA
+            LEB = { is_ai = yes }
+            is_ai = NO
+            country_exists = LEB
+        }
+        complete_effect = {
+            FRA = { 
+                annex_country = { target = LEB transfer_troops = yes }
+                    every_state = {
+                    limit = {
+                        is_core_of = LEB
+                        is_controlled_by = FRA
+                    }
+                    add_core_of = FRA
+                }
+            }
+        }
+    }
+    FRA_annex_SYR = {
+        # icon used to be here rip icon 04/29/2024
+        targets = {
+            SYR
+        }
+        fire_only_once = yes
+
+        available = {
+            original_tag = FRA
+            SYR = { is_ai = yes }
+            #date > 1940.01.01
+        }
+        visible = {
+            original_tag = FRA
+            SYR = { is_ai = yes }
+            is_ai = NO
+            country_exists = SYR
+        }
+        complete_effect = {
+            FRA = { 
+                annex_country = { target = SYR transfer_troops = yes }
+                    every_state = {
+                    limit = {
+                        is_core_of = SYR
+                        is_controlled_by = FRA
+                    }
+                    add_core_of = FRA
+                }
+            }
+        }
+    }
     FRA_annex_IRE = {
         # icon used to be here rip icon 04/29/2024
         targets = {

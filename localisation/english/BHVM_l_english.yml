@@ -1,5 +1,8 @@
 ﻿l_english:
  RULE_ALLOW_RETURN_TERRITORY_TOOLTIP:0 "Game Rule: §RCountries can never give back territory of other nations.§!"
+ mute_cheat_sound_category:0 "Anti-Cheat Decisions"
+ mute_cheat_sound:0 "Mute Anti-Cheat Sound Effect"
+ mute_cheat_event:0 "Suppress Anti-Cheat Event"
  motr_gun_upgrade:0 "Bigger Caliber Guns"
  adaptable_tooltip:0 "This trait is only pickable when the 'BHVM_adaptable' game rule option is set to 'on'."
  thorough_planner_tooltip:0 "This trait is only pickable when the 'BHVM_thorough_planner' game rule option is set to 'on'."
@@ -76,6 +79,8 @@
  FRA_annex_SAF:0"France Annex SAF"
  FRA_annex_CAN:0"France Annex Canadien"
  FRA_annex_IRE:0"France Annex Ireland"
+ FRA_annex_LEB:0"France Annex Lebanon"
+ FRA_annex_SYR:0"France Annex Syria"
  ENG_annex_IRE:0"England Annex Ireland"
  ENG_annex_CAN:0"England Annex Canadien"
  ENG_annex_SAF:0"England Annex SAF"

@@ -120,17 +120,6 @@ on_actions = {
 						logistics_skill=3
 					}
 				}
-				RAJ = {
-					add_corps_commander_role = {
-						character = RAJ_frank_messervy 
-						skill=4
-						traits = { infantry_leader trickster commando harsh_leader }
-						attack_skill=3
-						defense_skill=5
-						planning_skill=2
-						logistics_skill=3
-					}
-				}
 				AST = {
 					add_corps_commander_role = {
 						character = AST_horace_robertson
@@ -696,17 +685,6 @@ on_actions = {
 						attack_skill=4
 						defense_skill=4
 						planning_skill=5
-						logistics_skill=3
-					}
-				}
-				RAJ = {
-					add_corps_commander_role = {
-						character = RAJ_frank_messervy 
-						skill=4
-						traits = { infantry_leader trickster commando harsh_leader }
-						attack_skill=3
-						defense_skill=5
-						planning_skill=2
 						logistics_skill=3
 					}
 				}
